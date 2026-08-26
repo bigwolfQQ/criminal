@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第354條・毀損罪｜教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b;
+  --indigo:#2c4a76;
+  --paper-outer:#f3ede0;
+  --paper-content:#fbf8f1;
+  --paper-card:#fffdf8;
+  --paper-alt:#f6f1e6;
+  --seal:#9c2b3a;
+  --brass:#a9832f;
+  --border:#ddd3bf;
+  --ink-45:rgba(22,35,59,.45);
+  --ink-65:rgba(22,35,59,.65);
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--paper-outer);
+  color:var(--ink);
+  font-family:"Noto Sans TC",sans-serif;
+  line-height:1.75;
+}
+h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+a{color:var(--indigo);}
+
+/* ===== Layout ===== */
+.shell{display:flex;max-width:1180px;margin:0 auto;}
+.sidebar{
+  width:240px;flex:none;position:sticky;top:0;align-self:flex-start;
+  height:100vh;overflow-y:auto;padding:32px 18px;
+  border-right:1px solid var(--border);
+}
+.sidebar-title{font-size:12px;letter-spacing:.12em;color:var(--ink-45);margin-bottom:14px;}
+.nav-link{
+  display:block;padding:9px 12px;border-radius:6px;color:var(--ink-65);
+  text-decoration:none;font-size:14.5px;margin-bottom:2px;transition:background .15s;
+}
+.nav-link.faded{color:var(--ink-45);}
+.nav-link:hover{background:var(--paper-alt);}
+.nav-link.active{background:var(--indigo);color:var(--paper-card);}
+.main{flex:1;min-width:0;background:var(--paper-content);box-shadow:-6px 0 24px -18px rgba(22,35,59,.25);}
+.container{max-width:840px;margin:0 auto;padding:56px 40px 100px;}
+
+/* ===== Mobile nav ===== */
+.mobile-nav{display:none;position:sticky;top:0;z-index:20;background:var(--paper-outer);
+  border-bottom:1px solid var(--border);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.mobile-nav a{display:inline-block;padding:7px 14px;margin-right:8px;border-radius:999px;
+  background:var(--paper-card);border:1px solid var(--border);color:var(--ink-65);
+  text-decoration:none;font-size:13px;}
+.mobile-nav a.active{background:var(--indigo);color:var(--paper-card);border-color:var(--indigo);}
+
+@media (max-width:980px){
+  .sidebar{display:none;}
+  .mobile-nav{display:block;}
+  .container{padding:28px 18px 70px;}
+}
+
+/* ===== Cover ===== */
+.cover{padding:64px 40px 40px;position:relative;border-bottom:1px solid var(--border);}
+.eyebrow{font-size:12.5px;letter-spacing:.15em;color:var(--brass);font-weight:700;margin-bottom:14px;}
+.cover h1{font-size:clamp(30px,4.4vw,44px);font-weight:900;margin:0 0 10px;line-height:1.25;}
+.cover .sub{color:var(--ink-65);font-size:16px;margin-bottom:18px;}
+.cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px;}
+.meta-pill{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--indigo);color:var(--indigo);}
+.ver-badge{border-color:var(--seal);color:var(--seal);}
+.meta-date{color:var(--ink-45);}
+.seal-mark{
+  position:absolute;top:44px;right:40px;width:86px;height:86px;border:3px solid var(--seal);
+  border-radius:10px;transform:rotate(8deg);display:flex;align-items:center;justify-content:center;
+  writing-mode:vertical-rl;color:var(--seal);font-family:"Noto Serif TC",serif;font-weight:900;
+  font-size:26px;letter-spacing:.15em;opacity:.85;
+}
+@media (max-width:600px){.seal-mark{display:none;}}
+
+/* ===== Sections ===== */
+section{padding-top:52px;scroll-margin-top:20px;}
+section:first-of-type{padding-top:8px;}
+.sec-title{font-size:24px;font-weight:900;margin:0 0 6px;display:flex;align-items:center;gap:10px;}
+.sec-sub{color:var(--ink-45);font-size:13.5px;margin-bottom:24px;}
+h3.sub-title{font-size:18px;font-weight:700;color:var(--indigo);border-left:4px solid var(--brass);padding-left:10px;margin:30px 0 12px;}
+h4.mini-title{font-size:15.5px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+
+/* ===== Article box ===== */
+.article-box{
+  position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);
+  border-radius:4px;padding:20px 24px;margin-bottom:18px;overflow:hidden;
+  box-shadow:0 1px 2px rgba(22,35,59,.06);
+}
+.article-box .art-no{font-family:"Noto Serif TC",serif;font-weight:900;font-size:96px;
+  position:absolute;right:14px;bottom:-14px;color:var(--ink);opacity:.06;line-height:1;}
+.article-box .art-head{font-weight:700;color:var(--indigo);margin-bottom:8px;font-size:15px;}
+.article-box p{margin:0 0 6px;position:relative;z-index:1;}
+.article-box .art-note{font-size:12.5px;color:var(--ink-45);margin-top:10px;}
+
+/* ===== Tables ===== */
+table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:14.5px;}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top;}
+th{background:var(--ink);color:var(--paper-content);font-weight:700;}
+tr:nth-child(even) td{background:var(--paper-alt);}
+tr:nth-child(odd) td{background:var(--paper-card);}
+
+/* ===== Conclusion marks ===== */
+.pos{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.neg{font-weight:700;color:var(--seal);}
+
+/* ===== Cards ===== */
+.card{background:var(--paper-card);border-radius:8px;padding:20px 22px;margin-bottom:18px;
+  box-shadow:0 1px 3px rgba(22,35,59,.08),0 8px 20px -14px rgba(22,35,59,.25);}
+.card-head{font-family:"Noto Serif TC",serif;font-weight:700;font-size:15.5px;color:#fff;
+  background:var(--indigo);margin:-20px -22px 16px;padding:11px 22px;border-radius:8px 8px 0 0;}
+.card-head.exam{background:var(--ink);}
+.card p{margin:0 0 10px;}
+.card .q{font-weight:700;margin-bottom:10px;}
+.source-note{border-top:1px dashed var(--border);margin-top:14px;padding-top:12px;font-size:13px;color:var(--ink-65);}
+
+/* ===== Placeholder ===== */
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:34px 20px;text-align:center;
+  background:repeating-linear-gradient(135deg,rgba(169,131,47,.05),rgba(169,131,47,.05) 10px,transparent 10px,transparent 20px);}
+.placeholder .icon{font-size:26px;margin-bottom:8px;}
+.placeholder p{color:var(--ink-65);margin:0 0 10px;}
+.badge-todo{display:inline-block;background:var(--paper-alt);border:1px solid var(--border);border-radius:999px;
+  padding:3px 12px;font-size:12px;color:var(--ink-65);}
+
+/* ===== Cheat sheet ===== */
+.cheat{background:var(--ink);color:var(--paper-content);border-radius:10px;padding:28px 26px;
+  position:relative;overflow:hidden;}
+.cheat .wm{position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-size:190px;
+  font-weight:900;opacity:.07;line-height:1;}
+.cheat h4{margin:0 0 12px;font-size:16px;color:var(--paper-content);}
+.mnemonic{background:var(--seal);color:#fff;padding:12px 16px;border-radius:6px;font-family:"Noto Serif TC",serif;
+  font-size:17px;font-weight:700;text-align:center;margin-top:14px;}
+
+/* ===== Relation / mind map wrap ===== */
+.relation-wrap{background:var(--paper-card);border:1px solid var(--border);border-radius:8px;
+  padding:14px;margin:20px 0 6px;}
+.relation-note{text-align:center;color:var(--ink-45);font-size:13px;margin-top:6px;}
+
+/* ===== Link note ===== */
+.link-note{border:1px dashed var(--border);border-radius:8px;padding:16px 20px;margin-top:34px;font-size:14px;}
+.link-note h4{margin:0 0 8px;color:var(--indigo);}
+
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-65);margin:10px 0 4px;}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+</style>
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#article">條文原文</a>
+  <a href="#structure">心智圖</a>
+  <a href="#elements">三階層解析</a>
+  <a href="#theory">學說見解</a>
+  <a href="#practice">實務見解</a>
+  <a href="#cases">教學案例</a>
+  <a href="#essay">申論練習</a>
+  <a href="#cheatsheet">速查卡</a>
+</div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-title">目錄 CONTENTS</div>
+    <a class="nav-link" href="#article">一、條文原文</a>
+    <a class="nav-link" href="#structure">二、條文結構（心智圖）</a>
+    <a class="nav-link" href="#elements">三、犯罪三階層解析</a>
+    <a class="nav-link" href="#theory">四、學說見解</a>
+    <a class="nav-link" href="#practice">五、實務見解</a>
+    <a class="nav-link" href="#cases">六、教學案例</a>
+    <a class="nav-link" href="#essay">七、申論練習題</a>
+    <a class="nav-link" href="#cheatsheet">八、速查卡</a>
+  </nav>
+
+  <div class="main">
+    <div class="cover">
+      <div class="eyebrow">第二編　分則　第三十五章　毀棄損壞罪</div>
+      <h1>刑法第354條・毀損罪</h1>
+      <div class="sub">毀損器物罪（普通毀損罪）｜財產法益犯罪・抽象危險犯・告訴乃論</div>
+      <div class="cover-meta">
+        <span class="meta-pill ver-badge">v1.0</span>
+        <span class="meta-date">建立日期 2026-08-27</span>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.354" alt="visitor badge" style="height:20px;vertical-align:middle;">
+      </div>
+      <div class="seal-mark">罰</div>
+    </div>
+
+    <div class="container">
+
+      <!-- 一、條文原文 -->
+      <section id="article">
+        <h2 class="sec-title">一、條文原文</h2>
+        <p class="sec-sub">主條文與必要／建議關聯條文，原文照錄</p>
+
+        <div class="article-box">
+          <div class="art-head">刑法第354條（毀損器物罪）　　【主條文】</div>
+          <p>毀棄、損壞前二條以外之他人之物或致令不堪用，足以生損害於公眾或他人者，處二年以下有期徒刑、拘役或一萬五千元以下罰金。</p>
+          <div class="art-no">354</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第352條（毀損文書罪）　　【必要關聯・§354排除範圍】</div>
+          <p>毀棄、損壞他人文書或致令不堪用，足以生損害於公眾或他人者，處三年以下有期徒刑、拘役或三萬元以下罰金。</p>
+          <div class="art-no">352</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第353條（毀壞建築物、礦坑、船艦罪）　　【必要關聯・§354排除範圍】</div>
+          <p>毀壞他人建築物、礦坑、船艦或致令不堪用者，處六月以上五年以下有期徒刑。</p>
+          <p>因而致人於死者，處無期徒刑或七年以上有期徒刑，致重傷者，處三年以上十年以下有期徒刑。</p>
+          <p>第一項之未遂犯罰之。</p>
+          <div class="art-no">353</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第357條（告訴乃論）　　【建議關聯・追訴程序】</div>
+          <p>第三百五十二條、第三百五十四條至第三百五十六條之罪，須告訴乃論。</p>
+          <div class="art-note">＊即：第352、354、355、356條均為告訴乃論罪；唯獨第353條（建築物、礦坑、船艦）不在告訴乃論範圍內，屬非告訴乃論之罪。</div>
+          <div class="art-no">357</div>
+        </div>
+      </section>
+
+      <!-- 二、心智圖 -->
+      <section id="structure">
+        <h2 class="sec-title">二、條文結構（心智圖）</h2>
+        <p class="sec-sub">以第354條為中心，展開犯罪三階層與關聯規定的整體構造</p>
+
+        <div class="relation-wrap">
+          <svg viewBox="0 0 960 660" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <!-- connecting lines -->
+            <g stroke="#2c4a76" stroke-width="2.5" fill="none">
+              <path d="M480,290 C480,220 480,170 480,140"/>
+              <path d="M545,300 C650,260 730,240 800,225"/>
+              <path d="M545,360 C650,410 730,440 790,470"/>
+              <path d="M415,360 C310,410 230,440 170,470"/>
+            </g>
+            <g stroke="#a9832f" stroke-width="2.2" stroke-dasharray="5 5" fill="none">
+              <path d="M415,300 C310,260 230,240 170,225"/>
+            </g>
+
+            <!-- center -->
+            <ellipse cx="480" cy="325" rx="112" ry="52" fill="#16233b"/>
+            <text x="480" y="318" text-anchor="middle" fill="#fbf8f1" font-family="Noto Serif TC" font-weight="900" font-size="19">刑法§354</text>
+            <text x="480" y="342" text-anchor="middle" fill="#fbf8f1" font-family="Noto Sans TC" font-size="13">毀損罪</text>
+
+            <!-- Node: 構成要件-客觀 (top) -->
+            <rect x="325" y="30" width="310" height="112" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="340" y="54" font-family="Noto Serif TC" font-weight="700" font-size="14.5" fill="#2c4a76">構成要件該當性・客觀</text>
+            <text x="340" y="76" font-family="Noto Sans TC" font-size="12.5" fill="#16233b">行為客體：他人之物（不含文書／建築物等）</text>
+            <text x="340" y="95" font-family="Noto Sans TC" font-size="12.5" fill="#16233b">行為態樣：毀棄・損壞・致令不堪用（三者並列獨立）</text>
+            <text x="340" y="114" font-family="Noto Sans TC" font-size="12.5" fill="#9c2b3a" font-weight="700">結果：足以生損害（抽象危險犯）</text>
+
+            <!-- Node: 構成要件-主觀 (right top) -->
+            <rect x="800" y="180" width="140" height="90" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="815" y="205" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">主觀構成要件</text>
+            <text x="815" y="228" font-family="Noto Sans TC" font-size="12" fill="#16233b">故意（直接／</text>
+            <text x="815" y="245" font-family="Noto Sans TC" font-size="12" fill="#16233b">間接皆可）</text>
+            <text x="815" y="262" font-family="Noto Sans TC" font-size="12" fill="#9c2b3a" font-weight="700">不罰過失</text>
+
+            <!-- Node: 違法性 (right bottom) -->
+            <rect x="790" y="430" width="150" height="90" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="805" y="455" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">違法性</text>
+            <text x="805" y="478" font-family="Noto Sans TC" font-size="12" fill="#16233b">有無阻卻違法</text>
+            <text x="805" y="495" font-family="Noto Sans TC" font-size="12" fill="#16233b">事由（回歸總</text>
+            <text x="805" y="512" font-family="Noto Sans TC" font-size="12" fill="#16233b">則§21-24）</text>
+
+            <!-- Node: 有責性 (left bottom) -->
+            <rect x="20" y="430" width="150" height="90" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="35" y="455" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">有責性</text>
+            <text x="35" y="478" font-family="Noto Sans TC" font-size="12" fill="#16233b">責任能力</text>
+            <text x="35" y="495" font-family="Noto Sans TC" font-size="12" fill="#16233b">（§18、19）</text>
+            <text x="35" y="512" font-family="Noto Sans TC" font-size="12" fill="#16233b">期待可能性</text>
+
+            <!-- Node: 關聯規定 (left top, amber dashed) -->
+            <rect x="20" y="180" width="150" height="90" rx="8" fill="#fffdf8" stroke="#a9832f" stroke-width="2"/>
+            <text x="35" y="205" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#a9832f">關聯規定</text>
+            <text x="35" y="227" font-family="Noto Sans TC" font-size="12" fill="#16233b">§352 文書</text>
+            <text x="35" y="244" font-family="Noto Sans TC" font-size="12" fill="#16233b">§353 建築物等</text>
+            <text x="35" y="261" font-family="Noto Sans TC" font-size="12" fill="#16233b">§357 告訴乃論</text>
+          </svg>
+          <div class="legend">
+            <span><i class="dot" style="background:#2c4a76"></i>犯罪三階層構成要素</span>
+            <span><i class="dot" style="background:#a9832f"></i>關聯條文（虛線＝條文外部參照）</span>
+          </div>
+          <div class="relation-note">紅字為本條解釋上的重點爭議：屬「抽象危險犯」，不以物之效用實際喪失為必要；且未罰過失毀損。</div>
+        </div>
+      </section>
+
+      <!-- 三、犯罪三階層解析 -->
+      <section id="elements">
+        <h2 class="sec-title">三、犯罪三階層解析</h2>
+        <p class="sec-sub">構成要件該當性 → 違法性 → 有責性，依序檢驗</p>
+
+        <h3 class="sub-title">（一）構成要件該當性</h3>
+
+        <h4 class="mini-title">客觀構成要件</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>行為主體</td><td>一般犯，不限特定身分，任何人均可為之</td></tr>
+          <tr><td>行為客體</td><td>「他人之物」，須為第352條（文書）、第353條（建築物、礦坑、船艦）以外之物；須為他人所有或持有，<span class="neg">無主物不與</span></td></tr>
+          <tr><td>實行行為</td><td>「毀棄」「損壞」「致令不堪用」三種行為態樣。依學說多數見解（見下方學說見解），三者為<span class="pos">各自獨立</span>的構成要件行為類型，不具互為補充之規範關係，行為人只要實行其中一種即該當本罪行為要件</td></tr>
+          <tr><td>構成要件結果</td><td>「足以生損害於公眾或他人」。本罪為<span class="pos">抽象危險犯</span>，通說認為不以物之效用實際全部或一部喪失為必要，僅須有發生損害之危險即為已足（惟早期實務曾採較嚴格之「效用喪失」判準，詳見實務見解單元）</td></tr>
+          <tr><td>因果關係</td><td>行為與結果間須具因果關係。實務多依相當因果關係說判斷；學說並提出客觀歸責理論（行為是否製造法所不容許之風險、該風險是否實現於結果）作為補充審查工具</td></tr>
+        </table>
+
+        <h4 class="mini-title">主觀構成要件</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>故意</td><td>行為人須具毀損故意。依刑法第13條，不限於直接故意（明知並有意使其發生），間接故意（預見其發生而其發生不違背本意）亦可成立</td></tr>
+          <tr><td>過失</td><td>本條<span class="neg">未設處罰過失毀損之明文</span>。依刑法第12條第2項「過失行為之處罰，以有特別規定者為限」，過失毀損他人之物<span class="neg">不成立本罪</span>，僅生民事上損害賠償責任</td></tr>
+        </table>
+
+        <h3 class="sub-title">（二）違法性</h3>
+        <p>本條文本身未規定特別阻卻違法事由，判斷應回歸刑法總則相關規定，例如：</p>
+        <ul>
+          <li>依法令之行為（如依法定程序拆除違建、扣押物品等公權力行使）</li>
+          <li>正當防衛（第23條）、緊急避難（第24條）：若行為人係為避免自己或他人生命、身體、自由、財產之緊急危難，不得已而毀損他人之物，得依緊急避難阻卻違法（教學案例四即以此情境設計）</li>
+        </ul>
+        <p>若不具上述阻卻事由，則違法性即獲肯定（原則違法推定）。</p>
+
+        <h3 class="sub-title">（三）有責性（罪責）</h3>
+        <p>本條文亦未設特別阻卻或減輕罪責事由，判斷回歸總則規定，例如行為人是否具備責任能力（第18條：未滿14歲不罰、14歲以上未滿18歲得減輕；第19條：因精神障礙或其他心智缺陷致辨識能力或控制能力欠缺或顯著減低者不罰或得減輕）、有無違法性認識錯誤、有無期待可能性等。一般毀損案件較少涉及此階層之特殊爭議。</p>
+      </section>
+
+      <!-- 四、學說見解 -->
+      <section id="theory">
+        <h2 class="sec-title">四、學說見解</h2>
+        <p class="sec-sub">聚焦於「毀棄・損壞・致令不堪用」三者關係之爭議</p>
+
+        <div class="card">
+          <div class="card-head">李聖傑教授</div>
+          <p>針對最高法院47年台非字第34號判例之評析指出：實務將「致令不堪用」當作認定毀損罪是否成立的最終補充判斷依據，等於把「毀棄、損壞」與「致令不堪用」合而為一，如此一來，行為人縱已實行毀棄或損壞行為，仍須進一步視其是否使物之功能全部或一部喪失，方能認定成罪。此種解釋方式，混淆了構成要件行為與構成要件結果的區隔，也壓縮了法條「足以生損害於公眾或他人」此一結果要件應有的規範功能。李教授並指出，目前多數學說及部分實務見解均認為「毀棄」「損壞」「致令不堪用」三者係各自獨立的構成要件行為態樣，彼此間不具補充關係，行為人只要該當其中一種行為即可滿足構成要件行為之要求。</p>
+          <div class="source-note">📂 出處｜李聖傑，〈普通毀損罪的行為態樣分析——最高法院四十七年台非字第三十四號刑事判例〉，《月旦裁判時報》，第19期，頁110-113</div>
+        </div>
+
+        <div class="placeholder">
+          <div class="icon">📚</div>
+          <p>以下專書亦論及本罪，惟目前僅取得書目資訊、尚未取得可摘要引用之具體見解內容，待後續查證補充：</p>
+          <p style="font-size:13px;">甘添貴，《刑法各論(上)》，2009年6月，396頁／呂有文，《刑法各論》修訂版，1986年4月，420頁／盧映潔，《刑法分則新論》五版，2012年9月，738頁／郭棋湧，〈論毀損器物罪之構成要件〉，《檢察新論》第九期，2011年1月，90-107頁</p>
+          <span class="badge-todo">待補充</span>
+        </div>
+      </section>
+
+      <!-- 五、實務見解 -->
+      <section id="practice">
+        <h2 class="sec-title">五、實務見解</h2>
+
+        <div class="card">
+          <div class="card-head">最高法院47年台非字第34號刑事判例</div>
+          <p><b>案例事實：</b>甲、乙為鄰居，互有嫌隙。甲潛入乙之豬舍，將老鼠藥置入豬槽，企圖毒死乙飼養之豬隻五隻；豬隻食毒後經乙妻及時發覺搶救，倖免於死。</p>
+          <p><b>判決要旨：</b>原審法院認毀損罪（第354條）不以有實際損害為必要，只須有發生損害之危險已足，判處甲成立本罪；最高法院檢察署檢察總長則以毀損罪未設處罰未遂之規定為由提起非常上訴。最高法院認為，<span class="pos">毀損罪之成立，以使所毀損之物失其全部或一部之效用為構成要件</span>，豬隻既未死亡，即無喪失全部或一部效用，因本罪不罰未遂，故甲<span class="neg">不成立本罪</span>，改判無罪。</p>
+          <div class="source-note">📂 來源｜全國法規資料庫刑法§354相關判例；案情整理自高點法律專班論文導讀（月旦裁判時報第19期）<br>⚠️ 「判例」制度已於民國108年法院組織法修正後不再選編，本則現僅作為裁判先例參考，不具過去之拘束力。</div>
+        </div>
+
+        <div class="placeholder">
+          <div class="icon">⚖️</div>
+          <p>本條（§354）目前查無大法官解釋或憲法法庭判決，理由為：本條屬構成要件明確、爭議較低之財產犯罪規定，未見有人以此聲請違憲審查。</p>
+          <span class="badge-todo">查無資料</span>
+        </div>
+      </section>
+
+      <!-- 六、教學案例 -->
+      <section id="cases">
+        <h2 class="sec-title">六、教學案例</h2>
+        <p class="sec-sub">以下四則案例為 AI 虛構，僅供教學用途，非真實案件</p>
+
+        <div class="card">
+          <div class="card-head">案例一・「毀棄」型態</div>
+          <p><b>事實：</b>甲與乙為多年好友，某日因細故爭吵，甲盛怒之下，將乙珍藏多年、獨一無二的已故祖母親筆手作相冊直接丟入社區大樓的垃圾焚化投入口，相冊隨即遭焚燒殆盡。</p>
+          <p><b>爭點：</b>甲之行為是否構成「毀棄」？主觀上是否具毀損故意？</p>
+          <p><b>分析：</b>相冊為乙所有之動產，非文書亦非建築物、礦坑、船艦，屬第354條規範客體。甲將相冊丟入焚化口致其燒毀，使物之存在根本消滅，屬「銷毀」性質之「毀棄」行為。甲明知丟入焚化口將致相冊燒毀，仍執意為之，具直接故意。相冊雖無市場交易價格，但足以使乙受有財產上不利益，該當「足以生損害於他人」之結果要件。</p>
+          <p><b>結論：</b>甲之行為<span class="pos">該當第354條毀損罪之構成要件</span>，且無阻卻違法或阻卻罪責事由，成立毀損罪。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例二・「損壞」型態與告訴乃論</div>
+          <p><b>事實：</b>甲不滿鄰居乙深夜停車引擎聲擾人清夢，某夜持自備鑰匙沿乙自小客車車身刮出長條刮痕，車輛烤漆嚴重損傷，需送廠重新烤漆始能回復原狀。乙發現後一週始知悉係甲所為。</p>
+          <p><b>爭點：</b>「損壈」與「致令不堪用」之區辨；告訴期間之計算。</p>
+          <p><b>分析：</b>車輛外觀因刮痕而發生明顯不良變化，屬「損壞」而非單純「致令不堪用」（後者強調功能喪失而外觀未必改變）。烤漆受損足以貶損車輛之交易價值與使用觀感，該當「足以生損害」。本罪依第357條為告訴乃論之罪，乙應自知悉犯人之時起六個月內提出告訴。</p>
+          <p><b>結論：</b>甲成立第354條毀損罪；乙須留意告訴期間之起算與六個月期限。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例三・「致令不堪用」型態（無外觀變化）</div>
+          <p><b>事實：</b>甲為報復曾與其發生糾紛之店家老闆乙，於乙店內無人看管時，在乙用以處理訂單的收銀電腦上插入隨身碟植入惡意程式，導致該電腦當機、無法開機使用，但電腦外觀完好無損。</p>
+          <p><b>爭點：</b>未變更物之外觀，是否仍可能構成毀損罪？電腦主機是否屬第354條之「物」？</p>
+          <p><b>分析：</b>電腦主機為有體物，非文書亦非建築物等，屬第354條規範範圍。「致令不堪用」係指未變更物之形體，而消滅或減損物之全部或一部效用或價值之行為；電腦因中毒當機而完全無法使用，已達效用全部喪失之程度，該當「致令不堪用」。甲明知植入惡意程式將使電腦當機，仍執意為之，具毀損故意，該當本罪。</p>
+          <p><b>結論：</b>甲之行為<span class="pos">該當毀損罪</span>。惟此類行為於實務上亦可能另涉電腦犯罪相關規定而生法條競合或想像競合問題，因不在本次講義關聯條文範圍內，此處不深入分析，僅提醒讀者留意。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例四・違法性階層――緊急避難</div>
+          <p><b>事實：</b>某夜巷弄內丙住處失火，火勢迅速蔓延，甲見狀情急，發現鄰居乙停放路邊之機車置物廂內備有滅火器，遂持磚塊砸破置物廂玻璃取出滅火器撲滅火勢，成功阻止火勢延燒至相鄰住宅。乙返家後發現置物廂玻璃遭砸毀。</p>
+          <p><b>爭點：</b>甲砸毀他人置物廂之行為是否阻卻違法？</p>
+          <p><b>分析（依三階層完整檢驗）：</b></p>
+          <p>① 構成要件該當性：甲以磚塊砸破置物廂玻璃，屬「損壞」行為，玻璃損毀足以生損害於乙，甲主觀上明知並有意為之，具毀損故意，客觀與主觀構成要件均該當。</p>
+          <p>② 違法性：丙住處失火屬現在之緊急危難，甲為避免火勢延燒致生命身體財產之重大損害，別無其他更迅速有效手段可資利用，其砸毀置物廂取出滅火器之行為與所欲避免之危難間具相當性，未逾越必要程度，<span class="pos">得依第24條主張緊急避難，阻卻違法</span>。</p>
+          <p><b>結論：</b>甲雖該當構成要件，但因成立緊急避難而阻卻違法，<span class="neg">不成立毀損罪</span>。</p>
+        </div>
+      </section>
+
+      <!-- 七、申論練習題 -->
+      <section id="essay">
+        <h2 class="sec-title">七、申論練習題與模擬解答</h2>
+        <p class="sec-sub">以下四題為 AI 依本條要件自行出題（經使用者授權），供練習使用</p>
+
+        <div class="card">
+          <div class="card-head exam">題一</div>
+          <p class="q">甲因忌妒乙即將出國留學，趁乙不注意，將乙放在書桌上、記載三年來師長勉勵話語與同學留言之畢業紀念冊撕成碎片丟棄。試問甲之刑責為何？（提示：留意畢業紀念冊究屬「文書」抑或「物」）</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>畢業紀念冊上載有師長、同學之留言文字，足以為表示一定意思之證明，依第220條文書之定義及第352條規範意旨，應認屬「他人文書」，而非第354條所稱「前二條以外之物」。甲將紀念冊撕成碎片丟棄，使文書之存在及內容證明功能歸於消滅，該當「毀棄」或「損壞」行為；紀念冊承載乙珍貴之情感記憶與紀念價值，該行為足以生損害於乙。甲明知撕毀將致紀念冊滅失，仍執意為之，具直接故意。甲之行為並無阻卻違法或阻卻罪責事由。從而，甲應成立<span class="pos">第352條毀損文書罪</span>，而非第354條之毀損罪（第354條係以第352、353條以外之物為客體，具補充性質，本案應優先適用第352條）。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題二</div>
+          <p class="q">甲見乙將自行車停放於路邊，心生惡作劇念頭，將該自行車兩個輪胎的氣門芯拔除放氣，車胎因而完全洩氣，乙隔日發現後須將自行車牽至店家重新打氣及檢查氣門芯。試問甲之行為是否成立毀損罪？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>自行車為他人之物，非文書、建築物等，屬第354條規範客體。輪胎洩氣後，自行車雖外觀未有明顯毀損，但已喪失可供騎乘使用之功能，屬「未變更物之形體，而減損物之全部或一部效用」，該當「致令不堪用」之行為態樣。依通說見解，本罪為抽象危險犯，不以物之效用終局、永久喪失為必要，僅須有發生損害之危險即為已足；縱洩氣狀態可經打氣回復，仍於回復前使乙受有無法使用該自行車之不利益，並須支出打氣及檢查之勞費，足以生損害於乙。甲明知拔除氣門芯將致輪胎洩氣、車輛不堪使用，仍執意為之，具毀損故意。從而，甲之行為<span class="pos">該當第354條毀損罪</span>，且無阻卻違法、阻卻罪責事由，成立本罪；因屬告訴乃論之罪，須乙於六個月內提出告訴。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題三</div>
+          <p class="q">甲任職於乙公司，因遭資遣心生不滿，於離職當日利用尚未歸還之權限，將公司客戶資料庫檔案全數刪除，且未做任何備份，導致公司須耗費大量人力重新建置客戶資料。試問甲之行為是否成立第354條毀損罪？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>電磁紀錄依第220條規定，凡以電子、磁性、光學或其他相類方式所製成、供電腦處理之紀錄，均屬文書之列。客戶資料庫檔案係以電磁方式記錄乙公司之客戶資訊，具備意思表示證明之功能，應認屬第352條所稱之「他人文書」，而非第354條之「物」。甲將檔案全數刪除且未留備份，使該文書之內容永久滅失，屬「毀棄」行為；乙公司因此須耗費大量人力重建客戶資料，該當「足以生損害於他人」。甲明知刪除將致資料永久滅失，仍執意為之，具直接故意。從而，甲應成立<span class="pos">第352條毀損文書罪</span>。另須說明：此類刪除電磁紀錄之行為，實務上亦可能另涉刑法妨害電腦使用罪章之相關規定而生法條競合或想像競合問題，惟該部分條文不在本次講義關聯條文範圍內，此處不予深入分析，僅提示讀者留意可能的競合關係，實際案件仍應依個案調查結果判斷。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題四</div>
+          <p class="q">甲在便利商店內遭乙持刀行凶，情急之下，甲順手推倒店內置物貨架以阻擋乙逼近，貨架上多項商品因而摔落毀損。店家丙事後向甲求償並提出毀損告訴。試問甲之行為是否成立毀損罪？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>① 構成要件該當性：貨架上商品為丙所有之物，甲推倒貨架致商品摔落毀損，屬「損壞」行為，且足以生損害於丙；甲雖非以毀損商品為目的，然對於推倒貨架可能致商品損毀有所預見而不違背其本意，至少具間接故意，客觀與主觀構成要件均該當。② 違法性：乙持刀行凶對甲構成現在不法之侵害，甲推倒貨架之行為係為防衛自身生命身體安全所為之反擊手段，其防衛行為本身係針對乙之侵害而為（阻擋乙逼近），非直接對丙之財產法益發動攻擊，然因客觀上造成第三人丙之財產受損，應循緊急避難（而非正當防衛，因防衛之對象須為侵害人本身，本案受損法益歸屬於侵害人以外之第三人丙）之法理判斷：甲面臨現在之生命身體急迫危難，除推倒貨架別無更迅速手段可資利用，其避難行為與所保護之法益（生命身體）相較於受損法益（店家商品財產），依法益權衡原則，未過當，<span class="pos">應可依第24條主張緊急避難，阻卻違法</span>。③ 結論：甲雖該當構成要件，惟因成立緊急避難而阻卻違法，<span class="neg">不成立毀損罪</span>；丙如受有損害，僅得依民法相關規定另行請求損害賠償或補償。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 八、速查卡 -->
+      <section id="cheatsheet">
+        <h2 class="sec-title">八、速查卡</h2>
+        <div class="cheat">
+          <div class="wm">354</div>
+          <h4>刑法第354條・毀損罪　速查卡</h4>
+          <table style="margin:0;">
+            <tr><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">要素</th><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">重點</th></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">客體</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">他人之物（排除文書§352、建築物等§353）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">行為</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">毀棄／損壞／致令不堪用（三者並列獨立）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">結果</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">足以生損害（抽象危險犯，不以實害為必要）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">主觀</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">故意（直接／間接皆可），不罰過失</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">程序</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">告訴乃論（§357），六個月內提告</td></tr>
+          </table>
+          <div class="mnemonic">「棄壞不堪，三態並存；有損即罰，過失不論」</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+const sections = document.querySelectorAll('section[id]');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      document.querySelectorAll(`a[href="#${entry.target.id}"]`).forEach(l=>l.classList.add('active'));
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+links.forEach(l=>{
+  l.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const target = document.querySelector(l.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
