@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第358條｜入侵電腦或其相關設備罪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper-outer:#f3ede0;
+    --paper-inner:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45:rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--paper-outer);color:var(--ink);font-family:'Noto Sans TC',sans-serif;line-height:1.75;}
+  h1,h2,h3,.serif{font-family:'Noto Serif TC',serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex;max-width:1280px;margin:0 auto;}
+  nav.side{width:240px;flex:none;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;background:var(--paper-outer);border-right:1px solid var(--border);}
+  nav.side ul{list-style:none;padding:0;margin:0;}
+  nav.side li{margin-bottom:4px;}
+  nav.side a{display:block;padding:8px 12px;border-radius:6px;font-size:14px;text-decoration:none;color:var(--ink);}
+  nav.side a.active{background:var(--paper-card);color:var(--indigo);font-weight:700;box-shadow:inset 3px 0 0 var(--indigo);}
+  nav.side a.todo{color:var(--ink-45);}
+  main{flex:1;min-width:0;background:var(--paper-inner);box-shadow:-6px 0 18px -14px rgba(22,35,59,.35);}
+  .topnav{display:none;}
+  section{padding:56px 64px;border-bottom:1px solid var(--border);}
+  section:last-of-type{border-bottom:none;}
+  .cover{padding:70px 64px 56px;position:relative;}
+  .eyebrow{display:inline-block;font-size:13px;letter-spacing:.12em;color:var(--indigo);background:var(--paper-card);border:1px solid var(--border);padding:4px 12px;border-radius:20px;margin-bottom:18px;}
+  .cover h1{font-size:38px;font-weight:900;margin:0 0 8px;color:var(--ink);}
+  .cover .sub{font-size:16px;color:var(--ink-45);margin-bottom:14px;}
+  .cover-meta{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px;}
+  .cover-meta span{font-size:12.5px;padding:4px 10px;border-radius:14px;border:1px solid var(--indigo);color:var(--indigo);background:var(--paper-card);}
+  .ver-badge{border-color:var(--seal)!important;color:var(--seal)!important;}
+  .seal-mark{position:absolute;top:56px;right:64px;width:96px;height:96px;border:3px solid var(--seal);border-radius:8px;display:flex;align-items:center;justify-content:center;transform:rotate(-8deg);color:var(--seal);writing-mode:vertical-rl;font-family:'Noto Serif TC',serif;font-weight:900;font-size:20px;letter-spacing:4px;}
+  .toc{background:var(--paper-card);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-top:10px;}
+  .toc h3{margin:0 0 10px;font-size:15px;color:var(--indigo);}
+  .toc ol{margin:0;padding-left:20px;font-size:14px;}
+  h2.sec-title{font-size:24px;border-left:4px solid var(--brass);padding-left:14px;margin:0 0 26px;}
+  h3.sub-title{font-size:17px;border-left:3px solid var(--indigo);padding-left:10px;margin:30px 0 12px;}
+  .article-box{position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);border-radius:6px;padding:22px 26px;margin-bottom:18px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,.06);}
+  .article-box .num-wm{position:absolute;right:14px;bottom:-10px;font-family:'Noto Serif TC',serif;font-weight:900;font-size:90px;color:var(--ink);opacity:.06;line-height:1;user-select:none;}
+  .article-box .tag{font-size:12.5px;color:var(--indigo);font-weight:700;margin-bottom:6px;display:block;}
+  .article-box.related{border-left-color:var(--brass);}
+  .article-box.related .tag{color:var(--brass);}
+  table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:14.5px;background:var(--paper-card);}
+  th,td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--ink);color:var(--paper-inner);}
+  tr:nth-child(even) td{background:var(--row-alt);}
+  .pos{font-weight:700;color:var(--ink);background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .neg{font-weight:700;color:var(--seal);}
+  .case-card, .essay-card{background:var(--paper-card);border-radius:10px;box-shadow:0 1px 2px rgba(22,35,59,.08),0 8px 20px -14px rgba(22,35,59,.35);margin-bottom:26px;overflow:hidden;}
+  .case-card .hd{background:var(--indigo);color:#fff;padding:10px 20px;font-family:'Noto Serif TC',serif;font-weight:700;}
+  .essay-card .hd{background:var(--ink);color:#fff;padding:10px 20px;font-family:'Noto Serif TC',serif;font-weight:700;}
+  .case-card .bd, .essay-card .bd{padding:20px 24px;}
+  .case-card .bd h4, .essay-card .bd h4{margin:14px 0 6px;font-size:14.5px;color:var(--indigo);}
+  .relation-wrap{margin:18px 0 6px;text-align:center;}
+  .relation-note{font-size:13px;color:var(--ink-45);margin-top:6px;}
+  .quickcard{background:var(--ink);color:var(--paper-inner);border-radius:12px;padding:30px 34px;position:relative;overflow:hidden;}
+  .quickcard .wm{position:absolute;right:10px;bottom:-30px;font-family:'Noto Serif TC',serif;font-weight:900;font-size:160px;opacity:.08;}
+  .quickcard h3{color:#fff;margin-top:0;}
+  .mnemonic{background:var(--seal);color:#fff;padding:14px 18px;border-radius:8px;font-family:'Noto Serif TC',serif;font-size:17px;font-weight:700;display:inline-block;margin-top:10px;}
+  .placeholder{border:2px dashed var(--brass);border-radius:10px;padding:32px;text-align:center;color:var(--ink-45);background:repeating-linear-gradient(135deg,var(--paper-card),var(--paper-card) 10px,#f1e9d4 10px,#f1e9d4 20px);}
+  .placeholder .badge{display:inline-block;margin-top:10px;background:var(--brass);color:#fff;font-size:12px;padding:3px 12px;border-radius:12px;}
+  .link-note{border:1px dashed var(--indigo);border-radius:10px;padding:16px 20px;font-size:14px;margin-top:20px;}
+  .src-note{font-size:12.5px;color:var(--ink-45);margin-top:-4px;margin-bottom:16px;}
+  @media (max-width:980px){
+    nav.side{display:none;}
+    .layout{display:block;}
+    .topnav{display:flex;overflow-x:auto;gap:8px;position:sticky;top:0;background:var(--paper-outer);padding:10px 14px;border-bottom:1px solid var(--border);z-index:10;}
+    .topnav a{flex:none;font-size:13px;padding:6px 14px;border-radius:16px;background:var(--paper-card);border:1px solid var(--border);text-decoration:none;color:var(--ink);}
+    .topnav a.active{background:var(--indigo);color:#fff;border-color:var(--indigo);}
+    section{padding:34px 20px;}
+    .cover{padding:34px 20px 30px;}
+    .seal-mark{position:static;transform:none;writing-mode:horizontal-tb;width:auto;height:auto;display:inline-flex;padding:6px 14px;margin-bottom:16px;}
+    .cover h1{font-size:27px;}
+  }
+</style>
+</head>
+<body>
+<div class="topnav" id="topnav"></div>
+<div class="layout">
+  <nav class="side" id="sidenav">
+    <ul>
+      <li><a href="#cover">封面</a></li>
+      <li><a href="#art">條文原文</a></li>
+      <li><a href="#struct">條文結構</a></li>
+      <li><a href="#elements">犯罪三階層解析</a></li>
+      <li><a href="#doctrine">學說見解</a></li>
+      <li><a href="#practice">實務見解</a></li>
+      <li><a href="#cases">教學案例</a></li>
+      <li><a href="#essay">申論練習題</a></li>
+      <li><a href="#quickcard">速查卡</a></li>
+    </ul>
+  </nav>
+  <main>
+    <section class="cover" id="cover">
+      <span class="eyebrow">刑法分則 · 第三十六章 妨害電腦使用罪</span>
+      <div class="seal-mark">入侵</div>
+      <h1>第358條</h1>
+      <div class="sub">入侵電腦或其相關設備罪</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立日期：2026-08-27</span>
+        <img class="visitor" src="https://visitor-badge.laobi.icu/badge?page_id=bigwolfQQ.criminal.358" alt="訪客計數" style="height:20px;vertical-align:middle;border-radius:10px;">
+      </div>
+      <div class="toc">
+        <h3>本講義目錄</h3>
+        <ol>
+          <li>條文原文（第358條及關聯條文359～362條）</li>
+          <li>條文結構解析</li>
+          <li>要件逐項解析</li>
+          <li>學說見解</li>
+          <li>實務見解</li>
+          <li>教學案例</li>
+          <li>申論練習題與模擬解答</li>
+          <li>速查卡</li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="art">
+      <h2 class="sec-title">條文原文</h2>
+      <div class="article-box">
+        <span class="tag">刑法第358條（目標條文）</span>
+        無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦或其相關設備者，處三年以下有期徒刑、拘役或科或併科三十萬元以下罰金。
+        <div class="num-wm">358</div>
+      </div>
+      <div class="article-box related">
+        <span class="tag">刑法第359條（關聯條文）</span>
+        無故取得、刪除或變更他人電腦或其相關設備之電磁紀錄，致生損害於公眾或他人者，處五年以下有期徒刑、拘役或科或併科六十萬元以下罰金。
+        <div class="num-wm">359</div>
+      </div>
+      <div class="article-box related">
+        <span class="tag">刑法第360條（關聯條文）</span>
+        無故以電腦程式或其他電磁方式干擾他人電腦或其相關設備，致生損害於公眾或他人者，處三年以下有期徒刑、拘役或科或併科三十萬元以下罰金。
+        <div class="num-wm">360</div>
+      </div>
+      <div class="article-box related">
+        <span class="tag">刑法第361條（關聯條文）</span>
+        對於公務機關之電腦或其相關設備犯前三條之罪者，加重其刑至二分之一。
+        <div class="num-wm">361</div>
+      </div>
+      <div class="article-box related">
+        <span class="tag">刑法第362條（關聯條文）</span>
+        製作專供犯本章之罪之電腦程式，而供自己或他人犯本章之罪，致生損害於公眾或他人者，處五年以下有期徒刑、拘役或科或併科六十萬元以下罰金。
+        <div class="num-wm">362</div>
+      </div>
+    </section>
+
+    <section id="struct">
+      <h2 class="sec-title">條文結構解析</h2>
+      <h3 class="sub-title">第358條構成要件架構</h3>
+      <table>
+        <tr><th>層次</th><th>內容</th></tr>
+        <tr><td>行為主體</td><td>一般犯，任何人皆可構成</td></tr>
+        <tr><td>行為客體</td><td>他人之電腦或其相關設備</td></tr>
+        <tr><td>行為態樣（擇一即該當）</td><td>①無故輸入他人帳號密碼　②破解使用電腦之保護措施　③利用電腦系統之漏洞</td></tr>
+        <tr><td>行為結果</td><td>入侵他人之電腦或其相關設備</td></tr>
+        <tr><td>主觀要件</td><td>故意（須認識自己無正當理由，仍以上述手段進入他人電腦）</td></tr>
+        <tr><td>是否以損害結果為必要</td><td class="neg">否</td></tr>
+        <tr><td>既未遂區分</td><td>行為完成（達到隨時可取得電腦內部資訊之狀態）即為既遂，不待實際取得、刪除或變更資料</td></tr>
+      </table>
+      <h3 class="sub-title">第358條與第359條、第360條對照表</h3>
+      <table>
+        <tr><th>條號</th><th>行為核心</th><th>是否須「致生損害」</th><th>法定刑</th></tr>
+        <tr><td>第358條</td><td>入侵電腦（取得支配可能性）</td><td class="neg">不須</td><td>3年以下、拘役、或科或併科30萬元以下罰金</td></tr>
+        <tr><td>第359條</td><td>取得、刪除或變更電磁紀錄</td><td class="pos">須</td><td>5年以下、拘役、或科或併科60萬元以下罰金</td></tr>
+        <tr><td>第360條</td><td>以電腦程式或電磁方式干擾</td><td class="pos">須</td><td>3年以下、拘役、或科或併科30萬元以下罰金</td></tr>
+      </table>
+      <p style="font-size:14.5px;color:var(--ink-45)">第361條為對公務機關電腦犯前三條之罪的加重規定（加重至二分之一）；第362條規範製作專供犯本章之罪之電腦程式（如駭客工具），屬本章之預備／幫助行為獨立處罰化規定。</p>
+    </section>
+
+    <section id="elements">
+      <h2 class="sec-title">犯罪三階層逐項解析</h2>
+
+      <h3 class="sub-title">一、構成要件該當性</h3>
+      <p style="font-weight:700;color:var(--indigo);margin-bottom:4px">（一）客觀構成要件</p>
+      <table>
+        <tr><th>要素</th><th>說明</th></tr>
+        <tr><td>行為主體</td><td>一般犯，任何人皆可構成，不限特定身分</td></tr>
+        <tr><td>行為客體</td><td>他人之電腦或其相關設備</td></tr>
+        <tr><td>實行行為（擇一即該當）</td><td>①無故輸入他人帳號密碼　②破解使用電腦之保護措施　③利用電腦系統之漏洞</td></tr>
+        <tr><td>結果</td><td>入侵他人之電腦或其相關設備</td></tr>
+        <tr><td>因果關係與客觀歸責</td><td>行為人所實行之入侵手段須為取得電腦支配可能性之直接原因；若入侵結果係因他人另行提供權限等介入因素所致，應另行判斷歸責是否中斷</td></tr>
+      </table>
+
+      <p style="font-weight:700;color:var(--indigo);margin:20px 0 4px">「無故」之意涵</p>
+      <p>指欠缺阻卻違法之正當理由或授權基礎，即未經對電腦資訊具處分權人本人、管理機關或其同意、授權之人同意，而擅自為之。若行為人本有合法授權（如系統管理員之職務授權範圍內操作），縱使進入電腦系統，亦非「無故」。</p>
+
+      <p style="font-weight:700;color:var(--indigo);margin:20px 0 4px">三種入侵手段（擇一即該當）</p>
+      <table>
+        <tr><th>手段</th><th>說明／例示</th></tr>
+        <tr><td>無故輸入他人帳號密碼</td><td>包含輸入他人真實帳密，或輸入他人擁有之第三人帳密而登入第三人系統，即使未致生任何損害，仍屬既遂</td></tr>
+        <tr><td>破解使用電腦之保護措施</td><td>例如避開防火牆、破解加密機制等，積極突破既設之安全防護</td></tr>
+        <tr><td>利用電腦系統之漏洞</td><td>例如利用系統更新前之漏洞發動零時差攻擊（zero-day attack）進入系統</td></tr>
+      </table>
+
+      <p style="font-weight:700;color:var(--indigo);margin:20px 0 4px">「入侵」之認定標準</p>
+      <p>依實務見解（詳後述最高法院112年度台上字第2395號判決），行為人是否入侵他人電腦或其相關設備，應依對資訊內容具有處分權人之觀點判斷：依處分權人之意願，行為人不應取得該電腦資訊之支配，而行為人卻取得該支配可能性時，即屬入侵；只要達到「隨時可取得電腦內部資訊」之狀態，即為已足，不以行為人已實際瀏覽、下載或利用該資訊為必要。</p>
+
+      <p style="font-weight:700;color:var(--indigo);margin:20px 0 4px">既遂時點與第359條、第360條之區別</p>
+      <p>第358條之構成要件文義並無「致生損害於公眾或他人」之要素，與第359條、第360條明顯不同，故解釋上第358條僅須完成入侵行為（取得隨時可支配電腦資訊之狀態）即為既遂，不待發生任何實害或具體損害結果，性質上較接近抽象危險犯／舉動犯之結構。行為人入侵後若進一步取得、刪除、變更電磁紀錄，或以程式干擾系統，則可能另該當第359條或第360條，此時第358條之入侵行為與後續行為間之罪數關係（想像競合或法條競合），應依具體個案行為態樣判斷。</p>
+
+      <p style="font-weight:700;color:var(--indigo);margin-bottom:4px">（二）主觀構成要件</p>
+      <p>本罪僅處罰故意犯，不罰過失。行為人須認識自己係無正當理由，而以輸入他人帳號密碼、破解保護措施或利用系統漏洞等方式進入他人電腦或其相關設備，且有意使該入侵結果發生（直接故意），或預見入侵可能發生而不違背其本意（間接故意），均該當主觀構成要件。若行為人誤信自己有合法授權（如誤認已獲同意）而登入，則屬構成要件錯誤，阻卻故意之成立。</p>
+
+      <h3 class="sub-title">二、違法性</h3>
+      <p>構成要件該當後，須進一步審查有無阻卻違法事由（如正當防衛、緊急避難、依法令之行為、業務上正當行為等）。就第358條之典型入侵行為而言，實務上較少見有正當化事由可資主張；惟若行為人係依法令執行職務（如經法院核發搜索票之數位鑑識人員、依個人資料保護法或相關法規執行資安檢測且經授權者），則可能構成「依法令之行為」而阻卻違法。本條並非當然不涉及違法性階層判斷之條文，惟一般情形下，若查無上述特殊事由，即應肯認違法性具備。</p>
+
+      <h3 class="sub-title">三、有責性（罪責）</h3>
+      <p>違法性確認後，最後審查行為人有無責任能力（刑法第18條、第19條）、有無違法性認識，及有無期待可能性等阻卻或減輕罪責事由。第358條之行為人若為完全責任能力人，且對其行為之違法性有正常認識，通常不生罪責阻卻或減輕之問題；惟若行為人於行為時因精神障礙或其他心智缺陷，致其辨識行為違法或依其辨識而行為之能力顯著降低或欠缺，則有第19條減輕或阻卻罪責之適用，應依具體個案精神鑑定結果認定。</p>
+
+      <div class="placeholder">
+        📖
+        <div>「自動登入（如瀏覽器COOKIE）是否構成『輸入』帳號密碼」之爭議，於本講義「實務見解」章節已有初步整理（最高法院107年度台上字第4275號），惟相關學說深入討論尚待補充</div>
+        <span class="badge">待補充</span>
+      </div>
+    </section>
+
+    <section id="doctrine">
+      <h2 class="sec-title">學說見解</h2>
+
+      <h3 class="sub-title">保護法益之爭議</h3>
+      <table>
+        <tr><th>學者</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>黃榮堅</td>
+          <td>質疑妨害電腦使用罪章目前之保護法益設計，指出實務上電腦多數時候僅是犯罪之媒介（例如行為人利用電腦設備從事詐欺、侮辱他人，或侵害他人生命、隱私等法益），電腦本身未必是應獨立保護之法益核心</td>
+          <td>轉引自 legis-pedia.com（經 lawplayer.com 轉引，非原始文獻直接核實）</td>
+        </tr>
+        <tr>
+          <td>薛智仁</td>
+          <td>同黃榮堅見解方向，並進一步指出現行法保護方向並不明確；例如無故取得他人電磁紀錄之犯罪（第359條），解釋上應朝「保護個人財產」之方向理解，並建議未來修法朝「保護個人秘密」之方向調整</td>
+          <td>同上（轉引來源）</td>
+        </tr>
+      </table>
+      <p class="src-note">※以上二則學說見解均為間接轉引，尚未經原始文獻（期刊或專書）核實頁碼與完整脈絡，引用時請留意。</p>
+
+      <h3 class="sub-title">「入侵」手段之限定解釋</h3>
+      <div class="article-box related" style="border-left-color:var(--indigo)">
+        <span class="tag">學說見解（元照出版焦點判決文章轉引，未署名）</span>
+        入侵行為之態樣，限於條文明定之「無故輸入他人帳號密碼」「破解使用電腦之保護措施」「利用電腦系統之漏洞」三種方式，其共通特徵是均須破壞電腦既有之安全控制機制，造成人民對電腦網路溝通系統安全之不信賴。因此，若行為人僅以偷窺他人電腦螢幕之方式知悉內容，或以電子郵件夾帶病毒程式攻擊他人電腦，因未破壞任何電腦安全防護措施，即與本條之構成要件不該當。
+      </div>
+      <p class="src-note">出處：元照出版《刑法第358條入侵電腦罪之「入侵」應如何解釋——最高院112台上2395》焦點判決文章（2025/09/19發布）</p>
+
+      <div class="placeholder">
+        📚
+        <div>張天一，〈妨害電腦使用罪章之解釋與適用〉，月旦法學教室，251期，2023年9月，21-24頁 — 已確認出處，內容摘要待補充</div>
+        <span class="badge">待補充</span>
+      </div>
+    </section>
+
+    <section id="practice">
+      <h2 class="sec-title">實務見解</h2>
+
+      <h3 class="sub-title">最高法院112年度台上字第2395號刑事判決</h3>
+      <table>
+        <tr><th>項目</th><th>內容</th></tr>
+        <tr><td>爭點</td><td>刑法第358條入侵電腦罪之「入侵」應如何解釋？</td></tr>
+        <tr><td>案例事實概要</td><td>本案為政府（勞動力發展署）為提供就業服務所設立之網站，須先註冊會員（帳號為國民身分證統一編號，首次登入預設密碼為「12345678」）方得登入。行為人未經該網站有處分權之會員本人或管理機關同意或授權，即以會員之身分證字號及預設密碼多次成功登入該網站</td></tr>
+        <tr><td>判決要旨</td><td>行為人是否入侵他人電腦或其相關設備，應依對資訊內容具有處分權人之觀點判斷：依處分權人之意願，行為人不應取得該電腦資訊之支配，而行為人卻取得支配時，即屬入侵；只要達到隨時可取得電腦內部資訊之情形，即為已足。本案網站之會員登入機制已與一般公開網站有別，其電腦資訊秘密已建制在特別保護之下，故非會員本人、管理機關或經其同意授權者，不得以會員之身分證字號或預設密碼登入瀏覽；行為人之登入行為構成無故入侵（因對象為公務機關網站，另涉第361條加重規定）</td></tr>
+        <tr><td>查詢方式</td><td>本判決可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入案號【112年度，台上字，2395號】自行查閱全文</td></tr>
+      </table>
+      <p class="src-note">來源：元照出版焦點判決文章轉引選錄內容，尚未經司法院原文逐字核對，正式引用前建議自行查閱全文核實</p>
+
+      <h3 class="sub-title">最高法院107年度台上字第4275號刑事判決</h3>
+      <table>
+        <tr><th>項目</th><th>內容</th></tr>
+        <tr><td>爭點</td><td>透過瀏覽器COOKIE「自動登入」他人臉書帳號，是否該當「輸入他人帳號密碼」？</td></tr>
+        <tr><td>判決要旨（轉引）</td><td>臉書使用者得以將個人帳號、密碼等資料預先儲存於瀏覽器COOKIE，日後連接臉書網站時，透過COOKIE自動輸入所儲存之帳密資料即可自動登入，無需逐次重複輸入。故縱行為人有使用他人臉書帳號之情形，亦可能係因該自動登入功能所致，未必即有「輸入」他人帳號密碼之行為，難遽認有無故入侵他人電腦罪嫌，其行為核與第358條之構成要件不該當</td></tr>
+        <tr><td>查詢方式</td><td>本判決可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入案號【107年度，台上字，4275號】自行查閱全文</td></tr>
+      </table>
+      <p class="src-note">來源：元照出版焦點判決文章內轉引原判決文字節錄，尚未經司法院原文逐字核對</p>
+
+      <h3 class="sub-title">大法官解釋／憲法法庭判決</h3>
+      <p>本條（第358條）目前查無大法官解釋或憲法法庭判決，理由為：本條屬保護電腦使用安全之刑事處罰規範，性質上尚未見有人以此聲請違憲審查。</p>
+    </section>
+
+    <section id="cases">
+      <h2 class="sec-title">教學案例</h2>
+      <p class="src-note">以下案例為教學用途，情節經 AI 虛構設計，並非真實案件，僅供對應構成要件練習理解之用。</p>
+
+      <div class="case-card">
+        <div class="hd">案例一：知悉密碼登入前任社群帳號</div>
+        <div class="bd">
+          <h4>事實</h4>
+          <p>甲與乙原為男女朋友，交往期間甲曾知悉乙之通訊軟體登入密碼。兩人分手後，甲因懷疑乙與他人另有曖昧，未經乙同意，仍以先前知悉之密碼登入乙之通訊軟體帳號，瀏覽乙與他人之對話紀錄，惟登入後並未刪除或變更任何內容，亦未將對話紀錄外流。</p>
+          <h4>爭點</h4>
+          <p>甲是否成立刑法第358條之罪？分手後單純「知悉」密碼並持續使用，是否仍該當「無故」？</p>
+          <h4>分析</h4>
+          <p>甲於交往期間取得密碼之初，固有乙之同意授權；然雙方分手後，乙未再同意甲繼續使用該密碼登入其帳號，甲亦明知雙方關係已生變，仍執意登入，已欠缺乙現時之同意基礎，該當「無故」要件。甲以先前知悉之密碼登入乙之帳號，屬「無故輸入他人帳號密碼」之入侵手段。依實務見解，甲登入後即已達到隨時可取得乙帳號內部資訊之狀態，縱未進一步刪除、變更或外流資料，亦不影響第358條之既遂認定；甲若進一步變更或刪除對話紀錄，則另涉第359條。</p>
+          <h4>結論</h4>
+          <p class="pos">甲成立刑法第358條無故入侵電腦或其相關設備罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="hd">案例二：離職員工逾越授權登入公司系統</div>
+        <div class="bd">
+          <h4>事實</h4>
+          <p>丙原任職於A公司資訊部門，職務上經公司授權得使用管理員帳號登入公司內部客戶資料系統，惟其授權範圍僅限於「系統維護」用途。丙離職前夕，明知其已無正當理由繼續使用該管理員帳號，仍利用尚未被停用之帳密，登入系統瀏覽客戶名單，欲攜往新任職之競爭公司丁使用。A公司資訊系統管理者戊事後發現丙之登入紀錄。</p>
+          <h4>爭點</h4>
+          <p>丙原有職務上之合法授權，離職前之登入行為是否仍該當「無故」？涉及丙、A公司（戊）、丁三方關係應如何釐清？</p>
+          <div class="relation-wrap">
+            <svg viewBox="0 0 640 340" width="100%" style="max-width:560px">
+              <rect x="30" y="30" width="200" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="130" y="55" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">A公司（戊）</text>
+              <text x="130" y="75" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">系統管理權人／授權來源</text>
+
+              <rect x="410" y="30" width="200" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="510" y="55" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">丁（新公司）</text>
+              <text x="510" y="75" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">資料欲流向之對象</text>
+
+              <rect x="220" y="220" width="200" height="80" rx="6" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.8"/>
+              <text x="320" y="245" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">丙（離職員工）</text>
+              <text x="320" y="263" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">職務授權已逾越</text>
+              <text x="320" y="280" text-anchor="middle" font-family="Noto Sans TC" font-size="11.5" fill="#9c2b3a">離職前逾越授權登入（爭點）</text>
+
+              <line x1="130" y1="100" x2="300" y2="220" stroke="#2c4a76" stroke-width="1.5" marker-end="url(#arrow)"/>
+              <text x="175" y="165" font-family="Noto Sans TC" font-size="12" fill="#2c4a76">職務授權（維護用途）</text>
+
+              <line x1="360" y1="220" x2="470" y2="100" stroke="#a9832f" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrow2)"/>
+              <text x="380" y="165" font-family="Noto Sans TC" font-size="12" fill="#a9832f">資料是否流出（待分析）</text>
+
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2c4a76"/></marker>
+                <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#a9832f"/></marker>
+              </defs>
+            </svg>
+            <div class="relation-note">爭點核心：丙原有合法職務授權，但於離職前使用範圍已逾越「系統維護」目的，是否仍該當「無故」</div>
+          </div>
+          <h4>分析</h4>
+          <p>丙固然原經A公司授權得使用管理員帳號，然該授權範圍限於「系統維護」之職務目的。丙於離職前基於個人另謀職務之私利，登入系統瀏覽客戶名單並欲攜往新公司使用，已逾越授權範圍，其登入行為之正當性基礎已然消失，應認該當「無故」。丙以原有帳密登入系統，屬「無故輸入他人帳號密碼」之入侵手段；依前述實務見解，丙登入後已達到隨時可取得客戶名單之狀態，第358條即為既遂。丙若進一步下載、複製客戶名單並攜出，則另涉第359條無故取得電磁紀錄罪；因A公司為私人公司而非公務機關，尚無第361條加重規定之適用。</p>
+          <h4>結論</h4>
+          <p class="pos">丙成立刑法第358條無故入侵電腦或其相關設備罪；若進一步取得客戶名單電磁紀錄，另成立第359條，二者依具體行為態樣論處。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="hd">案例三：破解鄰居無線網路密碼進入其電腦</div>
+        <div class="bd">
+          <h4>事實</h4>
+          <p>己與鄰居庚同住一棟大樓，庚家中設有無線網路分享器並設定WPA2加密保護。己為節省自家網路費用，以破解軟體反覆嘗試破解庚之無線網路加密金鑰，成功連入庚之網路後，進一步發現庚家中一台未設密碼之電腦已開啟網路資料夾分享，己遂透過網路連線進入該電腦瀏覽其中之影音檔案，未下載亦未刪改任何內容。</p>
+          <h4>爭點</h4>
+          <p>己破解無線網路加密之行為，與其後進入庚電腦瀏覽檔案之行為，應如何評價？是否成立第358條？</p>
+          <h4>分析</h4>
+          <p>己破解庚之無線網路WPA2加密金鑰，屬突破既設之無線網路安全防護機制，該當「破解使用電腦之保護措施」之入侵手段；己未經庚同意即為之，欠缺正當理由，該當「無故」。己連入網路後，進一步透過網路連線進入庚之電腦瀏覽其中檔案，此部分電腦雖未另設密碼保護，然該電腦仍屬「他人之電腦或其相關設備」，己未經庚同意進入瀏覽，依處分權人庚之觀點判斷，庚並無同意任何人得經其無線網路連入該電腦之意，己之行為已達到隨時可取得該電腦內部資訊之狀態，仍屬入侵。至於該電腦本身是否另設密碼保護，僅影響入侵手段之判斷（此部分態樣較接近「利用系統漏洞」，即利用該電腦未設防護之疏漏），不影響入侵行為本身之評價。</p>
+          <h4>結論</h4>
+          <p class="pos">己成立刑法第358條無故入侵電腦或其相關設備罪（破解無線網路保護措施部分與其後進入電腦瀏覽部分，屬同一入侵行為之接續實行，論以一罪）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="hd">案例四：製作並散布入侵程式供他人犯罪使用</div>
+        <div class="bd">
+          <h4>事實</h4>
+          <p>辛具備程式設計專長，撰寫一款可自動掃描並利用特定作業系統漏洞入侵他人電腦之工具程式，並將該程式上傳至網路論壇供不特定人下載。壬下載該程式後，用以入侵癸所經營公司之內部伺服器，取得癸公司客戶之個人資料並刪除部分財務紀錄，致癸公司受有損害。</p>
+          <h4>爭點</h4>
+          <p>辛、壬、癸三方之刑責應如何區分？辛僅提供程式工具、未實際入侵癸之系統，是否仍須負責？</p>
+          <div class="relation-wrap">
+            <svg viewBox="0 0 640 340" width="100%" style="max-width:560px">
+              <rect x="30" y="30" width="200" height="70" rx="6" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.8"/>
+              <text x="130" y="55" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">辛（程式製作者）</text>
+              <text x="130" y="75" text-anchor="middle" font-family="Noto Sans TC" font-size="11.5" fill="#9c2b3a">製作並散布入侵程式（爭點）</text>
+
+              <rect x="410" y="30" width="200" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="510" y="55" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">壬（下載使用者）</text>
+              <text x="510" y="75" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">實際執行入侵行為</text>
+
+              <rect x="220" y="220" width="200" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="320" y="245" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">癸（公司）</text>
+              <text x="320" y="263" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">遭入侵並受有損害之被害人</text>
+
+              <line x1="230" y1="65" x2="410" y2="65" stroke="#a9832f" stroke-width="1.5" stroke-dasharray="5 5" marker-end="url(#arrow3)"/>
+              <text x="320" y="55" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#a9832f">於論壇提供程式下載</text>
+
+              <line x1="470" y1="100" x2="360" y2="220" stroke="#2c4a76" stroke-width="1.5" marker-end="url(#arrow4)"/>
+              <text x="460" y="165" font-family="Noto Sans TC" font-size="12" fill="#2c4a76">入侵並取得、刪除資料</text>
+
+              <defs>
+                <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#a9832f"/></marker>
+                <marker id="arrow4" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#2c4a76"/></marker>
+              </defs>
+            </svg>
+            <div class="relation-note">爭點核心：辛僅製作、散布程式，未親自入侵癸之系統，其刑責應依第362條獨立評價</div>
+          </div>
+          <h4>分析</h4>
+          <p>壬下載辛製作之程式，用以入侵癸公司伺服器，取得客戶個人資料並刪除部分財務紀錄，壬之行為該當「利用電腦系統之漏洞」而入侵（第358條），且進一步取得、刪除電磁紀錄致生損害於癸公司（第359條），依具體行為態樣，第358條之入侵行為應為第359條所吸收評價，論以第359條一罪為已足。辛雖未親自入侵癸之系統，然其製作專供犯本章之罪之電腦程式，並散布供不特定人（包含壬）下載使用，且該程式已實際供壬用以犯罪，致生損害於癸公司，該當刑法第362條「製作專供犯本章之罪之電腦程式，而供自己或他人犯本章之罪，致生損害於公眾或他人」之獨立處罰規定，無須再論以第358條、第359條之幫助犯或教唆犯，逕依第362條處斷即可。</p>
+          <h4>結論</h4>
+          <p class="pos">壬成立刑法第359條無故取得、刪除或變更電磁紀錄罪（第358條之入侵行為為其所吸收）；辛成立刑法第362條製作供犯罪之電腦程式罪，二人分別依其行為態樣論處，不成立共同正犯。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="essay">
+      <h2 class="sec-title">申論練習題與模擬解答</h2>
+      <p class="src-note">📝 以下題目由 AI 依使用者授權自行編擬，非取自真實考題來源，僅供練習參考。</p>
+
+      <div class="essay-card">
+        <div class="hd">申論題一</div>
+        <div class="bd">
+          <h4>題目</h4>
+          <p>甲任職於某科技公司資訊部門，因不滿主管乙之考核結果，明知自己並未經授權使用乙之個人辦公電腦帳號，仍利用乙上班時忘記將電腦上鎖之機會，於乙離座期間以肉眼記下乙先前輸入之開機密碼，於乙下班後再次進入辦公室，以該密碼開啟乙之電腦並瀏覽乙之個人信件夾，惟未刪除或變更任何檔案。試問甲之刑責為何？</p>
+          <h4>模擬解答</h4>
+          <p>刑法第358條規定，無故輸入他人帳號密碼、破解使用電腦之保護措施或利用電腦系統之漏洞，而入侵他人之電腦或其相關設備者，構成本罪。甲並非乙電腦之處分權人，亦未經乙或公司管理機關同意授權使用該電腦，甲基於對主管考核不滿之私人動機而入侵，欠缺任何正當理由，該當「無故」要件。甲以肉眼窺見乙先前輸入之密碼並記下，屬取得他人密碼之方式之一，其後持該密碼實際開啟電腦，即為「輸入他人帳號密碼」之入侵手段，與條文文義相符。依實務見解，入侵是否成立應依處分權人乙之觀點判斷：依乙之意願，甲原不應取得對其電腦之支配，甲卻以此方式取得隨時瀏覽電腦內部資訊之狀態，已該當「入侵」。甲雖僅瀏覽信件夾內容，未刪除或變更任何檔案，然第358條之構成要件並未以致生損害為必要，行為完成入侵狀態即為既遂，不因甲事後未進一步為刪除、變更行為而阻卻既遂之成立。甲之行為既已該當構成要件，本案復查無任何阻卻違法事由（如正當防衛、依法令之行為等）可資主張；甲行為時亦無責任能力欠缺或期待可能性降低等情形，違法性與有責性均無阻卻或減輕之餘地。</p>
+          <h4>結論</h4>
+          <p class="pos">甲成立刑法第358條無故入侵電腦或其相關設備罪。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="hd">申論題二</div>
+        <div class="bd">
+          <h4>題目</h4>
+          <p>丙為資訊安全研究人員，於研究過程中發現某公務機關網站存在系統漏洞，未經該機關同意，逕自利用該漏洞進入該機關內部資料庫，瀏覽部分公務機密資料後隨即登出，並未下載、複製或對外揭露任何資料，事後丙主動向該機關通報漏洞。試問丙之行為是否成立刑法第358條之罪？是否有加重事由之適用？</p>
+          <h4>模擬解答</h4>
+          <p>丙雖出於善意之資安研究動機，並事後主動通報漏洞，然刑法第358條之成立與行為人之動機是否良善無涉，僅須客觀上未經處分權人同意，且以條文所列手段之一入侵他人電腦或其相關設備即為已足。丙未經該公務機關同意或授權，逕自利用系統漏洞進入其內部資料庫，該當「無故」且屬「利用電腦系統之漏洞」之入侵手段。依處分權人（該公務機關）之觀點判斷，丙原不應取得對該資料庫之支配，卻因利用漏洞而取得隨時瀏覽內部資料之狀態，已該當「入侵」，縱丙嗣後隨即登出且未下載、複製或外洩任何資料，依前所述既遂不以損害結果為必要之解釋，仍無礙第358條既遂之成立。又因本案入侵之對象為公務機關之電腦或其相關設備，依刑法第361條規定，對於公務機關之電腦或其相關設備犯第358條至第360條之罪者，應加重其刑至二分之一，故丙之刑責應依第361條規定加重論處。丙事後主動通報漏洞之行為，於法無阻卻違法或阻卻構成要件該當之效力，惟屬科刑時得依刑法第57條一切情狀（如犯罪後之態度）為量刑輕重之參考。丙以資安研究為目的，並非依法令執行職務或經授權之檢測，亦非面臨現時危難而不得已為之，故不構成依法令之行為或緊急避難等阻卻違法事由；丙具完全責任能力，主觀上亦明知未獲授權，違法性認識並無欠缺，故不生阻卻或減輕罪責之情形。</p>
+          <h4>結論</h4>
+          <p class="pos">丙成立刑法第358條無故入侵電腦或其相關設備罪，並依第361條規定加重其刑至二分之一；其事後通報漏洞之行為僅屬量刑參考因素，不影響犯罪成立。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="hd">申論題三</div>
+        <div class="bd">
+          <h4>題目</h4>
+          <p>甲因與乙有債務糾紛，為報復乙，未經乙同意，以先前於乙電腦維修時取得之系統管理密碼登入乙經營之網路商店後台，並植入自行撰寫之干擾程式，使該網路商店網頁於為期三天內持續當機無法正常運作，致乙受有訂單流失之損害。試問甲之行為應如何論罪？</p>
+          <h4>模擬解答</h4>
+          <p>甲未經乙同意，以先前維修時取得之系統管理密碼登入乙之網路商店後台，因該密碼之取得雖源於維修目的之授權，然甲於報復目的下重新使用該密碼登入，已逾越原授權範圍且欠缺乙現時之同意，該當「無故」，且以「輸入他人帳號密碼」之方式入侵乙之電腦相關設備，依前述既遂不以損害為必要之解釋，甲登入之時即已成立刑法第358條既遂。甲登入後進一步植入干擾程式，使乙之網路商店網頁持續當機無法運作，此部分行為核屬「無故以電腦程式干擾他人電腦或其相關設備」，且因網頁當機三日已致乙受有訂單流失之具體損害，該當刑法第360條「致生損害於公眾或他人」之要件，成立第360條之罪。甲之入侵行為（第358條）係其植入干擾程式（第360條）之必要過程與低度行為，依一般法條競合原則，第358條應為第360條所吸收，不另論罪，逕依第360條一罪處斷。甲基於報復債務糾紛之私人動機而為之，並無任何阻卻違法事由存在；甲具完全責任能力，對其行為之違法性亦有正常認識，違法性與有責性均無阻卻或減輕之事由。</p>
+          <h4>結論</h4>
+          <p class="pos">甲成立刑法第360條無故干擾他人電腦或其相關設備罪，其第358條入侵行為為第360條所吸收，不另論罪。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="hd">申論題四</div>
+        <div class="bd">
+          <h4>題目</h4>
+          <p>丁與戊為同事關係，丁曾借用戊之公務電腦處理臨時交辦事項，因戊之瀏覽器設有自動登入功能，丁開啟瀏覽器後，瀏覽器透過COOKIE自動代入戊先前儲存之公司內部系統帳號密碼，丁見狀便利用該自動登入之機會，瀏覽戊之個人薪資單及考核紀錄。試問丁之行為是否成立刑法第358條之罪？</p>
+          <h4>模擬解答</h4>
+          <p>刑法第358條所稱「無故輸入他人帳號密碼」，依實務見解（最高法院107年度台上字第4275號判決意旨），須以行為人有實際「輸入」他人帳號密碼之積極作為為前提；若係透過瀏覽器COOKIE自動登入功能，於使用者開啟瀏覽器時，由系統自動代入先前儲存之帳密資料而完成登入，行為人本身並未逐次或重新輸入該帳號密碼，即難認該當「輸入他人帳號密碼」之構成要件行為。本案丁開啟戊之瀏覽器後，係因戊瀏覽器原有之自動登入設定，由系統自動代入帳密完成登入，丁本身並未主動輸入戊之帳號密碼，依上開實務見解意旨，此部分尚難認丁該當「無故輸入他人帳號密碼」之入侵手段，亦查無丁有何「破解保護措施」或「利用系統漏洞」之行為，故丁之登入行為本身尚不成立第358條。惟丁明知該系統帳號登入畫面顯示為戊之個人資料，仍利用此一機會進一步瀏覽戊之薪資單及考核紀錄等與交辦事項無關之個人資料，此部分已逾越戊原借用電腦之目的範圍，是否另涉其他罪責（如個人資料保護法相關規定），應視具體個資利用行為另行判斷，惟非屬本條規範範疇。</p>
+          <h4>結論</h4>
+          <p class="neg">丁單純因瀏覽器自動登入而瀏覽戊資料之行為，依實務見解尚不成立刑法第358條無故入侵電腦或其相關設備罪；惟丁逾越授權目的瀏覽戊個人資料之行為，是否另涉其他法律責任，應另行判斷。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickcard">
+      <h2 class="sec-title">速查卡</h2>
+      <div class="quickcard">
+        <div class="wm">速</div>
+        <h3>第358條重點速記</h3>
+        <table style="background:transparent">
+          <tr><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">入侵手段（擇一）</td><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">輸入帳密／破解保護措施／利用系統漏洞</td></tr>
+          <tr><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">是否須損害結果</td><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">否（與359、360條之最大差異）</td></tr>
+          <tr><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">入侵判斷標準</td><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">依處分權人觀點，達「隨時可取得」狀態即為已足</td></tr>
+          <tr><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">對象為公務機關</td><td style="color:#f3ede0;border-color:rgba(255,255,255,.2)">依第361條加重其刑至二分之一</td></tr>
+        </table>
+        <div class="mnemonic">帳密漏洞破防護，入侵既遂免損害</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const links = Array.from(document.querySelectorAll('nav.side a'));
+  const sections = links.map(a => document.querySelector(a.getAttribute('href')));
+  const topnav = document.getElementById('topnav');
+  links.forEach(a=>{
+    const clone = a.cloneNode(true);
+    clone.addEventListener('click',e=>{e.preventDefault();document.querySelector(clone.getAttribute('href')).scrollIntoView({behavior:'smooth'});});
+    topnav.appendChild(clone);
+  });
+  links.forEach(a=>{
+    a.addEventListener('click',e=>{e.preventDefault();document.querySelector(a.getAttribute('href')).scrollIntoView({behavior:'smooth'});});
+  });
+  const allLinks = () => document.querySelectorAll('nav.side a, .topnav a');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const id = '#'+entry.target.id;
+        allLinks().forEach(a=>a.classList.toggle('active', a.getAttribute('href')===id));
+      }
+    });
+  },{rootMargin:'-40% 0px -55% 0px'});
+  sections.forEach(s=>s && obs.observe(s));
+</script>
+</body>
+</html>
