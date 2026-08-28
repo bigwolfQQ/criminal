@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第294條｜違背義務遺棄罪 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper-outer:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45:rgba(22,35,59,0.45);
+    --ink-70:rgba(22,35,59,0.7);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper-outer);
+    font-family:"Noto Sans TC",sans-serif;
+    color:var(--ink);
+    line-height:1.75;
+  }
+  h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+
+  /* ---- layout ---- */
+  .shell{display:flex;max-width:1280px;margin:0 auto;}
+  nav.sidebar{
+    width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;
+    height:100vh;overflow-y:auto;padding:28px 18px;border-right:1px solid var(--border);
+  }
+  nav.sidebar .nav-title{font-size:12px;letter-spacing:.15em;color:var(--ink-45);margin-bottom:14px;}
+  nav.sidebar a{
+    display:block;padding:8px 10px;border-radius:6px;color:var(--ink-70);
+    text-decoration:none;font-size:14px;margin-bottom:2px;border-left:3px solid transparent;
+  }
+  nav.sidebar a.active{background:rgba(44,74,118,0.08);color:var(--indigo);border-left-color:var(--indigo);font-weight:700;}
+  nav.sidebar a.pending{color:var(--ink-45);}
+  main{flex:1;min-width:0;background:var(--paper-content);box-shadow:-6px 0 18px rgba(22,35,59,0.05);}
+  .topnav{display:none;}
+
+  @media(max-width:980px){
+    nav.sidebar{display:none;}
+    .topnav{
+      display:flex;position:sticky;top:0;z-index:20;overflow-x:auto;gap:6px;
+      background:var(--paper-outer);padding:10px 12px;border-bottom:1px solid var(--border);
+    }
+    .topnav a{
+      flex-shrink:0;padding:7px 14px;border-radius:999px;background:var(--paper-card);
+      border:1px solid var(--border);font-size:13px;text-decoration:none;color:var(--ink-70);white-space:nowrap;
+    }
+    .topnav a.active{background:var(--indigo);color:var(--paper-content);border-color:var(--indigo);}
+    .topnav a.pending{color:var(--ink-45);}
+  }
+
+  section{padding:56px 48px;border-bottom:1px solid var(--border);}
+  @media(max-width:640px){section{padding:36px 20px;}}
+
+  /* ---- cover ---- */
+  .cover{background:linear-gradient(180deg,var(--paper-content) 0%,var(--paper-content) 100%);position:relative;padding:64px 48px 48px;}
+  .eyebrow{font-size:13px;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:10px;}
+  .cover h1{font-size:40px;font-weight:900;color:var(--ink);margin:0 0 8px;}
+  .cover .sub{font-size:16px;color:var(--ink-70);margin-bottom:18px;}
+  .cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:30px;}
+  .ver-badge{border:1px solid var(--seal);color:var(--seal);font-size:12px;padding:4px 10px;border-radius:999px;font-weight:700;}
+  .meta-date{font-size:12px;color:var(--ink-45);border:1px solid var(--indigo);padding:4px 10px;border-radius:999px;}
+  .seal-mark{
+    position:absolute;top:40px;right:48px;width:96px;height:96px;border:3px solid var(--seal);
+    border-radius:8px;transform:rotate(6deg);display:flex;align-items:center;justify-content:center;
+    color:var(--seal);writing-mode:vertical-rl;font-family:"Noto Serif TC",serif;font-weight:900;font-size:20px;letter-spacing:.3em;
+  }
+  @media(max-width:640px){.seal-mark{position:static;transform:rotate(-2deg);margin-top:18px;width:auto;height:auto;padding:10px 6px;}}
+  .toc-list{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:20px;}
+  @media(max-width:760px){.toc-list{grid-template-columns:1fr 1fr;}}
+  .toc-list div{font-size:13px;color:var(--ink-70);padding:8px 10px;background:var(--paper-card);border:1px solid var(--border);border-radius:6px;}
+
+  /* ---- article box ---- */
+  .article-box{
+    position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);
+    border-radius:6px;padding:22px 26px;margin:18px 0;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,0.06);
+  }
+  .article-box .num-watermark{
+    position:absolute;right:10px;bottom:-14px;font-family:"Noto Serif TC",serif;font-weight:900;
+    font-size:110px;color:var(--ink);opacity:0.06;line-height:1;pointer-events:none;
+  }
+  .article-box h4{margin:0 0 8px;color:var(--indigo);font-size:15px;}
+  .article-box p{margin:6px 0;position:relative;z-index:1;}
+  .tag-related{display:inline-block;font-size:11px;color:var(--brass);border:1px solid var(--brass);padding:1px 8px;border-radius:999px;margin-left:8px;}
+
+  h2.sec-title{font-size:24px;margin:0 0 22px;display:flex;align-items:center;gap:10px;}
+  h2.sec-title .eyebrow-mini{font-size:12px;background:var(--indigo);color:var(--paper-content);padding:2px 10px;border-radius:999px;font-family:"Noto Sans TC",sans-serif;}
+  h3.sub-title{font-size:17px;border-left:4px solid var(--brass);padding-left:10px;margin:30px 0 12px;color:var(--ink);}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;}
+  th,td{border:1px solid var(--border);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--ink);color:var(--paper-content);font-weight:700;}
+  tr:nth-child(even) td{background:#f6f1e6;}
+  tr:nth-child(odd) td{background:var(--paper-card);}
+
+  .conclude-yes{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%, rgba(169,131,47,0.35) 60%);padding:0 2px;}
+  .conclude-no{font-weight:700;color:var(--seal);}
+
+  .placeholder{
+    border:2px dashed var(--brass);border-radius:8px;padding:26px;text-align:center;background:repeating-linear-gradient(135deg,rgba(169,131,47,0.05),rgba(169,131,47,0.05) 10px,transparent 10px,transparent 20px);
+    color:var(--ink-45);
+  }
+  .placeholder .badge{display:inline-block;margin-top:10px;font-size:12px;background:var(--brass);color:#fff;padding:3px 12px;border-radius:999px;}
+
+  .case-card,.essay-card{
+    background:var(--paper-card);border-radius:8px;margin:20px 0;overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,0.08), 0 6px 16px rgba(22,35,59,0.06);
+  }
+  .case-card .head{background:var(--indigo);color:var(--paper-content);padding:10px 18px;font-family:"Noto Serif TC",serif;font-weight:700;}
+  .essay-card .head{background:var(--ink);color:var(--paper-content);padding:10px 18px;font-family:"Noto Serif TC",serif;font-weight:700;}
+  .case-card .body,.essay-card .body{padding:18px 22px;}
+  .case-card .fic-tag{font-size:11px;background:rgba(255,255,255,0.15);padding:2px 8px;border-radius:999px;margin-left:8px;}
+
+  .relation-wrap{margin:18px 0;text-align:center;}
+  .relation-note{font-size:13px;color:var(--ink-45);margin-top:8px;}
+
+  .quickcard{background:var(--ink);color:var(--paper-content);border-radius:10px;padding:28px;position:relative;overflow:hidden;}
+  .quickcard .deco{position:absolute;right:6px;bottom:-20px;font-size:150px;font-family:"Noto Serif TC",serif;opacity:0.08;font-weight:900;}
+  .quickcard h4{margin-top:0;color:var(--brass);font-size:15px;}
+  .mnemonic{background:var(--seal);color:#fff;padding:14px 18px;border-radius:8px;font-family:"Noto Serif TC",serif;font-size:18px;font-weight:700;text-align:center;margin:14px 0;letter-spacing:.05em;}
+
+  .link-note{border:1px dashed var(--indigo);border-radius:8px;padding:16px 20px;font-size:14px;color:var(--ink-70);margin-top:20px;}
+  .link-note a{color:var(--indigo);}
+
+  .src-note{font-size:12px;color:var(--ink-45);margin-top:6px;}
+  .disclaimer{font-size:12px;color:var(--ink-45);border-top:1px dashed var(--border);margin-top:14px;padding-top:10px;}
+</style>
+</head>
+<body>
+
+<div class="topnav" id="topnav">
+  <a href="#cover" class="nc">封面</a>
+  <a href="#article" class="nc">條文</a>
+  <a href="#structure" class="nc">結構</a>
+  <a href="#tripartite" class="nc">三階層</a>
+  <a href="#doctrine" class="nc">學說</a>
+  <a href="#practice" class="nc">實務</a>
+  <a href="#cases" class="nc">案例</a>
+  <a href="#essay" class="nc">申論題</a>
+  <a href="#quickcard" class="nc">速查卡</a>
+</div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="nav-title">章節導覽</div>
+    <a href="#cover" class="nc">一、封面</a>
+    <a href="#article" class="nc">二、條文原文</a>
+    <a href="#structure" class="nc">三、條文結構</a>
+    <a href="#tripartite" class="nc">四、犯罪三階層</a>
+    <a href="#doctrine" class="nc">五、學說見解</a>
+    <a href="#practice" class="nc">六、實務見解</a>
+    <a href="#cases" class="nc">七、教學案例</a>
+    <a href="#essay" class="nc">八、申論題與解答</a>
+    <a href="#quickcard" class="nc">九、速查卡</a>
+  </nav>
+
+  <main>
+    <!-- 封面 -->
+    <section class="cover" id="cover">
+      <div class="seal-mark">不作為犯</div>
+      <div class="eyebrow">第二編分則．第二十五章．遺棄罪</div>
+      <h1>刑法第294條</h1>
+      <div class="sub">違背義務遺棄罪｜身分犯．不作為犯．抽象危險犯</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立日期：2026-08-29</span>
+        <img alt="visitor" src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.294" style="height:20px;">
+      </div>
+      <div class="toc-list">
+        <div>一、封面</div><div>二、條文原文</div><div>三、條文結構</div>
+        <div>四、犯罪三階層</div><div>五、學說見解</div><div>六、實務見解</div>
+        <div>七、教學案例</div><div>八、申論題與解答</div><div>九、速查卡</div>
+      </div>
+    </section>
+
+    <!-- 條文原文 -->
+    <section id="article">
+      <h2 class="sec-title"><span class="eyebrow-mini">02</span>條文原文</h2>
+
+      <div class="article-box">
+        <div class="num-watermark">294</div>
+        <h4>刑法第294條（違背義務遺棄罪）</h4>
+        <p>①對於無自救力之人，依法令或契約應扶助、養育或保護而遺棄之，或不為其生存所必要之扶助、養育或保護者，處六月以上、五年以下有期徒刑。</p>
+        <p>②因而致人於死者，處無期徒刑或七年以上有期徒刑；致重傷者，處三年以上十年以下有期徒刑。</p>
+      </div>
+
+      <h3 class="sub-title">關聯條文</h3>
+
+      <div class="article-box">
+        <div class="num-watermark">293</div>
+        <h4>刑法第293條（無義務遺棄罪）<span class="tag-related">對照組</span></h4>
+        <p>①遺棄無自救力之人者，處六月以下有期徒刑、拘役或三千元以下罰金。</p>
+        <p>②因而致人於死者，處五年以下有期徒刑；致重傷者，處三年以下有期徒刑。</p>
+      </div>
+
+      <div class="article-box">
+        <div class="num-watermark">294-1</div>
+        <h4>刑法第294-1條（阻卻遺棄罪成立之事由）<span class="tag-related">必要</span></h4>
+        <p>對於無自救力之人，依民法親屬編應扶助、養育或保護，因有下列情形之一，而不為無自救力之人生存所必要之扶助、養育或保護者，不罰：</p>
+        <p>一、無自救力之人前為最輕本刑六月以上有期徒刑之罪之行為，而侵害其生命、身體或自由者。</p>
+        <p>二、無自救力之人前對其為第227條第3項、第228條第2項、第231條第1項、第286條之行為或人口販運防制法第32條、第33條之行為者。</p>
+        <p>三、無自救力之人前侵害其生命、身體、自由，而故意犯前二款以外之罪，經判處逾六月有期徒刑確定者。</p>
+        <p>四、無自救力之人前對其無正當理由未盡扶養義務持續逾二年，且情節重大者。</p>
+      </div>
+
+      <div class="article-box">
+        <div class="num-watermark">15</div>
+        <h4>刑法第15條（不作為犯／保證人地位）<span class="tag-related">必要</span></h4>
+        <p>①對於犯罪結果之發生，法律上有防止之義務，能防止而不防止者，與因積極行為發生結果者同。</p>
+        <p>②因自己行為致有發生犯罪結果之危險者，負防止其發生之義務。</p>
+      </div>
+    </section>
+
+    <!-- 條文結構 -->
+    <section id="structure">
+      <h2 class="sec-title"><span class="eyebrow-mini">03</span>條文結構．罪名構造總覽</h2>
+      <table>
+        <tr><th>項目</th><th>內容</th></tr>
+        <tr><td>罪名性質</td><td>身分犯（限依法令或契約負扶助義務之人）／不作為犯之典型／學理通說採<span class="conclude-yes">抽象危險犯</span></td></tr>
+        <tr><td>保護法益</td><td>生存權（維持生命繼續存在之利益）</td></tr>
+        <tr><td>行為主體</td><td>依法令或契約，對無自救力之人負扶助、養育、保護義務之人</td></tr>
+        <tr><td>行為客體</td><td>無自救力之人（因年齡、疾病、身心障礙或其他原因，不能自行維持生存所必要生理機能者）</td></tr>
+        <tr><td>實行行為</td><td>①積極遺棄（將被害人移置於危險狀態）；②消極不為生存所必要之扶助、養育、保護（不作為）</td></tr>
+        <tr><td>既未遂／加重結果</td><td>基本犯不待具體危險發生即成立（通說）；因而致死、致重傷為加重結果犯</td></tr>
+        <tr><td>本條涉及三階層</td><td>構成要件該當性／違法性／有責性，三階層均涉及（含294-1特殊阻卻事由之定性爭議）</td></tr>
+      </table>
+    </section>
+
+    <!-- 犯罪三階層 -->
+    <section id="tripartite">
+      <h2 class="sec-title"><span class="eyebrow-mini">04</span>犯罪三階層逐項解析</h2>
+
+      <h3 class="sub-title">（一）構成要件該當性－客觀構成要件</h3>
+      <table>
+        <tr><th>要件</th><th>內容說明</th></tr>
+        <tr><td>行為主體</td><td>限於「依法令」（如民法第1114條以下親屬扶養義務）或「依契約」（如看護契約、醫療契約、運送契約）負扶助、養育、保護義務之人，屬<span class="conclude-yes">身分犯</span>，無此身分者不能單獨成立本罪正犯（僅得依刑法第31條論以共犯或視情形論以第293條）</td></tr>
+        <tr><td>行為客體</td><td>無自救力之人：因年齡（嬰幼兒、高齡）、疾病、身心障礙或其他原因，客觀上不能自行維持生存所必要生理機能者</td></tr>
+        <tr><td>實行行為</td><td>積極遺棄（移置於危險場所或狀態）或消極不為必要之扶助、養育、保護；後者屬純正不作為犯，須依第15條檢驗行為人是否具「保證人地位」（法令或契約所生之保護義務）與「作為可能性」</td></tr>
+        <tr><td>結果／危險</td><td>通說（及最高法院104年度台上字第2837號刑事判決）採<span class="conclude-yes">抽象危險犯</span>：行為人一旦不履行義務，對無自救力人生存已生抽象危險，罪即成立，不待具體危險現實發生；惟學說上仍有採具體危險犯之對立見解（詳見學說見解）</td></tr>
+        <tr><td>因果關係／客觀歸責（限加重結果犯部分）</td><td>實務多採<span class="conclude-yes">相當因果關係說</span>判斷不作為與死亡、重傷結果間之因果關係；學說則以<span class="conclude-yes">客觀歸責理論</span>補充限縮：須行為人之不作為製造法所不容許之風險，且該風險現實化於死亡或重傷結果中</td></tr>
+      </table>
+
+      <h3 class="sub-title">（二）構成要件該當性－主觀構成要件</h3>
+      <table>
+        <tr><th>要件</th><th>內容說明</th></tr>
+        <tr><td>故意</td><td>行為人須認識自己具扶助義務人身分、被害人為無自救力之人，並有不為必要扶助、養育、保護（或積極遺棄）之意欲；直接故意、間接故意均可成立</td></tr>
+        <tr><td>加重結果部分</td><td>致死、致重傷部分依第17條，以行為人對加重結果有客觀預見可能性為限，主觀上不要求故意，屬加重結果犯之典型</td></tr>
+      </table>
+
+      <h3 class="sub-title">（三）違法性</h3>
+      <p>本條原則上依一般阻卻違法事由（正當防衛、緊急避難、依法令之行為等）判斷，惟實務上較少見適用情形。</p>
+      <p><strong>第294-1條之定性爭議</strong>：條文文字為「不罰」，學理上就其性質有阻卻違法事由說、阻卻罪責事由說、客觀處罰阻卻事由說等不同見解（詳見學說見解區塊），講義暫依多數實務操作方式，將其列入違法性階層檢驗，惟提醒讀者留意此爭議尚未有定論。</p>
+
+      <h3 class="sub-title">（四）有責性（罪責）</h3>
+      <table>
+        <tr><th>要件</th><th>內容說明</th></tr>
+        <tr><td>責任能力</td><td>依第18條（未成年人）、第19條（精神障礙）判斷行為人有無責任能力或責任能力減輕</td></tr>
+        <tr><td>違法性認識</td><td>行為人須認識其行為為法所不許（一般人依社會通念多能認識扶養義務之存在）</td></tr>
+        <tr><td>期待可能性／第294-1事由</td><td>若符合第294-1所定四款情形之一，多數實務見解認為<span class="conclude-no">阻卻犯罪成立</span>（不罰），行為人得主張免責</td></tr>
+      </table>
+    </section>
+
+    <!-- 學說見解 -->
+    <section id="doctrine">
+      <h2 class="sec-title"><span class="eyebrow-mini">05</span>學說見解</h2>
+
+      <h3 class="sub-title">危險犯性質之爭議</h3>
+      <table>
+        <tr><th>學者／立場</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>林東茂教授</td>
+          <td>主張第294條性質上為抽象危險犯，與第293條（具體危險犯）有別，行為人一旦違背義務即足當之，不待具體危險現實發生</td>
+          <td>林東茂，《刑法綜覽》</td>
+        </tr>
+        <tr>
+          <td>王皇玉教授（台大法律學系）</td>
+          <td>整理實務通說之「區分說」：第293條（無義務遺棄）因涉及積極遺棄行為，危險較不確定，故解為具體危險犯；第294條因係違背既存法定或約定義務，立法者已預設抽象危險存在，故解為抽象危險犯</td>
+          <td>「刑法分則」課程講義（台大開放式課程）</td>
+        </tr>
+        <tr>
+          <td>少數說</td>
+          <td>亦有學者從第294條刑度明顯重於第293條出發，主張重刑應嚴格解釋，本罪宜限縮為具體危險犯，須個案審查是否使無自救力人陷於生命危險之虞，方能成立</td>
+          <td>高點法律專班「法觀人．判解集」相關整理</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">保證人地位（第15條）之實質根據</h3>
+      <table>
+        <tr><th>學者</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>許玉秀教授</td>
+          <td>就前行為所生保證人地位提出「前行為的保證人地位與客觀歸責理論」之分析架構，主張應以客觀歸責理論檢驗前行為是否製造法所不容許之風險，作為保證人地位發生根據，而非單純形式法律義務判斷</td>
+          <td>許玉秀，〈保證人地位的法理基礎〉，收於《刑法的問題與對策》</td>
+        </tr>
+        <tr>
+          <td>黃榮堅教授</td>
+          <td>就保證人地位之整體理論提出檢討，反省形式法律義務說之侷限</td>
+          <td>黃榮堅，〈論保證人地位〉，收於《刑罰的極限》</td>
+        </tr>
+        <tr>
+          <td>林山田、林鈺雄教授等（通說）</td>
+          <td>採形式與實質併用之保證人地位分類：監督義務（對危險源之監督）與保護義務（對特定法益之保護），第294條所涉法令、契約扶養義務即屬「保護義務」類型之保證人地位</td>
+          <td>林山田，《刑法通論（下）》；林鈺雄，《新刑法總則》</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">第294-1條之定性</h3>
+      <div class="placeholder">
+        <div>📋</div>
+        <p>尚未加入對第294-1條「阻卻違法／阻卻罪責／客觀處罰阻卻事由」定性爭議之學說整理內容</p>
+        <span class="badge">待補充</span>
+      </div>
+      <p class="src-note">若您有指定學者對294-1條性質之見解，歡迎提供後補入本節。</p>
+    </section>
+
+    <!-- 實務見解 -->
+    <section id="practice">
+      <h2 class="sec-title"><span class="eyebrow-mini">06</span>實務見解</h2>
+
+      <table>
+        <tr><th>案號</th><th>見解要旨</th><th>查詢方式</th></tr>
+        <tr>
+          <td>最高法院104年度台上字第2837號刑事判決</td>
+          <td>明確指出第294條屬身分犯，保護法益為生存權；依法律文字結構（未見「致生損害」「足以生損害於公眾或他人」等具體危險犯慣用文字）判斷，性質上屬<span class="conclude-yes">抽象危險犯</span>，行為人一旦不履行義務，對無自救力人生存已生抽象危險，罪即成立</td>
+          <td>司法院裁判書查詢系統（https://judgment.judicial.gov.tw/）輸入案號查閱全文</td>
+        </tr>
+        <tr>
+          <td>最高法院87年度台上字第2395號判例</td>
+          <td>義務人不盡義務，但事實上「業已」有其他義務人為之養育、保護，致無自救力人生命不生危險者，難成立本罪；惟此限於不履行義務之際已有他人扶養之情形，若他人扶養並非基於義務、隨時可能停止者，仍不能解免罪責</td>
+          <td>同上（108年後判例已不再選編為判例，僅供裁判先例參考）</td>
+        </tr>
+        <tr>
+          <td>最高法院91年度台上字第4394號判決</td>
+          <td>呼應抽象危險犯見解：本罪成立以有法令上義務者對無自救力人不履行義務、於其生存有危險之虞為已足，不以果已發生具體危險為必要</td>
+          <td>同上</td>
+        </tr>
+        <tr>
+          <td>最高法院29年上字第3777號判例</td>
+          <td>舊判例，闡述「事實上尚有他人為之養育或保護」時之判斷基礎，為87年判例所援引之先例</td>
+          <td>同上；提醒：判例制度於108年法院組織法修正後已不再選編，現僅具參考價值，不具過去之拘束力</td>
+        </tr>
+        <tr>
+          <td>最高法院99年度台上字第3048號判決</td>
+          <td>學界整理指出本判決曾出現與通說相對立之<span class="conclude-no">具體危險犯</span>見解，惟本篇全文我方僅取得月旦知識庫之引用摘要，尚未經司法院原文核實</td>
+          <td>月旦知識庫，或至司法院系統輸入案號查閱全文自行核實</td>
+        </tr>
+      </table>
+      <p class="disclaimer">以上判決／判例之案號、年度、要旨均來自搜尋結果整理，內容摘要已標明出處；99年度台上字第3048號判決因無法取得全文，僅列查詢路徑供您自行核實後採用。</p>
+    </section>
+
+    <!-- 教學案例 -->
+    <section id="cases">
+      <h2 class="sec-title"><span class="eyebrow-mini">07</span>教學案例（AI虛構．教學用途）</h2>
+
+      <div class="case-card">
+        <div class="head">案例一．失智母親的長期漠視<span class="fic-tag">虛構案例</span></div>
+        <div class="body">
+          <p><strong>事實</strong>：甲之母乙罹患重度失智症，完全喪失自我照顧能力，長期由甲同住照顧。甲因工作壓力沉重，近半年幾乎不再為乙準備三餐、未依醫囑帶乙回診，乙因此營養不良併發感染，經鄰居報警送醫。</p>
+          <p><strong>爭點</strong>：甲對乙是否負有刑法第294條之扶助義務？其消極不作為是否已足該當「不為生存所必要之扶助」？</p>
+          <p><strong>分析</strong>：依民法第1114條第1款，直系血親相互間互負扶養義務，甲對乙具法令上扶助義務，屬本罪適格主體。乙因失智症完全不能自理生活，屬無自救力之人。甲長期未提供三餐、未協助就醫，已足使乙之生存陷於抽象危險，依通說（抽象危險犯）不待乙現實發生生命危險即已既遂；甲對自己身分與乙之處境均有認識而仍不予扶助，主觀故意亦具備。</p>
+          <p><strong>結論</strong>：甲<span class="conclude-yes">成立</span>刑法第294條第1項違背義務遺棄罪；若乙因此死亡或重傷，另依第294條第2項論以加重結果犯。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="head">案例二．旅館房內的猶豫<span class="fic-tag">虛構案例</span></div>
+        <div class="body">
+          <p><strong>事實</strong>：丙與丁為同居男女朋友。某日丁於租屋處誤食過量藥物，陷入昏迷且口吐白沫。丙發現後，因擔憂遭警方查獲同居處藏有其他違禁物，猶豫近一小時未報警，之後鄰居察覺異狀報警，丙見警消抵達又一度阻止其進入屋內，經員警堅持始進入將丁送醫，丁到院前已死亡。</p>
+          <p><strong>爭點</strong>：同居男女朋友間是否具第294條所稱「依法令」之扶助義務？丙之消極不作為與延誤是否具備因果關係？</p>
+          <p><strong>分析</strong>：依民法第1114條第4款，家長家屬相互間負扶養義務，同居男女朋友若以永久共同生活為目的、客觀上有同居一家之事實，實務上認可能成立家長家屬關係，從而丙對丁負法令上扶助義務。丁陷入昏迷已屬無自救力之人。丙明知丁有生命危險卻猶豫不報警，甚至一度阻止救護人員進入，客觀上已違背保護義務並製造、延續法所不容許之風險；該風險現實化為丁到院前死亡之結果，依相當因果關係說及客觀歸責理論均可肯認因果關係存在。</p>
+          <p><strong>結論</strong>：丙<span class="conclude-yes">成立</span>刑法第294條第2項前段違背義務遺棄致死罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="head">案例三．三兄弟的推諉<span class="fic-tag">虛構案例</span></div>
+        <div class="body">
+          <p><strong>事實</strong>：戊年邁臥病在床，無自救力。戊育有三子：長子己、次子庚、三子辛。三兄弟口頭約定由己負責主要照顧，庚、辛每月分攤照護費用。某月起己因故未再前往照顧，亦未通知庚、辛，庚、辛仍以為己持續照顧而未聞問，戊因此數週未獲妥善照料，身體狀況惡化。</p>
+          <p><strong>爭點</strong>：庚、辛是否因己「業已」照顧在先而不成立本罪？三人間之口頭分工約定是否影響各自之法令扶養義務？</p>
+          <div class="relation-wrap">
+            <svg viewBox="0 0 640 340" width="100%" height="320" xmlns="http://www.w3.org/2000/svg">
+              <!-- 戊 -->
+              <rect x="260" y="20" width="120" height="58" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="320" y="42" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">戊（父）</text>
+              <text x="320" y="62" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">臥病無自救力</text>
+
+              <!-- 己 -->
+              <rect x="40" y="220" width="150" height="66" rx="6" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.5"/>
+              <text x="115" y="244" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">長子己</text>
+              <text x="115" y="262" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">原負主要照顧</text>
+              <text x="115" y="278" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">中途停止未通知</text>
+
+              <!-- 庚 -->
+              <rect x="245" y="220" width="150" height="66" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="320" y="244" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">次子庚</text>
+              <text x="320" y="262" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">分攤費用</text>
+              <text x="320" y="278" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">誤信己仍在照顧</text>
+
+              <!-- 辛 -->
+              <rect x="450" y="220" width="150" height="66" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+              <text x="525" y="244" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">三子辛</text>
+              <text x="525" y="262" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">分攤費用</text>
+              <text x="525" y="278" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">誤信己仍在照顧</text>
+
+              <line x1="290" y1="78" x2="150" y2="218" stroke="#2c4a76" stroke-width="1.5"/>
+              <line x1="320" y1="78" x2="320" y2="218" stroke="#a9832f" stroke-width="1.5" stroke-dasharray="5 5"/>
+              <line x1="350" y1="78" x2="500" y2="218" stroke="#a9832f" stroke-width="1.5" stroke-dasharray="5 5"/>
+              <text x="200" y="150" font-family="Noto Sans TC" font-size="11" fill="#2c4a76">法定扶養義務</text>
+              <text x="330" y="150" font-family="Noto Sans TC" font-size="11" fill="#a9832f">義務是否已被己履行取代？</text>
+              <text x="470" y="150" font-family="Noto Sans TC" font-size="11" fill="#a9832f">義務是否已被己履行取代？</text>
+            </svg>
+            <div class="relation-note">爭點紅字：庚、辛能否以「己業已照顧在先」為由主張自己不成立本罪？</div>
+          </div>
+          <p><strong>分析</strong>：依民法第1114條第1款，己、庚、辛對戊均獨立負扶養義務，不因三人間之私下分工約定而免除各自之法定義務——該約定僅屬內部分擔方式，對戊而言，三子仍均為義務人。依87年度台上字第2395號判例意旨，「業已」有他人扶養、致無自救力人生命不生危險者，固可能阻卻他人罪責，但此須以扶養「持續中」為前提；己中途停止且未通知庚、辛，庚、辛之「誤信」並非基於己仍在履行之客觀事實，戊之生存已陷入抽象危險。惟庚、辛主觀上是否具備遺棄故意，須視其對己已停止照顧一事有無認識而定；若庚、辛確不知情且無可歸責之查證懈怠，可能欠缺故意而不成立本罪，僅得討論有無過失致死等其他罪責（惟現行法無過失遺棄罪之特別規定，僅得依個案檢視是否另構成過失致死傷罪）。</p>
+          <p><strong>結論</strong>：長子己明知停止照顧仍不通知，<span class="conclude-yes">成立</span>第294條違背義務遺棄罪；庚、辛則須視其主觀認識而定，若確屬不知情，<span class="conclude-no">不成立</span>本罪之故意犯。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="head">案例四．曾受暴的女兒<span class="fic-tag">虛構案例</span></div>
+        <div class="body">
+          <p><strong>事實</strong>：壬自幼遭其父癸長期毆打成傷，癸並曾因傷害罪經法院判處有期徒刑八月確定。壬成年後與癸斷絕往來。多年後癸中風臥床無自救力，壬明知癸之處境卻拒絕前往照顧或安排看護。</p>
+          <p><strong>爭點</strong>：壬得否主張刑法第294-1條第3款規定而不罰？</p>
+          <p><strong>分析</strong>：壬雖依民法第1114條第1款對癸負法令上扶養義務，客觀上該當第294條違背義務遺棄罪之構成要件。惟依294-1條第3款，「無自救力之人前侵害其生命、身體、自由，而故意犯前二款以外之罪，經判處逾六月有期徒刑確定者」，義務人得不罰。本案癸對壬之傷害行為經法院判處有期徒刑八月確定，逾六月之要件已具備，且該傷害行為侵害壬之身體法益，核與第3款規定相符。</p>
+          <p><strong>結論</strong>：壬雖該當第294條構成要件，但依第294-1條第3款規定，<span class="conclude-no">不罰</span>。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 申論題 -->
+    <section id="essay">
+      <h2 class="sec-title"><span class="eyebrow-mini">08</span>申論練習題與模擬解答（AI出題，經使用者授權）</h2>
+
+      <div class="essay-card">
+        <div class="head">題一</div>
+        <div class="body">
+          <p><strong>題目</strong>：甲之父乙獨居，因中風導致行動不便、無法自理生活。甲雖知悉乙之處境，仍以工作繁忙為由，數月未曾探視、亦未安排看護或送餐服務，乙因長期未獲妥善照顧，於家中意外滑倒骨折後無人知悉，延誤送醫致成重傷。試論甲之刑事責任。</p>
+          <p><strong>模擬解答</strong>：</p>
+          <p>甲依民法第1114條第1款規定，對其父乙負有法令上之扶養義務，屬刑法第294條所定適格之行為主體。乙因中風致行動不便、無法自理生活，客觀上已屬無自救力之人。甲明知乙之處境仍長期未提供必要之扶助、養育、保護，屬純正不作為犯，依刑法第15條第1項，甲基於法令上之防止義務，能防止而不防止，與因積極行為發生結果者同視。甲對自身義務人身分及乙之無自救力狀態均有認識，卻仍決意不予扶助，主觀故意已具備。依實務通說（最高法院104年度台上字第2837號刑事判決意旨），本罪屬抽象危險犯，甲一旦長期不履行義務，乙之生存已陷於抽象危險，構成要件即已該當，不待乙現實跌倒受傷之結果發生。</p>
+          <p>甲之不作為與乙延誤送醫致重傷之結果間，依相當因果關係說觀察，若甲按時探視、安排送餐或看護，通常可即時發現乙之異狀並送醫，是甲之不作為與重傷結果具相當因果關係；依客觀歸責理論補充觀察，甲之持續不作為使乙獨居而無人可即時察覺意外，已製造並實現法所不容許之風險，風險現實化於乙之重傷結果中，客觀歸責亦可肯認。甲對此加重結果縱無故意，然依一般社會生活經驗，長期未探視獨居失能長者，客觀上可預見其有生活意外而無人知悉救助之風險，甲就加重結果具有預見可能性，該當第294條第2項之加重結果犯。</p>
+          <p>違法性部分，本案無任何阻卻違法事由，亦查無第294-1條所定四款不罰情形之適用餘地。有責性部分，甲具完全責任能力，亦無阻卻或減輕罪責事由。</p>
+          <p><strong>結論</strong>：甲成立刑法第294條第2項違背義務遺棄致重傷罪。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="head">題二</div>
+        <div class="body">
+          <p><strong>題目</strong>：試從犯罪三階層架構，說明刑法第294條「違背義務遺棄罪」與第293條「無義務遺棄罪」於構成要件該當性上之主要差異，並說明學說對第294條危險犯性質之爭議。</p>
+          <p><strong>模擬解答</strong>：</p>
+          <p>就構成要件該當性而言，第293條與第294條之核心差異在於行為主體是否負有法令或契約上之扶助義務：第293條為一般犯，行為主體不限身分，任何人均得為之；第294條則限於依法令或契約對無自救力之人負扶助、養育、保護義務者，屬身分犯。其次，第293條僅處罰積極之遺棄行為（將被害人移置於危險狀態），第294條則除積極遺棄外，亦處罰消極不為必要扶助、養育、保護之不作為，屬不作為犯之典型，須依刑法第15條檢驗行為人是否具保證人地位。再者，因第294條之義務人本負有既存之保護義務，立法者評價其違反義務之不作為對被害人生存所生之危險程度較高，故第294條刑度（六月以上五年以下）明顯重於第293條（六月以下、拘役或罰金）。</p>
+          <p>關於危險犯性質，實務通說（最高法院104年度台上字第2837號刑事判決、91年度台上字第4394號判決）認為第294條依其法律文字結構，未見「致生損害」等具體危險犯慣用語，性質上屬抽象危險犯，行為人一旦不履行義務即足以對無自救力人之生存產生抽象危險，罪即成立，不待具體危險現實發生。學說上，林東茂教授及台大王皇玉教授整理之通說「區分說」亦採相同立場，並進一步以第293條因積極遺棄行為之危險程度較不確定，解為具體危險犯，與第294條形成對照。惟仍有少數見解自法定刑輕重出發，主張重刑應嚴格解釋，第294條宜限縮為具體危險犯，須個案審查有無使被害人陷於生命危險之虞，方能成立本罪。此一爭議之實益在於：若採抽象危險犯，僅需證明義務人客觀上未履行義務即可；若採具體危險犯，尚須另行舉證被害人於個案中確有生存危險存在。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="head">題三</div>
+        <div class="body">
+          <p><strong>題目</strong>：丙自幼遭其母丁性侵害（該當刑法第228條第2項情形），成年後不再與丁聯繫。多年後丁年邁失智無自救力，丙拒絕扶養。試問丙得否主張阻卻遺棄罪成立之事由？並請說明第294-1條在犯罪三階層中應如何定位。</p>
+          <p><strong>模擬解答</strong>：</p>
+          <p>丙依民法第1114條第1款對丁負法令上扶養義務，丁因失智無自救力，丙明知丁處境仍拒絕扶養，客觀上已該當第294條違背義務遺棄罪之構成要件（消極不作為、義務人身分、無自救力客體均具備），主觀上丙亦有故意。</p>
+          <p>惟依第294-1條第2款規定，無自救力之人前對義務人為第228條第2項之行為者（對於因親屬、監護等關係受自己扶助、照護之人利用權勢或機會而為性交），義務人得不為扶助而不罰。本案丁對丙之性侵害行為該當第228條第2項情形，丙得主張第294-1條第2款事由。</p>
+          <p>就第294-1條在犯罪三階層中之定位，條文明文規定「不罰」，惟其究屬阻卻違法事由、阻卻罪責事由，抑或獨立之客觀處罰阻卻事由，學理上尚無定論（本講義學說見解區塊就此設有待補充佔位，提醒讀者留意此為尚未有共識之爭議點）。若採阻卻違法事由說，則丙之行為於違法性階層即被阻卻，不成立犯罪；若採阻卻罪責事由說，則丙之行為構成要件該當、違法性具備，僅於有責性階層因欠缺期待可能性而阻卻罪責；若採客觀處罰阻卻事由說，則丙之行為仍構成犯罪，僅因政策考量而阻卻國家刑罰權之發動。三說在論理上雖有位階差異，惟結論上均導向丙不負刑事責任，作答時應敘明所採見解及理由，不宜逕行省略此一定性判斷。</p>
+          <p><strong>結論</strong>：丙依第294-1條第2款規定，不罰。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="head">題四</div>
+        <div class="body">
+          <p><strong>題目</strong>：戊將重病臥床、無自救力之母安置於設有醫護人員之安養機構後，即未再前往探視、亦未繳納安養費用達半年之久，機構因積欠費用多次通知未獲置理，最終依約定終止照護契約，並要求戊限期接回。戊仍置之不理。試論戊之刑事責任。</p>
+          <p><strong>模擬解答</strong>：</p>
+          <p>戊依民法第1114條第1款對其母負法令上扶養義務，其母因重病臥床，屬無自救力之人，戊具第294條適格之行為主體身分。</p>
+          <p>本題爭點在於：戊已將其母安置於安養機構，是否因「業已」有他人（機構）照顧而阻卻罪責？依最高法院87年度台上字第2395號判例意旨，若義務人不盡義務，然事實上「業已」有他人為之養育、保護，致無自救力人生命不生危險者，難成立本罪；惟依104年度台上字第2837號刑事判決進一步闡釋，此僅限於他人扶養「業已」且「持續中」之情形，若他人之扶養並非基於義務、隨時可能停止者，仍不能解免義務人之罪責。本案安養機構之照護係基於契約關係，機構已依約定於費用積欠時終止契約，並非可無限期、無條件持續之扶養；戊經通知後仍置之不理，其母之生存已因照護關係終止而重新陷入抽象危險。是戊不得以「業已」交由機構照顧為由，主張阻卻罪責。</p>
+          <p>戊明知機構已終止契約、其母將失去照護仍不接回或另作安排，主觀上具備遺棄故意。違法性與有責性階層均查無阻卻事由，第294-1條四款情形亦均不該當。</p>
+          <p><strong>結論</strong>：戊成立刑法第294條第1項違背義務遺棄罪。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 速查卡 -->
+    <section id="quickcard">
+      <h2 class="sec-title"><span class="eyebrow-mini">09</span>速查卡</h2>
+      <div class="quickcard">
+        <div class="deco">294</div>
+        <h4>核心口訣</h4>
+        <div class="mnemonic">有義務不扶助，抽象危險即成立</div>
+        <p style="position:relative;z-index:1;">
+          ・行為主體：限依法令或契約負扶助義務者（身分犯）<br>
+          ・行為客體：無自救力之人<br>
+          ・實行行為：積極遺棄 或 消極不為必要扶助（不作為，須第15條保證人地位）<br>
+          ・危險性質：通說採抽象危險犯，不待具體危險發生<br>
+          ・294-1：四款事由不罰，定性（阻卻違法／罪責／處罰阻卻）尚有學說爭議<br>
+          ・加重結果：因果關係採相當因果關係說＋客觀歸責理論補充
+        </p>
+      </div>
+
+      <div class="link-note">
+        本次未發現與既有講義重疊之條文範圍，暫無相關主題連結。若日後刑法第293條或第15條建有獨立講義，可回頭為本講義補上連結。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  var sections = ['cover','article','structure','tripartite','doctrine','practice','cases','essay','quickcard'];
+  var sideLinks = document.querySelectorAll('#sidebar a.nc');
+  var topLinks = document.querySelectorAll('#topnav a.nc');
+  function setActive(id){
+    sideLinks.forEach(function(a){a.classList.toggle('active', a.getAttribute('href')==='#'+id);});
+    topLinks.forEach(function(a){a.classList.toggle('active', a.getAttribute('href')==='#'+id);});
+  }
+  var observer = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){ setActive(entry.target.id); }
+    });
+  }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
+  sections.forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) observer.observe(el);
+  });
+  document.querySelectorAll('a.nc').forEach(function(a){
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      var id = a.getAttribute('href').slice(1);
+      var el = document.getElementById(id);
+      if(el) el.scrollIntoView({behavior:'smooth'});
+    });
+  });
+  setActive('cover');
+})();
+</script>
+</body>
+</html>
