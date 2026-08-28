@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第315條～315-3條・妨害秘密罪｜教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b;
+  --indigo:#2c4a76;
+  --paper-outer:#f3ede0;
+  --paper-content:#fbf8f1;
+  --paper-card:#fffdf8;
+  --paper-alt:#f6f1e6;
+  --seal:#9c2b3a;
+  --brass:#a9832f;
+  --border:#ddd3bf;
+  --ink-45:rgba(22,35,59,.45);
+  --ink-65:rgba(22,35,59,.65);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper-outer);color:var(--ink);font-family:"Noto Sans TC",sans-serif;line-height:1.75;}
+h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+a{color:var(--indigo);}
+.shell{display:flex;max-width:1180px;margin:0 auto;}
+.sidebar{width:240px;flex:none;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;border-right:1px solid var(--border);}
+.sidebar-title{font-size:12px;letter-spacing:.12em;color:var(--ink-45);margin-bottom:14px;}
+.nav-link{display:block;padding:9px 12px;border-radius:6px;color:var(--ink-65);text-decoration:none;font-size:14.5px;margin-bottom:2px;transition:background .15s;}
+.nav-link.faded{color:var(--ink-45);}
+.nav-link:hover{background:var(--paper-alt);}
+.nav-link.active{background:var(--indigo);color:var(--paper-card);}
+.main{flex:1;min-width:0;background:var(--paper-content);box-shadow:-6px 0 24px -18px rgba(22,35,59,.25);}
+.container{max-width:840px;margin:0 auto;padding:56px 40px 100px;}
+.mobile-nav{display:none;position:sticky;top:0;z-index:20;background:var(--paper-outer);border-bottom:1px solid var(--border);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.mobile-nav a{display:inline-block;padding:7px 14px;margin-right:8px;border-radius:999px;background:var(--paper-card);border:1px solid var(--border);color:var(--ink-65);text-decoration:none;font-size:13px;}
+.mobile-nav a.active{background:var(--indigo);color:var(--paper-card);border-color:var(--indigo);}
+@media (max-width:980px){.sidebar{display:none;}.mobile-nav{display:block;}.container{padding:28px 18px 70px;}}
+.cover{padding:64px 40px 40px;position:relative;border-bottom:1px solid var(--border);}
+.eyebrow{font-size:12.5px;letter-spacing:.15em;color:var(--brass);font-weight:700;margin-bottom:14px;}
+.cover h1{font-size:clamp(26px,4vw,40px);font-weight:900;margin:0 0 10px;line-height:1.3;}
+.cover .sub{color:var(--ink-65);font-size:16px;margin-bottom:18px;}
+.cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px;}
+.meta-pill{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--indigo);color:var(--indigo);}
+.ver-badge{border-color:var(--seal);color:var(--seal);}
+.meta-date{color:var(--ink-45);}
+.seal-mark{position:absolute;top:44px;right:40px;width:86px;height:86px;border:3px solid var(--seal);border-radius:10px;transform:rotate(8deg);display:flex;align-items:center;justify-content:center;writing-mode:vertical-rl;color:var(--seal);font-family:"Noto Serif TC",serif;font-weight:900;font-size:26px;letter-spacing:.15em;opacity:.85;}
+@media (max-width:600px){.seal-mark{display:none;}}
+section{padding-top:52px;scroll-margin-top:20px;}
+section:first-of-type{padding-top:8px;}
+.sec-title{font-size:24px;font-weight:900;margin:0 0 6px;display:flex;align-items:center;gap:10px;}
+.sec-sub{color:var(--ink-45);font-size:13.5px;margin-bottom:24px;}
+h3.sub-title{font-size:18px;font-weight:700;color:var(--indigo);border-left:4px solid var(--brass);padding-left:10px;margin:30px 0 12px;}
+h4.mini-title{font-size:15.5px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+.article-box{position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);border-radius:4px;padding:20px 24px;margin-bottom:18px;overflow:hidden;box-shadow:0 1px 2px rgba(22,35,59,.06);}
+.article-box .art-no{font-family:"Noto Serif TC",serif;font-weight:900;font-size:82px;position:absolute;right:14px;bottom:-14px;color:var(--ink);opacity:.06;line-height:1;}
+.article-box .art-head{font-weight:700;color:var(--indigo);margin-bottom:8px;font-size:15px;}
+.article-box p{margin:0 0 6px;position:relative;z-index:1;}
+.article-box .art-note{font-size:12.5px;color:var(--ink-45);margin-top:10px;}
+table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:14.5px;}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top;}
+th{background:var(--ink);color:var(--paper-content);font-weight:700;}
+tr:nth-child(even) td{background:var(--paper-alt);}
+tr:nth-child(odd) td{background:var(--paper-card);}
+.pos{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.neg{font-weight:700;color:var(--seal);}
+.card{background:var(--paper-card);border-radius:8px;padding:20px 22px;margin-bottom:18px;box-shadow:0 1px 3px rgba(22,35,59,.08),0 8px 20px -14px rgba(22,35,59,.25);}
+.card-head{font-family:"Noto Serif TC",serif;font-weight:700;font-size:15.5px;color:#fff;background:var(--indigo);margin:-20px -22px 16px;padding:11px 22px;border-radius:8px 8px 0 0;}
+.card-head.exam{background:var(--ink);}
+.card p{margin:0 0 10px;}
+.card .q{font-weight:700;margin-bottom:10px;}
+.source-note{border-top:1px dashed var(--border);margin-top:14px;padding-top:12px;font-size:13px;color:var(--ink-65);}
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:34px 20px;text-align:center;background:repeating-linear-gradient(135deg,rgba(169,131,47,.05),rgba(169,131,47,.05) 10px,transparent 10px,transparent 20px);}
+.placeholder .icon{font-size:26px;margin-bottom:8px;}
+.placeholder p{color:var(--ink-65);margin:0 0 10px;}
+.badge-todo{display:inline-block;background:var(--paper-alt);border:1px solid var(--border);border-radius:999px;padding:3px 12px;font-size:12px;color:var(--ink-65);}
+.cheat{background:var(--ink);color:var(--paper-content);border-radius:10px;padding:28px 26px;position:relative;overflow:hidden;}
+.cheat .wm{position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-size:150px;font-weight:900;opacity:.07;line-height:1;}
+.cheat h4{margin:0 0 12px;font-size:16px;color:var(--paper-content);}
+.mnemonic{background:var(--seal);color:#fff;padding:12px 16px;border-radius:6px;font-family:"Noto Serif TC",serif;font-size:17px;font-weight:700;text-align:center;margin-top:14px;}
+.relation-wrap{background:var(--paper-card);border:1px solid var(--border);border-radius:8px;padding:14px;margin:20px 0 6px;}
+.relation-note{text-align:center;color:var(--ink-45);font-size:13px;margin-top:6px;}
+.link-note{border:1px dashed var(--border);border-radius:8px;padding:16px 20px;margin-top:34px;font-size:14px;}
+.link-note h4{margin:0 0 8px;color:var(--indigo);}
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-65);margin:10px 0 4px;}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+</style>
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#article">條文原文</a>
+  <a href="#structure">結構總覽</a>
+  <a href="#elements">三階層解析</a>
+  <a href="#theory">學說見解</a>
+  <a href="#practice">實務見解</a>
+  <a href="#cases">教學案例</a>
+  <a href="#essay">申論練習</a>
+  <a href="#cheatsheet">速查卡</a>
+</div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-title">目錄 CONTENTS</div>
+    <a class="nav-link" href="#article">一、條文原文</a>
+    <a class="nav-link" href="#structure">二、條文結構總覽</a>
+    <a class="nav-link" href="#elements">三、犯罪三階層解析</a>
+    <a class="nav-link" href="#theory">四、學說見解</a>
+    <a class="nav-link" href="#practice">五、實務見解</a>
+    <a class="nav-link" href="#cases">六、教學案例</a>
+    <a class="nav-link" href="#essay">七、申論練習題</a>
+    <a class="nav-link" href="#cheatsheet">八、速查卡</a>
+  </nav>
+
+  <div class="main">
+    <div class="cover">
+      <div class="eyebrow">第二編　分則　第二十八章　妨害秘密罪</div>
+      <h1>刑法第315條～第315-3條・妨害秘密罪</h1>
+      <div class="sub">妨害書信秘密罪／窺視竊聽竊錄罪／加重竊錄及散布罪／竊錄物之沒收｜個人隱私法益犯罪</div>
+      <div class="cover-meta">
+        <span class="meta-pill ver-badge">v1.0</span>
+        <span class="meta-date">建立日期 2026-08-28</span>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.315-315-1-315-2-315-3" alt="visitor badge" style="height:20px;vertical-align:middle;">
+      </div>
+      <div class="seal-mark">密</div>
+    </div>
+
+    <div class="container">
+
+      <!-- 一、條文原文 -->
+      <section id="article">
+        <h2 class="sec-title">一、條文原文</h2>
+        <p class="sec-sub">主條文與必要關聯條文，原文照錄</p>
+
+        <div class="article-box">
+          <div class="art-head">刑法第315條（妨害書信秘密罪）　　【主條文】</div>
+          <p>無故開拆或隱匿他人之封緘信函、文書或圖畫者，處拘役或九千元以下罰金。無故以開拆以外之方法，窺視其內容者，亦同。</p>
+          <div class="art-no">315</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第315-1條（窺視竊聽竊錄罪）　　【主條文】</div>
+          <p>有下列行為之一者，處三年以下有期徒刑、拘役或三十萬元以下罰金：</p>
+          <p>一、無故利用工具或設備窺視、竊聽他人非公開之活動、言論、談話或身體隱私部位者。</p>
+          <p>二、無故以錄音、照相、錄影或電磁紀錄竊錄他人非公開之活動、言論、談話或身體隱私部位者。</p>
+          <div class="art-no">315<span style="font-size:.5em;">之1</span></div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第315-2條（加重竊錄及散布罪）　　【主條文】</div>
+          <p>意圖營利供給場所、工具或設備，便利他人為前條之行為者，處五年以下有期徒刑、拘役或科或併科五十萬元以下罰金。</p>
+          <p>意圖散布、播送、販賣而有前條第二款之行為者，亦同。</p>
+          <p>製造、散布、播送或販賣前二項或前條第二款竊錄之內容者，依第一項之規定處斷。</p>
+          <p>前三項之未遂犯罰之。</p>
+          <div class="art-no">315<span style="font-size:.5em;">之2</span></div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第315-3條（沒收特別規定）　　【主條文】</div>
+          <p>前二條竊錄內容之附著物及物品，不問屬於犯人與否，沒收之。</p>
+          <div class="art-note">＊本條為沒收之特別規定，非犯罪構成要件條文，不涉及犯罪三階層判斷（詳見單元三說明）。</div>
+          <div class="art-no">315<span style="font-size:.5em;">之3</span></div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第25條（未遂犯）　　【必要關聯・§315-2 IV未遂判斷】</div>
+          <p>已著手於犯罪行為之實行而不遂者，為未遂犯。未遂犯之處罰，以有特別規定者為限，並得按既遂犯之刑減輕之。</p>
+          <div class="art-no">25</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第26條（不能犯）　　【必要關聯・§315-2 IV未遂判斷】</div>
+          <p>行為不能發生犯罪之結果，又無危險者，不罰。</p>
+          <div class="art-no">26</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第27條（中止犯）　　【必要關聯・§315-2 IV未遂判斷】</div>
+          <p>已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，減輕或免除其刑。結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦同。</p>
+          <p>前項規定，於正犯或共犯中之一人或數人，因己意防止犯罪結果之發生，或結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦適用之。</p>
+          <div class="art-no">27</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第319條（告訴乃論）　　【必要關聯・追訴程序】</div>
+          <p>第三百十五條、第三百十五條之一及第三百十六條至第三百十八條之二之罪，須告訴乃論。</p>
+          <div class="art-note">⚠️ 重要爭點：本條列舉範圍僅及於§315、§315-1及§316～318-2，並<span class="neg">未列入§315-2</span>。故§315-2（加重竊錄及散布罪）屬<span class="neg">非告訴乃論之罪（公訴罪）</span>，此與§315、§315-1為告訴乃論罪不同，詳見單元二比較表與單元八速查卡。</div>
+          <div class="art-no">319</div>
+        </div>
+      </section>
+
+      <!-- 二、條文結構總覽 -->
+      <section id="structure">
+        <h2 class="sec-title">二、條文結構總覽</h2>
+        <p class="sec-sub">§315～315-3四條之行為態樣、保護客體、刑度與追訴程序比較</p>
+
+        <table>
+          <tr><th style="width:110px;">條文</th><th>行為態樣</th><th>保護客體</th><th>法定刑</th><th>處罰未遂</th><th>告訴乃論</th></tr>
+          <tr><td><b>§315</b></td><td>開拆／隱匿／以開拆以外方法窺視</td><td>封緘信函、文書、圖畫（實體隔絕）</td><td>拘役或9,000元以下罰金</td><td class="neg">否</td><td class="pos">是</td></tr>
+          <tr><td><b>§315-1</b></td><td>①窺視竊聽　②錄音照相錄影電磁紀錄竊錄</td><td>非公開之活動、言論、談話、身體隱私部位</td><td>3年以下徒刑／拘役／30萬元以下罰金</td><td class="neg">否</td><td class="pos">是</td></tr>
+          <tr><td><b>§315-2 I</b></td><td>意圖營利，供給場所工具設備便利他人為§315-1行為</td><td>同上（透過第三人便利）</td><td>5年以下徒刑／拘役／科或併科50萬元以下罰金</td><td class="pos">是（IV）</td><td class="neg">否</td></tr>
+          <tr><td><b>§315-2 II</b></td><td>意圖散布播送販賣，而自行為§315-1第2款竊錄</td><td>同上</td><td>同上</td><td class="pos">是（IV）</td><td class="neg">否</td></tr>
+          <tr><td><b>§315-2 III</b></td><td>製造／散布／播送／販賣竊錄內容</td><td>竊錄所得之內容本身</td><td>依第一項處斷（同5年以下）</td><td class="pos">是（IV）</td><td class="neg">否</td></tr>
+          <tr><td><b>§315-3</b></td><td>—（沒收規定，非犯罪行為）</td><td>竊錄內容之附著物及物品</td><td>不問屬於犯人與否，沒收之</td><td>不適用</td><td>不適用</td></tr>
+        </table>
+
+        <p style="color:var(--ink-65);font-size:14px;">整體刑度呈現「開拆信件（最輕）→窺錄非公開活動（加重）→意圖營利散布竊錄內容（最重且非告訴乃論）」之遞增結構，反映立法者認為破壞資訊隱私、且涉及營利散布之惡性較開拆實體信件更為重大。</p>
+      </section>
+
+      <!-- 三、犯罪三階層逐項解析 -->
+      <section id="elements">
+        <h2 class="sec-title">三、犯罪三階層逐項解析</h2>
+        <p class="sec-sub">§315、§315-1、§315-2分別解析；§315-3為沒收規定，不涉及三階層判斷</p>
+
+        <h3 class="sub-title">（一）第315條・妨害書信秘密罪</h3>
+        <h4 class="mini-title">構成要件該當性・客觀</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>行為主體</td><td>一般犯，不限特定身分</td></tr>
+          <tr><td>行為客體</td><td>他人「封緘」之信函、文書或圖畫。「封緘」指以膠帶、膠水、火漆、釘書針等實體隔絕措施包裹，使人不能輕易得知內容；未封緘者不受本條保護。「文書」範圍較§220準文書廣，不論其內容有無表彰一定意思</td></tr>
+          <tr><td>實行行為</td><td>①開拆　②隱匿　③以開拆以外之方法窺視內容（如透光、蒸氣）。三者為<span class="pos">並列之獨立行為態樣</span></td></tr>
+          <tr><td>構成要件結果</td><td>本條未設「足以生損害」要件，屬<span class="pos">行為犯</span>，完成開拆／隱匿／窺視行為即為既遂，不以行為人實際知悉信函內容或造成何種損害為必要</td></tr>
+        </table>
+        <h4 class="mini-title">構成要件該當性・主觀</h4>
+        <p>須具開拆／隱匿／窺視之故意（直接或間接皆可），本條未處罰過失。</p>
+        <h3 class="sub-title">（二）第315-1條・窺視竊聽竊錄罪</h3>
+        <h4 class="mini-title">構成要件該當性・客觀</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>行為客體</td><td>他人「非公開」之活動、言論、談話或身體隱私部位。「非公開」要件依實務見解，須被害人主觀上具有隱私期待，且客觀上已利用相當環境或採取適當設備確保隱密性；依釋字第603號意旨及GPS追蹤器相關判決，<span class="pos">個人縱身處公共場域，依社會通念仍可能享有免於他人持續注視、監看之合理隱私期待</span>，不因處於公開場所即當然否定非公開性</td></tr>
+          <tr><td>實行行為（第1款）</td><td>利用「工具或設備」窺視、竊聽。工具須具備<span class="pos">擴張人類感官能力</span>之性質（如望遠鏡、竊聽器、GPS定位器），單純以肉眼或耳朵直接感知，<span class="neg">不該當本罪</span></td></tr>
+          <tr><td>實行行為（第2款）</td><td>以錄音、照相、錄影或電磁紀錄「竊錄」，重點在「錄」的行為本身，不以事後散布為要件（散布另涉§315-2）</td></tr>
+          <tr><td>構成要件結果</td><td>本條亦未設「足以生損害」要件，屬<span class="pos">行為犯</span>，行為完成即既遂</td></tr>
+        </table>
+        <h4 class="mini-title">構成要件該當性・主觀</h4>
+        <p>須具窺視、竊聽或竊錄之故意；「無故」係指欠缺法律上、契約上或社會通念上之正當理由，屬構成要件要素而非單純阻卻違法事由（學說上就此定性容有爭議，詳見學說見解）。</p>
+        <h3 class="sub-title">（三）第315-2條・加重竊錄及散布罪</h3>
+        <table>
+          <tr><th style="width:90px;">項次</th><th>客觀行為</th><th>主觀要件</th></tr>
+          <tr><td>I項</td><td>供給場所、工具或設備，便利他人為§315-1所定之任一行為（窺視竊聽或竊錄）</td><td>須具「意圖營利」之特定意圖</td></tr>
+          <tr><td>II項</td><td>行為人自行實施§315-1第2款之竊錄行為</td><td>須具「意圖散布、播送、販賣」之特定意圖（與單純§315-1第2款竊錄之區別即在此意圖）</td></tr>
+          <tr><td>III項</td><td>製造、散布、播送或販賣I、II項或§315-1第2款竊錄之內容，依第一項規定處斷</td><td>不須特定意圖，製造／散布／播送／販賣行為本身即為構成要件行為</td></tr>
+          <tr><td>IV項</td><td>前三項之未遂犯，依§25判斷已著手而不遂，得按既遂犯之刑減輕；§26不能犯不罰；§27中止犯減輕或免除其刑</td><td>—</td></tr>
+        </table>
+        <h3 class="sub-title">（四）違法性（§315、315-1、315-2共通）</h3>
+        <p>三條均未設特別阻卻違法事由，回歸總則規定判斷，例如依法令之行為（如依法定程序之通訊監察）、正當防衛、緊急避難。實務上亦有見解認為「無故」本身即隱含正當理由之審查，若行為人有法律上、契約上或社會通念上之正當理由（如為蒐集自身權益直接相關之證據），則欠缺「無故」要件而不該當構成要件，非屬違法性層次之阻卻事由，此定性爭議詳見學說見解單元。</p>
+        <h3 class="sub-title">（五）有責性（§315、315-1、315-2共通）</h3>
+        <p>回歸總則規定，判斷行為人是否具備責任能力（§18、19）、有無違法性認識錯誤、有無期待可能性等，一般案件較少涉及此階層特殊爭議。</p>
+        <div class="placeholder">
+          <div class="icon">📎</div>
+          <p>第315-3條為沒收之特別規定，規範竊錄內容附著物及物品「不問屬於犯人與否」一律沒收，性質上屬刑罰執行從屬規定，本條不涉及犯罪三階層判斷。</p>
+          <span class="badge-todo">非犯罪構成要件條文</span>
+        </div>
+      </section>
+
+      <!-- 四、學說見解 -->
+      <section id="theory">
+        <h2 class="sec-title">四、學說見解</h2>
+
+        <div class="card">
+          <div class="card-head">林山田</div>
+          <p>將妨害秘密罪章區分為：妨害文件秘密罪（§315）、窺視竊聽竊錄罪（§315-1）、便利窺視竊聽竊錄罪（§315-2 I）、加重竊錄罪（§315-2 II）、製造散布販賣竊錄內容罪（§315-2 III）等類型，指出各行為態樣雖同屬妨害秘密罪章，惟保護法益之直接性與行為惡性程度有別，故立法者設計出遞增之刑度結構。</p>
+          <div class="source-note">📂 出處｜林山田，《刑法各罪論》，2005年，頁274</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">甘添貴</div>
+          <p>認為妨害秘密罪章所保護者為個人生活私密領域之不公開，此類法益一旦遭受侵犯，對個人之人格尊嚴及生活安全將帶來重大威脅，故有以刑罰手段加以保護之必要。</p>
+          <div class="source-note">📂 出處｜甘添貴，《刑法各論》，2010年，頁180</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">王皇玉（國立臺灣大學法律學系）</div>
+          <p>就§315「文書」之解釋指出，其範圍較§220準文書規定更廣，不需具備「表示一定用意」之功能，不論文書內容為何、有無表彰任何意思、或於法律上是否具重要性，均屬本條規範範圍；此與偽造文書罪章著重文書於法律交往上之信賴利益保護，性質有別。</p>
+          <div class="source-note">📂 出處｜王皇玉，國立臺灣大學法律學系刑法分則授課講義</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">學者見解（轉引自期刊整理，原始學者姓名待查證）</div>
+          <p>指出§315-1「非公開」要件之規範功能，在於描述本法所承認之隱私主張——唯有符合「非公開」要件之活動遭窺視、竊聽、竊錄後，始形成隱私權侵擾問題。並具體指出本罪所保護之法益包含兩種利益：一為個人得以較不拘謹之方式在公開場合進行言論、談話、活動之自由信賴利益，屬人格自由發展之重要基礎；二為個人就其言論射程範圍之支配掌控權。</p>
+          <div class="source-note">📂 出處｜轉引自《法觀人．判解集》NO.10，頁65<br>⚠️ 本則見解來自非原始文獻之期刊節錄轉引，原始學者姓名尚未核實，建議進一步查證後正式引用。</div>
+        </div>
+      </section>
+
+      <!-- 五、實務見解 -->
+      <section id="practice">
+        <h2 class="sec-title">五、實務見解</h2>
+
+        <div class="card">
+          <div class="card-head">司法院釋字第603號解釋（隱私權之憲法基礎）</div>
+          <p>維護人性尊嚴與尊重人格自由發展，乃自由民主憲政秩序之核心價值。隱私權雖非憲法明文列舉之權利，惟基於人性尊嚴與個人主體性之維護及人格發展之完整，並為保障個人生活私密領域免於他人侵擾及個人資料之自主控制，隱私權乃<span class="pos">不可或缺之基本權利，應受憲法第22條所保障</span>。本號解釋雖非直接針對§315-1作成，惟為刑法妨害秘密罪章保護隱私法益之重要憲法上依據。</p>
+          <div class="source-note">📂 來源｜司法院大法官解釋（cons.judicial.gov.tw），釋字第603號</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">最高法院106年度台上字第3788號刑事判決</div>
+          <p>被告（公務員）為查緝私菸運送，未經同意於他人所使用之貨車底盤裝設GPS定位器，經最高法院認定構成刑法§315-1第2款「無故以電磁紀錄竊錄他人非公開活動」罪，且因係公務員假借職務上機會犯之而加重其刑。判決要旨闡明：<span class="pos">個人縱然在公共場所行駛車輛，依社會通念仍享有免於他人持續、精確掌握其行蹤之合理隱私期待</span>，此隱私期待不因車輛行駛於公眾可共見之道路而當然喪失；且GPS定位器持續蒐集之位置資訊經長期分析比對，足以拼湊出使用人之日常作息及行為模式，較單純現實跟監之侵害程度更高，故仍該當「非公開活動」之竊錄。</p>
+          <div class="source-note">📂 來源｜可至司法院裁判書查詢系統（https://judgment.judicial.gov.tw/）輸入案號【106年度台上字第3788號】自行查閱全文</div>
+        </div>
+      </section>
+
+      <!-- 六、教學案例 -->
+      <section id="cases">
+        <h2 class="sec-title">六、教學案例</h2>
+        <p class="sec-sub">以下四則案例為 AI 虛構，僅供教學用途，非真實案件</p>
+
+        <div class="card">
+          <div class="card-head">案例一・§315「開拆」與「隱匿」型態</div>
+          <p><b>事實：</b>甲與乙為室友，某日甲見乙訂購之網購包裹（外包裝以膠帶完整封緘）放置於公共信箱，出於好奇心，甲徒手撕開包裹膠帶查看內容物後，因擔心乙發現，遂將包裹藏入自己房間衣櫃內未告知乙。乙尋找包裹未果三日後，始於甲房內發現。</p>
+          <p><b>爭點：</b>甲之行為是否同時該當「開拆」與「隱匿」兩種行為態樣？是否成立數罪？</p>
+          <p><b>分析：</b>網購包裹以膠帶密封，屬「封緘」之文書／物品外包裝，該當§315客體要件。甲徒手撕開膠帶查看內容物，該當「開拆」行為；其後將包裹藏入衣櫃不讓乙知悉，另該當「隱匿」行為。惟「開拆」與「隱匿」係同一構成要件（§315前段）所定之並列行為態樣，甲基於同一接續之犯意，在密接時地先後為之，應評價為<span class="pos">一個開拆行為之接續實施</span>，僅成立一個妨害書信秘密罪，不生數罪併罰問題。</p>
+          <p><b>結論：</b>甲之行為<span class="pos">該當§315妨害書信秘密罪</span>，屬告訴乃論之罪，乙須於知悉犯人後六個月內提出告訴。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例二・§315-1「非公開活動」與公共場域隱私期待</div>
+          <p><b>事實：</b>甲懷疑配偶乙有外遇，未經乙同意，於乙每日通勤使用之自小客車底盤裝設GPS定位追蹤器，持續二十餘日記錄乙之行車路線、停留地點及停留時間，藉以拼湊乙下班後之行蹤模式。乙發現後報警提告。</p>
+          <p><b>爭點：</b>乙駕車行駛於公眾道路，其行蹤是否仍屬「非公開活動」？</p>
+          <p><b>分析：</b>依最高法院106年度台上字第3788號判決意旨，個人縱身處公共場域，依社會通念仍享有免於他人持續、精確掌握行蹤之合理隱私期待，不因車輛行駛於公眾可共見之道路即喪失。甲長期、全天候裝設GPS追蹤器，得以連續多日精確掌握乙之位置及停留時間等資訊，經分析比對後即可窺知乙之日常作息及行為模式，其侵擾程度已逾單純現實跟監所能獲取之資訊範疇，該當「非公開活動」。甲主觀上明知並有意利用GPS工具持續定位乙之行蹤，具竊錄故意；甲雖以「蒐集配偶外遇證據」置辯，惟依現行實務多數見解，此尚不構成阻卻「無故」要件之法律上正當理由。</p>
+          <p><b>結論：</b>甲之行為<span class="pos">該當§315-1第2款窺視竊聽竊錄罪</span>，成立本罪。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例三・§315-2「營利供給設備＋竊錄＋散布」三方行為</div>
+          <p><b>事實：</b>甲經營徵信社，明知客戶乙欲蒐集第三人丙（乙之前配偶）之外遇證據，甲意圖營利，提供專業針孔攝影設備及技術指導，便利乙在丙住處臥室內裝設針孔攝影機，竊錄丙與交往對象之私密活動。乙竊錄成功後，因與丙談判賠償未果，竟意圖散布報復，將竊錄畫面上傳至網路論壇供不特定人瀏覽。</p>
+          <p><b>爭點：</b>甲、乙二人各應如何論罪？三人間之法律關係為何？</p>
+          <div class="relation-wrap">
+            <svg viewBox="0 0 640 340" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+              <g stroke="#2c4a76" stroke-width="2.2" fill="none">
+                <path d="M175,90 L295,155" marker-end="url(#arrow)"/>
+              </g>
+              <g stroke="#a9832f" stroke-width="2.2" stroke-dasharray="5 5" fill="none">
+                <path d="M345,190 C400,230 430,250 470,265"/>
+              </g>
+              <defs>
+                <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2c4a76"/></marker>
+              </defs>
+              <rect x="30" y="40" width="170" height="86" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+              <text x="45" y="65" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">甲（徵信社）</text>
+              <text x="45" y="86" font-family="Noto Sans TC" font-size="12" fill="#5b6472">意圖營利供給</text>
+              <text x="45" y="102" font-family="Noto Sans TC" font-size="12" fill="#5b6472">設備、技術指導</text>
+              <text x="45" y="118" font-family="Noto Sans TC" font-size="12" fill="#2c4a76" font-weight="700">§315-2 I</text>
+
+              <rect x="250" y="120" width="170" height="86" rx="6" fill="#fffdf8" stroke="#9c2b3a" stroke-width="2"/>
+              <text x="265" y="145" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">乙（委託人）</text>
+              <text x="265" y="166" font-family="Noto Sans TC" font-size="12" fill="#5b6472">裝機竊錄＋</text>
+              <text x="265" y="182" font-family="Noto Sans TC" font-size="12" fill="#9c2b3a" font-weight="700">爭點：竊錄後另生散布</text>
+              <text x="265" y="198" font-family="Noto Sans TC" font-size="12" fill="#9c2b3a" font-weight="700">意圖是否構成§315-2 II</text>
+
+              <rect x="460" y="230" width="150" height="76" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+              <text x="475" y="255" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">丙（被害人）</text>
+              <text x="475" y="276" font-family="Noto Sans TC" font-size="12" fill="#5b6472">私密活動遭竊錄</text>
+              <text x="475" y="292" font-family="Noto Sans TC" font-size="12" fill="#5b6472">並上傳網路論壇</text>
+            </svg>
+            <div class="legend">
+              <span><i class="dot" style="background:#2c4a76"></i>已確定之犯罪關係（實線）</span>
+              <span><i class="dot" style="background:#a9832f"></i>竊錄後另行起意之散布行為（虛線＝需另行評價）</span>
+            </div>
+            <div class="relation-note">紅字為本案核心爭點：乙裝機竊錄時是否已具散布意圖？抑或散布意圖係事後另行起意？將影響應論以§315-2第II項或應與§315-1、§315-2第III項數罪併論。</div>
+          </div>
+          <p><b>分析：</b>甲提供針孔攝影設備及技術指導，主觀上具營利意圖，客觀上供給工具便利乙為§315-1之竊錄行為，該當<span class="pos">§315-2第I項</span>。乙實際裝機竊錄丙之私密活動，客觀上該當§315-1第2款竊錄行為；惟依事實，乙裝機竊錄時主觀上僅有蒐證意圖，尚未具散布故意，其後因談判破裂始「另行起意」上傳散布，故裝機竊錄階段應論以<span class="pos">§315-1第2款</span>竊錄罪，而非援引§315-2第II項（因該項要求「意圖散布…而竊錄」，須竊錄當下即具散布意圖，與事後另行起意有別）；乙其後將竊錄內容上傳網路論壇之行為，另該當<span class="pos">§315-2第III項</span>「散布竊錄之內容」。乙前後兩行為侵害同一法益、時間密接，惟散布行為係另行起意所生之獨立行為決意，應與竊錄罪<span class="pos">分論併罰</span>。</p>
+          <p><b>結論：</b>甲成立§315-2第I項；乙成立§315-1第2款竊錄罪及§315-2第III項散布罪，數罪併罰；因§315-2非告訴乃論之罪，檢察官得依法逕行偵查起訴，不待丙提出告訴。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例四・§315-2 IV未遂犯判斷（不能犯情境）</div>
+          <p><b>事實：</b>甲意圖散布販賣牟利，購入針孔攝影機一台，欲裝設於乙經營之公共浴室更衣間內竊錄顧客更衣畫面。甲深夜潛入更衣間，正欲安裝攝影機時，才發現該台攝影機因製造瑕疵，鏡頭模組根本未組裝完成，實際上完全不具備錄影功能，甲當場察覺後悻然離去。</p>
+          <p><b>爭點：</b>甲之行為屬普通未遂或不能犯？</p>
+          <p><b>分析：</b>甲意圖散布販賣，並已著手於竊錄行為之實行（已潛入更衣間、正欲安裝設備），依§25已該當「著手實行」之要件。惟其所使用之攝影機因製造瑕疵而客觀上完全不具備錄影功能，屬「行為在性質上絕對、自始不能發生犯罪結果」之情形，且此等瑕疵品完全不能錄影，亦無因誤認而生具體危險可言，依§26應評價為<span class="pos">不能犯</span>，而非普通未遂。§315-2第IV項雖處罰未遂犯，惟不能犯依§26規定<span class="neg">不罰</span>（此為總則規定對未遂犯處罰範圍之限縮，優先於分則未遂處罰規定適用）。</p>
+          <p><b>結論：</b>甲之行為屬不能犯，<span class="neg">不成立§315-2之罪</span>；惟甲攜帶工具深夜潛入他人建物之行為，是否另涉侵入住居或其他規定，因不在本次講義關聯條文範圍內，此處不深入分析，僅提示讀者留意可能的競合關係。</p>
+        </div>
+      </section>
+
+      <!-- 七、申論練習題 -->
+      <section id="essay">
+        <h2 class="sec-title">七、申論練習題與模擬解答</h2>
+        <p class="sec-sub">以下四題為 AI 依本次條文組合自行出題（經使用者授權），供練習使用</p>
+
+        <div class="card">
+          <div class="card-head exam">題一</div>
+          <p class="q">甲收到寄給室友乙的信件，見信封並未黏合封口（僅隨手夾入信箱，未使用膠水或膠帶），甲基於好奇拆開信封閱讀內容後，依原樣將信紙放回信封內，未告知乙。試問甲之行為是否成立§315妨害書信秘密罪？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>§315所稱之「封緘」，係指以膠帶、膠水、火漆或其他方式將信函予以實體隔絕封合，使人不能輕易得知內容之措施。本案信封僅隨手夾入信箱、未經黏合封口，客觀上並無任何實體隔絕措施，不具備「封緘」之外觀，依通說見解，非封緘之信函，任意取閱亦不構成妨害秘密罪責。甲拆閱該未封緘信件之行為，雖有違一般社會禮儀及乙之隱私感受，惟因客體要件（封緘信函）不該當，甲之行為<span class="neg">不成立§315妨害書信秘密罪</span>。乙如認其隱私受有侵害，僅得循民法侵權行為相關規定請求救濟。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題二</div>
+          <p class="q">甲任職於乙公司大樓管理室，因懷疑某承租戶頻繁進出可疑，未經同意於承租戶所承租辦公室門口走廊（大樓公共空間）加裝監視器，錄下該承租戶每日進出大樓之時間與人員。試問甲之行為是否成立§315-1？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>§315-1所保護者為「非公開」之活動、言論、談話或身體隱私部位，其判斷標準為被害人主觀上須具有隱私期待，且客觀上已利用相當環境或設備確保其隱密性。本案監視器架設地點為大樓公共走廊，屬公眾得共見共聞之開放空間，承租戶進出大樓、經過走廊之行為，依社會通念不具備得合理期待不受他人觀看之隱密性，與GPS長期精確掌握個人行蹤、可拼湊出私密行為模式之情形有別；單純記錄何人於何時進出公共走廊，尚不足以窺知承租戶之私密活動內容。故承租戶於此公共走廊之進出行為，難謂該當「非公開活動」要件。甲之行為<span class="neg">不成立§315-1</span>。惟若監視器角度足以攝入承租戶辦公室內部之非公開空間，則另當別論，應依個案具體攝錄範圍重新判斷。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題三</div>
+          <p class="q">甲於網路論壇經營付費會員專區，明知會員乙上傳之數段影片係乙未經同意竊錄他人非公開活動之內容，甲仍將該些影片轉貼至自己經營之另一個免費瀏覽網站，供不特定網友觀看，甲並未自影片流量獲取任何實質對價。試問甲之行為是否成立§315-2第III項？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>§315-2第III項規範「製造、散布、播送或販賣前二項或前條第二款竊錄之內容者」，依第一項規定處斷。本項行為要件僅要求客觀上有製造、散布、播送或販賣竊錄內容之行為，並<span class="pos">不以行為人自己有營利對價為要件</span>（此與第I項「意圖營利供給設備」及第II項「意圖散布播送販賣而竊錄」之特定意圖要求不同，第III項規範對象為已完成竊錄內容之後續流通行為本身）。甲明知該些影片為他人非公開活動之竊錄內容，仍將之轉貼至免費網站供不特定網友瀏覽，客觀上已該當「散布」行為（使不特定多數人得以共見共聞），縱甲未獲取任何實質對價，亦不影響本罪之成立。甲主觀上明知影片性質仍執意轉貼，具散布故意。從而，甲之行為<span class="pos">該當§315-2第III項</span>，依第一項規定處斷，成立本罪；又因§315-2非告訴乃論之罪，被害人是否提告不影響檢察官偵查起訴之進行。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題四</div>
+          <p class="q">甲已著手於乙住處臥室窗外架設望遠鏡頭準備竊錄乙更衣畫面，惟甲於架設過程中，內心忽然感到愧疚不安，主動放棄竊錄計畫並將器材收拾離去，全程未曾實際窺視或錄得任何畫面。試問甲之行為應如何論處？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>本題須先確認甲所該當之罪名及其未遂處罰依據。甲並無營利或散布販賣之特定意圖，僅單純意圖窺視竊錄乙之更衣畫面，其行為態樣應對應§315-1第1款（利用望遠鏡頭工具窺視）。惟§315-1本身<span class="neg">未設有處罰未遂犯之特別規定</span>，依§25「未遂犯之處罰，以有特別規定者為限」，§315-1之未遂行為原則上不罰，甲架設望遠鏡尚未實際窺視得逞之階段行為，<span class="neg">不成立§315-1</span>。退步言之，縱认为本案情节接近§315-2第I或II項之未遂（惟本案甲並無供給設備予他人、亦無散布販賣意圖，客觀上不該當§315-2構成要件，故亦無適用§315-2 IV未遂處罰之餘地）。從而，甲之行為<span class="neg">不成立本章任何既遂或未遂之罪</span>。此題之教學重點在於：§315-1未設未遂處罰明文，僅§315-2第IV項特別規定處罰未遂，二者處罰範圍不可混淆；若本案甲已著手架設並實際完成窺視動作，則已該當§315-1既遂，方生犯罪成立與否之問題，附此敘明。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 八、速查卡 -->
+      <section id="cheatsheet">
+        <h2 class="sec-title">八、速查卡</h2>
+        <div class="cheat">
+          <div class="wm">315</div>
+          <h4>刑法第315條～315-3條・妨害秘密罪　速查卡</h4>
+          <table style="margin:0;">
+            <tr><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">條文</th><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">核心重點</th></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">§315</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">封緘信函／文書／圖畫；開拆・隱匿・窺視；行為犯，不罰未遂；告訴乃論</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">§315-1</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">非公開活動／言論／談話／身體隱私；須用工具設備；行為犯，不罰未遂；告訴乃論</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">§315-2</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">營利供給設備／意圖散布竊錄／散布販賣內容；<b>處罰未遂（§25-27）</b>；<b>非告訴乃論</b></td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">§315-3</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">沒收特別規定，不問屬於犯人與否一律沒收</td></tr>
+          </table>
+          <div class="mnemonic">「封緘從輕，窺錄加重，散布最重」</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+const sections = document.querySelectorAll('section[id]');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      document.querySelectorAll(`a[href="#${entry.target.id}"]`).forEach(l=>l.classList.add('active'));
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+links.forEach(l=>{
+  l.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const target = document.querySelector(l.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
