@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第173條～第176條｜放火失火罪體系講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b;
+  --indigo:#2c4a76;
+  --paper-outer:#f3ede0;
+  --paper-content:#fbf8f1;
+  --paper-card:#fffdf8;
+  --seal:#9c2b3a;
+  --brass:#a9832f;
+  --border:#ddd3bf;
+  --ink-45:rgba(22,35,59,.45);
+}
+*{box-sizing:border-box;}
+body{margin:0;background:var(--paper-outer);color:var(--ink);font-family:'Noto Sans TC',sans-serif;line-height:1.75;}
+h1,h2,h3,.serif{font-family:'Noto Serif TC',serif;}
+a{color:var(--indigo);}
+.layout{display:flex;min-height:100vh;}
+nav.side{width:240px;flex:none;position:sticky;top:0;height:100vh;overflow-y:auto;background:var(--paper-outer);border-right:1px solid var(--border);padding:28px 18px;}
+nav.side .navtitle{font-size:12px;letter-spacing:.15em;color:var(--brass);margin-bottom:14px;}
+nav.side a{display:block;padding:8px 10px;border-radius:6px;color:var(--ink);text-decoration:none;font-size:14px;margin-bottom:2px;}
+nav.side a.active{background:var(--indigo);color:#fbf8f1;}
+nav.side a.pending{color:var(--ink-45);}
+main{flex:1;background:var(--paper-content);box-shadow:-6px 0 18px -14px rgba(0,0,0,.3);min-width:0;}
+.wrap{max-width:880px;margin:0 auto;padding:56px 32px 90px;}
+section{margin-bottom:64px;scroll-margin-top:24px;}
+.cover{position:relative;padding:60px 20px 20px;}
+.eyebrow{font-size:13px;letter-spacing:.18em;color:var(--brass);font-weight:700;margin-bottom:10px;}
+.cover h1{font-size:34px;font-weight:900;margin:0 0 10px;color:var(--ink);}
+.cover .sub{color:#5b6472;font-size:15px;margin-bottom:14px;}
+.cover-meta{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;margin-bottom:24px;}
+.cover-meta span{padding:4px 10px;border:1px solid var(--indigo);border-radius:20px;color:var(--indigo);}
+.ver-badge{border-color:var(--seal) !important;color:var(--seal) !important;}
+.seal-mark{position:absolute;top:20px;right:10px;width:78px;height:78px;border:3px solid var(--seal);border-radius:8px;transform:rotate(6deg);display:flex;align-items:center;justify-content:center;}
+.seal-mark span{writing-mode:vertical-rl;color:var(--seal);font-weight:900;font-size:17px;letter-spacing:4px;}
+h2.sech{font-size:22px;border-left:4px solid var(--indigo);padding-left:14px;margin-bottom:22px;}
+.article-box{position:relative;border-left:3px solid var(--indigo);background:var(--paper-card);padding:20px 22px;margin-bottom:16px;overflow:hidden;border-radius:2px;box-shadow:0 1px 3px rgba(0,0,0,.06);}
+.article-box .num{position:absolute;right:10px;bottom:-6px;font-size:80px;font-weight:900;color:var(--ink);opacity:.06;font-family:'Noto Serif TC',serif;}
+.article-box h3{margin:0 0 8px;font-size:17px;color:var(--indigo);}
+.article-box p{margin:4px 0;font-size:15px;}
+table{width:100%;border-collapse:collapse;margin:16px 0;font-size:14px;}
+th{background:var(--ink);color:var(--paper-content);padding:10px 12px;text-align:left;}
+td{padding:10px 12px;border-bottom:1px solid var(--border);}
+tr:nth-child(even) td{background:#f6f1e6;}
+tr:nth-child(odd) td{background:var(--paper-card);}
+.elem-block{margin-bottom:22px;}
+.elem-block h3{font-size:17px;border-left:3px solid var(--brass);padding-left:10px;margin-bottom:8px;}
+.conclusion-yes{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);padding:0 2px;}
+.conclusion-no{font-weight:700;color:var(--seal);}
+.placeholder{border:2px dashed #cdbf9c;background:repeating-linear-gradient(45deg,#f6f1e6,#f6f1e6 10px,#f0e8d5 10px,#f0e8d5 20px);border-radius:8px;padding:34px;text-align:center;color:#8a7a55;}
+.placeholder .badge{display:inline-block;margin-top:10px;background:var(--brass);color:#fff;font-size:12px;padding:3px 12px;border-radius:20px;}
+.src-note{font-size:12.5px;color:#7a7263;margin-top:6px;}
+.case-card,.exam-card{background:var(--paper-card);border-radius:8px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 6px 18px -12px rgba(0,0,0,.25);margin-bottom:22px;overflow:hidden;}
+.case-card .hd{background:var(--indigo);color:#fbf8f1;padding:10px 16px;font-weight:700;font-family:'Noto Serif TC',serif;}
+.exam-card .hd{background:var(--ink);color:#fbf8f1;padding:10px 16px;font-weight:700;font-family:'Noto Serif TC',serif;}
+.case-card .bd,.exam-card .bd{padding:18px 20px;font-size:14.5px;}
+.case-card .bd h4,.exam-card .bd h4{margin:14px 0 6px;font-size:14px;color:var(--indigo);}
+.badge-edu{display:inline-block;font-size:11px;background:#eee3c8;color:#7a5c1c;padding:2px 8px;border-radius:12px;margin-left:8px;}
+.relation-wrap{margin:14px 0;}
+.relation-note{text-align:center;font-size:12.5px;color:var(--ink-45);margin-top:6px;}
+.quickcard{background:var(--ink);color:#fbf8f1;border-radius:10px;padding:32px 28px;position:relative;overflow:hidden;}
+.quickcard::after{content:"速";position:absolute;right:6px;bottom:-30px;font-size:150px;font-weight:900;font-family:'Noto Serif TC',serif;opacity:.08;}
+.quickcard h3{margin-top:0;color:#fbf8f1;}
+.mnemonic{background:var(--seal);display:inline-block;padding:10px 18px;border-radius:6px;font-size:16px;font-weight:700;margin-top:10px;}
+.topnav{display:none;}
+@media (max-width:980px){
+  nav.side{display:none;}
+  .topnav{display:flex;position:sticky;top:0;z-index:10;background:var(--paper-outer);border-bottom:1px solid var(--border);overflow-x:auto;padding:10px 12px;gap:8px;}
+  .topnav a{flex:none;padding:6px 14px;border:1px solid var(--indigo);border-radius:20px;font-size:13px;color:var(--indigo);text-decoration:none;white-space:nowrap;}
+  .topnav a.active{background:var(--indigo);color:#fff;}
+  .wrap{padding:24px 18px 70px;}
+  .seal-mark{position:static;margin-bottom:16px;transform:rotate(3deg);}
+  .cover{padding:20px 4px 10px;}
+}
+</style>
+</head>
+<body>
+<div class="topnav" id="topnav"></div>
+<div class="layout">
+<nav class="side" id="sidenav">
+  <div class="navtitle">第二編分則．第十一章 公共危險罪</div>
+</nav>
+<main>
+<div class="wrap">
+
+<section id="cover">
+  <div class="cover">
+    <div class="seal-mark"><span>喪失效用</span></div>
+    <div class="eyebrow">刑法第173條～第176條</div>
+    <h1>放火失火罪體系講義</h1>
+    <div class="sub">現供人所在建築物放火罪及其體系比較（§173、§174、§175、§176）</div>
+    <div class="cover-meta">
+      <span class="ver-badge">v1.0</span>
+      <span class="meta-date">建立日期 2026-08-28</span>
+      <span><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.173-174-175-176" alt="visitors" style="vertical-align:middle;height:14px;"></span>
+    </div>
+  </div>
+</section>
+
+<section id="art">
+  <h2 class="sech">一、條文原文</h2>
+
+  <div class="article-box">
+    <span class="num">173</span>
+    <h3>第173條（放火失火燒燬現供人使用或現有人所在物罪）</h3>
+    <p>Ⅰ 放火燒燬現供人使用之住宅或現有人所在之建築物、礦坑、火車、電車或其他供水、陸、空公眾運輸之舟、車、航空機者，處無期徒刑或七年以上有期徒刑。</p>
+    <p>Ⅱ 失火燒燬前項之物者，處一年以下有期徒刑、拘役或一萬五千元以下罰金。</p>
+    <p>Ⅲ 第一項之未遂犯罰之。</p>
+    <p>Ⅳ 預備犯第一項之罪者，處一年以下有期徒刑、拘役或九千元以下罰金。</p>
+  </div>
+
+  <div class="article-box">
+    <span class="num">174</span>
+    <h3>第174條（放火失火燒燬現非供人使用或現未有人所在物罪）</h3>
+    <p>Ⅰ 放火燒燬現非供人使用之他人所有住宅或現未有人所在之他人所有建築物、礦坑、火車、電車或其他供水、陸、空公眾運輸之舟、車、航空機者，處三年以上十年以下有期徒刑。</p>
+    <p>Ⅱ 放火燒燬前項之自己所有物，致生公共危險者，處六月以上五年以下有期徒刑。</p>
+    <p>Ⅲ 失火燒燬第一項之物者，處六月以下有期徒刑、拘役或九千元以下罰金；失火燒燬前項之物，致生公共危險者，亦同。</p>
+    <p>Ⅳ 第一項之未遂犯罰之。</p>
+  </div>
+
+  <div class="article-box">
+    <span class="num">175</span>
+    <h3>第175條（放火失火燒燬住宅等以外之物罪）</h3>
+    <p>Ⅰ 放火燒燬前二條以外之他人所有物，致生公共危險者，處一年以上七年以下有期徒刑。</p>
+    <p>Ⅱ 放火燒燬前二條以外之自己所有物，致生公共危險者，處三年以下有期徒刑。</p>
+    <p>Ⅲ 失火燒燬前二條以外之物，致生公共危險者，處拘役或九千元以下罰金。</p>
+  </div>
+
+  <div class="article-box">
+    <span class="num">176</span>
+    <h3>第176條（準放火罪）</h3>
+    <p>故意或因過失，以火藥、蒸氣、電氣、煤氣或其他爆裂物，炸燬前三條之物者，準用各該條放火、失火之規定。</p>
+  </div>
+</section>
+
+<section id="structure">
+  <h2 class="sech">二、條文體系總覽</h2>
+  <p>§173～§175 三條的核心差異在於「燒燬客體有無人在內使用」與「物之所有權歸屬」；§176 則是行為手段的擴張（以爆裂物等代替直接放火），法律效果準用前三條。</p>
+  <table>
+    <tr><th>條文</th><th>客體</th><th>所有權</th><th>是否要求「致生公共危險」</th><th>法定刑（故意既遂）</th></tr>
+    <tr><td>§173 Ⅰ</td><td>現供人使用之住宅／現有人所在之建築物等</td><td>不問所有權歸屬</td><td>否（抽象危險犯）</td><td>無期徒刑或7年以上</td></tr>
+    <tr><td>§174 Ⅰ</td><td>現非供人使用／現未有人所在之建築物等</td><td>他人所有</td><td>否（抽象危險犯）</td><td>3年以上10年以下</td></tr>
+    <tr><td>§174 Ⅱ</td><td>同上</td><td>自己所有</td><td>是（具體危險犯）</td><td>6月以上5年以下</td></tr>
+    <tr><td>§175 Ⅰ</td><td>§173、§174以外之物</td><td>他人所有</td><td>是（具體危險犯）</td><td>1年以上7年以下</td></tr>
+    <tr><td>§175 Ⅱ</td><td>同上</td><td>自己所有</td><td>是（具體危險犯）</td><td>3年以下</td></tr>
+    <tr><td>§176</td><td>以爆裂物等炸燬前三條之物</td><td>準用前三條</td><td>準用前三條</td><td>準用前三條</td></tr>
+  </table>
+  <p class="src-note">判斷順序建議：先確認客體是否「現供人使用／現有人所在」（→§173）；否則再確認「是否為他人所有」及「是否致生公共危險」（→§174、§175）。</p>
+</section>
+
+<section id="elements">
+  <h2 class="sech">三、犯罪三階層逐項解析（以§173Ⅰ為核心，並比較§174～§176）</h2>
+
+  <div class="elem-block">
+    <h3>（一）構成要件該當性 — 客觀構成要件</h3>
+    <p><strong>行為主體：</strong>一般犯，不限特定身分，任何人均得為之。</p>
+    <p><strong>行為客體：</strong>現供人使用之住宅，或現有人所在之建築物、礦坑、火車、電車或其他供水、陸、空公眾運輸之舟、車、航空機。「現供人使用」與「現有人所在」擇一即可，不以放火時屋內確有人在場為必要（如夜間空屋但仍供居住使用者亦屬之）。</p>
+    <p><strong>實行行為：</strong>放火（積極點燃），與§173Ⅱ之「失火」（過失致火）相區隔。</p>
+    <p><strong>結果與既未遂判斷：</strong>條文用語為「燒燬」，實務見解採<span class="conclusion-yes">效用喪失說</span>：房屋等標的物構成之重要部分因燃燒而喪失其主要效用，即屬既遂；僅局部燒損、尚未喪失效用者，僅論以未遂（§173Ⅲ）。</p>
+    <p><strong>因果關係：</strong>放火行為與燒燬結果間須具相當因果關係。</p>
+  </div>
+
+  <div class="elem-block">
+    <h3>（二）構成要件該當性 — 主觀構成要件</h3>
+    <p>須具備放火故意（直接或間接故意均可），且故意內容須及於「該建築物現供人使用或現有人所在」此一要素。實務見解指出，§173Ⅰ所稱之「人」係指放火人犯以外之人；若行為人所放火之住宅僅供其自己使用、或僅其本人在內，因放火人明知不致使他人遭受意外危害，即不該當本條，應視所有權歸屬另論§174。</p>
+    <p>§173Ⅱ 之失火則以過失（應注意能注意而不注意，或雖預見其發生但確信其不發生）為要件，不要求放火故意。</p>
+  </div>
+
+  <div class="elem-block">
+    <h3>（三）違法性</h3>
+    <p>本罪較少發生阻卻違法爭議，惟仍應依個案檢視有無正當防衛（§23）、緊急避難（§24）等阻卻違法事由，例如行為人為撲滅更大災害而以控制性方式引燃另一區域（實務上極罕見，通常仍須符合緊急避難之「不得已」與「法益權衡」要件，方能<span class="conclusion-yes">阻卻違法</span>；若不符合要件，仍<span class="conclusion-no">不能阻卻違法</span>）。</p>
+  </div>
+
+  <div class="elem-block">
+    <h3>（四）有責性（罪責）</h3>
+    <p>依§18、§19判斷行為人責任能力（未滿14歲不罰、14歲以上未滿18歲得減輕、因精神障礙致辨識能力欠缺或顯著減低者不罰或得減輕）；違法性認識與期待可能性一般均具備，較少成為本罪爭點。</p>
+  </div>
+
+  <div class="elem-block">
+    <h3>（五）與§174、§175、§176之比較重點</h3>
+    <p>§174Ⅰ、§175Ⅰ 均以「他人所有」為要件之一部分；§174Ⅱ、§175Ⅱ 則規範燒燬「自己所有物」之情形，此時額外要求「致生公共危險」作為<span class="conclusion-yes">具體危險犯</span>之構成要件要素，須由法官個案審查危險是否已現實化，與§173、§174Ⅰ之<span class="conclusion-yes">抽象危險犯</span>性質不同。§176則是將放火之「手段」擴張至爆裂物等，構成要件其餘部分準用前三條，不生獨立之要件內容。</p>
+  </div>
+</section>
+
+<section id="doctrine">
+  <h2 class="sech">四、學說見解</h2>
+  <table>
+    <tr><th>學者</th><th>見解摘要</th><th>出處</th></tr>
+    <tr>
+      <td>黃榮堅</td>
+      <td>犯罪依「行為之不法構成是否以行為客體之實際損害為要件」區分實害犯與危險犯；危險犯再分抽象危險犯（構成要件不以危險具體存在為要素，行為對法益形成一般、潛在、抽象危險即足以成立，法官無庸個案審查危險有無）與具體危險犯（危險之現實存在屬構成要件內容，須有發生實害之蓋然性）。§173、§174Ⅰ屬前者。</td>
+      <td>《基礎刑法學（下）》，四版，頁579（轉引自考用整理網站，建議核對原書頁碼）</td>
+    </tr>
+  </table>
+  <p class="src-note">「燒燬」之定義（效用喪失說／獨立燃燒說）目前搜尋僅查得實務見解（見下方實務見解），未查得附具名學者出處之專書論述，暫不列入本表，以免援引不明來源。</p>
+</section>
+
+<section id="practice">
+  <h2 class="sech">五、實務見解</h2>
+  <table>
+    <tr><th>案號</th><th>要旨</th></tr>
+    <tr><td>最高法院97年度台上字第4034號刑事判決</td><td>§173Ⅰ放火燒燬建築物罪，如房屋構成之重要部分燒損，達於喪失其主要效用之程度，即屬既遂。</td></tr>
+    <tr><td>最高法院87年度台上字第1719號刑事判決</td><td>§173Ⅰ所稱之「燒燬」，係指燃燒毀損之義，亦即標的物已因燃燒結果喪失其效用而言；未認定已喪失效用者，不得逕論既遂。</td></tr>
+    <tr><td>最高法院81年台上字第2734號決</td><td>現代大廈或公寓式建築，自己與他人擁有部分就公共安全而言具不可分性；在自己使用之住宅內放火，實與對整棟大廈放火無異，仍應依§173Ⅰ論處，不適用§174Ⅱ。</td></tr>
+    <tr><td>最高法院28年上字第3218號判例</td><td>§173Ⅰ所稱之「人」，係指放火人犯以外之人；如建築物僅放火人自己使用或僅該犯在內，因放火行為並不致使他人遭受意外危害，不能適用§173Ⅰ論處。</td></tr>
+    <tr><td>最高法院97年台上字第2895號決</td><td>§173Ⅰ放火罪列入公共危險罪章，係以社會公安為重，其直接被害法益為一般社會之公共安全。</td></tr>
+  </table>
+  <p class="src-note">以上判決要旨轉引自考用整理網站與法律部落格節錄，尚未經司法院原文逐字核實，正式引用前建議至司法院裁判書查詢系統（https://judgment.judicial.gov.tw/）輸入案號核對全文。目前查無大法官解釋或憲法法庭判決涉及本條，理由為：本條構成要件明確、爭議多集中於既未遂與客體認定之事實審判斷，尚未有人以此聲請違憲審查。</p>
+</section>
+
+<section id="cases">
+  <h2 class="sech">六、教學案例<span class="badge-edu">教學用途，情節虛構</span></h2>
+
+  <div class="case-card">
+    <div class="hd">案例一｜§173Ⅰ 既遂</div>
+    <div class="bd">
+      <h4>事實</h4>
+      <p>甲深夜潛入前妻乙現正居住之透天厝一樓客廳，明知乙及其子女均在二、三樓臥室熟睡，仍持打火機點燃客廳沙發，隨即離去。火勢延燒至客廳天花板與部分牆壁，消防局到場撲滅後鑑定：一樓客廳裝潢、家具及天花板結構已嚴重碳化毀損，喪失居住使用效用；二、三樓因及時撲滅僅有輕微煙燻痕跡。</p>
+      <h4>爭點</h4>
+      <p>一樓客廳已喪失效用、但二、三樓未喪失效用，是否仍成立§173Ⅰ既遂？甲明知屋內有人是否影響故意之認定？</p>
+      <h4>分析</h4>
+      <p>本屋現供乙及子女居住使用，屬「現供人使用之住宅」；甲明知有人在內仍點火，具備放火故意。既遂判斷以「該建築物之重要部分是否喪失效用」為準，非要求建築物全部燒燬；一樓客廳構成整棟透天厝居住機能之重要部分，其喪失效用已足使整體住宅喪失主要居住效用。</p>
+      <h4>結論</h4>
+      <p>甲成立§173Ⅰ<span class="conclusion-yes">既遂</span>。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="hd">案例二｜自己獨居空屋，論§174Ⅱ而非§173Ⅰ</div>
+    <div class="bd">
+      <h4>事實</h4>
+      <p>丙獨自居住於自有透天厝，因積欠鉅額賭債，欲燒屋詐領保險金。放火前丙已確認家中無他人、亦通知鄰居暫時外出，點火後住宅一樓嚴重燒損喪失效用，惟消防局到場時火勢已受控，未延燒鄰房，鑑定報告亦認定當時風向、建材間距均未致生延燒鄰房或波及公眾之危險。</p>
+      <h4>爭點</h4>
+      <p>丙所燒燬者為自己所有、且僅供自己使用之住宅，是否適用§173Ⅰ？有無成立§174Ⅱ？</p>
+      <h4>分析</h4>
+      <p>依§173Ⅰ所稱之「人」，指放火人犯以外之人；丙本人自住且事前確認屋內無他人，並不符合「現供人使用」在保護他人安全意義下之要件，應改論§174Ⅱ（自己所有物，致生公共危險）。惟§174Ⅱ另要求「致生公共危險」，鑑定報告已認定當時未致生延燒鄰房或波及公眾之具體危險。</p>
+      <h4>結論</h4>
+      <p>丙<span class="conclusion-no">不成立§173Ⅰ</span>；因欠缺「致生公共危險」之具體危險要件，亦<span class="conclusion-no">不成立§174Ⅱ既遂</span>，僅得視有無延燒鄰房之現實危險個案再認定。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="hd">案例三｜教唆放火他人所有空屋，未遂與教唆犯歸屬<span class="badge-edu">三方關係</span></div>
+    <div class="bd">
+      <h4>事實</h4>
+      <p>丁與鄰地地主戊發生土地界址糾紛，為逼迫戊讓步，丁教唆己（丁之友人）前往戊所有、現無人居住之閒置倉庫縱火。己攜帶汽油前往，已將汽油潑灑於倉庫外牆並點燃打火機準備引燃，適逢巡邏員警經過當場制止，火苗未及延燒建物即被撲滅。</p>
+      <h4>爭點</h4>
+      <p>己之行為是否已著手實行§174Ⅰ之放火行為？丁教唆是否成立教唆犯？</p>
+      <div class="relation-wrap">
+        <svg viewBox="0 0 640 340" width="100%" xmlns="http://www.w3.org/2000/svg" style="max-width:560px;display:block;margin:0 auto;">
+          <rect x="40" y="30" width="180" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+          <text x="130" y="58" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">丁（教唆人）</text>
+          <text x="130" y="78" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">因土地糾紛萌生犯意</text>
+
+          <rect x="420" y="30" width="180" height="70" rx="6" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.5"/>
+          <text x="510" y="58" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">己（實行人）</text>
+          <text x="510" y="78" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">是否已著手放火（未遂）</text>
+
+          <rect x="230" y="230" width="180" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+          <text x="320" y="258" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">戊（被害人）</text>
+          <text x="320" y="278" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">閒置倉庫所有人</text>
+
+          <line x1="220" y1="65" x2="420" y2="65" stroke="#2c4a76" stroke-width="1.8" marker-end="url(#arrow)"/>
+          <text x="320" y="55" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#2c4a76">教唆放火</text>
+
+          <path d="M480,100 C440,160 380,190 340,225" fill="none" stroke="#a9832f" stroke-width="1.8" stroke-dasharray="5 5"/>
+          <text x="470" y="150" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#a9832f">著手後遭制止</text>
+
+          <defs>
+            <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#2c4a76"/>
+            </marker>
+          </defs>
+        </svg>
+        <div class="relation-note">爭點在於己潑灑汽油並點燃打火機是否已達「著手實行」，以及丁之教唆犯是否從屬於己之犯罪階段</div>
+      </div>
+      <h4>分析</h4>
+      <p>倉庫現無人居住使用，屬§174Ⅰ客體（現非供人使用之他人所有建築物）。己潑灑汽油並已點燃打火機，依一般社會通念已進入直接密接於構成要件行為之階段，應認已著手實行（§25），惟因員警制止未致燒燬結果，僅論§174Ⅰ未遂（§174Ⅳ）。丁教唆己實行放火，己已著手實行構成要件行為，依§29教唆犯從屬性原則，丁應論以§174Ⅰ未遂罪之教唆犯。</p>
+      <h4>結論</h4>
+      <p>己成立§174Ⅰ<span class="conclusion-yes">未遂</span>；丁成立§174Ⅰ未遂罪之<span class="conclusion-yes">教唆犯</span>。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="hd">案例四｜燒燬他人所有動產，§175Ⅰ致生公共危險之判斷</div>
+    <div class="bd">
+      <h4>事實</h4>
+      <p>庚為報復鄰居辛，於社區地下停車場將辛所有之自小客車以打火機引燃車內坐墊。火勢燃燒車輛內裝並延燒至引擎室，因地下停車場通風不良、濃煙迅速瀰漫，且辛車輛左右緊鄰另外兩輛他人車輛，消防局鑑定認定當時已有引燃鄰車及使地下室其他用路人吸入濃煙之現實危險。</p>
+      <h4>爭點</h4>
+      <p>汽車非屬§173、§174所列之公眾運輸工具（此車為私人自用），應如何適用§175？「致生公共危險」是否已具備？</p>
+      <h4>分析</h4>
+      <p>本案客體為私人自用小客車，非§173之「公眾運輸之舟、車、航空機」，亦非§174之住宅或建築物，屬§175所稱「前二條以外之物」；車輛為辛所有、非庚自己所有，適用§175Ⅰ。鑑定報告已具體指出存在引燃鄰車與波及其他用路人之現實危險，非僅抽象、擬制之危險，已滿足「致生公共危險」之具體危險犯要件。</p>
+      <h4>結論</h4>
+      <p>庚成立§175Ⅰ<span class="conclusion-yes">既遂</span>。</p>
+    </div>
+  </div>
+</section>
+
+<section id="exam">
+  <h2 class="sech">七、申論練習題與模擬解答<span class="badge-edu">AI擬題，經使用者授權出題</span></h2>
+
+  <div class="exam-card">
+    <div class="hd">題目一</div>
+    <div class="bd">
+      <p>甲與同居女友分手後心生怨懟，於女友熟睡之出租套房內點燃窗簾，火勢延燒至床架與部分天花板，經消防人員撲滅，鑑定該套房居住機能已喪失。甲辯稱其僅係一時衝動、並無使女友受傷之意。試問甲之刑責為何？</p>
+      <h4>模擬解答</h4>
+      <p>套房現由女友居住使用，屬「現供人使用之住宅」；甲明知女友熟睡屋內仍點火，其主觀上對「屋內現有人」乙節具備認識，縱其辯稱僅為一時衝動、不欲女友受傷，惟放火故意之成立不以希望被害人受傷為前提，只須認識並容任放火行為本身及其可能造成之危害發生即為已足，甲仍具備放火之直接故意。客觀上該套房居住機能因燃燒喪失，已達重要部分燒損而喪失效用之程度，堪認既遂。甲之行為該當§173Ⅰ構成要件，卷內亦無正當防衛、緊急避難等阻卻違法事由，甲亦無責任能力欠缺或期待可能性減損之情形。甲應論以§173Ⅰ放火罪既遂，處無期徒刑或七年以上有期徒刑。</p>
+    </div>
+  </div>
+
+  <div class="exam-card">
+    <div class="hd">題目二</div>
+    <div class="bd">
+      <p>乙誤信鄰棟老舊建築物長期無人居住，為圖清除違建視野，深夜前往點火。事後查明，該建築物實際上仍供遊民作為臨時棲身之用，惟放火當時屋內恰無人在場，亦無延燒鄰房之具體事證。試問乙之刑責為何？</p>
+      <h4>模擬解答</h4>
+      <p>§173Ⅰ客體採「現供人使用」或「現有人所在」擇一即足，不以放火當下屋內確有人在場為必要；該建築物既仍作為遊民臨時棲身之用，客觀上屬「現供人使用之住宅」，構成要件客觀上已該當。惟乙主觀上誤信該建築物長期無人使用，對「現供人使用」此一構成要件要素欠缺認識，屬構成要件錯誤，依其認識內容應阻卻§173Ⅰ之故意。惟乙仍認識其正在放火燒燬他人建築物，依其認識內容應論以§174Ⅰ（現非供人使用之他人所有建築物）故意既遂罪；至若乙對其誤信有應注意能注意而不注意之過失，因該建築物實際上仍供人使用，另應審酌是否該當§173Ⅱ失火罪，惟因二罪保護法益同一而僅擇一重罪論處，本案乙具放火故意，應優先論以§174Ⅰ既遂罪，處三年以上十年以下有期徒刑。</p>
+    </div>
+  </div>
+
+  <div class="exam-card">
+    <div class="hd">題目三</div>
+    <div class="bd">
+      <p>丙獨居於自有平房，因積欠卡債欲燒屋詐領火險理賠，放火前已確認無人在內。平房位於郊區，四周無其他建築物、亦無電線瓦斯管線經過，消防局鑑定當時並無延燒他物或波及公眾之危險。試問丙之刑責為何？</p>
+      <h4>模擬解答</h4>
+      <p>丙係燒燬自己獨居使用之平房，依實務見解，§173Ⅰ所稱之「人」係指放火人犯以外之人，丙本人自住且事前確認無他人在內，其行為並不致使他人遭受意外危害，不該當§173Ⅰ。丙所有之建築物屬自己所有，應改論§174Ⅱ；惟§174Ⅱ以「致生公共危險」為構成要件要素之具體危險犯，須有發生實害之蓋然性始足當之。本案平房位處郊區、四周無其他建築物或管線，鑑定報告亦認定無延燒他物或波及公眾之危險，客觀上欠缺「致生公共危險」此一構成要件要素，丙之行為不該當§174Ⅱ構成要件。丙就本次放火行為不成立刑法上放火罪責，惟仍可能另涉保險詐欺相關罪責，非本題討論範圍。</p>
+    </div>
+  </div>
+
+  <div class="exam-card">
+    <div class="hd">題目四</div>
+    <div class="bd">
+      <p>丁向友人戊借用機車代步未還，戊多次催討未果，憤而於社區露天機車停車格將丁所騎乘之機車（丁向他人承租）以打火機引燃座墊。機車引擎因燃燒受損，惟停車格屬露天空曠處，鄰近機車間距達2公尺以上，消防局鑑定認定並無延燒鄰車或波及他人之現實危險。試問戊之刑責為何？</p>
+      <h4>模擬解答</h4>
+      <p>機車非屬§173、§174所列之公眾運輸工具或建築物，應歸入§175所稱「前二條以外之物」。該機車係丁向他人承租，所有權歸屬出租人，對戊而言屬「他人所有」，應適用§175Ⅰ。§175Ⅰ與§174Ⅱ相同，均以「致生公共危險」為具體危險犯之構成要件要素。本案停車格屬露天空曠處，鄰車間距達2公尺以上，鑑定報告已具體認定無延燒鄰車或波及他人之現實危險，客觀上欠缺致生公共危險此一要素，戊之行為不該當§175Ⅰ既遂之構成要件。惟戊仍成立毀損罪責（依燒燬機車之行為另論相關財產犯罪），非本題§175討論範圍。</p>
+    </div>
+  </div>
+</section>
+
+<section id="quick">
+  <h2 class="sech">八、速查卡</h2>
+  <div class="quickcard">
+    <h3>放火失火罪速記</h3>
+    <p>§173：現用／現有人所在 → 不問所有權，抽象危險犯，刑度最重（無期或7年以上）</p>
+    <p>§174Ⅰ：現非供人用之他人物 → 抽象危險犯（3～10年）</p>
+    <p>§174Ⅱ／§175：自己所有物或住宅以外之物 → 均須「致生公共危險」（具體危險犯）</p>
+    <p>§176：以爆裂物代替直接放火，準用前三條</p>
+    <p>既遂標準：燒燬＝重要部分喪失效用（非須全部燒盡）</p>
+    <div class="mnemonic">現用從重罰，自己物看有無公危</div>
+  </div>
+</section>
+
+</div>
+</main>
+</div>
+
+<script>
+const sections = [
+  {id:'cover', label:'封面'},
+  {id:'art', label:'一、條文原文'},
+  {id:'structure', label:'二、體系總覽'},
+  {id:'elements', label:'三、三階層解析'},
+  {id:'doctrine', label:'四、學說見解'},
+  {id:'practice', label:'五、實務見解'},
+  {id:'cases', label:'六、教學案例'},
+  {id:'exam', label:'七、申論題'},
+  {id:'quick', label:'八、速查卡'},
+];
+const sidenav = document.getElementById('sidenav');
+const topnav = document.getElementById('topnav');
+sections.forEach(s=>{
+  const a1 = document.createElement('a');
+  a1.href = '#'+s.id; a1.textContent = s.label; a1.dataset.id = s.id;
+  sidenav.appendChild(a1);
+  const a2 = document.createElement('a');
+  a2.href = '#'+s.id; a2.textContent = s.label; a2.dataset.id = s.id;
+  topnav.appendChild(a2);
+});
+const allLinks = ()=>document.querySelectorAll('nav.side a, .topnav a');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      allLinks().forEach(l=>l.classList.remove('active'));
+      document.querySelectorAll('a[data-id="'+e.target.id+'"]').forEach(l=>l.classList.add('active'));
+    }
+  });
+},{rootMargin:'-20% 0px -70% 0px'});
+sections.forEach(s=>{
+  const el = document.getElementById(s.id);
+  if(el) io.observe(el);
+});
+allLinks().forEach(l=>{
+  l.addEventListener('click',(ev)=>{
+    ev.preventDefault();
+    document.getElementById(l.dataset.id).scrollIntoView({behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
