@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第168條｜偽證罪 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper-outer:#f3ede0;
+    --paper-inner:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --line:#ddd3bf;
+    --ink-45: rgba(22,35,59,.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper-outer); color:var(--ink);
+    font-family:'Noto Sans TC',sans-serif; line-height:1.8;
+  }
+  h1,h2,h3,h4,.serif{font-family:'Noto Serif TC',serif;}
+  a{color:var(--indigo);}
+
+  /* ---------- Layout ---------- */
+  .shell{display:flex; max-width:1180px; margin:0 auto;}
+  nav.sidebar{
+    width:240px; flex-shrink:0; position:sticky; top:0; height:100vh;
+    overflow-y:auto; padding:28px 18px; border-right:1px solid var(--line);
+  }
+  nav.sidebar .nav-title{font-size:12px; letter-spacing:.15em; color:var(--ink-45); margin-bottom:14px;}
+  nav.sidebar ul{list-style:none; padding:0; margin:0;}
+  nav.sidebar li{margin-bottom:4px;}
+  nav.sidebar a{
+    display:block; padding:8px 10px; border-radius:6px; color:var(--ink);
+    text-decoration:none; font-size:14px; border-left:3px solid transparent;
+  }
+  nav.sidebar a.active{background:var(--paper-card); border-left-color:var(--seal); color:var(--seal); font-weight:700;}
+  nav.sidebar a:hover{background:var(--paper-card);}
+
+  main{flex:1; min-width:0; background:var(--paper-inner); box-shadow:-8px 0 24px rgba(22,35,59,.04); padding:0;}
+
+  .mobile-nav{display:none;}
+
+  /* ---------- Cover ---------- */
+  .cover{
+    padding:56px 56px 40px; border-bottom:1px solid var(--line); position:relative;
+  }
+  .eyebrow{
+    display:inline-block; font-size:12px; letter-spacing:.18em; color:var(--indigo);
+    border:1px solid var(--indigo); padding:4px 10px; border-radius:999px; margin-bottom:18px;
+  }
+  .cover h1{font-size:36px; font-weight:900; margin:0 0 8px; color:var(--ink);}
+  .cover .subtitle{font-size:16px; color:var(--ink-45); margin-bottom:10px;}
+  .cover-meta{display:flex; gap:10px; flex-wrap:wrap; margin:14px 0 22px;}
+  .cover-meta span{
+    font-size:12px; padding:3px 10px; border-radius:999px; border:1px solid var(--indigo); color:var(--indigo);
+  }
+  .cover-meta .ver-badge{border-color:var(--seal); color:var(--seal); font-weight:700;}
+  .seal-mark{
+    position:absolute; top:40px; right:56px; width:78px; height:98px;
+    border:3px solid var(--seal); border-radius:6px; color:var(--seal);
+    display:flex; align-items:center; justify-content:center;
+    writing-mode:vertical-rl; font-family:'Noto Serif TC',serif; font-weight:900; font-size:20px;
+    transform:rotate(4deg); letter-spacing:4px; opacity:.85;
+  }
+  .toc{margin-top:24px;}
+  .toc-title{font-size:13px; color:var(--ink-45); letter-spacing:.1em; margin-bottom:8px;}
+  .toc ol{margin:0; padding-left:20px; columns:2; column-gap:24px; font-size:14px;}
+  .toc li{margin-bottom:6px;}
+
+  section{padding:40px 56px; border-bottom:1px solid var(--line);}
+  section h2{font-size:22px; color:var(--ink); border-left:5px solid var(--brass); padding-left:14px; margin:0 0 20px;}
+  section h3{font-size:16px; color:var(--indigo); border-left:3px solid var(--indigo); padding-left:10px; margin:26px 0 12px;}
+
+  /* ---------- Article box ---------- */
+  .article-box{
+    position:relative; background:var(--paper-card); border-left:3px solid var(--indigo);
+    border-radius:4px; padding:20px 22px; margin-bottom:16px; overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,.05);
+  }
+  .article-box .no{font-weight:700; color:var(--indigo); font-family:'Noto Serif TC',serif; margin-bottom:6px;}
+  .article-box .watermark{
+    position:absolute; right:10px; bottom:-16px; font-size:96px; font-weight:900;
+    font-family:'Noto Serif TC',serif; color:var(--ink); opacity:.06; line-height:1; pointer-events:none;
+  }
+  .article-box.primary{border-left-color:var(--seal);}
+
+  /* ---------- Tables ---------- */
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:14px;}
+  thead th{background:var(--ink); color:var(--paper-inner); padding:10px 12px; text-align:left; font-family:'Noto Serif TC',serif;}
+  tbody td{padding:10px 12px; border-bottom:1px solid var(--line);}
+  tbody tr:nth-child(even){background:#f6f1e6;}
+  tbody tr:nth-child(odd){background:var(--paper-card);}
+
+  /* ---------- Conclusions ---------- */
+  .hold{font-weight:700; color:var(--ink); background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+  .not-hold{font-weight:700; color:var(--seal);}
+
+  /* ---------- Cards ---------- */
+  .card{
+    background:var(--paper-card); border-radius:8px; padding:18px 20px; margin-bottom:16px;
+    box-shadow:0 1px 3px rgba(22,35,59,.08), 0 6px 16px rgba(22,35,59,.05);
+  }
+  .card .card-head{
+    margin:-18px -20px 14px; padding:12px 20px; border-radius:8px 8px 0 0; color:var(--paper-inner);
+    background:var(--indigo); font-family:'Noto Serif TC',serif; font-weight:700;
+  }
+  .card.exam .card-head{background:var(--ink);}
+  .card .tag{display:inline-block; font-size:11px; color:var(--paper-inner); background:var(--seal); padding:2px 8px; border-radius:999px; margin-left:8px;}
+
+  /* ---------- Placeholder (unused here, kept for consistency) ---------- */
+  .placeholder{
+    border:2px dashed var(--brass); border-radius:8px; padding:30px; text-align:center; color:var(--ink-45);
+  }
+
+  /* ---------- Term list ---------- */
+  .term{margin-bottom:14px;}
+  .term dt{font-weight:700; color:var(--indigo); font-family:'Noto Serif TC',serif;}
+  .term dd{margin:4px 0 0;}
+
+  /* ---------- Doctrine / practice source cards ---------- */
+  .source-note{font-size:12px; color:var(--ink-45); margin-top:6px;}
+
+  /* ---------- Cheat sheet ---------- */
+  .cheatsheet{
+    background:var(--ink); color:var(--paper-inner); border-radius:10px; padding:28px 30px; position:relative; overflow:hidden;
+  }
+  .cheatsheet .deco{
+    position:absolute; right:-10px; bottom:-30px; font-size:150px; font-weight:900; opacity:.08;
+    font-family:'Noto Serif TC',serif;
+  }
+  .cheatsheet .mnemonic{
+    background:var(--seal); color:#fff; padding:14px 18px; border-radius:6px; font-size:18px;
+    font-family:'Noto Serif TC',serif; font-weight:700; display:inline-block; margin-top:10px;
+  }
+
+  .link-note{border:2px dashed var(--indigo); border-radius:8px; padding:16px 20px; font-size:14px;}
+
+  /* ---------- Relation diagram wrap (unused, but keep style hook) ---------- */
+  .relation-wrap{margin:20px 0;}
+  .relation-note{text-align:center; color:var(--ink-45); font-size:13px; margin-top:8px;}
+
+  @media (max-width:980px){
+    nav.sidebar{display:none;}
+    .mobile-nav{
+      display:flex; position:sticky; top:0; z-index:10; overflow-x:auto; gap:8px;
+      background:var(--paper-outer); padding:10px 14px; border-bottom:1px solid var(--line);
+    }
+    .mobile-nav a{
+      flex-shrink:0; font-size:12px; padding:6px 12px; border-radius:999px; border:1px solid var(--indigo);
+      color:var(--indigo); text-decoration:none; white-space:nowrap;
+    }
+    .mobile-nav a.active{background:var(--indigo); color:#fff;}
+    .cover{padding:32px 22px;}
+    section{padding:28px 22px;}
+    .seal-mark{top:22px; right:22px; width:60px; height:76px; font-size:16px;}
+    .toc ol{columns:1;}
+    .cover h1{font-size:26px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav"></div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="nav-title">章節導覽</div>
+    <ul id="navList"></ul>
+  </nav>
+
+  <main>
+    <div class="cover">
+      <div class="eyebrow">第二編分則・第十章 偽證及誣告罪</div>
+      <div class="seal-mark">偽證</div>
+      <h1>刑法第168條</h1>
+      <div class="subtitle">偽證罪 教學講義</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立日期：2026-08-28</span>
+        <img alt="visitors" style="border-radius:999px;" src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.168">
+      </div>
+      <div class="toc">
+        <div class="toc-title">本講義目錄</div>
+        <ol>
+          <li>條文原文</li>
+          <li>條文結構總覽</li>
+          <li>犯罪三階層逐項解析</li>
+          <li>專業名詞解釋</li>
+          <li>學說見解</li>
+          <li>實務見解</li>
+          <li>教學案例（4則）</li>
+          <li>申論練習題與模擬解答（4題）</li>
+          <li>速查卡</li>
+        </ol>
+      </div>
+    </div>
+
+    <section id="s1">
+      <h2>一、條文原文</h2>
+      <div class="article-box primary">
+        <div class="no">第168條（偽證罪）【主條文】</div>
+        於執行審判職務之公署審判時或於檢察官偵查時，證人、鑑定人、通譯於案情有重要關係之事項，供前或供後具結，而為虛偽陳述者，處七年以下有期徒刑。
+        <div class="watermark">168</div>
+      </div>
+      <div class="article-box">
+        <div class="no">第169條（誣告罪）【關聯條文】</div>
+        意圖他人受刑事或懲戒處分，向該管公務員誣告者，處七年以下有期徒刑。<br>
+        意圖他人受刑事或懲戒處分，而偽造、變造證據，或使用偽造、變造之證據者，亦同。
+        <div class="watermark">169</div>
+      </div>
+      <div class="article-box">
+        <div class="no">第171條【關聯條文】</div>
+        未指定犯人，而向該管公務員誣告犯罪者，處一年以下有期徒刑、拘役或九千元以下罰金。<br>
+        未指定犯人，而偽造、變造犯罪證據，或使用偽造、變造之犯罪證據，致開始刑事訴訟程序者，亦同。
+        <div class="watermark">171</div>
+      </div>
+      <div class="article-box">
+        <div class="no">第172條（自白減免）【關聯條文】</div>
+        犯第一百六十八條至第一百七十一條之罪，於所虛偽陳述或所誣告之案件，裁判或懲戒處分確定前自白者，減輕或免除其刑。
+        <div class="watermark">172</div>
+      </div>
+    </section>
+
+    <section id="s2">
+      <h2>二、條文結構總覽</h2>
+      <table>
+        <thead><tr><th>項目</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>保護法益</td><td>國家審判權（司法審判／偵查程序）之公正行使與正確性</td></tr>
+          <tr><td>行為主體</td><td>純正身分犯——限「證人、鑑定人、通譯」，不具此身分者不成立本罪</td></tr>
+          <tr><td>犯罪性質</td><td>抽象危險犯，不以陳述實際造成裁判或偵查結果錯誤為要件</td></tr>
+          <tr><td>既未遂</td><td>即成犯，具結後為虛偽陳述即該當既遂，法無明文處罰未遂</td></tr>
+          <tr><td>涉及階層</td><td>構成要件該當性（客觀＋主觀）、有責性；違法性階層通常不生問題</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="s3">
+      <h2>三、犯罪三階層逐項解析</h2>
+
+      <h3>（一）構成要件該當性</h3>
+      <p><strong>客觀構成要件</strong></p>
+      <table>
+        <thead><tr><th>要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行為主體</td><td>證人、鑑定人或通譯（身分於行為時已具備）</td></tr>
+          <tr><td>行為時點</td><td>於執行審判職務之公署審判時，或於檢察官偵查時</td></tr>
+          <tr><td>行為客體（事項）</td><td>須「於案情有重要關係之事項」為之；實務見解認係指該事項之有無足以影響偵查結果或裁判之決斷</td></tr>
+          <tr><td>具結</td><td>供前或供後具結，具結為可罰性前提（未合法具結，例如未滿16歲或精神障礙者依刑訴法不得令其具結，其具結無效者，不成立本罪）</td></tr>
+          <tr><td>實行行為</td><td>虛偽陳述——通說採客觀說，指陳述內容與客觀存在之真實事實不相一致</td></tr>
+        </tbody>
+      </table>
+      <p><strong>主觀構成要件</strong></p>
+      <p>須有故意，即證人對於所知實情故作虛偽之陳述，<span class="not-hold">不包括證人根據自己意見所作之判斷</span>在內。本罪無過失犯處罰規定，故過失陳述不實不構成本罪。</p>
+
+      <h3>（二）違法性</h3>
+      <p>本條性質上通常<span class="hold">不生阻卻違法之特殊問題</span>；若有正當防衛、緊急避難等一般阻卻違法事由之特殊情形，仍應依刑法總則規定個案判斷，惟實務上極為罕見。本罪之核心爭議多集中於構成要件該當性之認定，而非違法性階層。</p>
+
+      <h3>（三）有責性（罪責）</h3>
+      <table>
+        <thead><tr><th>要件</th><th>說明</th></tr></thead>
+        <tbody>
+          <tr><td>責任能力</td><td>依第18條（未滿14歲不罰、14以上未滿18得減輕）、第19條（精神障礙）個案判斷</td></tr>
+          <tr><td>違法性認識</td><td>一般人均可認識具結後據實陳述之義務，鮮少發生禁止錯誤問題</td></tr>
+          <tr><td>期待可能性</td><td>若證人依刑事訴訟法第180、181條本得拒絕證言，卻未受司法機關合法告知該權利即為具結陳述，實務見解認為此等情形因未經合法具結，本即不成立本罪；學說上亦有以期待可能性角度補充說明此類情形之減免依據</td></tr>
+          <tr><td>刑罰減免事由</td><td>第172條自白減免——性質上屬個人減免刑罰事由，於裁判或懲戒處分確定前自白者減輕或免除其刑，於量刑階段適用，<span class="not-hold">不影響犯罪本身是否成立</span>之判斷</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="s4">
+      <h2>四、專業名詞解釋</h2>
+      <dl>
+        <div class="term"><dt>虛偽陳述</dt><dd>指陳述之內容與客觀存在之真實事實不相一致。學說上有客觀說（比對陳述內容與客觀事實是否吻合）與主觀說（是否違反行為人主觀確信之記憶內容）之爭，通說採客觀說。</dd></div>
+        <div class="term"><dt>具結</dt><dd>訴訟程序上保證依真實內容陳述之具名行為（簽署「願據實陳述，如有虛偽陳述，願受偽證罪之處罰」結文）。學說上多認其於偽證罪體系中定位為客觀可罰條件。</dd></div>
+        <div class="term"><dt>於案情有重要關係之事項</dt><dd>指該事項之有無，足以影響偵查結果或裁判之決斷而言，非以決定性事項為限，實務解釋範圍相對寬廣。</dd></div>
+        <div class="term"><dt>抽象危險犯</dt><dd>指立法者僅以行為本身具有一定之危險性即予處罰，不要求發生具體實害結果。本罪不以陳述實際導致裁判或偵查結果錯誤為要件。</dd></div>
+        <div class="term"><dt>純正身分犯</dt><dd>指以特定身分為構成要件要素之犯罪，不具備該身分者不能單獨成立正犯（僅得依身分共犯規定論處）。本罪行為主體限「證人、鑑定人、通譯」。</dd></div>
+        <div class="term"><dt>即成犯</dt><dd>指行為完成之同時犯罪即已既遂，無延續之犯罪狀態（相對於繼續犯）。本罪於具結後為虛偽陳述之時即該當既遂。</dd></div>
+      </dl>
+    </section>
+
+    <section id="s5">
+      <h2>五、學說見解</h2>
+      <div class="card">
+        <div class="card-head">柯耀程</div>
+        <p>就「虛偽陳述」之判斷標準，指出學者間見解不一：客觀說主張應比對陳述內容與客觀事實是否吻合；主觀說則認為虛偽陳述係指陳述內容違反行為人主觀上確信之記憶內容。柯氏認為宜以客觀說為妥，理由在於「是否違反行為人記憶內容」屬主觀要件之審查對象，不宜與虛偽陳述之客觀要件判斷混為一談。另就「具結」之定位，柯氏認為宜將其理解為偽證罪之客觀可罰條件，而非構成要件要素本身。</p>
+        <div class="source-note">出處：柯耀程，〈偽證罪是否得以成立連續犯〉，收錄於《刑法問題評釋》，2004年12月初版，頁134（經AI搜尋整理，內容為濃縮改寫，建議使用者查閱原書核實後正式引用）</div>
+      </div>
+    </section>
+
+    <section id="s6">
+      <h2>六、實務見解</h2>
+      <div class="card">
+        <div class="card-head">最高法院69年台上字第1506號判決先例</div>
+        <p>偽證罪之故意，係指證人對於所知實情故作虛偽之陳述而言，<span class="not-hold">不包括證人根據自己之意見所作之判斷在內</span>。</p>
+        <div class="source-note">可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">judgment.judicial.gov.tw</a>）輸入案號自行查閱全文核實。</div>
+      </div>
+      <div class="card">
+        <div class="card-head">最高法院81年度台上字第1330號判決</div>
+        <p>涉及偽證罪構成要件之相關論述，與69年台上字第1506號先例意旨相互引用參照。</p>
+        <div class="source-note">可至司法院裁判書查詢系統輸入案號自行查閱全文核實。</div>
+      </div>
+      <div class="card">
+        <div class="card-head">最高法院87年度台上字第3213號判決</div>
+        <p>刑法上之偽證罪所稱「虛偽之陳述」，必須行為人以明知不實之事項，故為虛偽之陳述，始為相當；即行為人主觀上須明知陳述內容反於其所見所聞之事實。</p>
+        <div class="source-note">可至司法院裁判書查詢系統輸入案號自行查閱全文核實。</div>
+      </div>
+      <div class="card">
+        <div class="card-head">最高法院106年度台上字第192號刑事判決</div>
+        <p>涉及第168條與刑事訴訟法第180、186條拒絕證言權規定之交錯適用——依此判決意旨，證人與被告或自訴人間具有特殊身分關係（如配偶、直系血親）而依法得拒絕證言，若未經司法機關合法告知該權利即令其具結作證，因具結不合法，縱陳述不實，亦不構成偽證罪。</p>
+        <div class="source-note">可至司法院裁判書查詢系統輸入案號自行查閱全文核實。</div>
+      </div>
+      <div class="card">
+        <div class="card-head">大法官解釋／憲法法庭判決</div>
+        <p>經搜尋，目前<span class="not-hold">查無</span>與本條直接相關之大法官解釋或憲法法庭判決。推測理由：本條構成要件相對明確，爭議多集中於個案事實認定（是否具結有效、陳述是否虛偽等），尚未見有人以此聲請違憲審查。</p>
+      </div>
+    </section>
+
+    <section id="s7">
+      <h2>七、教學案例（4則，教學用途虛構案例）</h2>
+
+      <div class="card">
+        <div class="card-head">案例一：民事訴訟中之單純虛偽陳述<span class="tag">教學用途</span></div>
+        <p><strong>事實：</strong>甲於丙訴請乙返還房屋之民事訴訟中，以證人身分經合法告知具結義務並具結後證稱：「乙與甲之租約於訴訟前已續約」，惟經查甲、乙間實際上並未續約，法院認定甲之證詞不可採而未採信，判決乙敗訴。事後檢察官偵辦甲是否涉犯偽證罪。</p>
+        <p><strong>爭點：</strong>民事訴訟程序中具結作證是否適用第168條？「事後未被法院採信」是否影響偽證罪之成立？</p>
+        <p><strong>分析：</strong>第168條「於執行審判職務之公署審判時」並未限於刑事審判，民事審判程序中經合法具結而為虛偽陳述，同有適用。又本罪為抽象危險犯，不以陳述實際造成裁判結果錯誤或未被法院採信為要件，僅須具備具結後就重要事項故意為虛偽陳述之客觀與主觀要件，即該當既遂。</p>
+        <p><strong>結論：</strong>甲之行為<span class="hold">該當第168條偽證罪</span>，不因法院最終未採信其證詞而阻卻既遂之成立。</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">案例二：鑑定人之虛偽鑑定意見<span class="tag">教學用途</span></div>
+        <p><strong>事實：</strong>乙為法院選任之筆跡鑑定人，於具結後提出鑑定報告，明知系爭簽名筆跡特徵與待鑑定人筆跡明顯不符，卻故意出具「筆跡相符」之鑑定結論，以協助友人勝訴。</p>
+        <p><strong>爭點：</strong>鑑定人依專業判斷所為之「意見」，是否仍屬第168條所稱之「虛偽陳述」？</p>
+        <p><strong>分析：</strong>學說與實務均肯認，證人根據自己意見所作之「合理判斷」原則上不構成虛偽陳述之故意；然本案乙並非基於誠實之專業判斷產生歧異結論，而係明知鑑定結果不符卻故意扭曲陳述，其主觀上仍具備「明知不實而故為虛偽陳述」之故意，與單純專業意見判斷有間。</p>
+        <p><strong>結論：</strong>乙之行為<span class="hold">該當第168條偽證罪</span>（鑑定人身分亦屬本罪行為主體）。</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">案例三：未受告知拒絕證言權之具結瑕疵<span class="tag">教學用途</span></div>
+        <p><strong>事實：</strong>丙為被告丁之胞姊，於丁被訴詐欺案件偵查程序中經檢察官傳喚作證，惟檢察官未依刑事訴訟法規定告知丙得依親屬關係拒絕證言，逕命丙具結後作證，丙因迴護胞弟而為部分不實陳述。</p>
+        <p><strong>爭點：</strong>未經合法告知拒絕證言權即命具結，該具結是否有效？是否影響偽證罪之成立？</p>
+        <p><strong>分析：</strong>依刑事訴訟法規定及最高法院106年度台上字第192號判決意旨，證人與被告具有法定特殊身分關係而得拒絕證言者，司法機關負有告知義務；未經合法告知即命具結，該具結程序有瑕疵，其效力應認為不生合法具結之效果。</p>
+        <p><strong>結論：</strong>因具結程序不合法，丙雖為不實陳述，仍<span class="not-hold">不成立第168條偽證罪</span>之構成要件該當性。</p>
+      </div>
+
+      <div class="card">
+        <div class="card-head">案例四：記憶模糊與故意之區辨<span class="tag">教學用途</span></div>
+        <p><strong>事實：</strong>戊於車禍案件審判中以證人身分具結後證稱：「案發當時我確定對方沒有闖紅燈」，惟事後調閱路口監視器證實對方確有闖紅燈之情事，經查戊案發時實際上距離現場甚遠，對於燈號變化並無明確記憶。</p>
+        <p><strong>爭點：</strong>證人因記憶模糊或誤認所為之陳述與客觀事實不符，是否即構成「虛偽陳述」之故意？</p>
+        <p><strong>分析：</strong>依前揭最高法院69年台上字第1506號、87年度台上字第3213號判決意旨，偽證罪之故意須行為人明知陳述內容反於其所見所聞之事實而故為陳述，若僅係因記憶模糊、誤認而陳述與客觀事實不符，欠缺「明知不實而故意為之」之主觀要件，尚難逕以偽證罪相繩。</p>
+        <p><strong>結論：</strong>依題示事實，戊若確係因記憶模糊而非明知不實仍故意陳述，則<span class="not-hold">難認該當第168條偽證罪</span>之主觀構成要件；惟具體仍應依個案證據（如戊當時是否確實在場、視角是否可及等）認定其主觀故意之有無。</p>
+      </div>
+    </section>
+
+    <section id="s8">
+      <h2>八、申論練習題與模擬解答（AI出題4題）</h2>
+
+      <div class="card exam">
+        <div class="card-head">練習題一</div>
+        <p>甲於某侵占案件偵查中經檢察官合法告知具結義務並具結後，就案情有重要關係之關鍵事項為不實陳述，惟檢察官偵查終結後認罪嫌不足為不起訴處分確定，該案並未進入審判程序。試問甲是否成立偽證罪？</p>
+      </div>
+      <div class="card">
+        <div class="card-head">模擬解答一</div>
+        <p>依刑法第168條規定，證人於檢察官偵查時，就案情有重要關係之事項，供前或供後具結而為虛偽陳述者，即構成偽證罪，其性質為抽象危險犯，不以嗣後該案件是否進入審判程序、是否經起訴或為不起訴處分為要件。甲既已於檢察官偵查程序中合法具結，並就案情有重要關係之事項故意為與事實不符之陳述，其行為於陳述完成之時即已該當第168條之客觀與主觀構成要件，且無阻卻違法或阻卻罪責事由，應成立偽證罪既遂。至該案嗣後是否經不起訴處分確定，僅屬另案處理結果，不影響甲偽證罪之既已成立；惟若甲於原案裁判或懲戒處分確定前自白其虛偽陳述之事，依第172條規定，得減輕或免除其刑。</p>
+      </div>
+
+      <div class="card exam">
+        <div class="card-head">練習題二</div>
+        <p>乙為某竊盜案件之通譯，於審判時經合法具結後，明知被告之外語陳述內容，卻故意為錯誤之翻譯，導致法官誤解被告陳述之意涵。試問乙之行為應如何論處？</p>
+      </div>
+      <div class="card">
+        <div class="card-head">模擬解答二</div>
+        <p>刑法第168條所稱之行為主體包含「通譯」，乙以通譯身分於審判程序中經合法具結，其翻譯行為性質上屬其於訴訟程序中所為之陳述。乙明知被告外語陳述之真意，卻故意為與真意不符之錯誤翻譯，使法官誤解案情有重要關係之事項，核其主觀上具備明知不實而故為虛偽陳述之故意，客觀上亦具備具結後就案情有重要關係事項為虛偽陳述之行為，應成立第168條偽證罪。乙之行為既已完成錯誤翻譯之陳述，犯罪即為既遂，不以法官是否確實因此形成錯誤心證為必要。</p>
+      </div>
+
+      <div class="card exam">
+        <div class="card-head">練習題三</div>
+        <p>丙明知友人丁涉犯傷害罪嫌疑重大，為使丁脫罪，向警員誣指案發時在場之路人戊才是真正加害人，並偽造一份現場照片交予警方作為證據。試問丙成立何罪？</p>
+      </div>
+      <div class="card">
+        <div class="card-head">模擬解答三</div>
+        <p>丙意圖使他人（戊）受刑事處分，向該管公務員（警員）誣告，並偽造證據（現場照片）交予警方使用，其行為同時符合刑法第169條第1項「意圖他人受刑事處分而誣告」及第2項「意圖他人受刑事處分而偽造證據並使用」之構成要件。丙誣指之對象戊為特定之人（非未指定犯人），故應論以第169條誣告罪，而非第171條未指定犯人誣告罪。丙偽造照片並提出使用之行為，屬同一誣告犯意下之接續行為，應評價為第169條誣告罪之一部，不另論偽造證據及使用偽造證據之數罪。若丙於戊被訴案件裁判確定前自白其誣告之事實，依第172條規定，得減輕或免除其刑。</p>
+      </div>
+
+      <div class="card exam">
+        <div class="card-head">練習題四</div>
+        <p>庚於某民事案件審判中以證人身分具結後陳述：「我認為原告所述應屬合理」，其陳述內容係基於自己對事件之主觀評價，非陳述其親身見聞之具體事實。事後原告敗訴，被告一方對庚提起偽證罪告訴。試問庚是否成立偽證罪？</p>
+      </div>
+      <div class="card">
+        <div class="card-head">模擬解答四</div>
+        <p>刑法第168條偽證罪之故意，依實務見解，不包括證人根據自己意見所作之判斷在內。庚所稱「我認為原告所述應屬合理」，性質上屬其個人主觀評價與意見判斷，並非就其親身見聞之具體事實為陳述，核與偽證罪所欲規範之「虛偽陳述」有間。縱嗣後原告敗訴，亦僅為訴訟結果之呈現，與庚陳述內容是否構成虛偽陳述並無直接關聯，且偽證罪為抽象危險犯，本不以訴訟結果作為判斷基準。庚之陳述既屬意見判斷而非事實陳述，難認具備偽證罪之主觀構成要件，應<span class="not-hold">不成立</span>第168條偽證罪。</p>
+      </div>
+    </section>
+
+    <section id="s9" style="border-bottom:none;">
+      <h2>九、速查卡</h2>
+      <div class="cheatsheet">
+        <div class="deco">速</div>
+        <p>行為主體：證人、鑑定人、通譯（純正身分犯）</p>
+        <p>時點：審判時 或 檢察官偵查時</p>
+        <p>要件：具結 ＋ 案情重要事項 ＋ 故意虛偽陳述</p>
+        <p>性質：抽象危險犯・即成犯，不待結果發生</p>
+        <p>不含：單純意見判斷、記憶模糊之誤認陳述</p>
+        <p>減免：§172 裁判確定前自白，得減輕或免除其刑</p>
+        <div class="mnemonic">具結據實方為證，虛偽即成不問果</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const sections = [
+    {id:'s1', label:'一、條文原文'},
+    {id:'s2', label:'二、條文結構總覽'},
+    {id:'s3', label:'三、犯罪三階層解析'},
+    {id:'s4', label:'四、專業名詞解釋'},
+    {id:'s5', label:'五、學說見解'},
+    {id:'s6', label:'六、實務見解'},
+    {id:'s7', label:'七、教學案例'},
+    {id:'s8', label:'八、申論練習題'},
+    {id:'s9', label:'九、速查卡'},
+  ];
+  const navList = document.getElementById('navList');
+  const mobileNav = document.getElementById('mobileNav');
+  sections.forEach(s=>{
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#'+s.id; a.textContent = s.label; a.dataset.target = s.id;
+    li.appendChild(a); navList.appendChild(li);
+
+    const ma = document.createElement('a');
+    ma.href = '#'+s.id; ma.textContent = s.label; ma.dataset.target = s.id;
+    mobileNav.appendChild(ma);
+  });
+
+  const allLinks = document.querySelectorAll('nav.sidebar a, .mobile-nav a');
+  allLinks.forEach(link=>{
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      document.getElementById(this.dataset.target).scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        allLinks.forEach(l=>l.classList.remove('active'));
+        document.querySelectorAll(`a[data-target="${entry.target.id}"]`).forEach(l=>l.classList.add('active'));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+
+  document.querySelectorAll('section').forEach(sec=>observer.observe(sec));
+</script>
+
+</body>
+</html>
