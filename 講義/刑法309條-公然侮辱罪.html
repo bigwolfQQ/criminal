@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第309條・公然侮辱罪｜教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b;
+  --indigo:#2c4a76;
+  --paper-outer:#f3ede0;
+  --paper-content:#fbf8f1;
+  --paper-card:#fffdf8;
+  --paper-alt:#f6f1e6;
+  --seal:#9c2b3a;
+  --brass:#a9832f;
+  --border:#ddd3bf;
+  --ink-45:rgba(22,35,59,.45);
+  --ink-65:rgba(22,35,59,.65);
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--paper-outer);
+  color:var(--ink);
+  font-family:"Noto Sans TC",sans-serif;
+  line-height:1.75;
+}
+h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+a{color:var(--indigo);}
+
+/* ===== Layout ===== */
+.shell{display:flex;max-width:1180px;margin:0 auto;}
+.sidebar{
+  width:240px;flex:none;position:sticky;top:0;align-self:flex-start;
+  height:100vh;overflow-y:auto;padding:32px 18px;
+  border-right:1px solid var(--border);
+}
+.sidebar-title{font-size:12px;letter-spacing:.12em;color:var(--ink-45);margin-bottom:14px;}
+.nav-link{
+  display:block;padding:9px 12px;border-radius:6px;color:var(--ink-65);
+  text-decoration:none;font-size:14.5px;margin-bottom:2px;transition:background .15s;
+}
+.nav-link.faded{color:var(--ink-45);}
+.nav-link:hover{background:var(--paper-alt);}
+.nav-link.active{background:var(--indigo);color:var(--paper-card);}
+.main{flex:1;min-width:0;background:var(--paper-content);box-shadow:-6px 0 24px -18px rgba(22,35,59,.25);}
+.container{max-width:840px;margin:0 auto;padding:56px 40px 100px;}
+
+/* ===== Mobile nav ===== */
+.mobile-nav{display:none;position:sticky;top:0;z-index:20;background:var(--paper-outer);
+  border-bottom:1px solid var(--border);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.mobile-nav a{display:inline-block;padding:7px 14px;margin-right:8px;border-radius:999px;
+  background:var(--paper-card);border:1px solid var(--border);color:var(--ink-65);
+  text-decoration:none;font-size:13px;}
+.mobile-nav a.active{background:var(--indigo);color:var(--paper-card);border-color:var(--indigo);}
+
+@media (max-width:980px){
+  .sidebar{display:none;}
+  .mobile-nav{display:block;}
+  .container{padding:28px 18px 70px;}
+}
+
+/* ===== Cover ===== */
+.cover{padding:64px 40px 40px;position:relative;border-bottom:1px solid var(--border);}
+.eyebrow{font-size:12.5px;letter-spacing:.15em;color:var(--brass);font-weight:700;margin-bottom:14px;}
+.cover h1{font-size:clamp(30px,4.4vw,44px);font-weight:900;margin:0 0 10px;line-height:1.25;}
+.cover .sub{color:var(--ink-65);font-size:16px;margin-bottom:18px;}
+.cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px;}
+.meta-pill{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--indigo);color:var(--indigo);}
+.ver-badge{border-color:var(--seal);color:var(--seal);}
+.meta-date{color:var(--ink-45);}
+.seal-mark{
+  position:absolute;top:44px;right:40px;width:86px;height:86px;border:3px solid var(--seal);
+  border-radius:10px;transform:rotate(8deg);display:flex;align-items:center;justify-content:center;
+  writing-mode:vertical-rl;color:var(--seal);font-family:"Noto Serif TC",serif;font-weight:900;
+  font-size:26px;letter-spacing:.15em;opacity:.85;
+}
+@media (max-width:600px){.seal-mark{display:none;}}
+
+/* ===== Sections ===== */
+section{padding-top:52px;scroll-margin-top:20px;}
+section:first-of-type{padding-top:8px;}
+.sec-title{font-size:24px;font-weight:900;margin:0 0 6px;display:flex;align-items:center;gap:10px;}
+.sec-sub{color:var(--ink-45);font-size:13.5px;margin-bottom:24px;}
+h3.sub-title{font-size:18px;font-weight:700;color:var(--indigo);border-left:4px solid var(--brass);padding-left:10px;margin:30px 0 12px;}
+h4.mini-title{font-size:15.5px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+
+/* ===== Article box ===== */
+.article-box{
+  position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);
+  border-radius:4px;padding:20px 24px;margin-bottom:18px;overflow:hidden;
+  box-shadow:0 1px 2px rgba(22,35,59,.06);
+}
+.article-box .art-no{font-family:"Noto Serif TC",serif;font-weight:900;font-size:96px;
+  position:absolute;right:14px;bottom:-14px;color:var(--ink);opacity:.06;line-height:1;}
+.article-box .art-head{font-weight:700;color:var(--indigo);margin-bottom:8px;font-size:15px;}
+.article-box p{margin:0 0 6px;position:relative;z-index:1;}
+.article-box .art-note{font-size:12.5px;color:var(--ink-45);margin-top:10px;}
+
+/* ===== Tables ===== */
+table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:14.5px;}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top;}
+th{background:var(--ink);color:var(--paper-content);font-weight:700;}
+tr:nth-child(even) td{background:var(--paper-alt);}
+tr:nth-child(odd) td{background:var(--paper-card);}
+
+/* ===== Conclusion marks ===== */
+.pos{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.neg{font-weight:700;color:var(--seal);}
+
+/* ===== Cards ===== */
+.card{background:var(--paper-card);border-radius:8px;padding:20px 22px;margin-bottom:18px;
+  box-shadow:0 1px 3px rgba(22,35,59,.08),0 8px 20px -14px rgba(22,35,59,.25);}
+.card-head{font-family:"Noto Serif TC",serif;font-weight:700;font-size:15.5px;color:#fff;
+  background:var(--indigo);margin:-20px -22px 16px;padding:11px 22px;border-radius:8px 8px 0 0;}
+.card-head.exam{background:var(--ink);}
+.card p{margin:0 0 10px;}
+.card .q{font-weight:700;margin-bottom:10px;}
+.source-note{border-top:1px dashed var(--border);margin-top:14px;padding-top:12px;font-size:13px;color:var(--ink-65);}
+
+/* ===== Placeholder ===== */
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:34px 20px;text-align:center;
+  background:repeating-linear-gradient(135deg,rgba(169,131,47,.05),rgba(169,131,47,.05) 10px,transparent 10px,transparent 20px);}
+.placeholder .icon{font-size:26px;margin-bottom:8px;}
+.placeholder p{color:var(--ink-65);margin:0 0 10px;}
+.badge-todo{display:inline-block;background:var(--paper-alt);border:1px solid var(--border);border-radius:999px;
+  padding:3px 12px;font-size:12px;color:var(--ink-65);}
+
+/* ===== Alert / important notice ===== */
+.alert{border:2px solid var(--seal);border-radius:8px;padding:18px 22px;margin:0 0 22px;background:rgba(156,43,58,.05);}
+.alert h4{margin:0 0 8px;color:var(--seal);font-size:15.5px;}
+.alert p{margin:0 0 8px;}
+.alert p:last-child{margin-bottom:0;}
+
+/* ===== Cheat sheet ===== */
+.cheat{background:var(--ink);color:var(--paper-content);border-radius:10px;padding:28px 26px;
+  position:relative;overflow:hidden;}
+.cheat .wm{position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-size:190px;
+  font-weight:900;opacity:.07;line-height:1;}
+.cheat h4{margin:0 0 12px;font-size:16px;color:var(--paper-content);}
+.mnemonic{background:var(--seal);color:#fff;padding:12px 16px;border-radius:6px;font-family:"Noto Serif TC",serif;
+  font-size:17px;font-weight:700;text-align:center;margin-top:14px;}
+
+/* ===== Relation / mind map wrap ===== */
+.relation-wrap{background:var(--paper-card);border:1px solid var(--border);border-radius:8px;
+  padding:14px;margin:20px 0 6px;}
+.relation-note{text-align:center;color:var(--ink-45);font-size:13px;margin-top:6px;}
+
+/* ===== Link note ===== */
+.link-note{border:1px dashed var(--border);border-radius:8px;padding:16px 20px;margin-top:34px;font-size:14px;}
+.link-note h4{margin:0 0 8px;color:var(--indigo);}
+
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-65);margin:10px 0 4px;}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+</style>
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#article">條文原文</a>
+  <a href="#structure">心智圖</a>
+  <a href="#elements">三階層解析</a>
+  <a href="#theory">學說見解</a>
+  <a href="#practice">實務見解</a>
+  <a href="#cases">教學案例</a>
+  <a href="#essay">申論練習</a>
+  <a href="#cheatsheet">速查卡</a>
+</div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-title">目錄 CONTENTS</div>
+    <a class="nav-link" href="#article">一、條文原文</a>
+    <a class="nav-link" href="#structure">二、條文結構（心智圖）</a>
+    <a class="nav-link" href="#elements">三、犯罪三階層解析</a>
+    <a class="nav-link" href="#theory">四、學說見解</a>
+    <a class="nav-link" href="#practice">五、實務見解</a>
+    <a class="nav-link" href="#cases">六、教學案例</a>
+    <a class="nav-link" href="#essay">七、申論練習題</a>
+    <a class="nav-link" href="#cheatsheet">八、速查卡</a>
+  </nav>
+
+  <div class="main">
+    <div class="cover">
+      <div class="eyebrow">第二編　分則　第二十七章　妨害名譽及信用罪</div>
+      <h1>刑法第309條・公然侮辱罪</h1>
+      <div class="sub">公然侮辱罪（第1項）／以強暴犯之加重規定（第2項）｜個人法益犯罪・已經憲法法庭合憲性限縮解釋</div>
+      <div class="cover-meta">
+        <span class="meta-pill ver-badge">v1.0</span>
+        <span class="meta-date">建立日期 2026-08-28</span>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.309" alt="visitor badge" style="height:20px;vertical-align:middle;">
+      </div>
+      <div class="seal-mark">辱</div>
+    </div>
+
+    <div class="container">
+
+      <!-- 一、條文原文 -->
+      <section id="article">
+        <h2 class="sec-title">一、條文原文</h2>
+        <p class="sec-sub">主條文與關聯條文，原文照錄</p>
+
+        <div class="alert">
+          <h4>⚠️ 適用範圍重大提醒：憲法法庭113年憲判字第3號</h4>
+          <p>本條文字雖仍完整保留於現行法規資料庫，但憲法法庭113年憲判字第3號（113年3月15日）已就本條第1項作成<b>合憲性限縮解釋</b>：須依個案之表意脈絡，<span class="pos">行為人故意發表公然貶損他人名譽之言論，已逾越一般人可合理忍受之範圍，並經權衡該言論是否有益公共事務思辯、文學藝術表現、學術專業價值等因素後，認被害人名譽權應優先於表意人言論自由而受保障者，始成立本罪</span>。</p>
+          <p>該判決並明確：本條所保護之名譽權，<span class="pos">限於「社會名譽（外部名譽）」與「名譽人格」</span>，<span class="neg">不包含被害人主觀之「名譽感情」</span>（單純自我主觀好惡感受不足以構成本罪）。詳細分析見「三、犯罪三階層解析」與「五、實務見解」。</p>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第309條（公然侮辱罪）　　【主條文】</div>
+          <p>公然侮辱人者，處拘役或九千元以下罰金。</p>
+          <p>以強暴犯前項之罪者，處一年以下有期徒刑、拘役或一萬五千元以下罰金。</p>
+          <div class="art-note">＊第1項為基本構成要件（單純侮辱）；第2項為加重構成要件（以強暴方式實施侮辱）。</div>
+          <div class="art-no">309</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第310條（誹謗罪）　　【建議關聯・相近罪名對照】</div>
+          <p>意圖散布於眾，而指摘或傳述足以毀損他人名譽之事者，為誹謗罪，處一年以下有期徒刑、拘役或一萬五千元以下罰金。</p>
+          <p>散布文字、圖畫犯前項之罪者，處二年以下有期徒刑、拘役或三萬元以下罰金。</p>
+          <p>對於所誹謗之事，能證明其為真實者，不罰。但涉於私德而與公共利益無關者，不在此限。</p>
+          <div class="art-note">＊與第309條之核心區辨：誹謗罪須「指摘或傳述具體事實」，公然侮辱罪則為不涉具體事實之抽象謾罵、輕蔑。</div>
+          <div class="art-no">310</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第311條（善意言論不罰）　　【建議關聯・違法性判斷依據】</div>
+          <p>以善意發表言論，而有左列情形之一者，不罰：</p>
+          <p>一、因自衛、自辯或保護合法之利益者。</p>
+          <p>二、公務員因職務而報告者。</p>
+          <p>三、對於可受公評之事，而為適當之評論者。</p>
+          <p>四、對於中央及地方之會議或法院或公眾集會之記事，而為適當之載述者。</p>
+          <div class="art-note">＊條文文義及傳統實務見解認為本條係專為誹謗罪（§310）而設，是否得類推適用於公然侮辱罪（§309），學說與實務見解不一，詳見「三、犯罪三階層解析（二）違法性」。</div>
+          <div class="art-no">311</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第313條（妨害信用罪）　　【建議關聯・同章保護法益對照】</div>
+          <p>散布流言或以詐術損害他人之信用者，處二年以下有期徒刑、拘役或科或併科二十萬元以下罰金。</p>
+          <p>以廣播電視、電子通訊、網際網路或其他傳播工具犯前項之罪者，得加重其刑至二分之一。</p>
+          <div class="art-note">＊同屬第二十七章「妨害名譽及信用罪」，惟保護法益為「信用」（經濟上支付能力與誠信之社會評價）而非「名譽」，構成要件亦不同（散布流言或施用詐術，而非公然侮辱或指摘具體事實）。</div>
+          <div class="art-no">313</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第314條（告訴乃論）　　【必要關聯】</div>
+          <p>本章之罪，須告訴乃論。</p>
+          <div class="art-note">＊本章（第309條至第313條）所有罪名均為告訴乃論之罪，被害人須於知悉犯人之時起六個月內提出告訴（依刑事訴訟法第237條），逾期不得再行告訴。</div>
+          <div class="art-no">314</div>
+        </div>
+      </section>
+
+      <!-- 二、心智圖 -->
+      <section id="structure">
+        <h2 class="sec-title">二、條文結構（心智圖）</h2>
+        <p class="sec-sub">以第309條（限縮解釋後之有效範圍）為中心，展開犯罪三階層與關聯規定的整體構造</p>
+
+        <div class="relation-wrap">
+          <svg viewBox="0 0 960 660" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <g stroke="#2c4a76" stroke-width="2.5" fill="none">
+              <path d="M480,290 C480,220 480,170 480,140"/>
+              <path d="M545,300 C650,260 730,240 800,225"/>
+              <path d="M545,360 C650,410 730,440 790,470"/>
+            </g>
+            <g stroke="#a9832f" stroke-width="2.2" stroke-dasharray="5 5" fill="none">
+              <path d="M415,300 C310,260 230,240 170,225"/>
+              <path d="M415,360 C310,410 230,440 170,470"/>
+            </g>
+
+            <ellipse cx="480" cy="325" rx="112" ry="52" fill="#16233b"/>
+            <text x="480" y="318" text-anchor="middle" fill="#fbf8f1" font-family="Noto Serif TC" font-weight="900" font-size="19">刑法§309</text>
+            <text x="480" y="342" text-anchor="middle" fill="#fbf8f1" font-family="Noto Sans TC" font-size="13">公然侮辱罪</text>
+
+            <rect x="300" y="20" width="360" height="122" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="315" y="44" font-family="Noto Serif TC" font-weight="700" font-size="14.5" fill="#2c4a76">構成要件該當性・客觀</text>
+            <text x="315" y="66" font-family="Noto Sans TC" font-size="12.5" fill="#16233b">行為情狀：公然（不特定人得共見共聞）</text>
+            <text x="315" y="85" font-family="Noto Sans TC" font-size="12.5" fill="#16233b">行為：侮辱（I）／以強暴方式侮辱（II，加重）</text>
+            <text x="315" y="104" font-family="Noto Sans TC" font-size="12.5" fill="#9c2b3a" font-weight="700">限縮要件：逾越一般人可合理忍受範圍</text>
+            <text x="315" y="123" font-family="Noto Sans TC" font-size="11.5" fill="#9c2b3a">（113憲判3後之合憲性限縮解釋）</text>
+
+            <rect x="800" y="170" width="150" height="110" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="815" y="195" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">主觀構成要件</text>
+            <text x="815" y="218" font-family="Noto Sans TC" font-size="12" fill="#16233b">故意（直接／</text>
+            <text x="815" y="235" font-family="Noto Sans TC" font-size="12" fill="#16233b">間接皆可）</text>
+            <text x="815" y="258" font-family="Noto Sans TC" font-size="12" fill="#16233b">無處罰過失</text>
+            <text x="815" y="275" font-family="Noto Sans TC" font-size="12" fill="#16233b">明文</text>
+
+            <rect x="790" y="430" width="150" height="90" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="805" y="455" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">違法性</text>
+            <text x="805" y="478" font-family="Noto Sans TC" font-size="12" fill="#16233b">§311類推適用</text>
+            <text x="805" y="495" font-family="Noto Sans TC" font-size="12" fill="#16233b">爭議（善意言</text>
+            <text x="805" y="512" font-family="Noto Sans TC" font-size="12" fill="#16233b">論不罰）</text>
+
+            <rect x="20" y="430" width="150" height="90" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="35" y="455" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">有責性</text>
+            <text x="35" y="478" font-family="Noto Sans TC" font-size="12" fill="#16233b">責任能力</text>
+            <text x="35" y="495" font-family="Noto Sans TC" font-size="12" fill="#16233b">（§18、19）</text>
+            <text x="35" y="512" font-family="Noto Sans TC" font-size="12" fill="#16233b">期待可能性</text>
+
+            <rect x="20" y="180" width="150" height="130" rx="8" fill="#fffdf8" stroke="#a9832f" stroke-width="2"/>
+            <text x="35" y="205" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#a9832f">關聯規定</text>
+            <text x="35" y="227" font-family="Noto Sans TC" font-size="12" fill="#16233b">§310 誹謗罪</text>
+            <text x="35" y="244" font-family="Noto Sans TC" font-size="12" fill="#16233b">（具體事實指摘）</text>
+            <text x="35" y="264" font-family="Noto Sans TC" font-size="12" fill="#16233b">§313 妨害信用罪</text>
+            <text x="35" y="281" font-family="Noto Sans TC" font-size="12" fill="#16233b">（保護法益：信用）</text>
+            <text x="35" y="301" font-family="Noto Sans TC" font-size="11.5" fill="#9c2b3a">§314 告訴乃論</text>
+          </svg>
+          <div class="legend">
+            <span><i class="dot" style="background:#2c4a76"></i>犯罪三階層構成要素</span>
+            <span><i class="dot" style="background:#a9832f"></i>關聯條文（虛線＝條文外部參照／爭議連結）</span>
+          </div>
+          <div class="relation-note">紅字為113年憲判字第3號合憲性限縮解釋後新增之要件：須逾越一般人可合理忍受範圍，並權衡言論之公共事務、文學藝術、學術專業等正面價值。</div>
+        </div>
+      </section>
+
+      <!-- 三、犯罪三階層解析 -->
+      <section id="elements">
+        <h2 class="sec-title">三、犯罪三階層解析</h2>
+        <p class="sec-sub">構成要件該當性 → 違法性 → 有責性，依序檢驗（構成要件部分已納入113年憲判字第3號合憲性限縮解釋）</p>
+
+        <h3 class="sub-title">（一）構成要件該當性</h3>
+
+        <h4 class="mini-title">客觀構成要件</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>行為主體</td><td>一般犯，不限特定身分，任何人均可為之</td></tr>
+          <tr><td>行為客體</td><td>「人」，指自然人；法人是否受本罪保護，通說多持保留態度（法人無主觀名譽感情，惟仍有社會評價，實務多循誹謗罪或妨害信用罪等其他規定處理，非本講義討論核心）</td></tr>
+          <tr><td>行為情狀</td><td>須達「<b>公然</b>」之程度，指依社會通念，於不特定人或多數人得以共見共聞之狀態，不以實際上果真有人在場聞見為必要，僅須達可能共見共聞之狀態即為已足（實務所稱之「可能性理論」）；純屬特定、少數人私下互動場合（如僅二人單獨對話），原則上不該當「公然」</td></tr>
+          <tr><td>實行行為</td><td>第1項「<b>侮辱</b>」：指未指摘具體事實，而以言語、文字、圖畫或動作等方式，表示輕蔑、貶損他人人格、名譽之行為，核心特徵在於「抽象謾罵」而非「具體事實指摘」（後者屬第310條誹謗罪範疇）。第2項「<b>以強暴犯之</b>」：以強暴方法（如公然掌摑、潑灑穢物等）實施侮辱，屬加重構成要件</td></tr>
+          <tr><td>限縮要件（客觀）</td><td><span class="pos">須依個案表意脈絡，行為人故意發表之言論已逾越一般人可合理忍受之範圍</span>，並應權衡該言論是否有益於公共事務之思辯，或具文學、藝術之表現形式，或具學術、專業領域等正面價值，於個案足認被害人之名譽權應優先於表意人之言論自由而受保障者，始成立本罪（113年憲判字第3號主文一）。此為釋憲後新增之限縮性客觀構成要件，並非條文文字所明列，論述時須特別指出並涵攝說明</td></tr>
+          <tr><td>保護法益範圍</td><td>依113年憲判字第3號，本罪所保護之名譽權，僅限於「<b>社會名譽（外部名譽）</b>」（第三人對行為人之客觀評價）與「<b>名譽人格</b>」（個人於社會生存中應受平等對待、不受恣意歧視貶抑之主體地位），<span class="neg">不包含「名譽感情」</span>（個人主觀之自我期待與感受）。若言論僅使被害人主觀感到不快，惟客觀上未貶損其社會評價或人格地位，不成立本罪</td></tr>
+        </table>
+
+        <h4 class="mini-title">主觀構成要件</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>故意</td><td>行為人須認識其言行係於公然狀態下為之，且有意實施貶損他人名譽之言語、舉動；依刑法第13條，不限於直接故意，間接故意亦可成立</td></tr>
+          <tr><td>過失</td><td>本條<span class="neg">未設處罰過失之明文</span>，過失行為不成立本罪</td></tr>
+        </table>
+
+        <h3 class="sub-title">（二）違法性</h3>
+        <p>本條文本身未規定特別阻卻違法事由，判斷原則上應回歸刑法總則相關規定，例如依法令之行為、正當防衛（第23條）、緊急避難（第24條）等。</p>
+        <p>特別討論：<b>第311條善意言論不罰規定是否得類推適用於本罪？</b>依條文文義及傳統實務見解，第311條係專為誹謗罪（第310條）而設之特別阻卻違法事由，不當然適用於公然侮辱罪；惟學說見解認為，基於保障言論自由之相同法理，第311條所列各款情形（自衛自辯、公務員職務報告、對可受公評之事為適當評論、會議記事等），於行為人係以善意發表評論性言論而非單純謾罵時，亦應得類推適用於公然侮辱罪之違法性判斷，以與誹謗罪體系維持一致衡平。此一爭議於113年憲判字第3號後，實務上就「是否具公共事務思辨、文學藝術、學術專業等正面價值」之審查，已有相當部分內化至構成要件該當性階段（見上表限縮要件），與第311條類推適用之違法性判斷產生一定程度之交錯，論述時應注意二者關係，避免重複審查或遺漏審查層次。</p>
+        <p>若構成要件該當且不具總則上開阻卻事由（或依學說類推適用第311條各款情形），則違法性即獲肯定（原則違法推定）。</p>
+
+        <h3 class="sub-title">（三）有責性（罪責）</h3>
+        <p>本條文亦未設特別阻卻或減輕罪責事由，判斷回歸總則規定，例如行為人是否具備責任能力（第18條：未滿14歲不罰、14歲以上未滿18歲得減輕；第19條：因精神障礙或其他心智缺陷致辨識能力或控制能力欠缺或顯著減低者不罰或得減輕）、有無違法性認識錯誤、有無期待可能性等。一般公然侮辱案件較少涉及此階層之特殊爭議。</p>
+      </section>
+
+      <!-- 四、學說見解 -->
+      <section id="theory">
+        <h2 class="sec-title">四、學說見解</h2>
+        <p class="sec-sub">聚焦於本罪保護法益之定性，以及第311條善意言論不罰規定得否類推適用之爭議</p>
+
+        <div class="card">
+          <div class="card-head">甘添貴教授</div>
+          <p>輕蔑之表示是否有害於他人之感情名譽而構成侮辱，宜就具體情形，視行為人與被害人之關係、年齡、教育程度、職業、方言用詞習慣等加以客觀判斷，不能一概而論；例如同儕間之嬉笑辱罵，若欠缺侮辱故意，亦不足以使他人精神上或心理上感到難堪，又如以民間慣用歇後語形容他人，若無侮辱人格之意思，亦非侮辱。</p>
+          <div class="source-note">📂 出處｜甘添貴教授見解，轉引自國立政治大學相關研究論文（原始出處：甘添貴教授祝壽論文集），尚未經原書全文核實，建議進一步查證後正式引用：https://www.cprc.moj.gov.tw/media/20211022/</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">王皇玉教授（台大法律系授課整理）</div>
+          <p>就第311條善意言論不罰規定之適用範圍，過去實務見解多認為該條係針對誹謗罪特別設置之阻卻違法事由，並不適用於第309條公然侮辱罪；惟學說見解則認為，本條善意發表言論而不罰之情形，基於相同之言論自由保障法理，亦應適用於公然侮辱罪。</p>
+          <div class="source-note">📂 出處｜王皇玉教授「妨害名譽及信用罪」課程講義，台大開放式課程（摘要整理：法律學研究所黃晨育）：https://ocw.aca.ntu.edu.tw/course_item_files/15993</div>
+        </div>
+
+        <div class="placeholder">
+          <div class="icon">📚</div>
+          <p>目前僅取得上述兩則學說見解，若您有其他學者專書、期刊論文段落（如林山田、林東茂、盧映潔等學者對「公然」「侮辱」要件之具體論述），歡迎提供以補充本區塊：</p>
+          <span class="badge-todo">待補充</span>
+        </div>
+      </section>
+
+      <!-- 五、實務見解 -->
+      <section id="practice">
+        <h2 class="sec-title">五、實務見解</h2>
+
+        <div class="card">
+          <div class="card-head">憲法法庭113年憲判字第3號【公然侮辱罪案（一）】（113年3月15日）</div>
+          <p><b>案由：</b>聲請人等因公然侮辱案件，認確定終局判決所適用之刑法第309條第1項規定，及法院對「侮辱」之解釋，牴觸憲法保障之言論自由，聲請法規範憲法審查及裁判憲法審查。</p>
+          <p><b>判決主文：</b>①刑法第309條第1項規定，於符合本判決意旨之合憲性限縮解釋範圍內，<span class="pos">與憲法第11條保障言論自由之意旨尚屬無違</span>。②該規定所稱「侮辱」，<span class="pos">與法律明確性原則尚無違背</span>。</p>
+          <p><b>理由要旨：</b>所處罰之公然侮辱行為，係指依個案之表意脈絡，表意人故意發表公然貶損他人名譽之言論，已逾越一般人可合理忍受之範圍；經權衡該言論對他人名譽權之影響，及該言論是否有益公共事務思辯，或屬文學、藝術表現形式，或具學術、專業領域正面價值，於個案足認他人名譽權應優先於表意人言論自由而受保障者，始構成本罪。又本罪保護之名譽權範圍，限於社會名譽與名譽人格，不含個人主觀之名譽感情。</p>
+          <div class="source-note">📂 來源｜憲法法庭113年憲判字第3號判決摘要，https://cons.judicial.gov.tw/docdata.aspx?fid=77&id=352468</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">憲法法庭113年憲判字第4號【公然侮辱罪案（二）等】（113年4月26日）</div>
+          <p><b>要旨：</b>本號判決為同批聲請案件中，同時涉及誹謗罪（第310條）與善意言論不罰規定（第311條）適用問題之裁判憲法審查案件，將113年憲判字第3號就公然侮辱罪所建立之合憲性限縮解釋標準一併適用；並就原確定終局判決未就言論是否涉及公共利益、真實性抗辯（第310條第3項前段）等事項加以釐清，認定原判決有違憲之處，予以廢棄發回。</p>
+          <div class="source-note">📂 來源｜憲法法庭判決列表（cons.judicial.gov.tw）；判決全文建議至憲法法庭網站原文查閱核實。</div>
+        </div>
+
+        <div class="placeholder">
+          <div class="icon">⚖️</div>
+          <p>「公然」要件於新興傳播方式（如LINE群組、臉書社團等封閉或半封閉場域）之具體人數門檻認定，各級法院判決見解尚有分歧，目前僅查得非官方法律網站之整理節錄，尚未經司法院裁判書查詢系統原文核實，暫不列入，待後續搜尋確認具體案號後補充：</p>
+          <span class="badge-todo">待補充</span>
+        </div>
+      </section>
+
+      <!-- 六、教學案例 -->
+      <section id="cases">
+        <h2 class="sec-title">六、教學案例</h2>
+        <p class="sec-sub">以下四則案例為 AI 虛構，僅供教學用途，非真實案件</p>
+
+        <div class="card">
+          <div class="card-head">案例一・欠缺「公然」要件</div>
+          <p><b>事實：</b>甲與乙為夫妻，某日於自家房間內因家務分配問題發生爭執，甲情緒激動，對乙脫口辱罵「你這個人有夠沒用」，當時房門緊閉，屋內僅甲、乙二人，並無其他人在場或可能聽聞。</p>
+          <p><b>爭點：</b>甲之辱罵行為是否成立第309條公然侮辱罪？</p>
+          <p><b>分析：</b>甲之言語雖屬貶損乙人格之抽象謾罵，客觀上該當「侮辱」之行為態樣；然本案發生於自家房間、房門緊閉之私密空間，僅甲乙二人在場，客觀上不具備使不特定人或多數人得以共見共聞之可能性，欠缺「公然」之行為情狀要件。</p>
+          <p><b>結論：</b>甲之行為<span class="neg">不成立第309條公然侮辱罪</span>（欠缺「公然」要件），惟乙得考慮循其他途徑（如家庭暴力防治法相關規定）處理。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例二・公開網路留言，逾越合理忍受範圍</div>
+          <p><b>事實：</b>丙與丁為網路論壇上素不相識之網友，因對某公共議題意見不合，丙在該公開討論區（任何註冊會員及訪客均可瀏覽）留言指名道姓辱罵丁「腦殘白痴，這種水準也敢發言」，留言未涉及丁之任何具體事實指摘，純屬情緒性人身攻擊。</p>
+          <p><b>爭點：</b>丙之留言是否成立第309條公然侮辱罪？</p>
+          <p><b>分析：</b>該論壇為公開討論區，任何不特定人均得瀏覽留言，客觀上該當「公然」要件；丙之留言純屬對丁人格之抽象貶損謾罵，未指摘具體事實，該當「侮辱」行為。依113年憲判字第3號限縮解釋，丙之言論係單純人身攻擊，與公共事務之思辯、文學藝術表現、學術專業評論均無關聯，已逾越一般人可合理忍受之範圍，其言論自由不應優先於丁之名譽權而受保障。</p>
+          <p><b>結論：</b>丙之行為<span class="pos">該當第309條公然侮辱罪之構成要件</span>，且無阻卻違法或阻卻罪責事由，成立本罪。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例三・可受公評之適當評論，不成立</div>
+          <p><b>事實：</b>戊於美食評論網站公開發表評論，針對某餐廳之服務品質留言：「這家餐廳服務態度真的很差，上菜超慢，店員愛理不理，強烈不推薦」，內容係基於戊親身消費經驗所為之評價，未涉及對餐廳負責人或員工個人品行之人身攻擊字眼。</p>
+          <p><b>爭點：</b>戊之評論是否成立第309條公然侮辱罪？</p>
+          <p><b>分析：</b>戊之留言雖用語直接、對餐廳評價偏低，惟其內容係針對「可受公評之事」（餐廳服務品質，屬消費大眾普遍關心之公共事務範疇）所為之具體評論，並未使用單純人身攻擊性之貶抑詞彙，性質上屬對商品服務之適當評論，具有益於消費資訊流通之正面價值。依113年憲判字第3號限縮解釋意旨，此類言論之言論自由價值應優先於受評論者之名譽權而受保障，且依學說見解，亦與第311條第3款「對於可受公評之事為適當評論」之類推適用法理相符。</p>
+          <p><b>結論：</b>戊之行為<span class="neg">不成立第309條公然侮辱罪</span>（不具備限縮解釋所要求之「逾越一般人可合理忍受範圍」要件，且屬對可受公評事項之適當評論）。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例四・以強暴方式侮辱，成立加重規定</div>
+          <p><b>事實：</b>己與庚為鄰居，因停車糾紛於公寓大廳（其他住戶得自由進出、共見共聞之公共空間）發生爭執，己情緒失控，當眾對庚潑灑手中飲料並辱罵「你這個人渣」，庚衣物遭飲料噴濺，多名路過住戶目睹全程。</p>
+          <p><b>爭點：</b>己之行為應如何論罪？</p>
+          <p><b>分析：</b>公寓大廳為住戶得自由進出之公共空間，多名住戶目睹全程，客觀上該當「公然」要件；己以潑灑飲料此一具強暴性質之方式，同時實施貶損庚人格之辱罵行為，該當第309條第2項「以強暴犯前項之罪」之加重構成要件。依限縮解釋意旨審酌，己之行為純屬情緒性人身攻擊及肢體挑釁，與公共事務思辯等正面價值全然無關，已逾越一般人可合理忍受之範圍。</p>
+          <p><b>結論：</b>己之行為<span class="pos">該當第309條第2項（強暴公然侮辱罪）之構成要件</span>，成立加重規定，應依較重之第2項論處。</p>
+        </div>
+      </section>
+
+      <!-- 七、申論練習題 -->
+      <section id="essay">
+        <h2 class="sec-title">七、申論練習題與模擬解答</h2>
+        <p class="sec-sub">以下四題為 AI 依本條要件自行出題（經使用者授權），供練習使用</p>
+
+        <div class="card">
+          <div class="card-head exam">題一</div>
+          <p class="q">甲於臉書個人頁面發表公開貼文（任何不特定網友均可瀏覽留言），指名道姓批評前女友乙「劈腿賤人，人品差到極點」，貼文未指摘乙劈腿之具體對象、時間、地點等事實細節，純屬情緒性謾罵。乙提出告訴。試問甲之刑責為何？（提示：請依113年憲判字第3號限縮解釋逐項檢驗）</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>臉書個人頁面之公開貼文，任何不特定網友均得瀏覽，客觀上該當「公然」要件。甲之貼文內容「劈腿賤人，人品差到極點」，並未指摘具體之時間、地點、對象等可資查證之事實，純屬對乙人格之抽象貶損謾罵，性質上屬「侮辱」而非「誹謗」（誹謗須指摘或傳述具體事實，本題甲僅為情緒性評價用語，不該當誹謗罪之行為態樣）。依113年憲判字第3號限縮解釋，甲之言論純屬對前女友之情緒性人身攻擊，與公共事務之思辯、文學藝術表現、學術專業評論等正面價值均無關聯，客觀上已逾越一般人可合理忍受之範圍，乙之名譽權應優先於甲之言論自由而受保障。甲對其貼文內容公開可見、且具貶損乙名譽之性質均有認識而執意發表，具備故意。甲之行為並無阻卻違法或阻卻罪責事由。從而，甲之行為<span class="pos">該當刑法第309條第1項公然侮辱罪，成立本罪</span>。又本罪依第314條須告訴乃論，乙已提出告訴，程序要件亦已具備。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題二</div>
+          <p class="q">議員甲於議會定期質詢時，公開批評市府官員乙「無能失職，根本不適任這個位置」。試問甲之言論是否成立第309條公然侮辱罪？（提示：留意言論發生之場域性質與言論自由保障之特殊性，並與第140條案例之限縮解釋邏輯比較）</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>議會質詢過程公開進行，具備「公然」要件；甲之用語雖屬嚴厲，形式上亦該當對乙人格之負面評價。惟依113年憲判字第3號限縮解釋，處罰範圍應限於言論已逾越一般人可合理忍受範圍、且與公共事務思辯等正面價值無關之情形。本題甲係於正式議會質詢程序中，針對市府官員乙之施政表現與職務適任性所為之批評，其言論內容緊扣公共事務（市政施政成效與官員適任性），核心目的在於監督行政機關之公務執行，縱使用語不留餘地，仍屬「對可受公評之事所為之評論」範疇，具有益於公共事務思辯之正面價值，依限縮解釋意旨，此類言論之言論自由保障應優先於乙之名譽權。從而，甲之言論<span class="neg">不具備限縮解釋所要求之「逾越一般人可合理忍受範圍」要件，不成立第309條公然侮辱罪</span>。（若涉及地方議會議員言論免責權之另一層次討論，則屬憲法及地方制度法之個別議題，不在本條構成要件分析範圍。）</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題三</div>
+          <p class="q">丙與丁於僅有兩人之私人LINE對話中，丙向丁抱怨共同友人戊「真的很自私，都只顧自己」，丁截圖後未經丙同意，轉發至有五十名成員的LINE群組中公開流傳。試問丙、丁二人之刑責應如何論斷？（提示：留意「公然」要件之判斷對象與行為歸屬問題）</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>就丙而言：丙係於僅有丙、丁二人之私人對話中發表言論，行為當時客觀上僅特定之丁一人可能知悉，不具備使不特定人或多數人得以共見共聞之可能性，欠缺「公然」要件，丙之原始發言<span class="neg">不成立第309條公然侮辱罪</span>。就丁而言：丁將對話截圖轉發至五十人之群組，該群組成員人數眾多，依實務見解已達不特定多數人得共見共聞之程度，客觀上該當「公然」要件；惟丁轉發之言論內容係丙原本之發言，丁本身並非該貶損性言論之「表意人」，而係轉述、散布他人言論之行為，是否該當第309條「侮辱」構成要件（須行為人自身有侮辱他人之故意與行為），尚有疑義；此涉及轉發者是否得評價為另一獨立之侮辱行為人，學說上尚有討論空間，若丁轉發時另行加註己身之貶損性評語，則丁該部分之附加言論可能單獨該當本罪，惟本題丁僅單純轉發原對話截圖，未見丁另有貶損戊之附加言論，故丁亦難認該當本罪之「侮辱」行為要件，僅生丁是否違反其他法律（如個人資料保護法或民事侵權責任）之另一層次問題，不在本條討論範圍。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題四</div>
+          <p class="q">己於社群平台發文指控同業競爭對手庚「財務出問題，快要倒閉了，跟他做生意小心收不到錢」，該貼文內容並非事實，庚公司財務狀況良好。試問己之行為可能構成第309條、第310條、第313條中之何者？請比較三罪之區辨。</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>本題涉及第309條公然侮辱罪、第310條誹謗罪、第313條妨害信用罪三者之區辨。首先，己之貼文內容係「指摘具體事實」（財務出問題、快要倒閉），而非單純抽象謾罵，核心特徵已逾越「侮辱」（不涉具體事實之抽象貶損）之範疇，故不該當第309條公然侮辱罪。其次，就第310條誹謗罪與第313條妨害信用罪之區辨：誹謗罪所保護者為個人之「名譽」（社會名譽與名譽人格），妨害信用罪所保護者則為「信用」（經濟上支付能力、履約誠信之社會評價）；己之貼文內容直指庚公司財務狀況、償債能力（快要倒閉、收不到錢），核心指向庚之「經濟信用」而非單純人格名譽之貶損，較貼近第313條妨害信用罪之保護範疇（散布流言損害他人信用）。惟因己之言論同時亦足以貶損庚之社會評價，實務上亦可能認同時該當第310條誹謗罪，二罪保護法益雖有別，然若係基於同一行為，可能構成想像競合，應從一重處斷。又若己係以社群平台（電子通訊、網際網路）發表，依第313條第2項規定，得加重其刑至二分之一。此外，若指摘之事實不實，因欠缺「真實性」，亦無從主張第310條第3項之真實抗辯。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 八、速查卡 -->
+      <section id="cheatsheet">
+        <h2 class="sec-title">八、速查卡</h2>
+        <div class="cheat">
+          <div class="wm">309</div>
+          <h4>刑法第309條・公然侮辱罪　速查卡</h4>
+          <table style="margin:0;">
+            <tr><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">要素</th><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">重點</th></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">客體</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">自然人（「人」），不涉具體事實指摘</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">行為</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">公然＋侮辱（I）；以強暴方式侮辱（II，加重）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">限縮要件</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">逾越合理忍受範圍＋權衡公共事務等正面價值（113憲判3）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">保護法益</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">社會名譽＋名譽人格，不含名譽感情</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">與誹謗區辨</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">抽象謾罵（§309）vs. 具體事實指摘（§310）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">程序</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">告訴乃論（§314），六個月內須提告訴</td></tr>
+          </table>
+          <div class="mnemonic">「公然抽象罵，逾越忍受受罰」</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+const sections = document.querySelectorAll('section[id]');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      document.querySelectorAll(`a[href="#${entry.target.id}"]`).forEach(l=>l.classList.add('active'));
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+links.forEach(l=>{
+  l.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const target = document.querySelector(l.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
