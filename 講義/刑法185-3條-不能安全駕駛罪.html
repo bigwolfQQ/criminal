@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第185-3條・不能安全駕駛罪｜教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b;
+  --indigo:#2c4a76;
+  --paper-outer:#f3ede0;
+  --paper-content:#fbf8f1;
+  --paper-card:#fffdf8;
+  --paper-alt:#f6f1e6;
+  --seal:#9c2b3a;
+  --brass:#a9832f;
+  --border:#ddd3bf;
+  --ink-45:rgba(22,35,59,.45);
+  --ink-65:rgba(22,35,59,.65);
+}
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--paper-outer);
+  color:var(--ink);
+  font-family:"Noto Sans TC",sans-serif;
+  line-height:1.75;
+}
+h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+a{color:var(--indigo);}
+
+/* ===== Layout ===== */
+.shell{display:flex;max-width:1180px;margin:0 auto;}
+.sidebar{
+  width:240px;flex:none;position:sticky;top:0;align-self:flex-start;
+  height:100vh;overflow-y:auto;padding:32px 18px;
+  border-right:1px solid var(--border);
+}
+.sidebar-title{font-size:12px;letter-spacing:.12em;color:var(--ink-45);margin-bottom:14px;}
+.nav-link{
+  display:block;padding:9px 12px;border-radius:6px;color:var(--ink-65);
+  text-decoration:none;font-size:14.5px;margin-bottom:2px;transition:background .15s;
+}
+.nav-link.faded{color:var(--ink-45);}
+.nav-link:hover{background:var(--paper-alt);}
+.nav-link.active{background:var(--indigo);color:var(--paper-card);}
+.main{flex:1;min-width:0;background:var(--paper-content);box-shadow:-6px 0 24px -18px rgba(22,35,59,.25);}
+.container{max-width:840px;margin:0 auto;padding:56px 40px 100px;}
+
+/* ===== Mobile nav ===== */
+.mobile-nav{display:none;position:sticky;top:0;z-index:20;background:var(--paper-outer);
+  border-bottom:1px solid var(--border);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.mobile-nav a{display:inline-block;padding:7px 14px;margin-right:8px;border-radius:999px;
+  background:var(--paper-card);border:1px solid var(--border);color:var(--ink-65);
+  text-decoration:none;font-size:13px;}
+.mobile-nav a.active{background:var(--indigo);color:var(--paper-card);border-color:var(--indigo);}
+
+@media (max-width:980px){
+  .sidebar{display:none;}
+  .mobile-nav{display:block;}
+  .container{padding:28px 18px 70px;}
+}
+
+/* ===== Cover ===== */
+.cover{padding:64px 40px 40px;position:relative;border-bottom:1px solid var(--border);}
+.eyebrow{font-size:12.5px;letter-spacing:.15em;color:var(--brass);font-weight:700;margin-bottom:14px;}
+.cover h1{font-size:clamp(30px,4.4vw,44px);font-weight:900;margin:0 0 10px;line-height:1.25;}
+.cover .sub{color:var(--ink-65);font-size:16px;margin-bottom:18px;}
+.cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:6px;}
+.meta-pill{font-size:12.5px;padding:4px 11px;border-radius:999px;border:1px solid var(--indigo);color:var(--indigo);}
+.ver-badge{border-color:var(--seal);color:var(--seal);}
+.meta-date{color:var(--ink-45);}
+.seal-mark{
+  position:absolute;top:44px;right:40px;width:86px;height:86px;border:3px solid var(--seal);
+  border-radius:10px;transform:rotate(8deg);display:flex;align-items:center;justify-content:center;
+  writing-mode:vertical-rl;color:var(--seal);font-family:"Noto Serif TC",serif;font-weight:900;
+  font-size:26px;letter-spacing:.15em;opacity:.85;
+}
+@media (max-width:600px){.seal-mark{display:none;}}
+
+/* ===== Sections ===== */
+section{padding-top:52px;scroll-margin-top:20px;}
+section:first-of-type{padding-top:8px;}
+.sec-title{font-size:24px;font-weight:900;margin:0 0 6px;display:flex;align-items:center;gap:10px;}
+.sec-sub{color:var(--ink-45);font-size:13.5px;margin-bottom:24px;}
+h3.sub-title{font-size:18px;font-weight:700;color:var(--indigo);border-left:4px solid var(--brass);padding-left:10px;margin:30px 0 12px;}
+h4.mini-title{font-size:15.5px;font-weight:700;color:var(--ink);margin:20px 0 8px;}
+
+/* ===== Article box ===== */
+.article-box{
+  position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);
+  border-radius:4px;padding:20px 24px;margin-bottom:18px;overflow:hidden;
+  box-shadow:0 1px 2px rgba(22,35,59,.06);
+}
+.article-box .art-no{font-family:"Noto Serif TC",serif;font-weight:900;font-size:88px;
+  position:absolute;right:14px;bottom:-14px;color:var(--ink);opacity:.06;line-height:1;}
+.article-box .art-head{font-weight:700;color:var(--indigo);margin-bottom:8px;font-size:15px;}
+.article-box p{margin:0 0 6px;position:relative;z-index:1;}
+.article-box ol{margin:0 0 8px;padding-left:22px;position:relative;z-index:1;}
+.article-box .art-note{font-size:12.5px;color:var(--ink-45);margin-top:10px;}
+
+/* ===== Tables ===== */
+table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:14.5px;}
+th,td{border:1px solid var(--border);padding:9px 12px;text-align:left;vertical-align:top;}
+th{background:var(--ink);color:var(--paper-content);font-weight:700;}
+tr:nth-child(even) td{background:var(--paper-alt);}
+tr:nth-child(odd) td{background:var(--paper-card);}
+
+/* ===== Conclusion marks ===== */
+.pos{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.neg{font-weight:700;color:var(--seal);}
+
+/* ===== Cards ===== */
+.card{background:var(--paper-card);border-radius:8px;padding:20px 22px;margin-bottom:18px;
+  box-shadow:0 1px 3px rgba(22,35,59,.08),0 8px 20px -14px rgba(22,35,59,.25);}
+.card-head{font-family:"Noto Serif TC",serif;font-weight:700;font-size:15.5px;color:#fff;
+  background:var(--indigo);margin:-20px -22px 16px;padding:11px 22px;border-radius:8px 8px 0 0;}
+.card-head.exam{background:var(--ink);}
+.card p{margin:0 0 10px;}
+.card .q{font-weight:700;margin-bottom:10px;}
+.source-note{border-top:1px dashed var(--border);margin-top:14px;padding-top:12px;font-size:13px;color:var(--ink-65);}
+
+/* ===== Placeholder ===== */
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:34px 20px;text-align:center;
+  background:repeating-linear-gradient(135deg,rgba(169,131,47,.05),rgba(169,131,47,.05) 10px,transparent 10px,transparent 20px);}
+.placeholder .icon{font-size:26px;margin-bottom:8px;}
+.placeholder p{color:var(--ink-65);margin:0 0 10px;}
+.badge-todo{display:inline-block;background:var(--paper-alt);border:1px solid var(--border);border-radius:999px;
+  padding:3px 12px;font-size:12px;color:var(--ink-65);}
+
+/* ===== Cheat sheet ===== */
+.cheat{background:var(--ink);color:var(--paper-content);border-radius:10px;padding:28px 26px;
+  position:relative;overflow:hidden;}
+.cheat .wm{position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-size:150px;
+  font-weight:900;opacity:.07;line-height:1;}
+.cheat h4{margin:0 0 12px;font-size:16px;color:var(--paper-content);}
+.mnemonic{background:var(--seal);color:#fff;padding:12px 16px;border-radius:6px;font-family:"Noto Serif TC",serif;
+  font-size:17px;font-weight:700;text-align:center;margin-top:14px;}
+
+/* ===== Relation / mind map wrap ===== */
+.relation-wrap{background:var(--paper-card);border:1px solid var(--border);border-radius:8px;
+  padding:14px;margin:20px 0 6px;}
+.relation-note{text-align:center;color:var(--ink-45);font-size:13px;margin-top:6px;}
+
+/* ===== Link note ===== */
+.link-note{border:1px dashed var(--border);border-radius:8px;padding:16px 20px;margin-top:34px;font-size:14px;}
+.link-note h4{margin:0 0 8px;color:var(--indigo);}
+
+.legend{display:flex;gap:18px;flex-wrap:wrap;font-size:12.5px;color:var(--ink-65);margin:10px 0 4px;}
+.legend span{display:inline-flex;align-items:center;gap:6px;}
+.dot{width:10px;height:10px;border-radius:2px;display:inline-block;}
+</style>
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav">
+  <a href="#article">條文原文</a>
+  <a href="#structure">心智圖</a>
+  <a href="#elements">三階層解析</a>
+  <a href="#theory">學說見解</a>
+  <a href="#practice">實務見解</a>
+  <a href="#cases">教學案例</a>
+  <a href="#essay">申論練習</a>
+  <a href="#cheatsheet">速查卡</a>
+</div>
+
+<div class="shell">
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-title">目錄 CONTENTS</div>
+    <a class="nav-link" href="#article">一、條文原文</a>
+    <a class="nav-link" href="#structure">二、條文結構（心智圖）</a>
+    <a class="nav-link" href="#elements">三、犯罪三階層解析</a>
+    <a class="nav-link" href="#theory">四、學說見解</a>
+    <a class="nav-link" href="#practice">五、實務見解</a>
+    <a class="nav-link" href="#cases">六、教學案例</a>
+    <a class="nav-link" href="#essay">七、申論練習題</a>
+    <a class="nav-link" href="#cheatsheet">八、速查卡</a>
+  </nav>
+
+  <div class="main">
+    <div class="cover">
+      <div class="eyebrow">第二編　分則　第十一章　公共危險罪</div>
+      <h1>刑法第185-3條・不能安全駕駛罪</h1>
+      <div class="sub">不能安全駕駛動力交通工具罪（酒駕／毒駕）｜公共危險罪・抽象危險犯・加重結果犯</div>
+      <div class="cover-meta">
+        <span class="meta-pill ver-badge">v1.0</span>
+        <span class="meta-date">建立日期 2026-08-28</span>
+        <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.185-3" alt="visitor badge" style="height:20px;vertical-align:middle;">
+      </div>
+      <div class="seal-mark">罰</div>
+    </div>
+
+    <div class="container">
+
+      <!-- 一、條文原文 -->
+      <section id="article">
+        <h2 class="sec-title">一、條文原文</h2>
+        <p class="sec-sub">主條文與必要／建議關聯條文，原文照錄</p>
+
+        <div class="article-box">
+          <div class="art-head">刑法第185-3條（不能安全駕駛罪）　　【主條文】</div>
+          <p>駕駛動力交通工具而有下列情形之一者，處三年以下有期徒刑，得併科三十萬元以下罰金：</p>
+          <ol>
+            <li>吐氣所含酒精濃度達每公升零點二五毫克或血液中酒精濃度達百分之零點零五以上。</li>
+            <li>有前款以外之其他情事足認服用酒類或其他相類之物，致不能安全駕駛。</li>
+            <li>尿液或血液所含毒品、麻醉藥品或其他相類之物或其代謝物達行政院公告之品項及濃度值以上。</li>
+            <li>有前款以外之其他情事足認施用毒品、麻醉藥品或其他相類之物，致不能安全駕駛。</li>
+          </ol>
+          <p>因而致人於死者，處三年以上十年以下有期徒刑，得併科二百萬元以下罰金；致重傷者，處一年以上七年以下有期徒刑，得併科一百萬元以下罰金。</p>
+          <p>曾犯本條或陸海空軍刑法第五十四條之罪，經有罪判決確定或經緩起訴處分確定，於十年內再犯第一項之罪因而致人於死者，處無期徒刑或五年以上有期徒刑，得併科三百萬元以下罰金；致重傷者，處三年以上十年以下有期徒刑，得併科二百萬元以下罰金。</p>
+          <div class="art-no">185-3</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第17條（加重結果犯）　　【必要關聯・第2項之可罰性基礎】</div>
+          <p>因犯罪致發生一定之結果，而有加重其刑之規定者，如行為人不能預見其發生時，不適用之。</p>
+          <div class="art-no">17</div>
+        </div>
+
+        <div class="article-box">
+          <div class="art-head">刑法第19條（責任能力）　　【建議關聯・有責性階層常見爭點】</div>
+          <p>行為時因精神障礙或其他心智缺陷，致不能辨識其行為違法或欠缺依其辨識而行為之能力者，不罰。</p>
+          <p>行為時因前項之原因，致其辨識行為違法或依其辨識而行為之能力，顯著減低者，得減輕其刑。</p>
+          <p>前二項規定，於因故意或過失自行招致者，不適用之。</p>
+          <div class="art-no">19</div>
+        </div>
+      </section>
+
+      <!-- 二、心智圖 -->
+      <section id="structure">
+        <h2 class="sec-title">二、條文結構（心智圖）</h2>
+        <p class="sec-sub">以第185-3條為中心，展開犯罪三階層、加重結果犯與關聯規定的整體構造</p>
+
+        <div class="relation-wrap">
+          <svg viewBox="0 0 960 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+            <g stroke="#2c4a76" stroke-width="2.5" fill="none">
+              <path d="M480,290 C480,220 480,170 480,140"/>
+              <path d="M545,300 C650,260 730,240 800,225"/>
+              <path d="M545,360 C650,410 730,440 790,475"/>
+              <path d="M415,360 C310,410 230,440 170,475"/>
+              <path d="M480,377 C480,440 480,500 480,555"/>
+            </g>
+            <g stroke="#a9832f" stroke-width="2.2" stroke-dasharray="5 5" fill="none">
+              <path d="M415,300 C310,260 230,240 170,225"/>
+            </g>
+
+            <!-- center -->
+            <ellipse cx="480" cy="325" rx="112" ry="52" fill="#16233b"/>
+            <text x="480" y="318" text-anchor="middle" fill="#fbf8f1" font-family="Noto Serif TC" font-weight="900" font-size="18">刑法§185-3</text>
+            <text x="480" y="342" text-anchor="middle" fill="#fbf8f1" font-family="Noto Sans TC" font-size="12.5">不能安全駕駛罪</text>
+
+            <!-- top: 构成要件-客观 -->
+            <rect x="325" y="30" width="310" height="112" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="340" y="54" font-family="Noto Serif TC" font-weight="700" font-size="14.5" fill="#2c4a76">構成要件該當性・客觀</text>
+            <text x="340" y="76" font-family="Noto Sans TC" font-size="12.5" fill="#16233b">行為：駕駛動力交通工具，該當四款情形之一</text>
+            <text x="340" y="95" font-family="Noto Sans TC" font-size="12.5" fill="#16233b">第1、3款＝數值型；第2、4款＝其他事證型</text>
+            <text x="340" y="114" font-family="Noto Sans TC" font-size="12.5" fill="#9c2b3a" font-weight="700">不以發生具體危險為必要（抽象危險犯）</text>
+
+            <!-- right top: 主观 -->
+            <rect x="800" y="180" width="140" height="100" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="815" y="205" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">主觀構成要件</text>
+            <text x="815" y="228" font-family="Noto Sans TC" font-size="12" fill="#16233b">故意（明知已</text>
+            <text x="815" y="245" font-family="Noto Sans TC" font-size="12" fill="#16233b">飲酒／用毒仍</text>
+            <text x="815" y="262" font-family="Noto Sans TC" font-size="12" fill="#16233b">決意駕駛）</text>
+
+            <!-- right bottom: 违法性 -->
+            <rect x="790" y="475" width="160" height="100" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="805" y="500" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">違法性</text>
+            <text x="805" y="523" font-family="Noto Sans TC" font-size="12" fill="#16233b">回歸總則§21-24</text>
+            <text x="805" y="540" font-family="Noto Sans TC" font-size="12" fill="#16233b">緊急避難於本罪</text>
+            <text x="805" y="557" font-family="Noto Sans TC" font-size="12" fill="#16233b">實務從嚴審查</text>
+
+            <!-- left bottom: 有责性 -->
+            <rect x="20" y="475" width="170" height="100" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+            <text x="35" y="500" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#2c4a76">有責性</text>
+            <text x="35" y="523" font-family="Noto Sans TC" font-size="12" fill="#16233b">責任能力（§19）</text>
+            <text x="35" y="540" font-family="Noto Sans TC" font-size="12" fill="#9c2b3a" font-weight="700">自陷者依§19Ⅲ</text>
+            <text x="35" y="557" font-family="Noto Sans TC" font-size="12" fill="#9c2b3a" font-weight="700">排除減免</text>
+
+            <!-- left top: 关联规定 -->
+            <rect x="20" y="180" width="150" height="100" rx="8" fill="#fffdf8" stroke="#a9832f" stroke-width="2"/>
+            <text x="35" y="205" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#a9832f">關聯規定</text>
+            <text x="35" y="227" font-family="Noto Sans TC" font-size="12" fill="#16233b">§17 加重結果犯</text>
+            <text x="35" y="244" font-family="Noto Sans TC" font-size="12" fill="#16233b">（能否預見）</text>
+            <text x="35" y="261" font-family="Noto Sans TC" font-size="12" fill="#16233b">§19 責任能力</text>
+
+            <!-- bottom center: 加重结果/累犯 -->
+            <rect x="330" y="555" width="300" height="115" rx="8" fill="#fffdf8" stroke="#9c2b3a" stroke-width="2"/>
+            <text x="345" y="580" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#9c2b3a">加重結果犯／特別累犯（第2、3項）</text>
+            <text x="345" y="602" font-family="Noto Sans TC" font-size="12" fill="#16233b">致死：3–10年，得併科200萬</text>
+            <text x="345" y="620" font-family="Noto Sans TC" font-size="12" fill="#16233b">致重傷：1–7年，得併科100萬</text>
+            <text x="345" y="638" font-family="Noto Sans TC" font-size="12" fill="#16233b">10年內累犯致死：無期或5年以上</text>
+            <text x="345" y="656" font-family="Noto Sans TC" font-size="12" fill="#16233b">須依§17檢驗預見可能性</text>
+          </svg>
+          <div class="legend">
+            <span><i class="dot" style="background:#2c4a76"></i>犯罪三階層構成要素</span>
+            <span><i class="dot" style="background:#a9832f"></i>關聯條文（虛線＝條文外部參照）</span>
+            <span><i class="dot" style="background:#9c2b3a"></i>加重結果／特別累犯（重點強調）</span>
+          </div>
+          <div class="relation-note">紅字為本條解釋上的重點：屬「抽象危險犯」，酒測值或毒品濃度一旦超標即成立既遂，不待發生具體事故；行為人因飲酒或用毒自陷辨識能力欠缺者，依§19第3項不得主張罪責減免。</div>
+        </div>
+      </section>
+
+      <!-- 三、犯罪三階層解析 -->
+      <section id="elements">
+        <h2 class="sec-title">三、犯罪三階層解析</h2>
+        <p class="sec-sub">構成要件該當性 → 違法性 → 有責性，依序檢驗</p>
+
+        <h3 class="sub-title">（一）構成要件該當性</h3>
+
+        <h4 class="mini-title">客觀構成要件</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>行為主體</td><td>一般犯，不限特定身分，任何人均可為之；有無合法駕駛資格不影響本罪成立，無照駕駛另涉道路交通管理處罰條例之行政處罰</td></tr>
+          <tr><td>行為客體</td><td>「動力交通工具」，指以引擎、馬達等動力裝置驅動之交通工具（汽車、機車等），具體範圍（如電動輔助自行車是否屬之）須視個案動力裝置性質判斷</td></tr>
+          <tr><td>實行行為</td><td>「駕駛」，即發動並操控該交通工具行駛；學說上對「駕駛」是否須達實際移動狀態尚有討論（詳見學說見解）</td></tr>
+          <tr><td>四款情形</td><td>第1款、第3款為<b>數值型判準</b>（酒測值或毒品代謝物濃度達公告標準即該當，不問行為人主觀感受）；第2款、第4款為<b>其他事證型判準</b>（未達數值標準時，須綜合駕駛行為異常等具體事證，足認致不能安全駕駛）</td></tr>
+          <tr><td>構成要件結果</td><td><span class="pos">不要求發生具體危險或實害結果</span>，行為人一經駕駛且該當四款情形之一即為既遂，性質上屬<span class="pos">抽象危險犯</span>（最高法院101年度台上字第6211號刑事判決可資參照，詳見實務見解）</td></tr>
+        </table>
+
+        <h4 class="mini-title">主觀構成要件</h4>
+        <table>
+          <tr><th style="width:120px;">項目</th><th>內容</th></tr>
+          <tr><td>故意</td><td>行為人須明知自己已飲酒或用毒仍決意駕駛，不要求明知精確之酒測數值或濃度值；間接故意（預見致不能安全駕駛而不違背本意）亦可成立</td></tr>
+          <tr><td>過失</td><td>本條<span class="neg">未設處罰過失之明文</span>，依第12條第2項，過失駕駛致不能安全駕駛之情形不成立本罪（惟若因而肇事致人死傷，可能另涉過失致死傷罪，須視個案競合關係判斷）</td></tr>
+        </table>
+
+        <h4 class="mini-title">第2項（加重結果犯）之特別檢驗——依第17條</h4>
+        <table>
+          <tr><th style="width:160px;">檢驗項目</th><th>內容</th></tr>
+          <tr><td>①基本行為</td><td>第一項之罪（駕駛且該當四款情形之一）須先成立</td></tr>
+          <tr><td>②加重結果</td><td>發生致人於死或致重傷之結果</td></tr>
+          <tr><td>③因果關係</td><td>駕駛行為與死傷結果間須具相當因果關係</td></tr>
+          <tr><td>④預見可能性（§17）</td><td>行為人對死亡或重傷結果須<b>客觀上有預見可能性</b>；<span class="neg">若行為人不能預見其發生，依第17條不適用第2項之加重規定</span>，僅論以第一項之罪</td></tr>
+          <tr><td>⑤與故意致死之區辨</td><td>若行為人對死亡結果具有故意，應另論第271條殺人罪或想像競合，不再單純適用本條第2項</td></tr>
+        </table>
+
+        <h4 class="mini-title">第3項（特別累犯加重）</h4>
+        <p>行為人須「曾犯本條或陸海空軍刑法第54條之罪，經有罪判決確定或經緩起訴處分確定」，且「於10年內再犯第一項之罪因而致死或致重傷」，始構成本項之特別加重。此為立法者仿累犯加重（第47條）之特別規定，非普通累犯之當然適用；其一律以「10年內」為劃分標準、不區分個案情節逕行加重之立法方式，與大法官釋字第775號解釋就普通累犯「一律加重」宣告違憲之精神是否相符，學界及實務對此仍有討論空間（相關脈絡另見實務見解單元對憲法法庭111年憲判字第1號判決之關聯說明）。</p>
+
+        <h3 class="sub-title">（二）違法性</h3>
+        <p>本條未規定特別阻卻違法事由，判斷應回歸刑法總則相關規定，例如依法令之行為、正當防衛（第23條）、緊急避難（第24條）。惟緊急避難於本罪較難成立：縱行為人係出於送醫急救等正當目的而駕駛，實務仍從嚴審查其必要性與法益權衡，因本罪保護法益為不特定多數用路人之公共交通安全，行為人縱有正當目的，通常仍應優先尋求代駕、叫救護車等其他不侵害公共安全之替代手段，方能主張別無其他更迅速有效之方法。</p>
+        <p>若不具上述阻卻事由，則違法性即獲肯定（原則違法推定）。</p>
+
+        <h3 class="sub-title">（三）有責性（罪責）</h3>
+        <p>本條未設特別阻卻或減輕罪責事由，判斷回歸總則第19條。關鍵在於第19條第3項：<b>因故意或過失自行招致</b>精神障礙或心智缺陷者，不適用第1項不罰、第2項得減輕其刑之規定。行為人因自願飲酒或用毒，致陷入辨識行為違法或依其辨識而行為之能力顯著減低甚至喪失之狀態，此一狀態係「因故意或過失自行招致」，依第19條第3項，<span class="neg">不得主張責任能力不罰或減輕</span>。</p>
+        <p>須特別澄清：本罪（第185-3條）本身<b>並非</b>「原因自由行為」之明文化規定，二者成罪結構並不相同——原因自由行為係指行為人利用自陷精神障礙之狀態去實行「另一構成要件行為」（如故意灌醉自己後持刀傷人）；而本罪之構成要件本身即以「服用酒類或毒品後駕駛」為規範內容，行為人主張第19條抗辯時，通常即因第3項而被排除，二者請勿混為一談。</p>
+      </section>
+
+      <!-- 四、學說見解 -->
+      <section id="theory">
+        <h2 class="sec-title">四、學說見解</h2>
+        <p class="sec-sub">聚焦於本罪之危險犯定性、酒測值條款之規範性質，以及「駕駛」要件之解釋</p>
+
+        <div class="card">
+          <div class="card-head">古承宗教授</div>
+          <p>於〈論不能安全駕駛罪之解釋與適用——以刑法第185條之3第1項第1款為中心〉一文中指出，若將第1項第1款之酒測值規定，理解為構成要件要素本身，將使本罪之處罰時點過度前置，恐與抽象危險犯應避免不當擴張處罰範圍之要求有所扞格。作者建議，或可將酒測值條款理解為「客觀處罰條件」，藉此表明本罪真正所欲處罰之不法核心，其實是「飲用酒精飲料而駕駛動力交通工具」此一行為本身，酒測值僅作為限縮處罰範圍、避免處罰過度前置之立法技術手段，而非行為人主觀認識所須及之構成要件事實。</p>
+          <div class="source-note">📂 出處｜古承宗，〈論不能安全駕駛罪之解釋與適用——以刑法第185條之3第1項第1款為中心〉，《刑事政策與犯罪防治研究專刊》第22期（法務部司法官學院）</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">學界討論・本罪危險犯定性之爭議</div>
+          <p>依102年修法理由，立法者明確定性本罪第1項為抽象危險犯，不以發生具體危險為必要，只要行為人有危態駕駛行為即足成罪，此亦為實務多數見解所採（見實務見解單元）。惟學界另有見解認為，本罪之不法核心既在於「不能安全駕駛」，此一狀態本身即隱含某種程度之危險性，實質判斷上仍須於個案中認定行為之危險性，故性質上應更接近具體危險犯，並主張未來修法宜比照第2款、第4款之立法例，明文要求「致不能安全駕駛」作為統一判準。此一爭議亦連動至第1款、第3款單純以數值超標為要件之規定，是否有過度處罰、忽略個案實際駕駛能力之疑慮。</p>
+          <div class="source-note">📂 說明｜本段為搜尋整理之學界討論概況，非單一學者之個別出處，建議使用者如需引註特定學者原文，另行查證確認。</div>
+        </div>
+
+        <div class="placeholder">
+          <div class="icon">📚</div>
+          <p>以下文獻亦專論本罪「駕駛」要件之解釋，惟目前僅取得篇名與出處、尚未取得可摘要引用之具體見解內容，待後續查證補充：</p>
+          <p style="font-size:13px;">王皇玉，〈不能安全駕駛罪之駕駛〉，《月旦法學教室》，第153期／蔡聖偉，〈刑法第185條之3的「駕駛」行為〉，《台灣法學雜誌》，第292期</p>
+          <span class="badge-todo">待補充</span>
+        </div>
+      </section>
+
+      <!-- 五、實務見解 -->
+      <section id="practice">
+        <h2 class="sec-title">五、實務見解</h2>
+
+        <div class="card">
+          <div class="card-head">最高法院101年度台上字第6211號刑事判決</div>
+          <p><b>要旨：</b>本罪所謂「不能安全駕駛」，性質上為抽象危險犯，只要行為人有不能安全駕駛之情形而駕駛動力交通工具即足成立，並不以發生具體危險為必要。該案上訴人血液酒精濃度檢驗值達205.4 mg/dl（換算呼氣濃度約每公升1.027毫克），遠超法定標準，行駛中另有彎腰撿拾掉落物之異常駕駛行為，法院認定其對行為危險性之判斷力及車輛操控能力均已降低，<span class="neg">上訴人辯稱尚未達「不能安全駕駛」及與事故發生無相當因果關係，均不足採</span>，仍成立本罪並論以致人於死、傷之加重結果。</p>
+          <div class="source-note">📂 來源｜轉引自智丞法律事務所網站整理之判決要旨，建議另至司法院裁判書查詢系統（https://judgment.judicial.gov.tw/）核對原文全文。</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">最高法院110年度台上字第3556號判決</div>
+          <p><b>要旨：</b>本判決區辨第185條（妨害公眾往來安全罪）與第185條之3（不能安全駕駛罪）之性質差異：前者以損壞或壅塞公眾往來設備、致生往來之危險為要件，<span class="pos">屬具體危險犯</span>，以發生往來風險之結果為必要，法定刑為5年以下有期徒刑；後者以駕駛動力交通工具而有本條四款情形之一為要件，<span class="pos">性質上屬抽象危險犯</span>，只須出現危險駕駛行為即為已足，法定刑則為3年以下有期徒刑（本判決援引之法定刑度為修法前版本，現行法定刑度以本次講義所列條文為準）。</p>
+          <div class="source-note">📂 來源｜轉引自高點法律專班「熱門法訊速報」期刊PDF整理之判決要旨，建議另至司法院裁判書查詢系統核對原文全文。</div>
+        </div>
+
+        <div class="card">
+          <div class="card-head">憲法法庭111年憲判字第1號判決（關聯案例・非直接審查本條）</div>
+          <p><b>特別提示：</b>本判決審查標的<b>並非</b>刑法第185條之3本身，而是道路交通管理處罰條例第35條第5項（警察對肇事拒測或無法測試之駕駛人，強制移送醫療機構實施血液或其他檢體採樣、檢定之規定）。該案聲請人所承審之案件，其被告即涉犯本條之公共危險罪。憲法法庭認定系爭規定關於強制抽血採證之部分，牴觸憲法第8條保障人身自由、第22條保障身體權及資訊隱私權之意旨，於judgment公告之日起至遲2年時失效，並於過渡期間要求警察應報請檢察官核發鑑定許可書，始得對肇事駕駛人強制實施血液檢測（情況急迫者得先行檢測，24小時內陳報檢察官許可）。</p>
+          <p>本判決雖非直接針對第185條之3本文之違憲審查，惟其涉及酒駕／毒駕案件蒐證程序之合憲性要求，於辦理本罪個案時，仍應留意證據取得程序是否符合本判決意旨。</p>
+          <div class="source-note">📂 來源｜憲法法庭網站（cons.judicial.gov.tw）111年憲判字第1號判決全文及判決摘要。</div>
+        </div>
+      </section>
+
+      <!-- 六、教學案例 -->
+      <section id="cases">
+        <h2 class="sec-title">六、教學案例</h2>
+        <p class="sec-sub">以下三則案例為 AI 虛構，僅供教學用途，非真實案件</p>
+
+        <div class="card">
+          <div class="card-head">案例一・數值型該當（第一項第一款）</div>
+          <p><b>事實：</b>甲於友人聚餐時飲用啤酒三瓶，飯後仍自行駕駛小客車返家，途中經警攔檢實施酒測，測得吐氣所含酒精濃度為每公升0.31毫克。甲辯稱自己精神狀態良好、駕駛過程平穩，並無任何危險駕駛行為。</p>
+          <p><b>爭點：</b>行為人主觀上自認清醒，是否影響本罪之成立？</p>
+          <p><b>分析：</b>甲駕駛小客車（動力交通工具），吐氣所含酒精濃度每公升0.31毫克，已超過第1款所定每公升0.25毫克之標準，屬數值型判準，一旦超標即該當構成要件結果，不問行為人主觀上是否自認清醒或駕駛過程是否平穩。甲明知自己已飲酒仍決意駕駛，具駕駛故意。本罪為抽象危險犯，不以發生具體危險為必要。</p>
+          <p><b>結論：</b>甲之行為<span class="pos">該當第185條之3第一項第一款不能安全駕駛罪</span>，且無阻卻違法或阻卻罪責事由，成立本罪。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例二・致死加重結果犯與預見可能性（§17）</div>
+          <p><b>事實：</b>乙服用酒類後駕駛機車，吐氣酒精濃度達每公升0.4毫克，行駛於市區道路時因反應遲緩，撞上正常行走於斑馬線之行人丙，丙送醫後因腦部重創不治死亡。</p>
+          <p><b>爭點：</b>乙對丙之死亡結果是否具有預見可能性？是否成立第二項加重結果犯？</p>
+          <p><b>分析：</b>乙駕駛機車且酒測值超標，該當第一項第一款之基本行為。乙撞擊行走於斑馬線之行人致其死亡，駕駛行為與死亡結果間具相當因果關係。依第17條，須進一步檢驗乙對死亡結果是否具有預見可能性：一般理性人皆可預見，於酒精影響反應能力之狀態下駕駛，若不慎撞擊行人，可能導致行人死亡之結果，此為客觀上可得預見之範圍，乙並無特殊事由足認其不能預見。乙對丙之死亡並無殺人故意，僅具過失（未預見自己反應能力已受影響仍貿然行駛）。</p>
+          <p><b>結論：</b>乙<span class="pos">成立第185條之3第二項因而致人於死罪</span>，處三年以上十年以下有期徒刑，得併科二百萬元以下罰金；若乙前無同類前科，則不適用第三項累犯加重規定。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-head">案例三・責任能力抗辯之排除與累犯加重（§19Ⅲ、第三項）</div>
+          <p><b>事實：</b>丙前曾因酒後駕車經法院判決有罪確定，5年後丙再度於朋友慫恿下大量飲酒，血液酒精濃度達每毫升0.15%，仍執意駕車返家，途中撞擊路旁機車騎士丁，丁經送醫仍傷重不治。丙於偵查中辯稱：其飲酒後已達辨識能力顯著減低之程度，依第19條第2項應予減輕其刑。</p>
+          <p><b>爭點：</b>丙得否主張第19條第2項責任能力減輕？本案是否構成第三項特別累犯加重？</p>
+          <p><b>分析：</b>丙駕駛動力交通工具且血液酒精濃度達每毫升0.05%以上，該當第一項第一款；撞擊丁致其死亡，依第17條檢驗，一般理性人可預見酒後駕車撞擊他人可能致死，丙不具不能預見之特殊事由，該當第二項加重結果犯。丙雖辯稱其辨識能力因酒精影響顯著減低，然依第19條第3項，此一狀態係丙自行飲酒所故意招致，<span class="neg">不適用第19條第2項減輕其刑之規定</span>。又丙曾犯本條之罪經有罪判決確定，於10年內（本案為5年後）再犯第一項之罪因而致丁於死，該當第三項之要件。</p>
+          <p><b>結論：</b>丙<span class="pos">成立第185條之3第三項因而致人於死罪</span>，處無期徒刑或五年以上有期徒刑，得併科三百萬元以下罰金；其飲酒致辨識能力減低之抗辯，因屬自行招致，<span class="neg">不得依第19條第2項減輕其刑</span>。</p>
+        </div>
+      </section>
+
+      <!-- 七、申論練習題 -->
+      <section id="essay">
+        <h2 class="sec-title">七、申論練習題與模擬解答</h2>
+        <p class="sec-sub">以下四題為 AI 依本條要件自行出題（經使用者授權），供練習使用</p>
+
+        <div class="card">
+          <div class="card-head exam">題一</div>
+          <p class="q">甲於居酒屋飲用清酒兩壺後，自行騎乘機車上路，途中未發生任何擦撞或危險駕駛情事，平安騎抵住處。鄰居見狀報警，警方到場對甲實施酒測，測得其吐氣所含酒精濃度為每公升0.28毫克。試問甲之刑責為何？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>甲騎乘機車，屬駕駛動力交通工具。其吐氣所含酒精濃度每公升0.28毫克，已超過第185條之3第一項第一款所定每公升0.25毫克之標準。依本罪抽象危險犯之性質，行為人一旦數值超標並駕駛，即已該當構成要件結果，不須另行證明其有任何具體危險駕駛行為，亦不因其平安騎抵目的地、途中未生擦撞而免責。甲明知自己已飲用清酒兩壺仍決意騎車返家，具駕駛故意。甲並無阻卻違法或阻卻罪責事由。從而，甲應成立第185條之3第一項第一款不能安全駕駛罪，處三年以下有期徒刑，得併科三十萬元以下罰金。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題二</div>
+          <p class="q">乙服用醫師處方之感冒藥後駕駛自小客車，該藥物成分不含酒精亦非毒品、麻醉藥品，惟乙服藥後出現嗜睡、注意力渙散之副作用，行駛過程中多次偏離車道、忽快忽慢，經過往車輛駕駛人檢舉並提供行車紀錄器畫面。試問乙是否成立第185條之3之罪？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>本罪第一項第二款、第四款規範對象限於「服用酒類或其他相類之物」及「施用毒品、麻醉藥品或其他相類之物」，一般合法感冒藥物如非屬酒精或毒品、麻醉藥品之相類物，尚難逕依本罪四款情形論處。惟行駛過程中偏離車道、速度忽快忽慢等異常駕駛行為，若客觀上足認乙之駕駛能力已受藥物副作用影響而不能安全駕駛，仍應審酌該藥物成分是否屬「其他相類之物」之範疇，此涉及對條文文義之解釋界限，尚有討論空間；若認不屬本罪規範範圍，則乙之行為可能僅生道路交通管理法規上之責任，而非本罪所欲處罰之範疇。從而，乙是否成立第185條之3之罪，關鍵在於個案中該藥物性質是否可解為「其他相類之物」，尚待具體事證及主管機關認定判斷，不能逕予肯定或否定。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題三</div>
+          <p class="q">丙服用毒品後駕駛自用小貨車，血液毒品代謝物濃度達行政院公告之標準，行駛途中因操控不當衝入路邊早餐店，店內顧客丁當場遭撞擊身亡，另一顧客戊受有重傷。經查，丙駕駛前已連續三日未闔眼，早餐店老闆事後主張丙應成立殺人罪。試問丙之刑責為何？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>丙駕駛動力交通工具，血液毒品代謝物濃度達公告標準，該當第一項第三款。丙駕駛行為與丁死亡、戊重傷結果間具相當因果關係。依第17條，一般理性人可預見施用毒品後駕駛，操控能力顯著下降，若因而衝入店家，可能致店內顧客死傷，此為客觀上可得預見之範圍，丙並無不能預見之特殊事由，均該當第二項加重結果犯。丙雖連續三日未闔眼、駕駛前狀態不佳，惟其係自願施用毒品後仍決意駕駛，主觀上並無致丁於死之殺人故意（無證據顯示丙有意衝撞店家），僅具過失，尚不足以論以殺人罪。從而，丙就丁之死亡部分，成立第185條之3第二項因而致人於死罪；就戊之重傷部分，同項所定致重傷之結果與致死結果同屬本項規範範圍，實務上就一行為同時致一人於死、一人於重傷之情形，應以想像競合從一重之因而致死罪處斷，不另論罪。</p>
+          </details>
+        </div>
+
+        <div class="card">
+          <div class="card-head exam">題四</div>
+          <p class="q">戊曾於8年前因酒後駕車經法院判決有罪確定，此後未再犯。某夜戊與友人飲酒後駕車返家，途中因操控不當撞擊護欄，未撞及其他車輛或行人，僅車輛損毀、戊本人受輕傷。試問戊是否適用第185條之3第三項之特別累犯加重規定？</p>
+          <details><summary style="cursor:pointer;color:var(--indigo);font-weight:700;">模擬解答</summary>
+          <p>戊駕駛自小客車且經查酒測值超標（依題旨已符第一項情形），該當第一項第一款不能安全駕駛罪之基本行為。惟第三項特別累犯加重之適用，除須「曾犯本條之罪經有罪判決確定，於十年內再犯第一項之罪」外，尚須「因而致人於死或致重傷」為要件；本案戊撞擊護欄，僅致車輛損毀及自己受輕傷，並未致他人於死或重傷，欠缺第三項所要求之加重結果，故不適用第三項之特別累犯加重規定。又戊前案距今8年，雖在10年期間內，然因未該當致死或致重傷之結果要件，此節於本案並無實益。從而，戊僅成立第185條之3第一項不能安全駕駛罪，處三年以下有期徒刑，得併科三十萬元以下罰金；其前案紀錄得否作為普通累犯（第47條）加重事由之依據，則屬另一問題，應依第47條之要件另行判斷。</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- 八、速查卡 -->
+      <section id="cheatsheet">
+        <h2 class="sec-title">八、速查卡</h2>
+        <div class="cheat">
+          <div class="wm">185-3</div>
+          <h4>刑法第185-3條・不能安全駕駛罪　速查卡</h4>
+          <table style="margin:0;">
+            <tr><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">要素</th><th style="background:rgba(255,255,255,.08);color:#fbf8f1;">重點</th></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">性質</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">抽象危險犯，不以發生具體危險為必要</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">四款判準</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">第1、3款＝數值型（超標即該當）；第2、4款＝事證型</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">加重結果</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">致死3–10年、致重傷1–7年，依§17須有預見可能性</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">特別累犯</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">10年內再犯致死：無期或5年以上（第三項）</td></tr>
+            <tr><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">有責性</td><td style="background:transparent;color:#fbf8f1;border-color:rgba(255,255,255,.2);">自陷辨識能力減低，依§19Ⅲ不得減免</td></tr>
+          </table>
+          <div class="mnemonic">「超標即罪不問醉，致死加重累犯嚴」</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link, .mobile-nav a');
+const sections = document.querySelectorAll('section[id]');
+const obs = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      links.forEach(l=>l.classList.remove('active'));
+      document.querySelectorAll(`a[href="#${entry.target.id}"]`).forEach(l=>l.classList.add('active'));
+    }
+  });
+},{rootMargin:'-15% 0px -70% 0px'});
+sections.forEach(s=>obs.observe(s));
+
+links.forEach(l=>{
+  l.addEventListener('click', (e)=>{
+    e.preventDefault();
+    const target = document.querySelector(l.getAttribute('href'));
+    if(target) target.scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
