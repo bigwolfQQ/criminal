@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第320條．普通竊盜罪／竊佔罪 — 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45: rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif; line-height:1.75;
+  }
+  h1,h2,h3,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex; max-width:1200px; margin:0 auto;}
+  nav.sidebar{
+    width:240px; flex:none; position:sticky; top:0; align-self:flex-start;
+    height:100vh; overflow-y:auto; padding:28px 18px; border-right:1px solid var(--border);
+  }
+  nav.sidebar .brand{font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px; color:var(--indigo); margin-bottom:18px; letter-spacing:.05em;}
+  nav.sidebar ul{list-style:none; padding:0; margin:0;}
+  nav.sidebar li{margin-bottom:2px;}
+  nav.sidebar a{
+    display:block; padding:8px 10px; border-radius:6px; font-size:13.5px;
+    color:var(--ink); text-decoration:none; border-left:3px solid transparent;
+  }
+  nav.sidebar a.placeholder-link{color:var(--ink-45);}
+  nav.sidebar a.active, nav.sidebar a:hover{background:var(--paper-content); border-left-color:var(--brass); color:var(--indigo);}
+  main{flex:1; min-width:0; padding:0 0 80px; box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);}
+  .topnav{display:none;}
+  .section{padding:46px 56px; border-bottom:1px solid var(--border);}
+  .section:last-child{border-bottom:none;}
+  .eyebrow{font-size:12.5px; letter-spacing:.12em; color:var(--brass); font-weight:700; text-transform:uppercase; margin-bottom:8px;}
+  h2.stitle{font-size:22px; color:var(--ink); margin:0 0 22px; padding-left:14px; border-left:4px solid var(--indigo);}
+  h3.substitle{font-size:16.5px; color:var(--indigo); margin:28px 0 10px;}
+
+  /* Cover */
+  .cover{
+    background:var(--paper-content); padding:64px 56px 48px; position:relative; overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .cover .eyebrow{font-size:13px;}
+  .cover h1{font-size:38px; font-weight:900; color:var(--ink); margin:0 0 14px; max-width:640px;}
+  .cover .sub{font-size:15px; color:var(--ink-45); max-width:560px; margin-bottom:18px;}
+  .cover-meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:10px;}
+  .ver-badge{border:1px solid var(--seal); color:var(--seal); font-size:12px; padding:3px 10px; border-radius:20px; font-weight:700;}
+  .meta-date{border:1px solid var(--indigo); color:var(--indigo); font-size:12px; padding:3px 10px; border-radius:20px;}
+  .visitor-badge img{display:block; height:20px;}
+  .seal-mark{
+    position:absolute; top:46px; right:60px; width:112px; height:112px; border-radius:50%;
+    border:3px solid var(--seal); color:var(--seal); display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg); font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px;
+    writing-mode:vertical-rl; letter-spacing:.15em; opacity:.85;
+  }
+  .toc{margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px 20px; max-width:640px;}
+  .toc a{font-size:13px; color:var(--indigo); text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  /* Article box */
+  .article-box{
+    position:relative; background:var(--paper-card); border-left:3px solid var(--indigo);
+    border-radius:4px; padding:22px 24px; margin:16px 0; overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,.06);
+  }
+  .article-box .num-wm{
+    position:absolute; right:10px; bottom:-18px; font-family:"Noto Serif TC",serif; font-weight:900;
+    font-size:110px; color:var(--ink); opacity:.06; line-height:1; user-select:none;
+  }
+  .article-box .art-head{font-family:"Noto Serif TC",serif; font-weight:700; color:var(--indigo); margin-bottom:8px; font-size:15px;}
+  .article-box p{margin:6px 0; position:relative; z-index:1;}
+  .article-box.ref{border-left-color:var(--border); opacity:.94;}
+  .ref-group-title{font-size:13px; color:var(--ink-45); margin:26px 0 6px; font-weight:700;}
+
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:13.5px;}
+  thead th{background:var(--ink); color:var(--paper-content); padding:10px 12px; text-align:left; font-weight:700;}
+  tbody td, tbody th{padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--row-alt);}
+
+  .stage-badge{display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:700; margin-bottom:6px;}
+  .stage-badge.yes{background:rgba(44,74,118,.1); color:var(--indigo);}
+  .stage-badge.na{background:rgba(22,35,59,.08); color:var(--ink-45);}
+
+  .conclude-est{font-weight:700; color:var(--ink); background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .conclude-not{font-weight:700; color:var(--seal);}
+
+  .placeholder{
+    border:2px dashed var(--brass); border-radius:8px; padding:38px 24px; text-align:center;
+    background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, rgba(169,131,47,.09) 10px 20px);
+    color:var(--ink-45);
+  }
+  .placeholder .ic{font-size:26px; margin-bottom:8px;}
+  .placeholder .badge-todo{
+    display:inline-block; margin-top:10px; font-size:12px; padding:3px 12px; border-radius:20px;
+    border:1px solid var(--brass); color:var(--brass); font-weight:700;
+  }
+
+  .case-card{background:var(--paper-card); border-radius:8px; margin:20px 0; box-shadow:0 1px 3px rgba(22,35,59,.08), 0 6px 16px -10px rgba(22,35,59,.25); overflow:hidden;}
+  .case-card .ch{background:var(--indigo); color:var(--paper-content); padding:10px 18px; font-family:"Noto Serif TC",serif; font-weight:700; font-size:14.5px;}
+  .case-card.exam .ch{background:var(--ink);}
+  .case-card .cb{padding:20px 22px;}
+  .case-card .cb h4{margin:14px 0 6px; font-size:13.5px; color:var(--indigo);}
+  .case-card .cb h4:first-child{margin-top:0;}
+  .note-badge{font-size:12px; color:var(--seal); font-weight:700;}
+
+  .relation-wrap{margin:18px 0 6px; text-align:center;}
+  .relation-note{font-size:12.5px; color:var(--ink-45); margin-top:6px;}
+
+  .source-block{margin-top:16px; padding:12px 16px; background:var(--row-alt); border-radius:6px; font-size:13px; color:var(--ink-45);}
+  .source-block a{color:var(--indigo);}
+
+  .mnemonic-card{background:var(--ink); color:var(--paper-content); border-radius:10px; padding:32px 30px; position:relative; overflow:hidden;}
+  .mnemonic-card .wm{position:absolute; right:14px; bottom:-24px; font-family:"Noto Serif TC",serif; font-weight:900; font-size:130px; opacity:.08;}
+  .mnemonic-card h3{color:var(--paper-content); margin-top:0;}
+  .mnemonic-item{background:var(--seal); border-radius:6px; padding:12px 16px; margin:12px 0; font-family:"Noto Serif TC",serif; font-size:17px; font-weight:700; letter-spacing:.04em;}
+  .mnemonic-item small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:12.5px; opacity:.85; margin-top:4px; letter-spacing:0;}
+
+  .link-note{border:1px dashed var(--border); border-radius:8px; padding:16px 18px; font-size:13.5px; color:var(--ink-45); margin-top:10px;}
+  .link-note a{font-weight:700;}
+
+  @media (max-width: 980px){
+    nav.sidebar{display:none;}
+    .topnav{
+      display:flex; overflow-x:auto; gap:4px; position:sticky; top:0; z-index:10;
+      background:var(--paper-content); padding:10px 12px; border-bottom:1px solid var(--border);
+    }
+    .topnav a{
+      flex:none; padding:7px 14px; border-radius:20px; background:var(--paper); font-size:12.5px;
+      color:var(--ink); text-decoration:none; white-space:nowrap; border:1px solid var(--border);
+    }
+    .topnav a.placeholder-link{color:var(--ink-45);}
+    .topnav a.active{background:var(--indigo); color:#fff; border-color:var(--indigo);}
+    .section{padding:32px 20px;}
+    .cover{padding:40px 20px 32px;}
+    .cover h1{font-size:27px;}
+    .seal-mark{width:78px; height:78px; font-size:11px; top:24px; right:20px;}
+    .toc{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">刑法講義 · 分則</div>
+    <ul>
+      <li><a href="#s1">一、條文原文</a></li>
+      <li><a href="#s2">二、條文結構</a></li>
+      <li><a href="#s3">三、犯罪三階層解析</a></li>
+      <li><a href="#s4" class="placeholder-link">四、學說見解</a></li>
+      <li><a href="#s5">五、實務見解</a></li>
+      <li><a href="#s6">六、教學案例</a></li>
+      <li><a href="#s7">七、申論練習題</a></li>
+      <li><a href="#s8">八、速查卡</a></li>
+      <li><a href="#s9">九、相關主題</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav" id="topnav">
+    <a href="#s1">條文原文</a>
+    <a href="#s2">條文結構</a>
+    <a href="#s3">三階層解析</a>
+    <a href="#s4" class="placeholder-link">學說見解</a>
+    <a href="#s5">實務見解</a>
+    <a href="#s6">教學案例</a>
+    <a href="#s7">申論題</a>
+    <a href="#s8">速查卡</a>
+    <a href="#s9">相關主題</a>
+  </div>
+
+  <main>
+    <div class="cover">
+      <div class="seal-mark">竊盜成罪</div>
+      <div class="eyebrow">第二編分則 · 第二十九章 竊盜罪</div>
+      <h1>刑法第320條<br>普通竊盜罪／竊佔罪</h1>
+      <div class="sub">意圖為自己或第三人不法之所有，而竊取他人之動產者，為竊盜罪；意圖為自己或第三人不法之利益，而竊佔他人之不動產者，依前項之規定處斷；前二項之未遂犯罰之。</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立／最後更新：2026-08-28</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.320" alt="訪客數"></span>
+      </div>
+      <div class="toc">
+        <a href="#s1">一、條文原文</a>
+        <a href="#s2">二、條文結構</a>
+        <a href="#s3">三、犯罪三階層解析</a>
+        <a href="#s4">四、學說見解</a>
+        <a href="#s5">五、實務見解</a>
+        <a href="#s6">六、教學案例</a>
+        <a href="#s7">七、申論練習題</a>
+        <a href="#s8">八、速查卡</a>
+        <a href="#s9">九、相關主題</a>
+      </div>
+    </div>
+
+    <!-- 一、條文原文 -->
+    <section class="section" id="s1">
+      <h2 class="stitle">一、條文原文</h2>
+
+      <div class="article-box">
+        <div class="art-head">刑法第320條（普通竊盜罪、竊佔罪）</div>
+        <p>Ⅰ　意圖為自己或第三人不法之所有，而竊取他人之動產者，為竊盜罪，處五年以下有期徒刑、拘役或五十萬元以下罰金。</p>
+        <p>Ⅱ　意圖為自己或第三人不法之利益，而竊佔他人之不動產者，依前項之規定處斷。</p>
+        <p>Ⅲ　前二項之未遂犯罰之。</p>
+        <div class="num-wm">320</div>
+      </div>
+
+      <div class="ref-group-title">關聯條文（同章加重規定／客體擬制）</div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第321條（加重竊盜罪）</div>
+        <p>Ⅰ　犯前條第一項、第二項之罪而有下列情形之一者，處六月以上五年以下有期徒刑，得併科五十萬元以下罰金：</p>
+        <p>　　一、侵入住宅或有人居住之建築物、船艦或隱匿其內而犯之。</p>
+        <p>　　二、毀越門窗、牆垣或其他安全設備而犯之。</p>
+        <p>　　三、攜帶兇器而犯之。</p>
+        <p>　　四、結夥三人以上而犯之。</p>
+        <p>　　五、乘火災、水災或其他災害之際而犯之。</p>
+        <p>　　六、在車站、港埠、航空站或其他供水、陸、空公眾運輸之舟、車、航空機內而犯之。</p>
+        <p>Ⅱ　前項之未遂犯罰之。</p>
+        <div class="num-wm">321</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第323條（電能等準動產）</div>
+        <p>電能、熱能及其他能量，關於本章之罪，以動產論。</p>
+        <div class="num-wm">323</div>
+      </div>
+
+      <div class="ref-group-title">關聯條文（未遂犯三條，總則）</div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第25條（未遂犯）</div>
+        <p>Ⅰ　已著手於犯罪行為之實行而不遂者，為未遂犯。</p>
+        <p>Ⅱ　未遂犯之處罰，以有特別規定者為限，並得按既遂犯之刑減輕之。</p>
+        <div class="num-wm">25</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第26條（不能犯）</div>
+        <p>行為不能發生犯罪之結果，又無危險者，不罰。</p>
+        <div class="num-wm">26</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第27條（中止犯）</div>
+        <p>Ⅰ　已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，減輕或免除其刑。結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦同。</p>
+        <p>Ⅱ　前項規定，於正犯或共犯中之一人或數人，因己意防止犯罪結果之發生，或結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦適用之。</p>
+        <div class="num-wm">27</div>
+      </div>
+    </section>
+
+    <!-- 二、條文結構 -->
+    <section class="section" id="s2">
+      <h2 class="stitle">二、條文結構</h2>
+      <p>第320條為財產犯罪中「竊盜罪」之基本規定，架構上分三項：第1項為動產竊盜之基本構成要件；第2項為不動產竊佔罪，依第1項規定處斷（法定刑相同，僅客體與行為態樣不同）；第3項則明文處罰未遂犯。第321條為第320條第1項、第2項之加重規定（結夥、攜兇器、侵入住宅等六款事由），第323條則將電能、熱能及其他能量擬制為動產，擴張本章竊盜罪之適用客體。</p>
+      <table>
+        <thead>
+          <tr><th>項次</th><th>性質</th><th>涉及階層</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>第1項</td><td>動產竊盜基本構成要件</td><td><span class="stage-badge yes">構成要件該當性／違法性／有責性</span></td></tr>
+          <tr><td>第2項</td><td>不動產竊佔罪（依第1項處斷）</td><td><span class="stage-badge yes">構成要件該當性（客體與行為態樣不同）／違法性／有責性</span></td></tr>
+          <tr><td>第3項</td><td>未遂犯處罰明文</td><td><span class="stage-badge yes">構成要件該當性（結合第25、26、27條）</span></td></tr>
+        </tbody>
+      </table>
+      <p>本罪保護法益，依實務見解不僅限於所有權，亦及於持有利益本身（詳見實務見解章節），故縱使行為人對財物本無所有權爭議、僅係破壞他人現有持有支配關係並建立自己支配，仍該當本罪。學說上對於保護法益範圍是否應嚴格限縮於「合法持有」尚有進一步討論，詳見學說見解章節（現階段先以空白佔位呈現）。</p>
+    </section>
+
+    <!-- 三、犯罪三階層解析 -->
+    <section class="section" id="s3">
+      <h2 class="stitle">三、犯罪三階層逐項解析</h2>
+
+      <h3 class="substitle">(一) 構成要件該當性</h3>
+      <table>
+        <thead><tr><th>要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行為主體</td><td>一般犯，任何自然人皆得為之，無身分犯限制</td></tr>
+          <tr><td>行為客體</td><td>第1項：他人之動產（依第323條，電能、熱能及其他能量以動產論）；第2項：他人之不動產</td></tr>
+          <tr><td>實行行為（竊取）</td><td>未經他人同意，以非公然、隱密之和平手段，破壞他人對動產之持有支配關係，並建立自己（或第三人）之新持有支配關係。手段特徵為「和平、隱密」，與搶奪罪（§325）之「公然腕力」、強盜罪（§328）之「至使不能抗拒」有別</td></tr>
+          <tr><td>實行行為（竊佔）</td><td>主觀上意圖為自己或第三人不法之利益，破壞他人對不動產之持有支配關係，並建立自己之持有支配關係；若僅將他人不動產擅自登記於自己或第三人名下，而未實際排除他人對該不動產之管領實力，不成立竊佔罪</td></tr>
+          <tr><td>結果</td><td>動產已移入行為人（或第三人）實力支配之下、或不動產之管領支配關係已實際移轉，即為既遂；反之則為未遂</td></tr>
+          <tr><td>因果關係與客觀歸責</td><td>竊取／竊佔行為與支配移轉結果間須具相當因果關係（實務見解採此立場），學說上另有客觀歸責理論作為補充限縮（詳見學說見解章節）</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>主觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>故意</td><td>對於「竊取他人動產」或「竊佔他人不動產」之客觀事實須具備認識與意欲（直接故意或間接故意皆可）</td></tr>
+          <tr><td>不法所有意圖（第1項）／不法利益意圖（第2項）</td><td>意圖為自己或第三人不法之所有（或不法之利益），指欲領得其物、排除他人對物之監督權，而行使其所有權內容之意思。刑法不罰「使用竊盜」——若行為人僅有一時使用之意思、無排除他人所有權之終局意圖（如借用後即歸還），縱有竊取之外觀，仍不成立本罪</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(二) 違法性</h3>
+      <p><span class="stage-badge yes">一般性判斷</span> 竊盜、竊佔行為原則上具違法性，實務上少見阻卻違法事由之適用情形（如正當防衛、緊急避難、依法令之行為等），惟仍須依個案事實檢驗有無阻卻違法事由存在。若查無阻卻違法事由，即具違法性。</p>
+
+      <h3 class="substitle">(三) 有責性（罪責）</h3>
+      <p><span class="stage-badge yes">一般性判斷</span> 依第18條、第19條檢驗行為人有無責任能力（年齡、精神狀態），並檢驗有無違法性認識錯誤、期待可能性欠缺等阻卻或減輕罪責事由。若行為人具完全責任能力，且無阻卻或減輕罪責事由，即具有責性，成立本罪。</p>
+
+      <h3 class="substitle">(四) 著手與既未遂判斷（第3項，結合第25、26、27條）</h3>
+      <table>
+        <thead><tr><th>條文</th><th>判斷內容</th></tr></thead>
+        <tbody>
+          <tr><td>第25條</td><td>已著手實行竊盜／竊佔行為，但財物尚未移入行為人（或不動產管領支配關係尚未實際移轉）實力支配下者，為未遂犯，得按既遂犯之刑減輕之</td></tr>
+          <tr><td>第26條</td><td>行為在客觀上根本不能發生竊盜結果、又無危險者（不能犯），不罰；此於竊盜案例中較為少見（如誤認空屋內有財物而侵入搜尋，仍可能該當侵入住宅之危險行為，通常不直接論以不能犯）</td></tr>
+          <tr><td>第27條</td><td>已著手實行後，若行為人「因己意」中止或防止結果發生（如主動放棄、回復原狀），減輕或免除其刑；須與「因外力障礙而未遂」（仍依第25條處理，僅得減輕）相區別</td></tr>
+        </tbody>
+      </table>
+      <p><strong>著手時點提醒</strong>：依實務見解，行為人以竊盜為目的侵入他人住宅、以眼睛搜尋財物時，即應認與竊盜之著手行為相當，不以已伸手觸碰或取得財物為必要（詳見實務見解章節）。</p>
+      <p><strong>既遂標準提醒</strong>：竊盜既遂與未遂之區別，應以所竊之物已否移入自己權力支配之下為標準；若已將他人財物移歸自己所持，即應成立竊盜既遂罪，其後縱將已竊得之物遺棄逃逸，仍無妨於既遂之成立（詳見實務見解章節）。</p>
+    </section>
+
+    <!-- 四、學說見解（空白佔位） -->
+    <section class="section" id="s4">
+      <h2 class="stitle">四、學說見解</h2>
+      <div class="placeholder">
+        <div class="ic">📖</div>
+        <div>尚未加入學說見解內容</div>
+        <div style="font-size:12.5px; margin-top:6px;">此章節內容將由使用者提供，尚未補入</div>
+        <div class="badge-todo">待補充</div>
+      </div>
+    </section>
+
+    <!-- 五、實務見解 -->
+    <section class="section" id="s5">
+      <h2 class="stitle">五、實務見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下判決／判例／決議之案號與內容摘要係經網路搜尋整理，尚未逐一核對司法院原文，建議使用者或後續進一步核實。可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入案號查閱全文。</p>
+
+      <div class="case-card">
+        <div class="ch">最高法院17年上字第509號判例（舊判例）</div>
+        <div class="cb">
+          <p>竊盜罪既遂與未遂之區別，應以所竊之物已否移入自己權力支配之下為標準。若已將他人財物移歸自己所持，即應成立竊盜既遂罪。至其後將已竊得之物遺棄逃逸，仍無妨於該罪之成立。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則屬民國108年法院組織法修正前之「判例」，該次修法後判例已不再選編，現僅作為裁判先例參考，不具過去之拘束力，惟仍為理解竊盜既遂標準之經典見解。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院84年度台上字第4341號判決</div>
+        <div class="cb">
+          <p>侵入竊盜究以何時為著手起算時點，依一般社會觀念，咸認行為人以竊盜為目的，而侵入他人住宅、搜尋財物時，即應認與竊盜之著手行為相當，可認為已著手於竊盜行為之實行。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院93年度台上字第1011號裁判</div>
+        <div class="cb">
+          <p>與84年度台上字第4341號判決同一見解脈絡，佐證行為人以竊盜為目的侵入他人住宅、開始搜尋財物時，即屬著手於竊盜行為之實行，不以已實際取得財物為必要。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院25年5月12日25年度決議（三）</div>
+        <div class="cb">
+          <p>竊盜罪之保護法益，不僅包含所有權，亦包含持有利益本身。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則性質為刑事庭會議決議，非判例，僅供參考。</p>
+        </div>
+      </div>
+
+      <div class="source-block">
+        📂 資料整理來源：criminallaw.tw（刑法「異」見書）、高點法律專班判解集、vocus.cc等網路轉引整理，尚未核對司法院原文全文。<br>
+        🔗 建議自行查證：<a href="https://judgment.judicial.gov.tw/" target="_blank">司法院裁判書查詢系統</a>
+      </div>
+    </section>
+
+    <!-- 六、教學案例 -->
+    <section class="section" id="s6">
+      <h2 class="stitle">六、教學案例</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下案例均為教學用途虛構，與條文要件高度對應，非真實判決事實。</p>
+
+      <div class="case-card">
+        <div class="ch">案例一：動產竊盜既遂</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲於便利商店內，趁店員未注意之際，將貨架上之商品悄悄放入自己背包中，未結帳即走出店外。</p>
+          <h4>爭點</h4>
+          <p>甲之行為是否該當「竊取」？既遂時點為何？</p>
+          <h4>分析</h4>
+          <p>甲意圖為自己不法之所有，未經店家同意，以隱密和平之方式，破壞店家對商品之持有支配關係，並將商品移入自己背包（即自己實力支配下），該當刑法第320條第1項竊盜罪之構成要件。甲走出店外時，商品已完全脫離店家管領範圍、移入甲之支配，竊盜行為既遂。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第320條第1項<span class="conclude-est">普通竊盜罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例二：竊佔不動產與既未遂之區辨</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>乙未經地主丙同意，於丙所有之空地上搭建鐵皮屋，並開始堆放個人物品；搭建過程中經丙發現並制止，乙隨即自行拆除已搭建之部分骨架，離開現場。</p>
+          <h4>爭點</h4>
+          <p>乙之搭建行為是否已達「排除丙之管領支配」而既遂？乙嗣後自行拆除之效果為何？</p>
+          <h4>分析</h4>
+          <p>乙意圖為自己不法之利益，擅自占用丙之不動產，該當第320條第2項竊佔罪之構成要件。惟既遂與否，應以是否已實際排除地主之管領支配關係為判斷標準；乙僅初步搭建骨架、尚未完全排除丙對該土地之管領實力（丙仍得隨時進出、行使管領），應論以未遂（第320條第3項）。乙係因丙發現制止後，「因己意」主動拆除回復原狀，非因外力強制被迫拆除，應論以第27條中止犯，減輕或免除其刑。</p>
+          <h4>結論</h4>
+          <p>乙成立刑法第320條第2項、第3項<span class="conclude-est">竊佔罪未遂</span>，並依第27條規定<span class="conclude-est">減輕或免除其刑</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例三：使用竊盜（不成立竊盜罪）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>丁未經同事戊同意，於戊外出開會時，暫時拿取戊放置於辦公桌上之隨身碟使用，於當日下班前即將隨身碟原封不動放回戊之桌面，戊對此始終不知情。</p>
+          <h4>爭點</h4>
+          <p>丁之行為是否成立竊盜罪？</p>
+          <h4>分析</h4>
+          <p>丁雖有未經同意取走他人動產之外觀行為，惟丁自始僅有暫時使用之意思，並無排除戊對隨身碟所有權內容、據為己有之終局意圖，且已於當日歸還原狀，欠缺「不法所有意圖」此一主觀構成要件要素，屬刑法不罰之「使用竊盜」。</p>
+          <h4>結論</h4>
+          <p>丁之行為<span class="conclude-not">不成立</span>刑法第320條第1項竊盜罪（構成要件該當性即已不該當，欠缺不法所有意圖）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例四：電能準動產竊盜（第323條）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲未經鄰居乙同意，私自接線盜接乙住宅電表前方之線路，將電力引至自己違建之鐵皮屋使用，長達半年之久，經台電公司查獲。</p>
+          <h4>爭點</h4>
+          <p>電能是否為竊盜罪之行為客體？甲長達半年之持續用電行為，罪數應如何計算？</p>
+          <h4>分析</h4>
+          <p>依第323條，電能關於本章之罪以動產論，故電能屬第320條第1項竊盜罪之適用客體。甲私自接引電力供自己違建使用，破壞乙（或電力公司）對電能之持有支配關係，並建立自己之支配關係，且甲有免除自身電費支出之不法所有意圖，該當竊取行為。甲持續半年用電之數個接電、用電動作，基於同一犯意接續進行、時間緊接、侵害同一法益，應評價為接續犯，僅論以一個竊盜既遂罪，不予數罪併罰。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第320條第1項（結合第323條）<span class="conclude-est">普通竊盜罪既遂</span>（接續犯，論以一罪）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 七、申論練習題 -->
+    <section class="section" id="s7">
+      <h2 class="stitle">七、申論練習題與模擬解答</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下題目經使用者授權由 AI 出題，難度定位為高難度（含競合、加重竊盜比較），模擬解答僅供教學參考。</p>
+
+      <div class="case-card exam">
+        <div class="ch">題目一（加重竊盜與法條競合）</div>
+        <div class="cb">
+          <p>甲於深夜攀越乙獨居透天厝之圍牆牆垣，侵入乙一樓客廳，徒手竊取桌上乙之皮夾（內有現金及信用卡）得手後逃逸。試附理由分析甲之刑責。</p>
+          <h4>擬答</h4>
+          <p>甲意圖為自己不法之所有，未經乙同意，以隱密和平之方式，破壞乙對皮夾之持有支配關係，並將皮夾移入自己實力支配下，該當刑法第320條第1項竊盜罪之構成要件，且皮夾已移入甲之支配，竊盜行為既遂。</p>
+          <p>甲之行為另兼具第321條第1項第1款「侵入有人居住之建築物」及第2款「毀越牆垣」兩款加重事由。實務見解認為，行為人如同時該當第321條第1項數款情形，仍僅論以一個加重竊盜罪，不因該當數款而數罪併罰或想像競合，該當之數款事由僅屬同一犯罪之加重情狀重疊，得於量刑時一併審酌。故甲應依第321條第1項規定論處，處六月以上五年以下有期徒刑，得併科五十萬元以下罰金。</p>
+          <p>甲之侵入行為在概念上或另涉及侵入住居性質之不法內涵，惟因第321條第1項第1款「侵入有人居住之建築物」之加重事由，已將此部分侵入行為之不法內涵評價在加重竊盜罪之構成要件內，依法條競合之特別關係，應優先適用第321條加重竊盜罪，不再另行論罪，以免對同一侵入行為重複評價。</p>
+          <p>甲之行為並無阻卻違法、阻卻罪責事由，具完全責任能力，應成立刑法第321條第1項第1款、第2款<span class="conclude-est">加重竊盜罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目二（竊佔、未遂與中止犯之區辨）</div>
+        <div class="cb">
+          <p>丙意圖為自己不法之利益，擅自占用鄰地丁所有土地之一角，開始搭建鐵皮屋。搭建過程中，經丁發現並要求丙立即停工，丙隨即停工並自行拆除已搭建之鐵皮屋骨架，回復土地原狀。試問丙之刑責為何？若丙係因丁報警、警方到場後始被迫拆除回復原狀，結論是否不同？</p>
+          <h4>擬答</h4>
+          <p>丙擅自占用丁之土地並開始搭建鐵皮屋，屬破壞丁對不動產之管領支配關係、意圖建立自己支配之行為，該當第320條第2項竊佔罪之構成要件。惟既遂與否應以是否已實際排除丁之管領支配為斷；丙僅初步搭建骨架，丁仍得進出土地行使管領，尚未達完全排除丁支配之程度，應論以未遂（第320條第3項）。</p>
+          <p>丙係因丁發現制止後，出於己意主動停工並拆除回復原狀，並非因不可抗力或第三人強制介入而被迫停止，符合第27條「因己意中止並防止結果發生」之要件，應論以中止犯，減輕或免除其刑。</p>
+          <p>惟若丙係因丁報警、待警方到場後始被迫拆除回復原狀，則丙未能繼續占用之原因並非出於己意，而係外部公權力介入之外力障礙，此時應論以第25條障礙未遂，僅得按既遂犯之刑減輕之，無第27條中止犯減輕或免除其刑之適用。兩種情形之關鍵區別，在於丙終止占用行為之真實動機究係「己意」抑或「外力障礙」，判斷時應細究行為人終止行為當下之主觀意思，而非僅憑客觀上有無拆除回復原狀之外觀事實。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目三（與毀損罪之法條競合）</div>
+        <div class="cb">
+          <p>甲攜帶客觀上足以殺傷人之水果刀，毀壞乙住宅之門鎖後侵入行竊，得手現金新臺幣3萬元。試附理由分析甲之刑責，並說明甲毀越門鎖之毀損行為，應與竊盜罪數罪併罰、想像競合，抑或另有其他處理方式？</p>
+          <h4>擬答</h4>
+          <p>甲意圖為自己不法之所有，破壞乙對現金之持有支配關係並移入自己支配下，該當第320條第1項竊盜罪，且已既遂。甲之行為另兼具第321條第1項第1款（侵入住宅）、第2款（毀越門窗、牆垣或其他安全設備）、第3款（攜帶兇器）三款加重事由，應論以第321條第1項加重竊盜罪既遂。</p>
+          <p>關於甲毀壞門鎖之行為，實務及通說見解認為，第321條第1項第2款「毀越門窗、牆垣或其他安全設備」之加重構成要件，已將毀損安全設備此一行為之不法內涵納入立法評價，故毀損門鎖之行為不另論以第354條毀損罪，二者間應論以法條競合之特別關係，優先適用第321條加重竊盜罪，毀損行為不再另行論罪，亦無想像競合或數罪併罰之適用餘地，以免對同一毀越安全設備之行為重複評價。</p>
+          <p>甲之行為並無阻卻違法、阻卻罪責事由，應成立刑法第321條第1項第1款、第2款、第3款<span class="conclude-est">加重竊盜罪既遂</span>，毀損門鎖部分不另論罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目四（竊盜罪客體界限：電磁紀錄非動產）</div>
+        <div class="cb">
+          <p>甲以駭客工具入侵乙之電腦系統，未經乙同意，將乙帳戶內虛擬貨幣之私鑰資料下載至自己隨身碟。試問甲之行為是否成立刑法第320條竊盜罪？應如何正確論罪？</p>
+          <h4>擬答</h4>
+          <p>依第323條規定，僅電能、熱能及其他能量關於本章之罪以動產論，電磁紀錄（含私鑰資料等數位資料）並非第323條所擬制之動產範疇，亦非物理上得為人力支配移動之有體物，故甲下載電磁紀錄之行為，客體上尚難該當第320條竊盜罪所要求之「他人動產」要件，構成要件該當性即有所欠缺，不成立竊盜罪。</p>
+          <p>此為竊盜罪與妨害電腦使用罪章之重要界限：行為人入侵他人電腦系統、無故取得他人電磁紀錄之行為，應改論以規範電磁紀錄不法取得之罪名（詳見入侵電腦相關講義之分析），而非本條竊盜罪。若甲進一步利用所取得之私鑰資料實際將虛擬貨幣轉出並據為己有，則另涉及財產犯罪之定性問題（虛擬貨幣於刑法上究應論以動產竊盜、詐欺或其他罪名，學說與實務尚有討論空間），非本條所能涵蓋，應另行檢討。</p>
+          <p>結論：甲下載電磁紀錄之行為<span class="conclude-not">不成立</span>刑法第320條竊盜罪（客體不該當），應改依妨害電腦使用罪章相關規定論處。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 八、速查卡 -->
+    <section class="section" id="s8">
+      <h2 class="stitle">八、速查卡</h2>
+      <div class="mnemonic-card">
+        <div class="wm">速</div>
+        <h3>記憶口訣</h3>
+        <div class="mnemonic-item">移入支配即既遂，使用無意不成竊
+          <small>既遂判斷時點在於財物移入自己實力支配下之瞬間；欠缺不法所有意圖之使用竊盜，不成立本罪</small>
+        </div>
+        <div class="mnemonic-item">竊佔重排除，僅登記非既遂
+          <small>竊佔罪之既遂以實際排除他人管領支配為要，僅將不動產登記於自己名下而未排除他人管領實力者，不成立既遂</small>
+        </div>
+        <table style="margin-top:22px; color:var(--ink);">
+          <thead><tr><th>項次</th><th>客體</th><th>法定刑</th><th>未遂處罰</th></tr></thead>
+          <tbody>
+            <tr><td>第1項</td><td>他人動產</td><td>5年以下有期徒刑、拘役或50萬元以下罰金</td><td>罰（§320Ⅲ）</td></tr>
+            <tr><td>第2項</td><td>他人不動產</td><td>依第1項處斷（同上）</td><td>罰（§320Ⅲ）</td></tr>
+            <tr><td>第321條（加重）</td><td>同第1、2項客體，另有六款加重事由</td><td>6月以上5年以下，得併科50萬元以下罰金</td><td>罰（§321Ⅱ）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 九、相關主題 -->
+    <section class="section" id="s9">
+      <h2 class="stitle">九、相關主題</h2>
+      <div class="link-note">
+        本條與既有講義《<a href="../講義/刑法325條-搶奪罪.html" target="_blank">第325條．普通搶奪罪</a>》主題重疊：325講義之條文原文與速查卡比較表中，已將第320條列為鄰接比較罪名（竊盜／搶奪／強盜之手段強度與被害人狀態比較），建議對照閱讀以掌握財產犯罪體系中「和平隱密取走」與「公然腕力奪取」之區辨。<br><br>
+        本條申論題三（毀越安全設備與法條競合）另涉及既有講義《<a href="../講義/刑法354條-毀損罪.html" target="_blank">第354條．毀損罪</a>》：兩份講義對「毀越門窗等安全設備之毀損行為是否另論毀損罪」有直接關聯討論（本講義結論為法條競合、優先適用加重竊盜罪，毀損行為不另論罪），建議對照閱讀。<br><br>
+        本條申論題四（電磁紀錄非竊盜罪客體）另涉及既有講義《<a href="../講義/刑法358條-入侵電腦罪.html" target="_blank">第358條．入侵電腦或其相關設備罪</a>》：本講義說明電磁紀錄非第320條動產客體範疇，行為人入侵電腦取得電磁紀錄應改論以入侵電腦罪章相關規定，建議對照閱讀以掌握竊盜罪與妨害電腦使用罪章之界限。（已收錄之其他講義：第140條侮辱公務員罪、第339條詐欺罪，章節分類與本條無重疊。）
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const links = [...document.querySelectorAll('nav.sidebar a, .topnav a')];
+  const sections = [...document.querySelectorAll('main .section, main .cover')];
+  const map = new Map();
+  links.forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el) map.set(el, links.filter(l=>l.getAttribute('href')==='#'+id));
+  });
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const els = map.get(entry.target);
+      if(!els) return;
+      if(entry.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        els.forEach(l=>l.classList.add('active'));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>{ if(map.has(s)) observer.observe(s); });
+
+  links.forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
