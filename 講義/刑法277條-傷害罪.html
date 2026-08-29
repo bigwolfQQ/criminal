@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第277條．傷害罪 — 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45: rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif; line-height:1.75;
+  }
+  h1,h2,h3,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex; max-width:1200px; margin:0 auto;}
+  nav.sidebar{
+    width:240px; flex:none; position:sticky; top:0; align-self:flex-start;
+    height:100vh; overflow-y:auto; padding:28px 18px; border-right:1px solid var(--border);
+  }
+  nav.sidebar .brand{font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px; color:var(--indigo); margin-bottom:18px; letter-spacing:.05em;}
+  nav.sidebar ul{list-style:none; padding:0; margin:0;}
+  nav.sidebar li{margin-bottom:2px;}
+  nav.sidebar a{
+    display:block; padding:8px 10px; border-radius:6px; font-size:13.5px;
+    color:var(--ink); text-decoration:none; border-left:3px solid transparent;
+  }
+  nav.sidebar a.placeholder-link{color:var(--ink-45);}
+  nav.sidebar a.active, nav.sidebar a:hover{background:var(--paper-content); border-left-color:var(--brass); color:var(--indigo);}
+  main{flex:1; min-width:0; padding:0 0 80px; box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);}
+  .topnav{display:none;}
+  .section{padding:46px 56px; border-bottom:1px solid var(--border);}
+  .section:last-child{border-bottom:none;}
+  .eyebrow{font-size:12.5px; letter-spacing:.12em; color:var(--brass); font-weight:700; text-transform:uppercase; margin-bottom:8px;}
+  h2.stitle{font-size:22px; color:var(--ink); margin:0 0 22px; padding-left:14px; border-left:4px solid var(--indigo);}
+  h3.substitle{font-size:16.5px; color:var(--indigo); margin:28px 0 10px;}
+
+  .cover{
+    background:var(--paper-content); padding:64px 56px 48px; position:relative; overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .cover .eyebrow{font-size:13px;}
+  .cover h1{font-size:38px; font-weight:900; color:var(--ink); margin:0 0 14px; max-width:640px;}
+  .cover .sub{font-size:15px; color:var(--ink-45); max-width:560px; margin-bottom:18px;}
+  .cover-meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:10px;}
+  .ver-badge{border:1px solid var(--seal); color:var(--seal); font-size:12px; padding:3px 10px; border-radius:20px; font-weight:700;}
+  .meta-date{border:1px solid var(--indigo); color:var(--indigo); font-size:12px; padding:3px 10px; border-radius:20px;}
+  .visitor-badge img{display:block; height:20px;}
+  .seal-mark{
+    position:absolute; top:46px; right:60px; width:112px; height:112px; border-radius:50%;
+    border:3px solid var(--seal); color:var(--seal); display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg); font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px;
+    writing-mode:vertical-rl; letter-spacing:.15em; opacity:.85;
+  }
+  .toc{margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px 20px; max-width:640px;}
+  .toc a{font-size:13px; color:var(--indigo); text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  .article-box{
+    position:relative; background:var(--paper-card); border-left:3px solid var(--indigo);
+    border-radius:4px; padding:22px 24px; margin:16px 0; overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,.06);
+  }
+  .article-box .num-wm{
+    position:absolute; right:10px; bottom:-18px; font-family:"Noto Serif TC",serif; font-weight:900;
+    font-size:110px; color:var(--ink); opacity:.06; line-height:1; user-select:none;
+  }
+  .article-box .art-head{font-family:"Noto Serif TC",serif; font-weight:700; color:var(--indigo); margin-bottom:8px; font-size:15px;}
+  .article-box p{margin:6px 0; position:relative; z-index:1;}
+  .article-box.ref{border-left-color:var(--border); opacity:.94;}
+  .ref-group-title{font-size:13px; color:var(--ink-45); margin:26px 0 6px; font-weight:700;}
+
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:13.5px;}
+  thead th{background:var(--ink); color:var(--paper-content); padding:10px 12px; text-align:left; font-weight:700;}
+  tbody td, tbody th{padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--row-alt);}
+
+  .stage-badge{display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:700; margin-bottom:6px;}
+  .stage-badge.yes{background:rgba(44,74,118,.1); color:var(--indigo);}
+  .stage-badge.na{background:rgba(22,35,59,.08); color:var(--ink-45);}
+
+  .conclude-est{font-weight:700; color:var(--ink); background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .conclude-not{font-weight:700; color:var(--seal);}
+
+  .placeholder{
+    border:2px dashed var(--brass); border-radius:8px; padding:38px 24px; text-align:center;
+    background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, rgba(169,131,47,.09) 10px 20px);
+    color:var(--ink-45);
+  }
+  .placeholder .ic{font-size:26px; margin-bottom:8px;}
+  .placeholder .badge-todo{
+    display:inline-block; margin-top:10px; font-size:12px; padding:3px 12px; border-radius:20px;
+    border:1px solid var(--brass); color:var(--brass); font-weight:700;
+  }
+
+  .case-card{background:var(--paper-card); border-radius:8px; margin:20px 0; box-shadow:0 1px 3px rgba(22,35,59,.08), 0 6px 16px -10px rgba(22,35,59,.25); overflow:hidden;}
+  .case-card .ch{background:var(--indigo); color:var(--paper-content); padding:10px 18px; font-family:"Noto Serif TC",serif; font-weight:700; font-size:14.5px;}
+  .case-card.exam .ch{background:var(--ink);}
+  .case-card .cb{padding:20px 22px;}
+  .case-card .cb h4{margin:14px 0 6px; font-size:13.5px; color:var(--indigo);}
+  .case-card .cb h4:first-child{margin-top:0;}
+  .note-badge{font-size:12px; color:var(--seal); font-weight:700;}
+
+  .relation-wrap{margin:18px 0 6px; text-align:center;}
+  .relation-note{font-size:12.5px; color:var(--ink-45); margin-top:6px;}
+
+  .source-block{margin-top:16px; padding:12px 16px; background:var(--row-alt); border-radius:6px; font-size:13px; color:var(--ink-45);}
+  .source-block a{color:var(--indigo);}
+
+  .mnemonic-card{background:var(--ink); color:var(--paper-content); border-radius:10px; padding:32px 30px; position:relative; overflow:hidden;}
+  .mnemonic-card .wm{position:absolute; right:14px; bottom:-24px; font-family:"Noto Serif TC",serif; font-weight:900; font-size:130px; opacity:.08;}
+  .mnemonic-card h3{color:var(--paper-content); margin-top:0;}
+  .mnemonic-item{background:var(--seal); border-radius:6px; padding:12px 16px; margin:12px 0; font-family:"Noto Serif TC",serif; font-size:17px; font-weight:700; letter-spacing:.04em;}
+  .mnemonic-item small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:12.5px; opacity:.85; margin-top:4px; letter-spacing:0;}
+
+  .link-note{border:1px dashed var(--border); border-radius:8px; padding:16px 18px; font-size:13.5px; color:var(--ink-45); margin-top:10px;}
+  .link-note a{font-weight:700;}
+
+  @media (max-width: 980px){
+    nav.sidebar{display:none;}
+    .topnav{
+      display:flex; overflow-x:auto; gap:4px; position:sticky; top:0; z-index:10;
+      background:var(--paper-content); padding:10px 12px; border-bottom:1px solid var(--border);
+    }
+    .topnav a{
+      flex:none; padding:7px 14px; border-radius:20px; background:var(--paper); font-size:12.5px;
+      color:var(--ink); text-decoration:none; white-space:nowrap; border:1px solid var(--border);
+    }
+    .topnav a.placeholder-link{color:var(--ink-45);}
+    .topnav a.active{background:var(--indigo); color:#fff; border-color:var(--indigo);}
+    .section{padding:32px 20px;}
+    .cover{padding:40px 20px 32px;}
+    .cover h1{font-size:27px;}
+    .seal-mark{width:78px; height:78px; font-size:11px; top:24px; right:20px;}
+    .toc{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">刑法講義 · 分則</div>
+    <ul>
+      <li><a href="#s1">一、條文原文</a></li>
+      <li><a href="#s2">二、條文結構</a></li>
+      <li><a href="#s3">三、犯罪三階層解析</a></li>
+      <li><a href="#s4">四、學說見解</a></li>
+      <li><a href="#s5">五、實務見解</a></li>
+      <li><a href="#s6">六、教學案例</a></li>
+      <li><a href="#s7">七、申論練習題</a></li>
+      <li><a href="#s8">八、速查卡</a></li>
+      <li><a href="#s9">九、相關主題</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav" id="topnav">
+    <a href="#s1">條文原文</a>
+    <a href="#s2">條文結構</a>
+    <a href="#s3">三階層解析</a>
+    <a href="#s4">學說見解</a>
+    <a href="#s5">實務見解</a>
+    <a href="#s6">教學案例</a>
+    <a href="#s7">申論題</a>
+    <a href="#s8">速查卡</a>
+    <a href="#s9">相關主題</a>
+  </div>
+
+  <main>
+    <div class="cover">
+      <div class="seal-mark">加重結果</div>
+      <div class="eyebrow">第二編分則 · 第二十三章 傷害罪</div>
+      <h1>刑法第277條<br>傷害罪</h1>
+      <div class="sub">傷害人之身體或健康者，處五年以下有期徒刑、拘役或五十萬元以下罰金。犯前項之罪，因而致人於死者，處無期徒刑或七年以上有期徒刑；致重傷者，處三年以上十年以下有期徒刑。</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立／最後更新：2026-08-30</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.277" alt="訪客數"></span>
+      </div>
+      <div class="toc">
+        <a href="#s1">一、條文原文</a>
+        <a href="#s2">二、條文結構</a>
+        <a href="#s3">三、犯罪三階層解析</a>
+        <a href="#s4">四、學說見解</a>
+        <a href="#s5">五、實務見解</a>
+        <a href="#s6">六、教學案例</a>
+        <a href="#s7">七、申論練習題</a>
+        <a href="#s8">八、速查卡</a>
+        <a href="#s9">九、相關主題</a>
+      </div>
+    </div>
+
+    <!-- 一、條文原文 -->
+    <section class="section" id="s1">
+      <h2 class="stitle">一、條文原文</h2>
+
+      <div class="article-box">
+        <div class="art-head">刑法第277條（普通傷害罪）</div>
+        <p>Ⅰ　傷害人之身體或健康者，處五年以下有期徒刑、拘役或五十萬元以下罰金。</p>
+        <p>Ⅱ　犯前項之罪，因而致人於死者，處無期徒刑或七年以上有期徒刑；致重傷者，處三年以上十年以下有期徒刑。</p>
+        <div class="num-wm">277</div>
+      </div>
+
+      <div class="ref-group-title">關聯條文（必要，總則）</div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第17條（加重結果犯之預見可能性）</div>
+        <p>因犯罪致發生一定之結果，而有加重其刑之規定者，如行為人不能預見其發生時，不適用之。</p>
+        <div class="num-wm">17</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第10條第4項（重傷之定義）</div>
+        <p>稱重傷者，謂下列傷害：</p>
+        <p>一、毀敗或嚴重減損一目或二目之視能。</p>
+        <p>二、毀敗或嚴重減損一耳或二耳之聽能。</p>
+        <p>三、毀敗或嚴重減損語能、味能或嗅能。</p>
+        <p>四、毀敗或嚴重減損一肢以上之機能。</p>
+        <p>五、毀敗或嚴重減損生殖之機能。</p>
+        <p>六、其他於身體或健康，有重大不治或難治之傷害。</p>
+        <div class="num-wm">10</div>
+      </div>
+    </section>
+
+    <!-- 二、條文結構 -->
+    <section class="section" id="s2">
+      <h2 class="stitle">二、條文結構</h2>
+      <p>第277條為傷害罪章之基本規定，保護法益為個人身體、健康之完整性。第1項為普通傷害既遂之基本構成要件；第2項前段（致死）、後段（致重傷）均屬「加重結果犯」，須結合總則第17條判斷。加重結果犯之本質，係「故意之基礎行為＋過失（客觀可預見）之加重結果」的特殊犯罪類型，與需要死亡或重傷故意之殺人罪（第271條）、重傷罪（第278條）性質根本不同，此為本罪與第271條殺人罪最重要之區辨界線。</p>
+      <table>
+        <thead>
+          <tr><th>項次</th><th>類型</th><th>主觀要件</th><th>涉及階層／規定</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>第1項</td><td>普通傷害既遂</td><td>傷害故意</td><td><span class="stage-badge yes">構成要件該當性／違法性／有責性</span></td></tr>
+          <tr><td>第2項前段</td><td>傷害致死（加重結果犯）</td><td>基礎傷害故意＋死亡結果客觀可預見（不要求死亡故意）</td><td><span class="stage-badge yes">構成要件該當性（結合第17條）／違法性／有責性</span></td></tr>
+          <tr><td>第2項後段</td><td>傷害致重傷（加重結果犯）</td><td>基礎傷害故意＋重傷結果客觀可預見（不要求重傷故意）</td><td><span class="stage-badge yes">構成要件該當性（結合第17條、第10條第4項）／違法性／有責性</span></td></tr>
+        </tbody>
+      </table>
+      <p><strong>特別提醒——本罪不處罰未遂犯</strong>：第277條並無如第271條、第320條、第335條等設有未遂犯處罰之明文規定。依第25條第2項「未遂犯之處罰，以有特別規定者為限」，故普通傷害罪不處罰未遂犯；縱行為人已著手實行傷害行為而未生傷害結果，亦不成立犯罪，僅得視個案有無成立其他罪名。詳見三、犯罪三階層逐項解析(五)。</p>
+    </section>
+
+    <!-- 三、犯罪三階層逐項解析 -->
+    <section class="section" id="s3">
+      <h2 class="stitle">三、犯罪三階層逐項解析</h2>
+
+      <h3 class="substitle">(一) 構成要件該當性（第1項普通傷害罪）</h3>
+      <table>
+        <thead><tr><th>客觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行為主體</td><td>一般犯，任何自然人皆得為之</td></tr>
+          <tr><td>行為客體</td><td>行為人以外之他人身體或健康</td></tr>
+          <tr><td>實行行為</td><td>足以傷害他人身體或健康之行為，不以外力直接接觸身體為限，亦包括導致精神疾病等健康損害之行為</td></tr>
+          <tr><td>結果</td><td>身體或健康受侵害，包括生理機能之損傷或健康狀態之惡化，不要求達到「重傷」之程度</td></tr>
+          <tr><td>因果關係</td><td>傷害行為與傷害結果間須具因果關係</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>主觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>傷害故意</td><td>行為人對「傷害他人身體或健康」此一客觀事實須具備認識與意欲（直接故意或間接故意）</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(二) 加重結果犯之特別要件（第2項，結合第17條）</h3>
+      <table>
+        <thead><tr><th>要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>①基礎行為</td><td>須先該當第1項傷害罪之基本構成要件（有傷害故意並實行傷害行為）</td></tr>
+          <tr><td>②加重結果</td><td>死亡，或重傷（第10條第4項所定六款情形之一）結果實際發生</td></tr>
+          <tr><td>③相當因果關係</td><td>傷害行為與加重結果間依經驗法則具通常引發關係（實務採相當因果關係說）</td></tr>
+          <tr><td>④預見可能性（§17）</td><td>行為人對加重結果之發生，須客觀上具有預見可能性；所謂「能預見」，係以客觀情形判斷，與行為人自身主觀上有無現實預見之情形不同。<span class="conclude-not">若行為人不能預見</span>，依第17條不適用加重規定，僅論以第1項普通傷害罪</td></tr>
+          <tr><td>⑤與故意致死／致重傷之區辨</td><td>若行為人對死亡或重傷結果具故意，應論以第271條殺人罪或第278條重傷罪，而非本項加重結果犯，兩者為互斥關係，應依行為人主觀故意內容擇一適用</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(三) 違法性</h3>
+      <p><span class="stage-badge yes">個案判斷</span> 本罪常見之阻卻違法事由為正當防衛（第23條，如互毆情形中防衛一方之反擊行為）、業務上正當行為（如醫療行為，另須視病人同意及醫療必要性判斷）等，均屬個案審酌，非本條核心。</p>
+
+      <h3 class="substitle">(四) 有責性（罪責）</h3>
+      <p><span class="stage-badge yes">個案判斷</span> 依第18條、第19條檢驗行為人有無責任能力，並檢驗有無違法性認識錯誤、期待可能性欠缺等阻卻或減輕罪責事由。若行為人具完全責任能力，且無阻卻或減輕罪責事由，即具有責性，成立本罪。</p>
+
+      <h3 class="substitle">(五) 未遂與著手——本罪不處罰未遂之體系理由</h3>
+      <p>第277條並未如第271條、第320條、第335條等設有未遂犯處罰之明文規定。依第25條第2項「未遂犯之處罰，以有特別規定者為限」，故普通傷害罪不處罰未遂犯；縱行為人已著手實行傷害行為（如已出手攻擊）而未生傷害結果（如未擊中或擊中但未達傷害程度），亦不成立犯罪，僅得視個案有無成立其他罪名（如恐嚇罪、強制罪等）。第2項加重結果犯部分，因加重結果本身係過失性質，依過失犯原理，過失犯本身亦不處罰未遂，故第2項同無未遂犯之適用問題。</p>
+    </section>
+
+    <!-- 四、學說見解 -->
+    <section class="section" id="s4">
+      <h2 class="stitle">四、學說見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下學說見解係經網路搜尋整理摘要改寫，出處僅列可查得之作者與著作名稱，頁碼尚未逐一核對原始專書全文，建議使用者或後續進一步核實版次頁碼。</p>
+      <table>
+        <thead><tr><th>學者</th><th>見解摘要</th><th>出處</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>王皇玉（台大法律）</td>
+            <td>加重結果犯之「特殊危險關聯」判斷，學說上分為「狹義說」與「廣義說」兩派：兩說均要求基礎犯罪行為與加重結果之間須具備特殊危險關聯，惟對「特殊危險」內涵之解讀寬窄不同（狹義說要求該危險須為基礎行為之典型、固有危險；廣義說之判斷範圍相對寬鬆）。此一學說立場之選擇，直接影響加重結果犯「預見可能性」要件之具體認定寬嚴</td>
+            <td>相關論述整理，出處頁碼未查得，建議使用者核實原始出處</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 五、實務見解 -->
+    <section class="section" id="s5">
+      <h2 class="stitle">五、實務見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下判決／判例之案號與內容摘要係經網路搜尋轉引整理，尚未逐一核對司法院原文全文，建議使用者自行查證。近年判決可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入案號查閱全文；舊判例可至全國法規資料庫判例查詢核對。</p>
+
+      <div class="case-card">
+        <div class="ch">最高法院97年度台上字第3104號刑事判決</div>
+        <div class="cb">
+          <p>涉及傷害致死罪於客觀歸責理論之運用，該判決曾為法學期刊（法務通訊）專文評釋之對象，說明相當因果關係說與客觀歸責理論於傷害致死罪案件中之具體操作。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院107年台上字第2621號刑事判決</div>
+        <div class="cb">
+          <p>就加重結果犯之客觀預見可能性應如何判斷，認為應以事後第三人客觀立場，觀察行為前後客觀存在之一般情形（如傷害行為造成之傷勢及被害人之行為、身體狀況、他人之行為、當時環境及其他事故等外在條件），基於法律規範保障法益、課以行為人加重刑責之宗旨，綜合判斷行為人是否具有預見可能性。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院100年度台上字第3062號刑事判決</div>
+        <div class="cb">
+          <p>就加重結果犯之「預見可能性」要件，說明加重結果犯係故意之基礎犯罪與過失之加重結果之結合，不能僅有傷害行為與死亡結果，尚須傷害行為本身即含有發生死亡結果之高度危險、且與死亡結果間具相當因果關係，並須加重結果為行為人所能預見（負有預見義務而未預見，即對加重結果之發生具過失），始足成立。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院76年台上字192號刑事判例（舊判例）</div>
+        <div class="cb">
+          <p>確立「相當因果關係」之經典定義：無此行為，雖必不生此結果，有此行為，通常即足生此結果者，是為有因果關係；若有此行為，通常不生此種結果者，即無因果關係。以事後（客觀）之立場，依據經驗法則，就行為當時所存在之一切事實，客觀的加以審查，認為在一般情形下，有此環境、有此行為之同一條件，均可發生同一結果者，則該條件即為發生結果之相當條件，行為與結果即有相當因果關係。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則原為一起過失致人於死案件所確立之相當因果關係判準，其後被廣泛援引適用於各類犯罪（含傷害致死罪等加重結果犯）之因果關係判斷。本則屬民國108年法院組織法修正前之「判例」，該次修法後判例已不再選編，現僅作為裁判先例參考，不具過去之拘束力，惟仍為理解相當因果關係說之經典依據。</p>
+        </div>
+      </div>
+
+      <div class="source-block">
+        📂 資料整理來源：元照出版、法源法律網、全國法規資料庫等網路轉引整理，尚未核對司法院原文全文。<br>
+        🔗 建議自行查證：<a href="https://judgment.judicial.gov.tw/" target="_blank">司法院裁判書查詢系統</a>
+      </div>
+    </section>
+
+    <!-- 六、教學案例 -->
+    <section class="section" id="s6">
+      <h2 class="stitle">六、教學案例</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下案例均為教學用途虛構，與條文要件高度對應，非真實判決事實。</p>
+
+      <div class="case-card">
+        <div class="ch">案例一：普通傷害既遂（第277條第1項）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲與乙於路口行車糾紛後下車理論，甲情緒失控出拳毆打乙面部，致乙鼻樑骨折。</p>
+          <h4>爭點</h4>
+          <p>甲之行為是否成立傷害既遂？</p>
+          <h4>分析</h4>
+          <p>甲出拳毆打乙面部，主觀上具傷害故意，客觀上該行為已造成乙鼻樑骨折之身體傷害結果，甲之行為與乙之傷害結果間具因果關係。甲並無阻卻違法、阻卻罪責事由。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第277條第1項<span class="conclude-est">普通傷害罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例二：傷害致死（能預見，第277條第2項前段）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>丙與丁於居酒屋內因細故發生口角，丙出拳朝丁胸口猛擊一拳，丁當場倒地，同行友人發現丁呼吸急促、面色發紫，送醫後診斷為外傷性心因性休克，經搶救無效死亡（丁本身患有嚴重心臟病，惟丙、丁事前均不知情）。</p>
+          <h4>爭點</h4>
+          <p>丙對丁死亡之結果有無預見可能性？丙是否成立傷害致死罪？</p>
+          <h4>分析</h4>
+          <p>丙出拳毆擊丁之胸口，基礎行為該當第1項普通傷害罪之構成要件、具傷害故意。丙之拳擊行為與丁死亡結果間，依相當因果關係判斷，一般人於相同情境下對他人胸口猛力揮拳，通常足以引發身體內部損傷甚至誘發潛在疾病惡化致死之結果，兩者具相當因果關係。就預見可能性而言，依實務見解（如107年台上字第2621號），應以事後第三人之客觀立場，綜合行為前後存在之一般情形判斷。雖丙、丁均不知丁患有心臟病之特殊體質，惟依社會通念，朝他人胸口（內藏心臟等重要器官）猛力揮拳，本即存有引發身體嚴重反應甚至死亡之一般風險，被害人特殊體質為行為人所不知，通常不影響加重結果之客觀可預見性判斷，蓋加重結果犯所要求者為「對死亡結果類型」之可預見，非要求行為人須具體預見死亡之詳細機轉。丙對死亡結果並無故意，僅止於傷害故意。</p>
+          <h4>結論</h4>
+          <p>丙成立刑法第277條第2項前段<span class="conclude-est">傷害致死罪</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例三：傷害致重傷－不能預見，依第17條不適用加重規定</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>戊與己於路邊發生輕微推擠，戊僅出手輕推己一下，己因此重心不穩後退跌倒，不巧後腦勺恰巧撞擊路邊消防栓尖角，致己顱內出血，經送醫雖保住性命，惟其中一目視能嚴重減損，該當重傷。</p>
+          <h4>爭點</h4>
+          <p>戊對己受重傷之結果是否具客觀預見可能性？</p>
+          <h4>分析</h4>
+          <p>戊僅出手輕推己一下，依社會通念，此等輕微推力通常僅致他人身體晃動或輕微跌坐，並不當然引發嚴重傷害，更遑論導致視能減損之重傷結果。己受重傷之直接原因，實係跌倒後後腦勺恰巧撞擊路邊消防栓尖角此一偶然、非常態之外部因素所致，並非戊輕推行為本身通常、典型會引發之結果。依相當因果關係判斷，若無消防栓此一特殊環境因素介入，依通常情形輕推並不會導致重傷結果；消防栓之存在及己跌倒方向恰巧撞擊之情形，已逸脫戊出手當時客觀上可合理預見之風險範圍。依第17條，加重結果之發生若非行為人所能預見，不適用加重之規定。</p>
+          <h4>結論</h4>
+          <p>戊僅成立刑法第277條第1項<span class="conclude-est">普通傷害罪既遂</span>（輕推行為本身已足構成傷害），<span class="conclude-not">不適用</span>第2項後段傷害致重傷之加重規定。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例四：傷害致死與殺人既遂之對照（呼應第271條講義案例二）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>庚與辛於便利商店前發生口角，庚隨手拾起店外置放之空玻璃瓶朝辛頭部揮擊一下，辛因頭部外傷合併顱內出血，送醫不治死亡。庚下手後隨即撥打119並在旁陪同等候救護車。</p>
+          <h4>爭點</h4>
+          <p>本案與《第271條．殺人罪》講義案例二（丙持木棍朝丁後腦勺猛力揮擊致死）相較，同為攻擊頭部致死，何以主觀犯意認定結果可能不同？</p>
+          <h4>分析</h4>
+          <p>「攻擊頭部」並非認定殺人故意之唯一或絕對因素，仍須綜合兇器種類、攻擊力道與次數、攻擊後舉措等客觀情狀整體判斷。本案庚係隨手拾起現場玻璃瓶（非事先準備、殺傷力相對有限之隨機物品），僅單次揮擊，且下手後隨即主動呼叫救護並在旁陪同等候，其攻擊後之積極救助舉措，與271條講義案例二中丙持木棍（具相當殺傷力之預備性兇器）猛力揮擊後未有任何救助行為之情形明顯有別。綜合判斷，庚於下手當時應僅止於傷害故意，對死亡結果並無認識與容任，僅屬客觀上可預見之加重結果。</p>
+          <h4>結論</h4>
+          <p>庚成立刑法第277條第2項前段<span class="conclude-est">傷害致死罪</span>（非第271條殺人既遂罪）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 七、申論練習題 -->
+    <section class="section" id="s7">
+      <h2 class="stitle">七、申論練習題與模擬解答</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下題目經使用者授權由 AI 出題，模擬解答僅供教學參考。</p>
+
+      <div class="case-card exam">
+        <div class="ch">題目一（傷害致死與殺人既遂之區辨）</div>
+        <div class="cb">
+          <p>甲與乙於夜市擺攤發生地盤糾紛，甲徒手朝乙臉部揮拳一拳，乙倒地後頭部撞擊地面石磚，經送醫診斷為顱內出血，因搶救不及死亡。試附理由分析甲之刑責。</p>
+          <h4>擬答</h4>
+          <p>甲徒手朝乙臉部揮拳一拳，其行為本身該當第277條第1項普通傷害罪之基礎構成要件，主觀上具傷害故意。乙之死亡結果，係因倒地後頭部撞擊地面石磚所致，而非甲之拳擊直接造成顱內損傷；惟依相當因果關係判斷，徒手毆擊他人臉部通常足以致人失去平衡而倒地，倒地過程中頭部撞擊地面（尤其乙倒地處鄰近石磚等硬物），依社會通念屬毆打行為典型可能引發之後續風險，仍應認甲之拳擊行為與乙之死亡結果間具相當因果關係。就預見可能性而言，一般人徒手毆擊他人臉部，通常可預見被害人可能因此失去平衡倒地並受到跌倒導致之附隨傷害（包括頭部撞擊硬物之風險），此為社會通念上可得預見之範圍，甲並無不能預見之特殊事由。甲對乙之死亡結果並無故意，其行為始終僅止於傷害故意，並未進階至殺人故意（無證據顯示甲攜帶兇器、鎖定要害部位或有其他足認具殺意之客觀情狀）。</p>
+          <p>從而，甲之行為應成立刑法第277條第2項前段<span class="conclude-est">傷害致死罪</span>，而非第271條殺人既遂罪；兩罪之根本區辨，在於行為人對死亡結果究竟係出於故意抑或僅止於客觀可預見，不可僅因結果嚴重（發生死亡）即逕論以殺人罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目二（加重結果犯之預見可能性與第17條之不適用）</div>
+        <div class="cb">
+          <p>丙與丁發生口角互相拉扯，丙出手推了丁肩膀一下，丁因此後退兩步後平穩站定，並未跌倒受傷，未料丁竟因該次拉扯過度緊張，誘發原本潛伏、連丁本人與家屬事前均全然不知情之罕見腦血管病變急性發作，經送醫仍不治死亡。試問丙之刑責為何？</p>
+          <h4>擬答</h4>
+          <p>丙出手推丁肩膀之行為，主觀上具傷害故意，客觀上雖屬輕微推擠，然仍足以評價為對他人身體之侵害，該當第277條第1項普通傷害罪之基礎構成要件（縱丁未因此跌倒受傷，惟推擠行為本身已構成對身體法益之侵害，屬廣義之傷害行為，如認客觀傷害結果尚有疑義，至少應構成強制罪或其他罪名，惟就本題設題重點聚焦於加重結果犯部分之分析）。就丁之死亡結果，係因其自身潛伏、連本人與家屬事前均不知情之罕見腦血管病變經拉扯誘發急性發作所致，此一因果連結已逸脫一般社會通念下輕微推擠肩膀所通常會引發之風險範圍——依相當因果關係判斷，通常之推擠行為並不會引發如此嚴重之病變發作結果，此一結果之發生高度依賴於被害人自身極端罕見、連專業醫療人員與家屬事前亦無從知悉之特殊體質，已非一般理性人於行為時所能預見之範圍。依第17條規定，加重結果之發生若行為人不能預見，不適用加重之規定。</p>
+          <p>從而，丙僅成立刑法第277條第1項<span class="conclude-est">普通傷害罪既遂</span>，<span class="conclude-not">不適用</span>第2項前段傷害致死罪之加重規定；丁之死亡結果依現行法尚無從歸責於丙，僅得於丙普通傷害罪之量刑上，視個案是否酌留審酌空間。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目三（重傷之認定，第10條第4項）</div>
+        <div class="cb">
+          <p>戊與己發生肢體衝突，戊持球棒朝己右手臂猛力揮擊多次，導致己右手臂多處骨折，經手術治療後，該手臂喪失大部分活動與抓握機能，經鑑定認已達永久性、難以治癒之機能減損程度。試問戊之刑責為何？並說明「重傷」之認定標準。</p>
+          <h4>擬答</h4>
+          <p>戊持球棒朝己右手臂猛力揮擊多次，主觀上具傷害故意，客觀上已造成己右手臂多處骨折之傷害結果，基礎行為該當第277條第1項普通傷害罪之構成要件。就己右手臂喪失大部分活動與抓握機能一節，應審酌是否該當第10條第4項所定「重傷」之定義。依第10條第4項第4款，「毀敗或嚴重減損一肢以上之機能」屬重傷之一種類型；所謂機能之毀敗或嚴重減損，不以完全喪失該肢體之全部功能為必要，凡經治療後仍無法回復原有功能、達於顯著減損之程度，且屬永久性、難以治癒者，即屬之。本案己右手臂經手術治療後，仍喪失大部分活動與抓握機能，且經鑑定為永久性、難以治癒，已達第10條第4項第4款所定「嚴重減損一肢以上之機能」之重傷程度。戊持球棒（具相當殺傷力之鈍器）朝己手臂多次猛力揮擊，依社會通念，此等攻擊方式客觀上可預見足以造成肢體機能嚴重減損之重傷結果，該當第17條所定之預見可能性要件，且戊之揮擊行為與己之重傷結果間具相當因果關係。</p>
+          <p>從而，戊之行為應成立刑法第277條第2項後段<span class="conclude-est">傷害致重傷罪</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目四（傷害罪不處罰未遂之體系理由）</div>
+        <div class="cb">
+          <p>庚與辛發生口角，庚舉起拳頭作勢朝辛臉部揮出，惟辛及時閃避，庚之拳頭完全未擊中辛身體任何部位，辛亦未因此受有任何傷害。試問庚之刑責為何？並說明其法律上理由。</p>
+          <h4>擬答</h4>
+          <p>庚舉拳朝辛臉部揮出之行為，主觀上具傷害故意，客觀上亦已著手實行足以傷害他人身體之行為，然因辛及時閃避，庚之攻擊行為並未造成辛之身體或健康受到任何實際侵害，傷害結果並未發生。依第277條之規定體系，本條僅第1項規定既遂之處罰，並未如第271條第2項、第320條第2項、第335條第2項等條文另設「前項之未遂犯罰之」之明文規定；依第25條第2項「未遂犯之處罰，以有特別規定者為限」，普通傷害罪之立法者並未特別規定處罰其未遂犯，故縱行為人已著手實行傷害行為而未生傷害結果，依現行法尚不成立傷害罪（未遂）。</p>
+          <p>從而，庚之行為<span class="conclude-not">不成立</span>刑法第277條傷害罪，其舉拳作勢之行為本身若另符合其他罪名之構成要件（例如使辛心生畏懼而該當恐嚇危害安全罪、或評價為強暴脅迫而該當強制罪），得另行檢討是否成立各該罪名，惟均非傷害罪本身之未遂犯問題，蓋現行法對普通傷害罪根本未設未遂犯處罰規定。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 八、速查卡 -->
+    <section class="section" id="s8">
+      <h2 class="stitle">八、速查卡</h2>
+      <div class="mnemonic-card">
+        <div class="wm">速</div>
+        <h3>記憶口訣</h3>
+        <div class="mnemonic-item">傷害致死非故意，客觀能見即成立
+          <small>加重結果犯不要求死亡或重傷故意，僅要求對加重結果客觀上具預見可能性；若行為人對死亡具故意，應論殺人罪而非本條</small>
+        </div>
+        <div class="mnemonic-item">傷害本無未遂罰，著手未果不成罪
+          <small>第277條未設未遂犯處罰明文，依第25條第2項，未生傷害結果即不成立本罪</small>
+        </div>
+        <table style="margin-top:22px; color:var(--ink); background:var(--paper-card); border-radius:6px; overflow:hidden;">
+          <thead><tr><th>項次</th><th>類型</th><th>主觀要件</th><th>法定刑</th></tr></thead>
+          <tbody>
+            <tr><td>第1項</td><td>普通傷害既遂</td><td>傷害故意</td><td>5年以下有期徒刑、拘役或50萬元以下罰金</td></tr>
+            <tr><td>第2項前段</td><td>傷害致死</td><td>傷害故意＋死亡結果客觀可預見</td><td>無期徒刑或7年以上有期徒刑</td></tr>
+            <tr><td>第2項後段</td><td>傷害致重傷</td><td>傷害故意＋重傷結果客觀可預見</td><td>3年以上10年以下有期徒刑</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 九、相關主題 -->
+    <section class="section" id="s9">
+      <h2 class="stitle">九、相關主題</h2>
+      <div class="link-note">
+        本條加重結果犯（傷害致死／致重傷）之核心區辨對象——殺人故意——與新增講義《<a href="../講義/刑法271條-殺人罪.html" target="_blank">第271條．殺人罪</a>》互為對照，建議合併研讀；本講義教學案例四即直接對照該講義案例二之情境設計。<br><br>
+        本條第17條預見可能性要件之判斷結構，與既有講義《<a href="../講義/刑法185-3條-不能安全駕駛罪.html" target="_blank">第185-3條．不能安全駕駛罪</a>》（因而致死、致重傷之加重結果犯）、《<a href="../講義/刑法186-186-1-187條-危險物罪體系.html" target="_blank">第186、186-1、187條．危險物罪體系</a>》（爆裂物爆炸致死、致重傷之加重結果犯）、《<a href="../講義/刑法325條-搶奪罪.html" target="_blank">第325條．搶奪罪</a>》（搶奪致死、致重傷之加重結果犯）性質相同，均為結合第17條之加重結果犯類型，建議對照閱讀比較各罪加重結果之典型危險關聯有何不同。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const links = [...document.querySelectorAll('nav.sidebar a, .topnav a')];
+  const sections = [...document.querySelectorAll('main .section, main .cover')];
+  const map = new Map();
+  links.forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el) map.set(el, links.filter(l=>l.getAttribute('href')==='#'+id));
+  });
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const els = map.get(entry.target);
+      if(!els) return;
+      if(entry.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        els.forEach(l=>l.classList.add('active'));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>{ if(map.has(s)) observer.observe(s); });
+
+  links.forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
