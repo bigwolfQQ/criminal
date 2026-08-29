@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第5條｜國外犯罪之適用（保護主義・世界主義）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b; --indigo:#2c4a76; --indigo-soft:#3f5f8f;
+  --parchment:#f3ede0; --paper:#fbf8f1; --paper-panel:#fffdf8;
+  --seal:#9c2b3a; --brass:#a9832f; --line:#ddd3bf;
+  --ink-70:rgba(22,35,59,.7); --ink-45:rgba(22,35,59,.45);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"Noto Sans TC",sans-serif;background:var(--parchment);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+h1,h2,h3{font-family:"Noto Serif TC",serif;}
+
+/* ---- layout ---- */
+.shell{display:flex;max-width:1280px;margin:0 auto;}
+.sidenav{width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;border-right:1px solid var(--line);}
+.sidenav .brand{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1rem;color:var(--seal);margin-bottom:6px;}
+.sidenav .brand-sub{font-size:.72rem;color:var(--ink-45);margin-bottom:26px;}
+.sidenav ul{list-style:none;margin:0;padding:0;}
+.sidenav li{margin-bottom:2px;}
+.sidenav a{display:block;font-size:.86rem;padding:8px 10px;border-radius:6px;color:var(--ink-70);text-decoration:none;border-left:3px solid transparent;transition:.15s;}
+.sidenav a:hover{background:var(--paper-panel);}
+.sidenav a.active{background:var(--paper-panel);border-left-color:var(--seal);color:var(--ink);font-weight:700;}
+.sidenav a.dim{color:var(--ink-45);}
+.main{flex:1;min-width:0;box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);background:var(--paper);}
+.topnav{display:none;position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.topnav a{display:inline-block;font-size:.78rem;padding:7px 14px;margin-right:6px;border-radius:999px;background:var(--paper-panel);border:1px solid var(--line);color:var(--ink-70);text-decoration:none;}
+.topnav a.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.topnav a.dim{color:var(--ink-45);}
+
+@media (max-width:980px){
+  .sidenav{display:none;}
+  .topnav{display:block;}
+}
+
+/* ---- cover ---- */
+.cover{position:relative;padding:56px 40px 40px;border-bottom:1px solid var(--line);}
+.cover .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.24em;color:var(--brass);font-weight:700;margin-bottom:16px;}
+.cover .eyebrow::before{content:"";width:22px;height:1px;background:var(--brass);}
+.cover h1{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 10px;letter-spacing:.01em;}
+.cover .sub{font-size:1rem;color:var(--indigo);font-weight:500;margin:0;}
+.cover-meta{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.ver-badge{font-weight:700;font-size:.78rem;color:var(--seal);border:1px solid var(--seal);border-radius:20px;padding:3px 12px;letter-spacing:.03em;}
+.meta-date{font-size:.8rem;color:var(--ink-45);}
+.cover .seal-mark{position:absolute;top:48px;right:40px;width:78px;height:78px;border:2.5px solid var(--seal);border-radius:6px;color:var(--seal);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:900;writing-mode:vertical-rl;font-size:1.05rem;letter-spacing:.15em;transform:rotate(3deg);background:rgba(156,43,58,.03);}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.toc span{font-size:.74rem;background:var(--paper-panel);border:1px solid var(--line);padding:4px 10px;border-radius:6px;color:var(--ink-70);}
+@media(max-width:600px){.cover{padding:40px 20px 28px;}.cover .seal-mark{display:none;}}
+
+/* ---- section ---- */
+section{padding:44px 40px;border-bottom:1px solid var(--line);}
+@media(max-width:600px){section{padding:32px 20px;}}
+.eyebrow-sec{font-size:.72rem;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:8px;}
+section h2{font-size:1.4rem;margin:0 0 22px;color:var(--ink);}
+
+/* ---- article box ---- */
+.article-box{position:relative;background:var(--paper-panel);border-left:3px solid var(--indigo);border-radius:4px;padding:20px 22px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,.06);}
+.article-box .num-wm{position:absolute;right:10px;bottom:-14px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:5rem;color:var(--ink);opacity:.06;pointer-events:none;line-height:1;}
+.article-box h3{margin:0 0 10px;font-size:1.05rem;color:var(--indigo);}
+.article-box p{margin:0 0 6px;line-height:1.9;font-size:.95rem;}
+.article-box .tag-role{display:inline-block;font-size:.7rem;background:var(--parchment);border:1px solid var(--line);color:var(--ink-70);padding:2px 8px;border-radius:4px;margin-bottom:10px;}
+
+/* ---- tables ---- */
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.88rem;}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:10px 12px;font-weight:700;}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f6f1e6;}
+tr:nth-child(odd) td{background:var(--paper-panel);}
+
+.result-pos{color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.result-neg{color:var(--seal);font-weight:700;}
+
+/* ---- spectrum ---- */
+.spectrum{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap;}
+.spectrum .node{flex:1;min-width:130px;background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:14px 12px;text-align:center;}
+.spectrum .node h4{margin:0 0 6px;font-size:.86rem;color:var(--indigo);}
+.spectrum .node p{margin:0;font-size:.76rem;color:var(--ink-70);line-height:1.6;}
+.spectrum .arrow{align-self:center;color:var(--ink-45);font-size:1.1rem;}
+
+/* ---- placeholder ---- */
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:28px 20px;text-align:center;background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, transparent 10px 20px);}
+.placeholder .icon{font-size:1.6rem;margin-bottom:8px;}
+.placeholder p{margin:4px 0;font-size:.86rem;color:var(--ink-70);}
+.placeholder .badge{display:inline-block;margin-top:8px;font-size:.72rem;background:var(--brass);color:var(--paper);padding:3px 12px;border-radius:999px;}
+
+/* ---- doctrine / practice cards ---- */
+.doc-card{background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:12px;}
+.doc-card .name{font-weight:700;color:var(--indigo);margin-bottom:6px;font-size:.94rem;}
+.doc-card .body{font-size:.88rem;line-height:1.8;color:var(--ink);margin-bottom:8px;}
+.doc-card .src{font-size:.74rem;color:var(--ink-45);}
+
+/* ---- case card ---- */
+.case-card{background:var(--paper-panel);border-radius:10px;box-shadow:0 1px 2px rgba(22,35,59,.08), 0 6px 18px -10px rgba(22,35,59,.25);margin-bottom:22px;overflow:hidden;}
+.case-card .head{background:var(--indigo);color:var(--paper);padding:12px 18px;font-weight:700;font-size:.94rem;}
+.case-card .body-inner{padding:18px;}
+.case-card h4{margin:14px 0 6px;font-size:.86rem;color:var(--brass);letter-spacing:.05em;}
+.case-card h4:first-child{margin-top:0;}
+.case-card p{margin:0 0 8px;font-size:.9rem;line-height:1.9;}
+.essay-card .head{background:var(--ink);}
+
+.relation-note{text-align:center;font-size:.78rem;color:var(--ink-45);margin-top:6px;}
+
+/* ---- cheatsheet ---- */
+.cheatsheet{background:var(--ink);color:var(--paper);border-radius:12px;padding:30px 26px;position:relative;overflow:hidden;}
+.cheatsheet::after{content:"速";position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:9rem;color:rgba(251,248,241,.06);}
+.cheatsheet h3{margin:0 0 14px;font-size:1.1rem;color:var(--paper);}
+.cheatsheet ul{margin:0 0 18px;padding-left:1.2em;font-size:.88rem;line-height:2;}
+.mnemonic{background:var(--seal);border-radius:8px;padding:14px 16px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:1rem;text-align:center;letter-spacing:.05em;}
+
+.link-note{border:1px dashed var(--indigo);border-radius:8px;padding:16px 18px;font-size:.86rem;color:var(--ink-70);}
+.link-note a{color:var(--indigo);font-weight:700;text-decoration:underline;}
+
+.src-block{margin-top:14px;font-size:.78rem;color:var(--ink-45);}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="sidenav" id="sidenav">
+  <div class="brand">criminal-law-interpretation</div>
+  <div class="brand-sub">刑法教學講義</div>
+  <ul>
+    <li><a href="#cover" class="nav-link">封面</a></li>
+    <li><a href="#articles" class="nav-link">一、條文原文</a></li>
+    <li><a href="#structure" class="nav-link">二、條文結構</a></li>
+    <li><a href="#tiers" class="nav-link">三、適用要件解析</a></li>
+    <li><a href="#doctrine" class="nav-link">四、學說見解</a></li>
+    <li><a href="#practice" class="nav-link">五、實務見解</a></li>
+    <li><a href="#cases" class="nav-link">六、教學案例</a></li>
+    <li><a href="#essays" class="nav-link">七、申論練習題</a></li>
+    <li><a href="#cheatsheet" class="nav-link">八、速查卡</a></li>
+    <li><a href="#related" class="nav-link dim">相關主題</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+<nav class="topnav" id="topnav">
+  <a href="#cover" class="nav-link">封面</a>
+  <a href="#articles" class="nav-link">原文</a>
+  <a href="#structure" class="nav-link">結構</a>
+  <a href="#tiers" class="nav-link">要件解析</a>
+  <a href="#doctrine" class="nav-link">學說</a>
+  <a href="#practice" class="nav-link">實務</a>
+  <a href="#cases" class="nav-link">案例</a>
+  <a href="#essays" class="nav-link">申論題</a>
+  <a href="#cheatsheet" class="nav-link">速查卡</a>
+  <a href="#related" class="nav-link dim">相關</a>
+</nav>
+
+<header class="cover" id="cover">
+  <div class="eyebrow">第一編 總則 · 第一章 法例</div>
+  <h1>刑法第5條｜國外犯罪之適用<br>（保護主義・世界主義）</h1>
+  <p class="sub">刑法之空間效力體系：屬地・屬人・保護・世界四大原則</p>
+  <div class="cover-meta">
+    <span class="ver-badge">v1.0</span>
+    <span class="meta-date">建立日期：2026-08-29</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.3-4-5-6-7-8-9-10" alt="visitor badge" style="height:20px;">
+  </div>
+  <div class="toc">
+    <span>§3 屬地原則</span><span>§4 隔地犯</span><span>§5 保護／世界原則</span>
+    <span>§6 公務員國外犯罪</span><span>§7 屬人原則</span><span>§8 保護原則（對本國人）</span>
+    <span>§9 外國裁判之效力</span><span>§10 用語定義</span>
+  </div>
+  <div class="seal-mark">域外效力</div>
+</header>
+
+<!-- 一、條文原文 -->
+<section id="articles">
+  <div class="eyebrow-sec">ARTICLES</div>
+  <h2>一、條文原文</h2>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第5條（保護主義・世界主義——國外犯罪之適用）</h3>
+    <p>本法於凡在中華民國領域外犯下列各罪者，適用之：</p>
+    <p>一、內亂罪。</p>
+    <p>二、外患罪。</p>
+    <p>三、第一百三十五條、第一百三十六條及第一百三十八條之妨害公務罪。</p>
+    <p>四、第一百八十五條之一及第一百八十五條之二之公共危險罪。</p>
+    <p>五、偽造貨幣罪。</p>
+    <p>六、第二百零一條至第二百零二條之偽造有價證券罪。</p>
+    <p>七、第二百十一條、第二百十四條、第二百十八條及第二百十六條行使第二百十一條、第二百十三條、第二百十四條文書之偽造文書罪。</p>
+    <p>八、毒品罪。但施用毒品及持有毒品、種子、施用毒品器具罪，不在此限。</p>
+    <p>九、第二百九十六條及第二百九十六條之一之妨害自由罪。</p>
+    <p>十、第三百三十三條及第三百三十四條之海盜罪。</p>
+    <p>十一、第三百三十九條之四之加重詐欺罪。</p>
+    <div class="num-wm">5</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜屬地原則</span>
+    <h3>第3條</h3>
+    <p>本法於在中華民國領域內犯罪者，適用之。在中華民國領域外之中華民國船艦或航空器內犯罪者，以在中華民國領域內犯罪論。</p>
+    <div class="num-wm">3</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜隔地犯</span>
+    <h3>第4條</h3>
+    <p>犯罪之行為或結果，有一在中華民國領域內者，為在中華民國領域內犯罪。</p>
+    <div class="num-wm">4</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜公務員國外犯罪</span>
+    <h3>第6條</h3>
+    <p>本法於中華民國公務員在中華民國領域外犯左列各罪者，適用之：</p>
+    <p>一、第一百二十一條至第一百二十三條、第一百二十五條、第一百二十六條、第一百二十九條、第一百三十一條、第一百三十二條及第一百三十四條之瀆職罪。</p>
+    <p>二、第一百六十三條之脫逃罪。</p>
+    <p>三、第二百十三條之偽造文書罪。</p>
+    <p>四、第三百三十六條第一項之侵占罪。</p>
+    <div class="num-wm">6</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜屬人原則</span>
+    <h3>第7條</h3>
+    <p>本法於中華民國人民在中華民國領域外犯前二條以外之罪，而其最輕本刑為三年以上有期徒刑者，適用之。但依犯罪地之法律不罰者，不在此限。</p>
+    <div class="num-wm">7</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜保護原則（對本國人民）</span>
+    <h3>第8條</h3>
+    <p>前條之規定，於在中華民國領域外對於中華民國人民犯罪之外國人，準用之。</p>
+    <div class="num-wm">8</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜外國裁判之效力</span>
+    <h3>第9條</h3>
+    <p>同一行為雖經外國確定裁判，仍得依本法處斷。但在外國已受刑之全部或一部執行者，得免其刑之全部或一部之執行。</p>
+    <div class="num-wm">9</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜用語定義</span>
+    <h3>第10條</h3>
+    <p>稱以上、以下、以內者，俱連本數或本刑計算。</p>
+    <p>稱公務員者，謂下列人員：一、依法令服務於國家、地方自治團體所屬機關而具有法定職務權限，以及其他依法令從事於公共事務，而具有法定職務權限者。二、受國家、地方自治團體所屬機關依法委託，從事與委託機關權限有關之公共事務者。</p>
+    <p>稱公文書者，謂公務員職務上製作之文書。</p>
+    <p>稱重傷者，謂下列傷害：一、毀敗或嚴重減損一目或二目之視能。二、毀敗或嚴重減損一耳或二耳之聽能。三、毀敗或嚴重減損語能、味能或嗅能。四、毀敗或嚴重減損一肢以上之機能。五、毀敗或嚴重減損生殖之機能。六、其他於身體或健康，有重大不治或難治之傷害。</p>
+    <p>稱性交者，謂非基於正當目的所為之下列性侵入行為：一、以性器進入他人之性器、肛門或口腔，或使之接合之行為。二、以性器以外之其他身體部位或器物進入他人之性器、肛門，或使之接合之行為。</p>
+    <p>稱電磁紀錄者，謂以電子、磁性、光學或其他相類之方式所製成，而供電腦處理之紀錄。</p>
+    <p>稱凌虐者，謂以強暴、脅迫或其他違反人道之方法，對他人施以凌辱虐待行為。</p>
+    <p>稱性影像者，謂內容有下列各款之一之影像或電磁紀錄：一、第五項第一款或第二款之行為。二、性器或客觀上足以引起性慾或羞恥之身體隱私部位。三、以身體或器物接觸前款部位，而客觀上足以引起性慾或羞恥之行為。四、其他與性相關而客觀上足以引起性慾或羞恥之行為。</p>
+    <div class="num-wm">10</div>
+  </div>
+</section>
+
+<!-- 二、條文結構 -->
+<section id="structure">
+  <div class="eyebrow-sec">STRUCTURE</div>
+  <h2>二、條文結構——刑法空間效力四原則光譜</h2>
+  <p style="font-size:.9rem;color:var(--ink-70);line-height:1.9;">我國刑法以「屬地原則」（§3、§4）為基準，再以「屬人原則」（§7）、「保護原則」（§5部分款、§8）、「世界原則」（§5部分款）依序擴張域外適用範圍，四者判斷邏輯環環相扣，不可跳躍適用。</p>
+
+  <div class="spectrum">
+    <div class="node"><h4>① 屬地原則</h4><p>§3、§4<br>領域內犯罪，或行為／結果一在領域內者，一律適用</p></div>
+    <div class="arrow">→</div>
+    <div class="node"><h4>② 屬人原則</h4><p>§6、§7<br>本國公務員／人民在國外犯罪，依身分與最輕本刑判斷</p></div>
+    <div class="arrow">→</div>
+    <div class="node"><h4>③ 保護原則</h4><p>§5第1、2、3、5、6、7款（國家法益）<br>§8（個人法益，準用§7要件）</p></div>
+    <div class="arrow">→</div>
+    <div class="node"><h4>④ 世界原則</h4><p>§5第4、8、9、10、11款<br>不問國籍、不問犯罪地、不問被害法益</p></div>
+  </div>
+
+  <table>
+    <thead><tr><th>第5條款次</th><th>罪名</th><th>歸類原則</th></tr></thead>
+    <tbody>
+      <tr><td>第1款</td><td>內亂罪</td><td>保護原則（國家法益）</td></tr>
+      <tr><td>第2款</td><td>外患罪</td><td>保護原則（國家法益）</td></tr>
+      <tr><td>第3款</td><td>妨害公務罪（§135、136、138）</td><td>保護原則（國家法益）</td></tr>
+      <tr><td>第4款</td><td>公共危險罪（§185-1、185-2，劫持交通工具）</td><td>世界原則</td></tr>
+      <tr><td>第5款</td><td>偽造貨幣罪</td><td>保護原則（國家法益）</td></tr>
+      <tr><td>第6款</td><td>偽造有價證券罪（§201–202）</td><td>保護原則（國家法益）</td></tr>
+      <tr><td>第7款</td><td>偽造文書罪（§211、213、214、216行使）</td><td>保護原則（國家法益）</td></tr>
+      <tr><td>第8款</td><td>毒品罪（施用及持有除外）</td><td>世界原則</td></tr>
+      <tr><td>第9款</td><td>妨害自由罪（§296、296-1，使人為奴隸／人口販運）</td><td>世界原則</td></tr>
+      <tr><td>第10款</td><td>海盜罪（§333、334）</td><td>世界原則</td></tr>
+      <tr><td>第11款</td><td>加重詐欺罪（§339-4）</td><td>世界原則</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.82rem;color:var(--ink-45);">分類依據：林鈺雄，見「四、學說見解」。</p>
+</section>
+
+<!-- 三、適用要件解析 -->
+<section id="tiers">
+  <div class="eyebrow-sec">APPLICATION TEST</div>
+  <h2>三、適用要件解析</h2>
+  <div class="placeholder" style="border-color:var(--indigo);background:none;margin-bottom:20px;">
+    <p style="color:var(--ink);font-weight:700;">本條性質為刑法「空間適用範圍」規定，非具體罪名之構成要件，故不涉及「構成要件該當性／違法性／有責性」三階層判斷。</p>
+    <p>本條之審查重點在於：法院對某一域外行為是否具有「實質審判權」，屬於訴訟先決事項，須先於實體犯罪三階層判斷之前處理。</p>
+  </div>
+
+  <h3 style="font-size:1rem;color:var(--indigo);">審查步驟（四層檢驗）</h3>
+  <table>
+    <thead><tr><th>步驟</th><th>檢驗內容</th><th>依據</th></tr></thead>
+    <tbody>
+      <tr><td>Step 1</td><td>行為地或結果地是否在中華民國領域內（含船艦、航空器）？若是，直接依屬地原則適用，不需再檢驗§5至§8</td><td>§3、§4</td></tr>
+      <tr><td>Step 2</td><td>若行為地不在領域內，行為人是否為中華民國公務員，且所犯是否屬§6列舉之瀆職、脫逃、偽造文書、侵占罪？</td><td>§6</td></tr>
+      <tr><td>Step 3</td><td>若非§6情形，行為人是否為中華民國人民，所犯罪名最輕本刑是否達3年以上有期徒刑，且犯罪地法律亦處罰？</td><td>§7</td></tr>
+      <tr><td>Step 4</td><td>若行為人為外國人，是否對中華民國人民犯罪，且該罪最輕本刑達3年以上、犯罪地法律亦處罰？（準用§7）</td><td>§8</td></tr>
+      <tr><td>Step 5</td><td>不論行為人國籍、被害人為何，所犯是否屬§5列舉之11款罪名之一？若是，逕行適用，不受最輕本刑或雙重犯罪原則限制</td><td>§5</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:.86rem;line-height:1.9;">五個步驟並非互斥，同一事實可能同時該當數款（如公務員在國外犯§5所列之罪，§5與§6可能競合適用，此時逕依§5適用即為已足，因§5本身即不受身分限制）。</p>
+</section>
+
+<!-- 四、學說見解 -->
+<section id="doctrine">
+  <div class="eyebrow-sec">DOCTRINE</div>
+  <h2>四、學說見解</h2>
+  <div class="doc-card">
+    <div class="name">林鈺雄</div>
+    <div class="body">保護原則：基於國家有保護法益之基本任務，即使在本國領域外，只要所侵害法益為本國國家法益或本國個人法益之特定犯罪，不問行為人國籍，皆適用本國刑法處斷，此為第5條第1、2、3、5、6、7款（國家法益）及第8條（個人法益）所由設。世界原則：基於世界共同法秩序之維護，不論行為人國籍、犯罪地、是否侵害內國法益，內國刑法皆得適用，第5條第4、8、9、10、11款屬之。</div>
+    <div class="src">出處：林鈺雄，《新刑法總則》，三版，頁77–79</div>
+  </div>
+  <div class="doc-card">
+    <div class="name">王皇玉</div>
+    <div class="body">就2016年增訂第11款（加重詐欺罪）之立法意義提出分析：本款增訂之宣示與象徵意義較大，其真正能發揮實質作用之處，並非社會矚目一時的「肯亞事件」，也非境外臺灣人彼此互詐之情形，而是臺灣人於其他國家對外國被害人犯加重詐欺罪之情形，例如臺灣人在越南對越南人進行電信詐騙，此時仍有我國刑法適用之餘地。</div>
+    <div class="src">出處：王皇玉，〈加重詐欺罪之解釋與適用〉</div>
+  </div>
+</section>
+
+<!-- 五、實務見解 -->
+<section id="practice">
+  <div class="eyebrow-sec">PRACTICE</div>
+  <h2>五、實務見解</h2>
+  <div class="doc-card">
+    <div class="name">最高法院108年度台上字第334號判決</div>
+    <div class="body">闡明我國刑法對人、事與地之適用範圍，係以屬地原則為基準，輔以國旗原則、屬人原則、保護原則及世界法原則，擴張我國刑法領域外適用之範圍，具體而言即依刑法第3條、第5條至第8條之規定，作為案件劃歸我國法院審判（實質審判權）之準據。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：108年度台上字第334號</div>
+  </div>
+  <div class="doc-card">
+    <div class="name">最高法院90年度台上字第705號判決、89年度台非字第94號判決</div>
+    <div class="body">見解為在大陸地區犯罪，仍應受我國法律處罰，常被援引作為理解保護原則、世界原則於兩岸案件實際操作之參考先例。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：90年度台上字第705號、89年度台非字第94號</div>
+  </div>
+
+  <h3 style="font-size:.92rem;color:var(--indigo);margin-top:24px;">大法官解釋／憲法法庭判決</h3>
+  <div class="placeholder">
+    <div class="icon">⚖️</div>
+    <p>本條（§5）目前查無大法官解釋或憲法法庭判決。</p>
+    <p>理由：本條屬國家管轄權劃分之技術性規定，尚未有人以此聲請違憲審查。</p>
+    <span class="badge">查無資料</span>
+  </div>
+</section>
+
+<!-- 六、教學案例 -->
+<section id="cases">
+  <div class="eyebrow-sec">CASES（教學用途・AI虛構）</div>
+  <h2>六、教學案例</h2>
+
+  <div class="case-card">
+    <div class="head">案例一｜世界原則——海盜罪</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>臺灣籍船員甲於印度洋公海上，夥同數名外國籍船員劫持一艘巴拿馬籍貨輪，強取船上財物。全程未進入我國領域，被害船隻亦非我國籍。</p>
+      <h4>爭點</h4>
+      <p>甲之行為地、被害人、船籍均與中華民國無涉，我國刑法是否仍得適用？</p>
+      <h4>分析</h4>
+      <p>依第5條第10款，海盜罪（第333條、第334條）屬世界原則列舉之罪名，不問行為人國籍、犯罪地、被害法益是否與我國有關，我國刑法皆得適用。甲雖為我國人民，但即便甲為外國人，依世界原則仍應適用我國刑法，此為海盜罪自古以來即被視為「萬國公罪」之體現。</p>
+      <h4>結論</h4>
+      <p>我國刑法對甲之海盜行為<span class="result-pos">適用之</span>，甲得依第333條論處。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例二｜保護原則（§8）——外國人對本國人犯罪</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>日本籍人士乙在日本境內，對前往當地旅遊之我國籍人民丙犯重傷害罪（最輕本刑逾3年），依日本刑法亦構成犯罪並得處罰。</p>
+      <h4>爭點</h4>
+      <p>乙為外國人、行為地在日本，我國刑法是否對乙之行為有適用餘地？</p>
+      <h4>分析</h4>
+      <p>依第8條準用第7條，外國人於我國領域外對我國人民犯罪，須符合：①最輕本刑三年以上有期徒刑之罪，②犯罪地法律亦處罰（雙重犯罪原則）。本案重傷害罪最輕本刑逾3年，且依日本法亦處罰，兩要件均具備。</p>
+      <h4>結論</h4>
+      <p>我國刑法對乙之行為<span class="result-pos">準用第7條規定，適用之</span>，我國就此案件具有管轄權。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例三｜屬人原則（§7）之限制——雙重犯罪原則之欠缺</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>我國籍人民丁在甲國旅遊期間，於當地合法賭場從事賭博行為。該行為依甲國法律完全合法，但我國刑法就特定賭博行為設有處罰規定，最輕本刑未達3年以上有期徒刑。</p>
+      <h4>爭點</h4>
+      <p>丁在國外之行為，我國刑法是否適用？</p>
+      <h4>分析</h4>
+      <p>本案非第5條、第6條列舉之罪，應依第7條屬人原則判斷：須符合「最輕本刑三年以上有期徒刑」要件，賭博罪並不符合此一門檻，本身即不該當第7條要件，無須再論及「犯罪地法律不罰」之除外規定。</p>
+      <h4>結論</h4>
+      <p>我國刑法對丁之行為<span class="result-neg">不適用</span>，因未達第7條最輕本刑門檻。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例四｜第9條——外國裁判之效力（雙重危險非絕對禁止）</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>我國籍人民戊在甲國犯加重詐欺罪（該當第5條第11款），經甲國法院判決有罪並已服畢兩年有期徒刑後返臺，遭我國檢察官起訴同一行為。</p>
+      <h4>爭點</h4>
+      <p>戊已於外國受刑之執行，我國是否仍得依同一行為追訴處罰？是否違反一事不二罰？</p>
+      <h4>分析</h4>
+      <p>依第9條，同一行為雖經外國確定裁判，我國仍得依本法處斷，僅在外國已受刑之全部或一部執行者，法院得依裁量免除其刑之全部或一部執行，而非當然阻卻我國之追訴權或管轄權。此規定顯示我國刑法採「主權獨立原則」，不承認外國判決之既判力當然拘束我國法院。</p>
+      <h4>結論</h4>
+      <p>我國就戊之行為<span class="result-pos">仍得依本法處斷</span>，惟法院於量刑時應審酌其已在外國服刑之事實，依第9條但書裁量減免其刑。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 七、申論題 -->
+<section id="essays">
+  <div class="eyebrow-sec">ESSAY QUESTIONS（AI自行出題，已獲使用者授權）</div>
+  <h2>七、申論練習題與模擬解答</h2>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題一</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：我國籍人民甲在越南境內，以電信詐騙方式對越南籍人民乙施用詐術，致乙陷於錯誤而匯款，甲該當我國刑法第339條之4加重詐欺罪之構成要件。試問：我國刑法就甲之行為是否有適用之餘地？</p>
+      <h4>模擬解答</h4>
+      <p>我國刑法第5條第11款規定，凡在我國領域外犯第339條之4加重詐欺罪者，不問行為人國籍、犯罪地、被害人國籍，我國刑法一律適用之，此為2016年因應跨境電信詐騙猖獗而增訂之世界原則規定。甲雖為我國人民，於越南境內對越南籍被害人乙犯加重詐欺罪，依學說見解（王皇玉），此正是第11款增訂真正發揮實益之典型情形——即我國人民於他國對外國被害人犯加重詐欺罪之案例。甲之行為既該當第339條之4之構成要件，我國就此案件依第5條第11款具有域外適用之效力，不受第7條最輕本刑或雙重犯罪原則之限制。從而，我國刑法對甲之行為適用之，甲得依加重詐欺罪論處。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題二</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：我國籍公務員丙於駐外辦事處任職期間，在當地涉嫌收受賄賂（該當瀆職罪章），亦同時涉嫌以私人身分在當地對他人犯普通傷害罪（最輕本刑未達3年）。試問此二行為，我國刑法是否均有適用餘地？請分別論述。</p>
+      <h4>模擬解答</h4>
+      <p>應分別以第6條與第7條檢驗。就收賄部分：丙具有中華民國公務員身分，於領域外涉犯瀆職罪章之罪，依第6條第1款規定，不問最輕本刑高低，我國刑法逕行適用，故此部分我國具有管轄權。就普通傷害部分：此非第5條、第6條列舉之罪名，應回歸第7條屬人原則判斷，其要件為最輕本刑三年以上有期徒刑之罪，普通傷害罪並不符合此一門檻，本身即不該當第7條之適用要件。從而，丙收賄部分我國刑法適用之，惟普通傷害部分因未達第7條最輕本刑門檻，我國刑法不適用，僅得依當地法律處理。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題三</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：外國籍人士丁在其本國境內偽造我國之新臺幣紙鈔（該當偽造貨幣罪），並未持入我國境內流通。試問我國刑法是否對丁之行為有適用餘地？其理論依據為何？</p>
+      <h4>模擬解答</h4>
+      <p>依第5條第5款，偽造貨幣罪為明文列舉之罪名，凡在我國領域外犯偽造貨幣罪者，不問行為人國籍、是否流入我國境內，我國刑法一律適用之。其理論依據為保護原則：偽造貨幣罪侵害者為國家對貨幣發行與流通秩序之公信力，屬國家法益之侵害，故即便丁未將偽鈔攜入我國境內流通，僅單純偽造行為本身即已侵害我國國家法益，依保護原則，不問行為人國籍或行為地，我國刑法均得適用。從而，丁之偽造貨幣行為，我國刑法適用之，丁得依偽造貨幣罪相關規定論處。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題四</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：我國籍人民戊在甲國境內對同為我國籍之友人己犯重傷罪，經甲國法院判決有罪並已服刑完畢。戊返臺後，我國檢察官仍對其提起公訴。戊主張其已於外國服刑完畢，我國不得再行追訴，否則違反一事不再理原則。試評析戊之主張是否有理由。</p>
+      <h4>模擬解答</h4>
+      <p>戊之主張並無理由。依第9條規定，同一行為雖經外國確定裁判，我國仍得依本法處斷，僅於行為人已在外國受刑之全部或一部執行者，法院得裁量免除其刑之全部或一部執行，而非當然阻卻我國之追訴權或使我國喪失管轄權。此規定係基於刑罰權為國家主權之展現，我國不當然承認外國確定裁判之既判力拘束我國法院，此與國內訴訟法上「一事不再理」原則（僅拘束本國法院體系內部）性質有別，不可混淆。就本案而言，戊在甲國之重傷行為，因戊、己均為我國人民，依第7條或視具體罪名亦可能該當第5條相關款次而有我國刑法適用之餘地；戊已服刑完畢之事實，僅影響法院是否依第9條但書裁量減免其刑，並不影響我國檢察官提起公訴、法院進行審判之權限。從而，我國對戊仍得依本法處斷，惟量刑時應依第9條但書審酌其已於外國服刑之事實。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 八、速查卡 -->
+<section id="cheatsheet">
+  <div class="eyebrow-sec">CHEAT SHEET</div>
+  <h2>八、速查卡</h2>
+  <div class="cheatsheet">
+    <h3>刑法空間效力四原則一覽</h3>
+    <ul>
+      <li>屬地原則（§3、§4）：領域內犯罪，或行為結果一在領域內，一律適用，不論國籍</li>
+      <li>屬人原則（§6、§7）：本國公務員／人民國外犯罪，依身分或最輕本刑3年以上判斷</li>
+      <li>保護原則（§5部分款＋§8）：侵害我國國家或人民法益，不問行為人國籍</li>
+      <li>世界原則（§5部分款）：萬國公罪性質，不問國籍、犯罪地、被害法益</li>
+      <li>§9：外國裁判不阻卻我國管轄，僅得裁量減免已執行之刑</li>
+    </ul>
+    <div class="mnemonic">地・人・護・世四原則，公罪不論你是誰</div>
+  </div>
+</section>
+
+<!-- 相關主題 -->
+<section id="related">
+  <div class="eyebrow-sec">RELATED</div>
+  <h2>相關主題</h2>
+  <div class="link-note">
+    本條第11款所列之加重詐欺罪，其基礎罪名詐欺罪（第339條）已有獨立講義，可延伸閱讀：<br>
+    <a href="../講義/刑法339條-詐欺罪.html">《第339條——普通詐欺罪（詐欺取財罪／詐欺得利罪）》</a>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link');
+const sections = ['cover','articles','structure','tiers','doctrine','practice','cases','essays','cheatsheet','related'].map(id => document.getElementById(id));
+
+function setActive(id){
+  links.forEach(a => {
+    const match = a.getAttribute('href') === '#' + id;
+    a.classList.toggle('active', match);
+  });
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting){
+      setActive(entry.target.id);
+    }
+  });
+}, {rootMargin: '-40% 0px -50% 0px', threshold: 0});
+
+sections.forEach(s => { if(s) observer.observe(s); });
+
+links.forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = a.getAttribute('href').slice(1);
+    document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
