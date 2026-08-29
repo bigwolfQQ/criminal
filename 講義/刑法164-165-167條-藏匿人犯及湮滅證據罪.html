@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第164、165、167條｜藏匿人犯及湮滅證據罪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b; --indigo:#2c4a76; --indigo-soft:#3f5f8f;
+  --parchment:#f3ede0; --paper:#fbf8f1; --paper-panel:#fffdf8;
+  --seal:#9c2b3a; --brass:#a9832f; --line:#ddd3bf;
+  --ink-70:rgba(22,35,59,.7); --ink-45:rgba(22,35,59,.45);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"Noto Sans TC",sans-serif;background:var(--parchment);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+h1,h2,h3{font-family:"Noto Serif TC",serif;}
+.shell{display:flex;max-width:1280px;margin:0 auto;}
+.sidenav{width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;border-right:1px solid var(--line);}
+.sidenav .brand{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1rem;color:var(--seal);margin-bottom:6px;}
+.sidenav .brand-sub{font-size:.72rem;color:var(--ink-45);margin-bottom:26px;}
+.sidenav ul{list-style:none;margin:0;padding:0;}
+.sidenav li{margin-bottom:2px;}
+.sidenav a{display:block;font-size:.86rem;padding:8px 10px;border-radius:6px;color:var(--ink-70);text-decoration:none;border-left:3px solid transparent;transition:.15s;}
+.sidenav a:hover{background:var(--paper-panel);}
+.sidenav a.active{background:var(--paper-panel);border-left-color:var(--seal);color:var(--ink);font-weight:700;}
+.sidenav a.dim{color:var(--ink-45);}
+.main{flex:1;min-width:0;box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);background:var(--paper);}
+.topnav{display:none;position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.topnav a{display:inline-block;font-size:.78rem;padding:7px 14px;margin-right:6px;border-radius:999px;background:var(--paper-panel);border:1px solid var(--line);color:var(--ink-70);text-decoration:none;}
+.topnav a.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.topnav a.dim{color:var(--ink-45);}
+@media (max-width:980px){.sidenav{display:none;}.topnav{display:block;}}
+.cover{position:relative;padding:56px 40px 40px;border-bottom:1px solid var(--line);}
+.cover .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.24em;color:var(--brass);font-weight:700;margin-bottom:16px;}
+.cover .eyebrow::before{content:"";width:22px;height:1px;background:var(--brass);}
+.cover h1{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 10px;letter-spacing:.01em;}
+.cover .sub{font-size:1rem;color:var(--indigo);font-weight:500;margin:0;}
+.cover-meta{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.ver-badge{font-weight:700;font-size:.78rem;color:var(--seal);border:1px solid var(--seal);border-radius:20px;padding:3px 12px;letter-spacing:.03em;}
+.meta-date{font-size:.8rem;color:var(--ink-45);}
+.cover .seal-mark{position:absolute;top:48px;right:40px;width:78px;height:78px;border:2.5px solid var(--seal);border-radius:6px;color:var(--seal);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:900;writing-mode:vertical-rl;font-size:1.05rem;letter-spacing:.15em;transform:rotate(3deg);background:rgba(156,43,58,.03);}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.toc span{font-size:.74rem;background:var(--paper-panel);border:1px solid var(--line);padding:4px 10px;border-radius:6px;color:var(--ink-70);}
+@media(max-width:600px){.cover{padding:40px 20px 28px;}.cover .seal-mark{display:none;}}
+section{padding:44px 40px;border-bottom:1px solid var(--line);}
+@media(max-width:600px){section{padding:32px 20px;}}
+.eyebrow-sec{font-size:.72rem;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:8px;}
+section h2{font-size:1.4rem;margin:0 0 22px;color:var(--ink);}
+.article-box{position:relative;background:var(--paper-panel);border-left:3px solid var(--indigo);border-radius:4px;padding:20px 22px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,.06);}
+.article-box .num-wm{position:absolute;right:10px;bottom:-14px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:5rem;color:var(--ink);opacity:.06;pointer-events:none;line-height:1;}
+.article-box h3{margin:0 0 10px;font-size:1.05rem;color:var(--indigo);}
+.article-box p{margin:0 0 6px;line-height:1.9;font-size:.95rem;}
+.article-box .tag-role{display:inline-block;font-size:.7rem;background:var(--parchment);border:1px solid var(--line);color:var(--ink-70);padding:2px 8px;border-radius:4px;margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.88rem;}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:10px 12px;font-weight:700;}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f6f1e6;}
+tr:nth-child(odd) td{background:var(--paper-panel);}
+.result-pos{color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.result-neg{color:var(--seal);font-weight:700;}
+.tier-block{margin-bottom:26px;}
+.tier-block h3{font-size:1.02rem;color:var(--indigo);margin:0 0 10px;padding-left:10px;border-left:3px solid var(--brass);}
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:28px 20px;text-align:center;background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, transparent 10px 20px);}
+.placeholder .icon{font-size:1.6rem;margin-bottom:8px;}
+.placeholder p{margin:4px 0;font-size:.86rem;color:var(--ink-70);}
+.placeholder .badge{display:inline-block;margin-top:8px;font-size:.72rem;background:var(--brass);color:var(--paper);padding:3px 12px;border-radius:999px;}
+.doc-card{background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:12px;}
+.doc-card .name{font-weight:700;color:var(--indigo);margin-bottom:6px;font-size:.94rem;}
+.doc-card .body{font-size:.88rem;line-height:1.8;color:var(--ink);margin-bottom:8px;}
+.doc-card .src{font-size:.74rem;color:var(--ink-45);}
+.case-card{background:var(--paper-panel);border-radius:10px;box-shadow:0 1px 2px rgba(22,35,59,.08), 0 6px 18px -10px rgba(22,35,59,.25);margin-bottom:22px;overflow:hidden;}
+.case-card .head{background:var(--indigo);color:var(--paper);padding:12px 18px;font-weight:700;font-size:.94rem;}
+.case-card .body-inner{padding:18px;}
+.case-card h4{margin:14px 0 6px;font-size:.86rem;color:var(--brass);letter-spacing:.05em;}
+.case-card h4:first-child{margin-top:0;}
+.case-card p{margin:0 0 8px;font-size:.9rem;line-height:1.9;}
+.essay-card .head{background:var(--ink);}
+.cheatsheet{background:var(--ink);color:var(--paper);border-radius:12px;padding:30px 26px;position:relative;overflow:hidden;}
+.cheatsheet::after{content:"速";position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:9rem;color:rgba(251,248,241,.06);}
+.cheatsheet h3{margin:0 0 14px;font-size:1.1rem;color:var(--paper);}
+.cheatsheet ul{margin:0 0 18px;padding-left:1.2em;font-size:.88rem;line-height:2;}
+.mnemonic{background:var(--seal);border-radius:8px;padding:14px 16px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:1rem;text-align:center;letter-spacing:.05em;}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="sidenav" id="sidenav">
+  <div class="brand">criminal-law-interpretation</div>
+  <div class="brand-sub">刑法教學講義</div>
+  <ul>
+    <li><a href="#cover" class="nav-link">封面</a></li>
+    <li><a href="#articles" class="nav-link">一、條文原文</a></li>
+    <li><a href="#structure" class="nav-link">二、條文結構</a></li>
+    <li><a href="#tiers" class="nav-link">三、犯罪三階層解析</a></li>
+    <li><a href="#doctrine" class="nav-link">四、學說見解</a></li>
+    <li><a href="#practice" class="nav-link">五、實務見解</a></li>
+    <li><a href="#cases" class="nav-link">六、教學案例</a></li>
+    <li><a href="#essays" class="nav-link">七、申論練習題</a></li>
+    <li><a href="#cheatsheet" class="nav-link">八、速查卡</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+<nav class="topnav" id="topnav">
+  <a href="#cover" class="nav-link">封面</a>
+  <a href="#articles" class="nav-link">原文</a>
+  <a href="#structure" class="nav-link">結構</a>
+  <a href="#tiers" class="nav-link">三階層</a>
+  <a href="#doctrine" class="nav-link">學說</a>
+  <a href="#practice" class="nav-link">實務</a>
+  <a href="#cases" class="nav-link">案例</a>
+  <a href="#essays" class="nav-link">申論題</a>
+  <a href="#cheatsheet" class="nav-link">速查卡</a>
+</nav>
+
+<header class="cover" id="cover">
+  <div class="eyebrow">第二編 分則 · 第九章 藏匿人犯及湮滅證據罪</div>
+  <h1>刑法第164、165、167條<br>藏匿人犯罪・湮滅刑事證據罪・親屬間減免</h1>
+  <p class="sub">保護國家刑事司法追訴權——兼論「親親相隱」與期待可能性</p>
+  <div class="cover-meta">
+    <span class="ver-badge">v1.0</span>
+    <span class="meta-date">建立日期：2026-08-29</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.164-165-167" alt="visitor badge" style="height:20px;">
+  </div>
+  <div class="toc">
+    <span>§164 藏匿人犯・頂替</span><span>§165 湮滅刑事證據</span><span>§167 親屬間減免</span>
+  </div>
+  <div class="seal-mark">有罪</div>
+</header>
+
+<!-- 一、條文原文 -->
+<section id="articles">
+  <div class="eyebrow-sec">ARTICLES</div>
+  <h2>一、條文原文</h2>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第164條（藏匿人犯或使之隱避、頂替罪）</h3>
+    <p>藏匿犯人或依法逮捕、拘禁之脫逃人或使之隱避者，處二年以下有期徒刑、拘役或一萬五千元以下罰金。</p>
+    <p>意圖犯前項之罪而頂替者，亦同。</p>
+    <div class="num-wm">164</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第165條（湮滅刑事證據罪）</h3>
+    <p>偽造、變造、湮滅或隱匿關係他人刑事被告案件之證據，或使用偽造、變造之證據者，處二年以下有期徒刑、拘役或一萬五千元以下罰金。</p>
+    <div class="num-wm">165</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第167條（親屬間犯本章罪之減免）</h3>
+    <p>配偶、五親等內之血親或三親等內之姻親圖利犯人或依法逮捕拘禁之脫逃人，而犯第一百六十四條或第一百六十五條之罪者，減輕或免除其刑。</p>
+    <div class="num-wm">167</div>
+  </div>
+</section>
+
+<!-- 二、條文結構 -->
+<section id="structure">
+  <div class="eyebrow-sec">STRUCTURE</div>
+  <h2>二、條文結構——妨害國家追訴權體系</h2>
+  <p style="font-size:.9rem;color:var(--ink-70);line-height:1.9;">本章保護法益為國家刑事司法權（偵查、審判、執行）之有效運作，屬侵害國家法益之犯罪。第164條、第165條為本章核心之兩種行為態樣，第167條則是就「親屬間」犯此二罪設減免規定，體現傳統倫理與國家追訴權之價值權衡。</p>
+
+  <table>
+    <thead><tr><th>條文</th><th>規範對象</th><th>行為態樣</th><th>法定刑</th></tr></thead>
+    <tbody>
+      <tr><td>§164Ⅰ</td><td>已犯罪之人／依法逮捕拘禁之脫逃人</td><td>藏匿、使之隱避</td><td>2年以下有期徒刑、拘役或1萬5千元以下罰金</td></tr>
+      <tr><td>§164Ⅱ</td><td>同上</td><td>意圖使之隱避而頂替</td><td>同上</td></tr>
+      <tr><td>§165</td><td>關係「他人」刑事被告案件之證據</td><td>偽造、變造、湮滅、隱匿證據，或使用偽造變造之證據</td><td>2年以下有期徒刑、拘役或1萬5千元以下罰金</td></tr>
+      <tr><td>§167</td><td>配偶、五親等內血親、三親等內姻親</td><td>圖利犯人或脫逃人而犯§164或§165</td><td>減輕或免除其刑（裁量）</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1rem;color:var(--indigo);margin-top:20px;">正犯自行行為不罰之連鎖效應</h3>
+  <p style="font-size:.9rem;line-height:1.9;">犯人自行隱避、自行湮滅自己犯罪之證據，均非刑法所處罰之行為（本人無自證己罪之義務，且欠缺期待可能性）。此一「正犯不罰」之基礎，連帶影響以下判斷：教唆他人頂替自己以便隱避者，因正犯（自己隱避）本不成立犯罪，教唆犯亦從屬不罰；§165之「湮滅關係他人刑事被告案件之證據」，亦明文限於「非本人犯罪之證據」，若行為人湮滅之證據同時涉及自己犯罪，原則上不成立本罪。</p>
+</section>
+
+<!-- 三、犯罪三階層逐項解析 -->
+<section id="tiers">
+  <div class="eyebrow-sec">THREE-TIER ANALYSIS</div>
+  <h2>三、犯罪三階層逐項解析</h2>
+
+  <div class="tier-block">
+    <h3>（一）構成要件該當性——第164條</h3>
+    <table>
+      <thead><tr><th>要件</th><th>內容</th></tr></thead>
+      <tbody>
+        <tr><td>行為主體</td><td>一般主體（任何人皆可能構成，惟不包括犯人自己）</td></tr>
+        <tr><td>行為客體</td><td>「犯人」——不以起訴後之人為限，凡實施犯罪行為之人，不問已否發覺、起訴或判刑，均屬之；或依法逮捕、拘禁後脫逃之人</td></tr>
+        <tr><td>實行行為①藏匿</td><td>收容、隱藏犯人或脫逃人，使其難以被偵查、審判或執行</td></tr>
+        <tr><td>實行行為②使之隱避</td><td>以指使或指示之方式，促使犯人自行隱避（須有指使、指示之意旨，單純不注意致其乘機隱避者不成立）</td></tr>
+        <tr><td>實行行為③頂替</td><td>意圖使犯人隱避，而由自己冒名頂替承擔刑責</td></tr>
+        <tr><td>主觀構成要件</td><td>故意，須「明知其為犯人」而仍為藏匿、使隱避或頂替之行為</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-block">
+    <h3>（二）構成要件該當性——第165條</h3>
+    <table>
+      <thead><tr><th>要件</th><th>內容</th></tr></thead>
+      <tbody>
+        <tr><td>行為主體</td><td>一般主體，惟限於就「他人」刑事被告案件之證據為之，本人不成立</td></tr>
+        <tr><td>行為客體</td><td>關係「他人」刑事被告案件之證據——須非行為人本人犯罪之證據，若與其他共犯有關，亦不當然成立本罪</td></tr>
+        <tr><td>實行行為</td><td>偽造、變造、湮滅、隱匿證據，或使用偽造變造之證據</td></tr>
+        <tr><td>主觀構成要件</td><td>故意，須明知該證據關係他人刑事被告案件而仍為湮滅等行為</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-block">
+    <h3>（三）違法性</h3>
+    <p style="font-size:.9rem;line-height:1.9;">本罪原則上不涉及正當防衛、緊急避難等傳統阻卻違法事由之討論，構成要件該當即通常具備違法性。</p>
+  </div>
+
+  <div class="tier-block">
+    <h3>（四）有責性（罪責）——第167條之定位</h3>
+    <p style="font-size:.9rem;line-height:1.9;">第167條並非阻卻違法或阻卻構成要件事由，而係於「罪責」層次上，就配偶、五親等內血親、三親等內姻親圖利犯人而犯§164、§165之情形，基於期待可能性顯著降低（不能強求至親「大義滅親」），賦予法官裁量減輕或免除其刑之空間。其行為本質仍屬違法且該當構成要件，僅於罪責非難程度上予以緩和，故條文明文為「減輕或免除」而非「阻卻」或「不罰」，法官仍有裁量空間，並非當然免刑。</p>
+  </div>
+</section>
+
+<!-- 四、學說見解 -->
+<section id="doctrine">
+  <div class="eyebrow-sec">DOCTRINE</div>
+  <h2>四、學說見解</h2>
+  <div class="doc-card">
+    <div class="name">張麗卿</div>
+    <div class="body">立法者於第167條設此減免規定，係基於行為人身處配偶、血親、姻親等至親關係下，欠缺期待其「大義滅親」而實施合法行為（即檢舉、不協助隱匿）之可能性，於罪責層次予以酌減或免除，體現「法律不強人所難」之期待可能性理論精神。此一理論同時可用以說明犯人自行隱避、自行湮滅自己犯罪證據為何不罰——蓋於此等情形，亦難期待行為人不利於己地自證己罪。</div>
+    <div class="src">出處：張麗卿，〈期待可能性在刑法的運用〉，《東海大學法學研究》，第29期，頁57–85，2008年12月</div>
+  </div>
+</section>
+
+<!-- 五、實務見解 -->
+<section id="practice">
+  <div class="eyebrow-sec">PRACTICE</div>
+  <h2>五、實務見解</h2>
+
+  <div class="doc-card">
+    <div class="name">最高法院22年上字第4614號判例</div>
+    <div class="body">藏匿犯人罪係指對於已經犯罪之人而為藏匿或使之隱避而言。若行為人係於實施犯罪之前，將其藏匿，直接或間接予以犯罪之便利，則應就正犯所實施之犯罪，認為幫助犯，不成立第164條第1項之藏匿犯人罪。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：「判例」制度已於民國108年法院組織法修正後不再選編，本則現僅作為裁判先例參考，不具過去之拘束力。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院24年上字第3518號判例</div>
+    <div class="body">藏匿犯人罪以「明知其為犯人而使之隱避」為條件。所謂使之隱避，必須有指使或指示隱避之意旨始屬相當，若對其是否確為犯人尚在疑似之間，因不注意其行動，致被乘機隱避者，尚不能繩以使犯人隱避之罪。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：判例制度已停止選編，現僅供裁判先例參考。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院24年上字第4974號判例</div>
+    <div class="body">犯人自行隱避，在刑法上既非處罰之行為，則教唆他人頂替自己以便隱避，當然亦在不罰之列。故教唆他人隱避自己者，該教唆者自不成立第164條藏匿犯人罪之教唆犯。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：判例制度已停止選編，現僅供裁判先例參考。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院24年7月刑庭總會決議</div>
+    <div class="body">第164條所稱「犯人」不以起訴後之人為限，凡觸犯刑罰法規所規定之罪名者，不問其觸犯者係普通法或特別法、實質刑法或形式刑法，只須其為實施犯罪行為之人，且所犯之罪不問已否發覺、起訴或判處罪刑，均屬本條之「犯人」。</div>
+    <div class="src">來源：law.moj.gov.tw 決議查詢，並經87年度台上字第757號判決援引確認。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院25年上字第4435號判例</div>
+    <div class="body">湮滅刑事證據罪之「湮滅關係他人刑事被告案件之證據」，必以其所湮滅者「並非其本人犯罪之證據」為要件，否則縱與其他共犯有關，亦難律以第165條之罪。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：判例制度已停止選編，現僅供裁判先例參考。</div>
+  </div>
+
+  <h3 style="font-size:.92rem;color:var(--indigo);margin-top:24px;">大法官解釋／憲法法庭判決</h3>
+  <div class="placeholder">
+    <div class="icon">⚖️</div>
+    <p>本章（§164、§165、§167）目前查無大法官解釋或憲法法庭判決。</p>
+    <p>理由：本章條文構成要件明確，爭議多集中於個案事實認定（是否明知為犯人、是否為指使隱避），尚未有人以此聲請違憲審查。</p>
+    <span class="badge">查無資料</span>
+  </div>
+</section>
+
+<!-- 六、教學案例 -->
+<section id="cases">
+  <div class="eyebrow-sec">CASES（教學用途・AI虛構）</div>
+  <h2>六、教學案例</h2>
+
+  <div class="case-card">
+    <div class="head">案例一｜犯罪前藏匿——論以幫助犯而非§164</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>甲已知悉友人乙即將前往丙住處行竊，遂於乙行竊「之前」，先在自己家中準備一密室供乙行竊得手後藏身，並事先告知乙此安排。乙依約行竊得手後隨即入住甲提供之密室。</p>
+      <h4>爭點</h4>
+      <p>甲之行為應論以藏匿人犯罪（§164Ⅰ），還是竊盜罪之幫助犯？</p>
+      <h4>分析</h4>
+      <p>依22年上字第4614號判例意旨，藏匿犯人罪係指對於「已經犯罪之人」而為藏匿；若行為人係於實施犯罪「之前」即予藏匿安排，直接或間接予以犯罪之便利（本案甲事先提供密室予乙行竊後藏身，客觀上助長乙行竊之決意與便利），應就正犯（乙）所實施之竊盜罪，論甲為幫助犯，而非成立藏匿犯人罪，因甲藏匿之意思與行為，發生於「犯罪既遂前」，性質上屬於犯罪之事前幫助，而非事後妨害國家追訴權之行為。</p>
+      <h4>結論</h4>
+      <p>甲之行為應論以<span class="result-pos">竊盜罪之幫助犯</span>，<span class="result-neg">不成立藏匿人犯罪（§164）</span>。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例二｜親屬間頂替——§167減免之適用</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>丁之胞弟戊觸犯傷害罪逃亡，丁明知戊為犯人，仍向警方謊稱案發時人是自己所為，欲替戊頂罪。</p>
+      <h4>爭點</h4>
+      <p>丁之行為應如何論處？是否得適用§167減免？</p>
+      <h4>分析</h4>
+      <p>丁意圖使戊隱避而頂替，該當第164條第2項之頂替罪。惟丁與戊為兄弟關係，屬「五親等內之血親」，且丁係「圖利」戊（使其免於刑責追訴）而犯本罪，該當第167條之適用要件。依張麗卿期待可能性理論，法律難以期待丁能大義滅親、坐視胞弟入罪，故法官得就丁之刑責予以減輕或免除，惟丁之行為本身仍該當構成要件且具違法性，僅罪責非難程度因期待可能性降低而受評價，並非當然無罪。</p>
+      <h4>結論</h4>
+      <p>丁<span class="result-pos">該當頂替罪（§164Ⅱ）</span>，惟得依<span class="result-pos">第167條減輕或免除其刑</span>（法官裁量）。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例三｜湮滅自己與他人共通之證據</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>己與庚共同竊盜，事後己單獨將犯罪工具（含己、庚共用之手套、庚所有之作案地圖）全數銷毀滅跡。</p>
+      <h4>爭點</h4>
+      <p>己銷毀該等證據之行為，是否成立湮滅刑事證據罪（§165）？</p>
+      <h4>分析</h4>
+      <p>依25年上字第4435號判例意旨，湮滅刑事證據罪之客體須為「非本人犯罪之證據」，若所湮滅者同時涉及本人犯罪，縱與其他共犯有關，亦難以本罪相繩。本案己銷毀之證據（手套、地圖）同時是己與庚共同犯罪之證據，並非「單純關係他人」之證據，而是己自己犯罪證據之一部分，己銷毀該等證據，性質上屬於湮滅「自己犯罪之證據」，依前開判例意旨與期待可能性理論（不能期待己自證己罪並保存不利於己之證據），不成立第165條之罪。</p>
+      <h4>結論</h4>
+      <p>己之行為<span class="result-neg">不成立湮滅刑事證據罪（§165）</span>，因所湮滅者非「單純關係他人」之證據，而涉及己自己之犯罪。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例四｜對是否為犯人有所疑似而未查證</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>辛經營一間小旅館，某日壬神色慌張入住，辛雖略感壬形跡可疑，但基於「多一事不如少一事」心態未多加詢問，僅正常辦理入住手續。事後查明壬確係逃亡通緝犯。</p>
+      <h4>爭點</h4>
+      <p>辛是否成立藏匿人犯罪？</p>
+      <h4>分析</h4>
+      <p>依24年上字第3518號判例意旨，藏匿犯人罪以「明知其為犯人而使之隱避」為要件，所謂使之隱避須有指使或指示隱避之意旨，若對其是否確為犯人尚在疑似之間，因不注意其行動致被乘機隱避者，不能繩以本罪。本案辛僅是對壬之形跡「略感可疑」，屬於疑似而未達明知之程度，且辛僅是正常辦理旅館業務上之入住手續，並無指使或指示壬隱避之積極行為，依前開判例意旨，尚不能認辛具備藏匿人犯罪之故意。</p>
+      <h4>結論</h4>
+      <p>辛之行為<span class="result-neg">不成立藏匿人犯罪（§164）</span>，因欠缺「明知其為犯人」之故意要件。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 七、申論題 -->
+<section id="essays">
+  <div class="eyebrow-sec">ESSAY QUESTIONS（AI自行出題，已獲使用者授權）</div>
+  <h2>七、申論練習題與模擬解答</h2>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題一</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：甲之表姊（三親等內之姻親範圍以外，四親等血親）乙涉嫌詐欺遭通緝，甲明知乙為通緝犯仍將其藏匿於自宅達一週。試問甲是否得主張第167條減免其刑？</p>
+      <h4>模擬解答</h4>
+      <p>甲之行為使已犯罪之乙藏匿於自宅，該當第164條第1項藏匿人犯罪之構成要件：甲明知乙為犯人（通緝犯），仍收容藏匿之，使其難以被偵查、審判或執行。就第167條減免規定之適用，須審查甲、乙是否屬「配偶、五親等內之血親或三親等內之姻親」。表姊為四親等旁系血親，屬五親等內之血親，故甲、乙間之親屬關係該當第167條之適用範圍。惟仍須審查甲是否係「圖利」乙而為之（即基於使乙脫免刑責之意思），若甲確實係基於親情、不忍見表姊入獄之心態而藏匿，應認符合圖利犯人之要件。從而，甲之行為該當藏匿人犯罪，惟因其與乙之親屬關係在五親等血親範圍內，且係圖利乙而犯之，法官得依第167條規定，斟酌具體情節，減輕或免除甲之刑責。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題二</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：丙涉嫌殺人遭警方通緝，丙之好友丁（無親屬關係）主動向丙提議：「你先躲起來，我去警局頂替說人是我殺的。」丙同意後，丁依約向警方自首承認殺人。試問丁之行為應如何論處？若丙、丁為兄弟關係，結論是否不同？</p>
+      <h4>模擬解答</h4>
+      <p>丁基於使丙隱避、脫免刑責之意圖，向警方頂替承認犯罪，該當第164條第2項「意圖犯前項之罪而頂替」之構成要件。丁明知丙為真正之殺人犯人，仍以自己名義頂替承擔刑責，主觀上具備頂替之故意與使丙隱避之意圖。就丙、丁為無親屬關係之朋友而言，並不符合第167條「配偶、五親等內血親或三親等內姻親」之適用範圍，故丁不得主張該條減免其刑，應依第164條第2項規定之通常法定刑論處（2年以下有期徒刑、拘役或1萬5千元以下罰金）。惟若丙、丁改為兄弟關係（屬二親等血親，在五親等血親範圍內），則丁圖利丙而頂替之行為，即該當第167條之適用要件，法官得依裁量減輕或免除丁之刑責，此為親屬關係存否對本罪量刑產生實質差異之關鍵。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題三</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：戊因偽造文書遭起訴，其配偶己在偵查中，明知一份對戊不利之關鍵文件（僅涉及戊個人犯罪，與己或其他任何人均無關）之下落，仍將該文件燒毀滅跡。試問己是否成立湮滅刑事證據罪？</p>
+      <h4>模擬解答</h4>
+      <p>己雖客觀上實行了「湮滅」證據之行為，惟第165條之構成要件明文限於「關係他人刑事被告案件之證據」，依25年上字第4435號判例意旨，湮滅刑事證據罪之客體須以「非本人犯罪之證據」為要件。本案己所湮滅之文件僅涉及戊個人之犯罪，與己自身之犯罪或其他共犯均無關聯，己銷毀該證據之行為，性質上為配偶間協助湮滅「他人」（戊）犯罪證據之典型情形，該當第165條「關係他人刑事被告案件之證據」之客體要件，己主觀上明知該證據關係戊之刑事案件仍予以燒毀，具備本罪故意。從而，己之行為該當湮滅刑事證據罪（第165條）之構成要件。惟因己與戊為配偶關係，且係圖利戊（使其脫免不利證據）而犯本罪，該當第167條之適用要件，法官得依裁量減輕或免除己之刑責，此正是第167條「親親相隱」規定發揮實益之典型情形。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題四</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：庚為警方通緝之竊盜犯，庚之友人辛在庚尚未犯下該竊盜案「之前」，即已聽聞庚有意行竊，並主動向庚表示「你之後要是被通緝，我家頂樓可以借你躲」。庚聽聞後心生壯膽，隨即實行竊盜。竊盜既遂後庚果真前往辛住處頂樓藏匿。試問辛之行為應如何論處？</p>
+      <h4>模擬解答</h4>
+      <p>本題須區分辛之「事前承諾」與「事後藏匿」兩階段行為之定性。就整體評價而言，依22年上字第4614號判例意旨，藏匿犯人罪之成立須以行為人對「已經犯罪之人」而為藏匿為前提；若行為人係於實施犯罪之前，即向正犯承諾藏匿之便利，並因而助長正犯行竊之決意（本案辛之承諾使庚「心生壯膽」，客觀上對庚之犯罪決意產生助長作用），則應就正犯庚所實施之竊盜罪，論辛為幫助犯，而非於庚犯罪既遂後之藏匿階段另論以藏匿人犯罪。蓋辛提供藏匿處所之意思聯絡，早於庚著手竊盜之前即已形成並對犯罪之實現具有促進作用，其後續之收容藏匿行為，僅是履行事前承諾之後續動作，應整體評價為竊盜罪之事前幫助行為，而非割裂為獨立之藏匿人犯罪。從而，辛應論以竊盜罪之幫助犯（第30條），不另論第164條第1項之藏匿人犯罪，以避免對同一行為人之單一犯意聯絡進行重複評價。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 八、速查卡 -->
+<section id="cheatsheet">
+  <div class="eyebrow-sec">CHEAT SHEET</div>
+  <h2>八、速查卡</h2>
+  <div class="cheatsheet">
+    <h3>藏匿人犯及湮滅證據罪一覽</h3>
+    <ul>
+      <li>§164：藏匿／使隱避／頂替「已犯罪之人」或依法逮捕拘禁之脫逃人</li>
+      <li>犯罪前藏匿並予便利＝論正犯罪之幫助犯，非§164</li>
+      <li>正犯自行隱避不罰→教唆他人頂替自己亦不罰（正犯不罰，教唆從屬不罰）</li>
+      <li>§165：湮滅「他人」刑事證據，須非本人犯罪之證據</li>
+      <li>§167：配偶／五親等血親／三親等姻親圖利犯人而犯§164、§165者，減輕或免除其刑（罪責層次，非阻卻違法）</li>
+    </ul>
+    <div class="mnemonic">藏他不藏己，隱避非指示；親親可相隱，減免非當然</div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link');
+const sections = ['cover','articles','structure','tiers','doctrine','practice','cases','essays','cheatsheet'].map(id => document.getElementById(id));
+function setActive(id){
+  links.forEach(a => {
+    const match = a.getAttribute('href') === '#' + id;
+    a.classList.toggle('active', match);
+  });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting){ setActive(entry.target.id); } });
+}, {rootMargin: '-40% 0px -50% 0px', threshold: 0});
+sections.forEach(s => { if(s) observer.observe(s); });
+links.forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = a.getAttribute('href').slice(1);
+    document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
