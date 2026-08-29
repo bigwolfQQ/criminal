@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第271條．殺人罪 — 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45: rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif; line-height:1.75;
+  }
+  h1,h2,h3,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex; max-width:1200px; margin:0 auto;}
+  nav.sidebar{
+    width:240px; flex:none; position:sticky; top:0; align-self:flex-start;
+    height:100vh; overflow-y:auto; padding:28px 18px; border-right:1px solid var(--border);
+  }
+  nav.sidebar .brand{font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px; color:var(--indigo); margin-bottom:18px; letter-spacing:.05em;}
+  nav.sidebar ul{list-style:none; padding:0; margin:0;}
+  nav.sidebar li{margin-bottom:2px;}
+  nav.sidebar a{
+    display:block; padding:8px 10px; border-radius:6px; font-size:13.5px;
+    color:var(--ink); text-decoration:none; border-left:3px solid transparent;
+  }
+  nav.sidebar a.placeholder-link{color:var(--ink-45);}
+  nav.sidebar a.active, nav.sidebar a:hover{background:var(--paper-content); border-left-color:var(--brass); color:var(--indigo);}
+  main{flex:1; min-width:0; padding:0 0 80px; box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);}
+  .topnav{display:none;}
+  .section{padding:46px 56px; border-bottom:1px solid var(--border);}
+  .section:last-child{border-bottom:none;}
+  .eyebrow{font-size:12.5px; letter-spacing:.12em; color:var(--brass); font-weight:700; text-transform:uppercase; margin-bottom:8px;}
+  h2.stitle{font-size:22px; color:var(--ink); margin:0 0 22px; padding-left:14px; border-left:4px solid var(--indigo);}
+  h3.substitle{font-size:16.5px; color:var(--indigo); margin:28px 0 10px;}
+
+  .cover{
+    background:var(--paper-content); padding:64px 56px 48px; position:relative; overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .cover .eyebrow{font-size:13px;}
+  .cover h1{font-size:38px; font-weight:900; color:var(--ink); margin:0 0 14px; max-width:640px;}
+  .cover .sub{font-size:15px; color:var(--ink-45); max-width:560px; margin-bottom:18px;}
+  .cover-meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:10px;}
+  .ver-badge{border:1px solid var(--seal); color:var(--seal); font-size:12px; padding:3px 10px; border-radius:20px; font-weight:700;}
+  .meta-date{border:1px solid var(--indigo); color:var(--indigo); font-size:12px; padding:3px 10px; border-radius:20px;}
+  .visitor-badge img{display:block; height:20px;}
+  .seal-mark{
+    position:absolute; top:46px; right:60px; width:112px; height:112px; border-radius:50%;
+    border:3px solid var(--seal); color:var(--seal); display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg); font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px;
+    writing-mode:vertical-rl; letter-spacing:.15em; opacity:.85;
+  }
+  .toc{margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px 20px; max-width:640px;}
+  .toc a{font-size:13px; color:var(--indigo); text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  .article-box{
+    position:relative; background:var(--paper-card); border-left:3px solid var(--indigo);
+    border-radius:4px; padding:22px 24px; margin:16px 0; overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,.06);
+  }
+  .article-box .num-wm{
+    position:absolute; right:10px; bottom:-18px; font-family:"Noto Serif TC",serif; font-weight:900;
+    font-size:110px; color:var(--ink); opacity:.06; line-height:1; user-select:none;
+  }
+  .article-box .art-head{font-family:"Noto Serif TC",serif; font-weight:700; color:var(--indigo); margin-bottom:8px; font-size:15px;}
+  .article-box p{margin:6px 0; position:relative; z-index:1;}
+  .article-box.ref{border-left-color:var(--border); opacity:.94;}
+  .ref-group-title{font-size:13px; color:var(--ink-45); margin:26px 0 6px; font-weight:700;}
+
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:13.5px;}
+  thead th{background:var(--ink); color:var(--paper-content); padding:10px 12px; text-align:left; font-weight:700;}
+  tbody td, tbody th{padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--row-alt);}
+
+  .stage-badge{display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:700; margin-bottom:6px;}
+  .stage-badge.yes{background:rgba(44,74,118,.1); color:var(--indigo);}
+  .stage-badge.na{background:rgba(22,35,59,.08); color:var(--ink-45);}
+
+  .conclude-est{font-weight:700; color:var(--ink); background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .conclude-not{font-weight:700; color:var(--seal);}
+
+  .placeholder{
+    border:2px dashed var(--brass); border-radius:8px; padding:38px 24px; text-align:center;
+    background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, rgba(169,131,47,.09) 10px 20px);
+    color:var(--ink-45);
+  }
+  .placeholder .ic{font-size:26px; margin-bottom:8px;}
+  .placeholder .badge-todo{
+    display:inline-block; margin-top:10px; font-size:12px; padding:3px 12px; border-radius:20px;
+    border:1px solid var(--brass); color:var(--brass); font-weight:700;
+  }
+
+  .case-card{background:var(--paper-card); border-radius:8px; margin:20px 0; box-shadow:0 1px 3px rgba(22,35,59,.08), 0 6px 16px -10px rgba(22,35,59,.25); overflow:hidden;}
+  .case-card .ch{background:var(--indigo); color:var(--paper-content); padding:10px 18px; font-family:"Noto Serif TC",serif; font-weight:700; font-size:14.5px;}
+  .case-card.exam .ch{background:var(--ink);}
+  .case-card .cb{padding:20px 22px;}
+  .case-card .cb h4{margin:14px 0 6px; font-size:13.5px; color:var(--indigo);}
+  .case-card .cb h4:first-child{margin-top:0;}
+  .note-badge{font-size:12px; color:var(--seal); font-weight:700;}
+
+  .relation-wrap{margin:18px 0 6px; text-align:center;}
+  .relation-note{font-size:12.5px; color:var(--ink-45); margin-top:6px;}
+
+  .source-block{margin-top:16px; padding:12px 16px; background:var(--row-alt); border-radius:6px; font-size:13px; color:var(--ink-45);}
+  .source-block a{color:var(--indigo);}
+
+  .mnemonic-card{background:var(--ink); color:var(--paper-content); border-radius:10px; padding:32px 30px; position:relative; overflow:hidden;}
+  .mnemonic-card .wm{position:absolute; right:14px; bottom:-24px; font-family:"Noto Serif TC",serif; font-weight:900; font-size:130px; opacity:.08;}
+  .mnemonic-card h3{color:var(--paper-content); margin-top:0;}
+  .mnemonic-item{background:var(--seal); border-radius:6px; padding:12px 16px; margin:12px 0; font-family:"Noto Serif TC",serif; font-size:17px; font-weight:700; letter-spacing:.04em;}
+  .mnemonic-item small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:12.5px; opacity:.85; margin-top:4px; letter-spacing:0;}
+
+  .link-note{border:1px dashed var(--border); border-radius:8px; padding:16px 18px; font-size:13.5px; color:var(--ink-45); margin-top:10px;}
+  .link-note a{font-weight:700;}
+
+  @media (max-width: 980px){
+    nav.sidebar{display:none;}
+    .topnav{
+      display:flex; overflow-x:auto; gap:4px; position:sticky; top:0; z-index:10;
+      background:var(--paper-content); padding:10px 12px; border-bottom:1px solid var(--border);
+    }
+    .topnav a{
+      flex:none; padding:7px 14px; border-radius:20px; background:var(--paper); font-size:12.5px;
+      color:var(--ink); text-decoration:none; white-space:nowrap; border:1px solid var(--border);
+    }
+    .topnav a.placeholder-link{color:var(--ink-45);}
+    .topnav a.active{background:var(--indigo); color:#fff; border-color:var(--indigo);}
+    .section{padding:32px 20px;}
+    .cover{padding:40px 20px 32px;}
+    .cover h1{font-size:27px;}
+    .seal-mark{width:78px; height:78px; font-size:11px; top:24px; right:20px;}
+    .toc{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">刑法講義 · 分則</div>
+    <ul>
+      <li><a href="#s1">一、條文原文</a></li>
+      <li><a href="#s2">二、條文結構</a></li>
+      <li><a href="#s3">三、犯罪三階層解析</a></li>
+      <li><a href="#s4">四、學說見解</a></li>
+      <li><a href="#s5">五、實務見解</a></li>
+      <li><a href="#s6">六、教學案例</a></li>
+      <li><a href="#s7">七、申論練習題</a></li>
+      <li><a href="#s8">八、速查卡</a></li>
+      <li><a href="#s9">九、相關主題</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav" id="topnav">
+    <a href="#s1">條文原文</a>
+    <a href="#s2">條文結構</a>
+    <a href="#s3">三階層解析</a>
+    <a href="#s4">學說見解</a>
+    <a href="#s5">實務見解</a>
+    <a href="#s6">教學案例</a>
+    <a href="#s7">申論題</a>
+    <a href="#s8">速查卡</a>
+    <a href="#s9">相關主題</a>
+  </div>
+
+  <main>
+    <div class="cover">
+      <div class="seal-mark">有無殺意</div>
+      <div class="eyebrow">第二編分則 · 第二十二章 殺人罪</div>
+      <h1>刑法第271條<br>殺人罪</h1>
+      <div class="sub">殺人者，處死刑、無期徒刑或十年以上有期徒刑。前項之未遂犯罰之。預備犯第一項之罪者，處二年以下有期徒刑。</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立／最後更新：2026-08-30</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.271" alt="訪客數"></span>
+      </div>
+      <div class="toc">
+        <a href="#s1">一、條文原文</a>
+        <a href="#s2">二、條文結構</a>
+        <a href="#s3">三、犯罪三階層解析</a>
+        <a href="#s4">四、學說見解</a>
+        <a href="#s5">五、實務見解</a>
+        <a href="#s6">六、教學案例</a>
+        <a href="#s7">七、申論練習題</a>
+        <a href="#s8">八、速查卡</a>
+        <a href="#s9">九、相關主題</a>
+      </div>
+    </div>
+
+    <!-- 一、條文原文 -->
+    <section class="section" id="s1">
+      <h2 class="stitle">一、條文原文</h2>
+
+      <div class="article-box">
+        <div class="art-head">刑法第271條（普通殺人罪）</div>
+        <p>Ⅰ　殺人者，處死刑、無期徒刑或十年以上有期徒刑。</p>
+        <p>Ⅱ　前項之未遂犯罰之。</p>
+        <p>Ⅲ　預備犯第一項之罪者，處二年以下有期徒刑。</p>
+        <div class="num-wm">271</div>
+      </div>
+
+      <div class="ref-group-title">關聯條文（未遂犯三條，總則）</div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第25條（未遂犯）</div>
+        <p>Ⅰ　已著手於犯罪行為之實行而不遂者，為未遂犯。</p>
+        <p>Ⅱ　未遂犯之處罰，以有特別規定者為限，並得按既遂犯之刑減輕之。</p>
+        <div class="num-wm">25</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第26條（不能犯）</div>
+        <p>行為不能發生犯罪之結果，又無危險者，不罰。</p>
+        <div class="num-wm">26</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第27條（中止犯）</div>
+        <p>Ⅰ　已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，減輕或免除其刑。結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦同。</p>
+        <p>Ⅱ　前項規定，於正犯或共犯中之一人或數人，因己意防止犯罪結果之發生，或結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦適用之。</p>
+        <div class="num-wm">27</div>
+      </div>
+    </section>
+
+    <!-- 二、條文結構 -->
+    <section class="section" id="s2">
+      <h2 class="stitle">二、條文結構</h2>
+      <p>第271條為殺人罪章之基本規定，保護法益為個人生命，屬侵害個人法益中最重之犯罪類型。第1項為既遂之基本構成要件；第2項明文處罰未遂犯，須結合總則第25條（未遂犯）、第26條（不能犯）、第27條（中止犯）三條判斷；第3項另設「預備犯」之獨立、較輕處罰類型，處罰尚未達著手階段、僅止於犯罪意思具體化為預備行為之情形。</p>
+      <table>
+        <thead>
+          <tr><th>項次</th><th>類型</th><th>結果要求</th><th>涉及階層／規定</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>第1項</td><td>既遂</td><td>須發生死亡結果</td><td><span class="stage-badge yes">構成要件該當性／違法性／有責性</span></td></tr>
+          <tr><td>第2項</td><td>未遂犯明文處罰</td><td>已著手，死亡結果未發生</td><td><span class="stage-badge yes">結合第25、26、27條</span></td></tr>
+          <tr><td>第3項</td><td>預備犯</td><td>尚未著手，僅完成預備行為</td><td><span class="stage-badge yes">構成要件該當性／違法性／有責性（無「著手」要求）</span></td></tr>
+        </tbody>
+      </table>
+      <p>本罪之核心爭議在於主觀構成要件——「殺人故意」之認定，尤其與第277條第2項「傷害致死罪」（傷害故意＋死亡結果客觀可預見之加重結果犯）之區辨，是實務與考試上最重要之爭點，詳見本講義三、學說見解、五、實務見解章節。</p>
+    </section>
+
+    <!-- 三、犯罪三階層逐項解析 -->
+    <section class="section" id="s3">
+      <h2 class="stitle">三、犯罪三階層逐項解析</h2>
+
+      <h3 class="substitle">(一) 構成要件該當性</h3>
+      <table>
+        <thead><tr><th>客觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行為主體</td><td>一般犯，任何自然人皆得為之</td></tr>
+          <tr><td>行為客體</td><td>行為人以外，出生後至死亡前具有生命之自然人；胎兒不屬本罪客體，另適用墮胎罪章（第288條以下）</td></tr>
+          <tr><td>實行行為</td><td>足以造成他人死亡結果之積極作為（如刺殺、槍擊、下毒）或消極不作為（不作為犯須行為人具保證人地位，如父母對幼兒之生命有防止危險發生之作為義務）</td></tr>
+          <tr><td>結果</td><td>被害人死亡</td></tr>
+          <tr><td>因果關係與客觀歸責</td><td>實務多採相當因果關係說，學說則以客觀歸責理論（製造法所不容許之風險、風險實現於結果）進一步限縮歸責範圍，詳見「因果關係與客觀歸責判斷」說明</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>主觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>殺人故意（直接故意）</td><td>行為人明知並有意使死亡結果發生</td></tr>
+          <tr><td>殺人故意（間接故意／未必故意）</td><td>行為人預見死亡結果之發生為可能，而其發生並不違背其本意，容任結果發生</td></tr>
+          <tr><td>與傷害故意之區辨</td><td>殺人罪與傷害罪之根本差異在於行為人下手加害時有無「殺意」；法院於個案中難以僅憑行為人事後之自陳認定，故輔以行為人之犯罪動機、所使用兇器之種類與用法、攻擊部位（是否為頭部、胸口等要害）、傷勢程度、攻擊行為結束後之舉措（如是否呼救、送醫）等客觀情狀，綜合推認行為人於下手當時之主觀犯意（詳見學說見解、實務見解、教學案例）</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(二) 違法性</h3>
+      <p><span class="stage-badge yes">個案判斷</span> 本罪可能涉及之阻卻違法事由包括正當防衛（第23條，如遭他人生命法益攻擊時之反擊行為）、依法令之行為（如刑事訴訟法上依法執行死刑）等，均屬個案審酌，非本條核心，殺人行為原則上具違法性。</p>
+
+      <h3 class="substitle">(三) 有責性（罪責）</h3>
+      <p><span class="stage-badge yes">個案判斷</span> 依第18條、第19條檢驗行為人有無責任能力，並檢驗有無違法性認識錯誤、期待可能性欠缺等阻卻或減輕罪責事由。若行為人具完全責任能力，且無阻卻或減輕罪責事由，即具有責性，成立本罪。</p>
+
+      <h3 class="substitle">(四) 著手與既未遂判斷（結合第25、26、27條）</h3>
+      <table>
+        <thead><tr><th>條文</th><th>判斷內容</th></tr></thead>
+        <tbody>
+          <tr><td>著手（第25條前提）</td><td>依主客觀混合說（印象理論），以行為人之犯罪計畫為主觀背景，並以該行為是否已對生命法益形成直接、具體之危險為客觀限制（如已持刀接近並舉刀刺向被害人、已瞄準並扣下扳機）</td></tr>
+          <tr><td>第25條</td><td>已著手實行殺人行為而未生死亡結果者，為未遂犯，得按既遂犯之刑減輕之</td></tr>
+          <tr><td>第26條</td><td>行為手段在客觀上根本不能發生死亡結果、又無危險者（不能犯），不罰。例如誤用完全無殺傷力之物品（誤信砂糖為砒霜下毒），與雖因偶然事由（如槍枝故障）未能得逞、但行為手段本質上仍具危險性之普通未遂有別</td></tr>
+          <tr><td>第27條</td><td>已著手實行後，若行為人「因己意」中止或防止結果發生，減輕或免除其刑；結果之不發生非防止行為所致，而行為人已盡力為防止行為者，亦同。判斷標準在於「縱使得以遂行，卻不欲遂行」，須排除因外界障礙事由（如遭人發現、力有未逮）而被迫停止之情形</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(五) 預備犯（第3項）之特別性質</h3>
+      <p>預備犯不以「著手」為要件，僅須行為人出於犯殺人罪之意思，從事以殺人為目的之具體預備行為（如購買凶器、勘查作案地點、跟蹤掌握被害人行蹤等），且該行為尚未達到對被害人生命法益形成直接、具體危險之著手程度。預備犯本身即為獨立、較輕之處罰類型（法定刑二年以下有期徒刑），並非以既遂為基準另行減輕之未遂形態，故不生第25條未遂犯減輕其刑、第26條不能犯、第27條中止犯規定之適用問題——蓋此三條規定均以「已著手」為適用前提，預備階段尚未著手，本無從適用（詳見教學案例四、申論題四）。</p>
+    </section>
+
+    <!-- 四、學說見解 -->
+    <section class="section" id="s4">
+      <h2 class="stitle">四、學說見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下學說見解係經網路搜尋整理摘要改寫，出處僅列可查得之作者與著作名稱，頁碼尚未逐一核對原始專書全文，建議使用者或後續進一步核實版次頁碼。</p>
+      <table>
+        <thead><tr><th>學者</th><th>見解摘要</th><th>出處</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>王皇玉（台大法律）</td>
+            <td>殺人罪與傷害罪之區辨，應以行為人下手加害時有無殺意為斷；法院僅憑行為人犯後自述難以明確判斷主觀意圖，故須輔以客觀行為與造成之結果推認，包括行為人之犯罪動機、所使用兇器之種類、被害人遭受攻擊之部位以及傷勢之嚴重程度等因素，綜合判定行為人主觀上究係具備殺人故意或傷害故意</td>
+            <td>《刑法分則（一）》，三民書局〔頁碼未查得，建議使用者核實版次頁碼〕</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 五、實務見解 -->
+    <section class="section" id="s5">
+      <h2 class="stitle">五、實務見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下判決之案號與內容摘要，除特別註明已核對官方來源者外，均係經網路搜尋轉引整理，尚未逐一核對司法院原文全文，建議使用者自行至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入案號查閱全文核實。</p>
+
+      <div class="case-card">
+        <div class="ch">最高法院110年度台上字第3266號刑事判決（湯景華縱火案）</div>
+        <div class="cb">
+          <p>被告因與人發生糾紛，於他人住宅前騎樓縱火燒毀機車洩忿，火勢延燒致住宅內6人死亡。最高法院認定被告就死亡結果係基於「間接（不確定）故意」而非「直接（確定）故意」，依公民與政治權利國際公約「最嚴重罪行」始得判處死刑之要求，間接故意殺人不該當最嚴重罪行，故撤銷高等法院原審死刑判決，自為改判無期徒刑，褫奪公權終身，全案確定。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">✅ 本案已有司法院官方新聞稿可查證核對，內容確認無誤：<a href="https://www.judicial.gov.tw/tw/cp-1888-450981-a24ae-1.html" target="_blank">最高法院審理110年度台上字第3266號湯景華殺人案件新聞稿</a>。本案為直接故意與間接故意殺人於量刑（尤其死刑是否適用）上有實質差異之指標性案例。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院108年台上字第1203號、88年度台上字第7328號、79年度台上字第4449號刑事判決</div>
+        <div class="cb">
+          <p>均涉及殺人未遂與傷害罪之區辨標準，實務見解一致認為：殺人罪與傷害罪之區別，應以行為人下手加害時有無殺意為斷；雖無絕對之標準，仍可斟酌所使用兇器之種類、用法，創傷之部位、程度，攻擊行為結束後之舉措等案發當時客觀環境及其他具體情形，判斷行為人於實施攻擊行為之際是否具備殺人之犯意。加害人下手之部位、用力之程度，亦非不可藉為判斷有無殺意之心證依據。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">⚠️ 以上三則案號之判決內容係經網路二手轉述整理，尚未逐一核對司法院原文全文，建議使用者或後續自行查證。</p>
+        </div>
+      </div>
+
+      <div class="source-block">
+        📂 資料整理來源：司法院全球資訊網、法律人 LawPlayer、國鼎事務所、正笙法律事務所、鳴人堂等網路轉引整理，除湯景華案已核對官方新聞稿外，其餘尚未核對司法院原文全文。<br>
+        🔗 建議自行查證：<a href="https://judgment.judicial.gov.tw/" target="_blank">司法院裁判書查詢系統</a>
+      </div>
+    </section>
+
+    <!-- 六、教學案例 -->
+    <section class="section" id="s6">
+      <h2 class="stitle">六、教學案例</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下案例均為教學用途虛構，與條文要件高度對應，非真實判決事實。</p>
+
+      <div class="case-card">
+        <div class="ch">案例一：殺人既遂（直接故意，第271條第1項）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲與乙因債務糾紛發生爭執，甲持尖刀朝乙胸口猛刺三刀，乙因大量出血當場死亡。</p>
+          <h4>爭點</h4>
+          <p>甲之行為是否成立殺人既遂？</p>
+          <h4>分析</h4>
+          <p>甲持尖刀刺向乙之胸口要害部位（心臟、肺臟所在），並連續刺擊三刀，客觀上足認甲明知此舉極可能致乙於死，仍決意為之，具直接殺人故意。乙因刺傷大量出血死亡，甲之刺擊行為與乙之死亡結果間依經驗法則具相當因果關係，甲之行為亦製造法所不容許之生命侵害風險，並實現於死亡結果，該當客觀歸責。甲並無阻卻違法、阻卻罪責事由。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第271條第1項<span class="conclude-est">普通殺人罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例二：殺人故意（間接故意）與傷害故意之區辨</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>丙與丁於酒後發生口角，丙持木棍朝丁之後腦勺猛力揮擊一次，丁倒地後頭部大量出血，經送醫仍因顱內出血不治死亡。丙事後辯稱僅想教訓丁，並無殺人犯意。</p>
+          <h4>爭點</h4>
+          <p>丙之主觀犯意應論以殺人故意或傷害故意？</p>
+          <h4>分析</h4>
+          <p>依實務見解，殺人罪與傷害罪之區別應以行為人下手加害時有無殺意為斷，可斟酌兇器種類、攻擊部位、力道、攻擊後舉措等客觀情狀推認。丙持木棍（具相當殺傷力之鈍器）朝丁之後腦勺（頭部為要害，內藏腦部，攻擊該部位極易致命）猛力揮擊，依社會通念，此等攻擊方式已足使丙預見有致丁於死之高度可能性，丙猶容任結果發生而為之，縱丙事後空言否認殺意，仍應認丙主觀上至少具備殺人之間接故意（未必故意），而非僅止於傷害故意。</p>
+          <h4>結論</h4>
+          <p>丙成立刑法第271條第1項<span class="conclude-est">普通殺人罪既遂</span>（基於間接故意），而非第277條第2項傷害致死罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例三：教唆殺人（結合第29條，涉及三方）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>戊因與其配偶己感情不睦，且己名下有鉅額保單，戊乃出資新臺幣10萬元僱請庚下手殺害己。庚應允後於某夜持刀埋伏於己返家途中，趁己不備自後方刺穿己心臟，己當場死亡。</p>
+
+          <div class="relation-wrap">
+            <svg viewBox="0 0 640 320" width="100%" style="max-width:560px;">
+              <rect x="40" y="140" rx="6" width="180" height="72" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.6"/>
+              <text x="130" y="166" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">戊（教唆者）</text>
+              <text x="130" y="184" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">出資10萬元僱請下手</text>
+              <text x="130" y="200" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">動機：保單／感情不睦</text>
+
+              <rect x="230" y="30" rx="6" width="180" height="72" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.8"/>
+              <text x="320" y="56" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">庚（正犯）</text>
+              <text x="320" y="74" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">親自持刀下手</text>
+              <text x="320" y="90" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">是否已著手？</text>
+
+              <rect x="420" y="140" rx="6" width="180" height="72" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.6"/>
+              <text x="510" y="166" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">己（被害人）</text>
+              <text x="510" y="184" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">戊之配偶</text>
+              <text x="510" y="200" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">遭刺殺身亡</text>
+
+              <line x1="220" y1="165" x2="270" y2="102" stroke="#2c4a76" stroke-width="1.6" marker-end="url(#arrow271a)"/>
+              <text x="215" y="130" font-family="Noto Sans TC" font-size="11" fill="#2c4a76">教唆下手（§29）</text>
+
+              <line x1="380" y1="102" x2="430" y2="165" stroke="#9c2b3a" stroke-width="1.6" marker-end="url(#arrow271b)"/>
+              <text x="415" y="130" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">實行殺害</text>
+
+              <defs>
+                <marker id="arrow271a" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2c4a76"/></marker>
+                <marker id="arrow271b" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9c2b3a"/></marker>
+              </defs>
+            </svg>
+            <div class="relation-note">關鍵爭點：庚係親自下手之正犯；戊未參與實行行為，僅出資引發庚原無之犯意，應論以教唆犯而非正犯。</div>
+          </div>
+
+          <h4>爭點</h4>
+          <p>戊、庚各應如何論罪？</p>
+          <h4>分析</h4>
+          <p>庚基於自己殺人犯意，親自下手實行殺人行為，成立刑法第271條第1項殺人罪既遂之正犯。戊本身未參與殺人構成要件行為之實行，僅出資僱請庚下手，使庚萌生原無之殺人犯意，該當第29條「教唆他人使之實行犯罪行為」之要件，依第29條第2項，依其所教唆之罪即殺人既遂罪處罰之。</p>
+          <h4>結論</h4>
+          <p>庚成立刑法第271條第1項<span class="conclude-est">殺人罪既遂（正犯）</span>；戊成立刑法第271條第1項殺人罪既遂之<span class="conclude-est">教唆犯（第29條）</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例四：預備犯與著手之區辨（第271條第3項）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>辛與其妻長期不睦，辛上網購買生魚片刀一把並藏於車內，另駕車前往妻子上班地點附近勘查環境、確認妻子下班動線，尚未有進一步行動即遭警方持搜索票查獲上開刀械及其手寫之犯罪計畫筆記。</p>
+          <h4>爭點</h4>
+          <p>辛之行為是否已達殺人罪之著手？應論以未遂犯抑或預備犯？</p>
+          <h4>分析</h4>
+          <p>著手之判斷，依主客觀混合說（印象理論），須行為人主觀上已將其犯罪決意訴諸行動，且該行動客觀上已對受保護法益（生命）形成直接、具體之危險，方屬著手。辛雖已購置凶器、勘查作案地點及被害人動線，並有具體犯罪計畫，然其尚未接近被害人本身、亦未開始實行任何足以直接威脅被害人生命之舉動（如持刀接近、埋伏等待被害人出現等），客觀上尚未對被害人之生命法益形成直接、迫近之危險，應評價為犯罪之預備階段，尚未達著手之程度。</p>
+          <h4>結論</h4>
+          <p>辛成立刑法第271條第3項<span class="conclude-est">預備殺人罪</span>，非殺人未遂罪。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 七、申論練習題 -->
+    <section class="section" id="s7">
+      <h2 class="stitle">七、申論練習題與模擬解答</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下題目經使用者授權由 AI 出題，模擬解答僅供教學參考。</p>
+
+      <div class="case-card exam">
+        <div class="ch">題目一（殺人既遂與傷害致死之區辨）</div>
+        <div class="cb">
+          <p>甲與乙夙有嫌隙，某日甲攜帶尖刀尾隨乙至無人巷弄，朝乙背部連刺兩刀後離去。乙倒地後經路人發現緊急送醫，惟仍因失血過多不治死亡。試附理由分析甲之刑責。</p>
+          <h4>擬答</h4>
+          <p>甲持尖刀朝乙之背部（軀幹要害部位，內藏心肺重要器官）連刺兩刀，依社會通念，持利刃刺擊他人軀幹要害且達兩刀之攻擊方式，已足使甲預見有致乙於死之高度可能性；縱甲事後未自陳有意致乙於死，仍應綜合其攻擊之凶器種類（尖刀）、部位（背部要害）、次數（連續兩刀）等客觀情狀，認定甲主觀上具備殺人之間接故意，而非僅止於傷害故意。甲之刺擊行為與乙之死亡結果間，依經驗法則，持刀刺擊他人軀幹要害通常足以引發大量出血致死之結果，具相當因果關係；甲之行為亦製造法所不容許之生命侵害風險，並實現於乙之死亡結果，該當客觀歸責。甲並無阻卻違法、阻卻罪責事由，具完全責任能力。</p>
+          <p>從而，甲之行為應成立刑法第271條第1項普通殺人罪既遂，而非第277條第2項傷害致死罪——蓋後者係以行為人僅具傷害故意、對死亡結果無故意但客觀上可預見為要件之加重結果犯，與本案甲對死亡結果具備故意之情形本質不同，兩者為互斥關係，應依甲之實際主觀犯意逕行擇一適用，不生想像競合或法條競合之問題。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目二（未遂犯與不能犯之區辨）</div>
+        <div class="cb">
+          <p>丙與丁發生口角後，丙返家取出獵槍，瞄準在自家庭院內之丁扣下扳機，惟因獵槍年久失修、內部彈簧鏽蝕斷裂，子彈根本無法擊發，丁毫髮無傷。試問丙之刑責為何？</p>
+          <h4>擬答</h4>
+          <p>丙攜帶獵槍前往現場、瞄準丁並扣下扳機之行為，主觀上已具殺人故意，客觀上此一舉動已直接對丁之生命法益形成迫近、具體之危險，依主客觀混合說，應認丙已著手於殺人行為之實行。惟丙扣扳機後子彈因獵槍故障而未能擊發，丁未受到任何傷害，死亡結果並未發生，丙之行為屬未遂。</p>
+          <p>就是否構成不能犯（第26條），應審酌行為手段在客觀上是否「不能」發生結果、且「無危險」。本案獵槍雖因故障未能擊發，然一般具備擊發功能之獵槍朝人體要害瞄準扣扳機，在客觀上仍具有致人於死之高度危險，僅因個別槍枝故障此一偶然事由而未生結果，非屬行為手段本質上不能發生結果之情形（不同於誤用完全無殺傷力之物品，如誤信白糖為砒霜下毒之情形），依一般社會通念判斷仍具危險性，故不該當第26條不能犯，應論以普通未遂犯。</p>
+          <p>從而，丙成立刑法第271條第1項、第2項<span class="conclude-est">殺人未遂罪</span>，得依第25條第2項按既遂犯之刑減輕之。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目三（中止犯之適用）</div>
+        <div class="cb">
+          <p>戊持刀朝己腹部刺入一刀後，見己倒地痛苦掙扎、血流如注，戊心生不忍，隨即撥打119並在救護車抵達前持續為己進行止血、施以急救，己經送醫及時救治，終未死亡但受有重傷。試問戊之刑責為何？</p>
+          <h4>擬答</h4>
+          <p>戊持刀刺入己之腹部（軀幹要害部位），主觀上具殺人故意，客觀上該行為已對己之生命法益形成迫近、具體之危險，已達殺人罪之著手。戊刺擊後，因己未死亡，其殺人行為屬未遂。就中止犯（第27條）之適用，須行為人「因己意」中止或防止結果之發生。戊於刺擊後，並非因外界障礙（如遭人發現、力有未逮）而被迫停止，而係基於自身「心生不忍」之內在轉念，主動撥打119並持續施以急救行為，此一積極防止死亡結果發生之作為，應認屬「因己意防止其結果之發生」；且死亡結果最終確實未發生（己經送醫治療存活），亦符合中止犯之結果要件。</p>
+          <p>從而，戊之行為應論以刑法第271條第1項、第2項<span class="conclude-est">殺人未遂罪</span>，並依第27條第1項前段中止犯規定，減輕或免除其刑。至於己所受之重傷結果，屬戊殺人行為之當然結果（未遂之過程結果），已包含於殺人未遂罪之評價範圍內，<span class="conclude-not">不另論</span>以重傷罪或傷害罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目四（預備犯與教唆犯之從屬性）</div>
+        <div class="cb">
+          <p>庚痛恨鄰居辛長期噪音擾民，乃出資新臺幣5萬元僱請壬前往殺害辛。壬應允後，購買刀械、勘查辛住處環境，惟尚未進一步行動即因故取消計畫，將刀械丟棄，亦未告知庚。試問庚、壬各應如何論罪？</p>
+          <h4>擬答</h4>
+          <p>壬應允庚之委託後，購買刀械、勘查辛之住處環境，均屬為犯殺人罪所為之預備行為，然壬尚未接近被害人辛本身，亦未實行任何對辛之生命法益形成直接、具體危險之舉動，客觀上未達著手之程度，僅止於預備階段。壬其後主動取消計畫、丟棄刀械，因其行為原即停留於預備階段，本無成立未遂犯之可能，第27條中止犯規定以「已著手實行而不遂」為前提，於預備階段尚無適用餘地。壬之行為應論以刑法第271條第3項預備殺人罪，其嗣後主動放棄計畫之事實，僅得於量刑時作為有利之酌減事由。</p>
+          <p>就庚而言，庚出資僱請壬殺害辛，使壬萌生原無之殺人犯意，該當第29條教唆犯之要件。惟依共犯從屬性原則，教唆犯之處罰以正犯（被教唆人）已著手實行為前提（限制從屬形式），壬之行為既僅止於預備階段、未達著手，依通說見解，庚教唆殺人之行為原則上<span class="conclude-not">不成立</span>殺人罪之教唆犯（既遂或未遂），僅得視有無其他罪名（如另行僱請他人購置刀械等行為）個別檢討，就殺人罪教唆部分庚不構成犯罪。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 八、速查卡 -->
+    <section class="section" id="s8">
+      <h2 class="stitle">八、速查卡</h2>
+      <div class="mnemonic-card">
+        <div class="wm">速</div>
+        <h3>記憶口訣</h3>
+        <div class="mnemonic-item">殺人須故意，過失另有科
+          <small>殺人罪以死亡結果之故意為要件；若行為人僅有過失，論以第276條過失致死罪，非本條殺人罪</small>
+        </div>
+        <div class="mnemonic-item">兇器部位加舉措，殺意傷意細推敲
+          <small>殺人故意與傷害故意之區辨，須綜合兇器種類、攻擊部位、傷勢程度、攻擊後舉措等客觀情狀判斷，不能僅憑行為人事後空言否認</small>
+        </div>
+        <table style="margin-top:22px; color:var(--ink); background:var(--paper-card); border-radius:6px; overflow:hidden;">
+          <thead><tr><th>項次</th><th>類型</th><th>結果要求</th><th>法定刑／效果</th></tr></thead>
+          <tbody>
+            <tr><td>第1項</td><td>既遂</td><td>死亡結果發生</td><td>死刑、無期徒刑或十年以上有期徒刑</td></tr>
+            <tr><td>第2項</td><td>未遂犯</td><td>已著手，未生死亡結果</td><td>依第25條第2項得按既遂犯之刑減輕之</td></tr>
+            <tr><td>第2項＋§26</td><td>不能犯</td><td>手段客觀上不能發生結果且無危險</td><td>不罰</td></tr>
+            <tr><td>第2項＋§27</td><td>中止犯</td><td>已著手後因己意中止／防止結果發生</td><td>減輕或免除其刑</td></tr>
+            <tr><td>第3項</td><td>預備犯</td><td>尚未著手，僅完成預備行為</td><td>二年以下有期徒刑</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 九、相關主題 -->
+    <section class="section" id="s9">
+      <h2 class="stitle">九、相關主題</h2>
+      <div class="link-note">
+        本條第2項未遂犯之判斷，涉及既有講義《<a href="../講義/刑法25-26-27條-未遂犯體系.html" target="_blank">第25、26、27條．未遂犯・不能犯・中止犯體系</a>》：該講義完整整理著手時點理論、既未遂區辨標準、不能犯與中止犯之判斷方式，建議對照閱讀以掌握總則未遂規定於本罪之具體適用。<br><br>
+        本講義教學案例三（教唆殺人）涉及既有講義《<a href="../講義/刑法28-31條-正犯與共犯體系.html" target="_blank">第28、29、30、31條．正犯與共犯體系</a>》：該講義完整整理共同正犯、教唆犯、幫助犯與身分犯之區辨標準，建議對照閱讀以掌握共犯從屬性理論。<br><br>
+        本條最核心之區辨——殺人故意與傷害故意（傷害致死）之判斷——與新增講義《<a href="../講義/刑法277條-傷害罪.html" target="_blank">第277條．傷害罪</a>》互為對照，建議合併研讀。<br><br>
+        本條亦與既有講義《<a href="../講義/刑法185-3條-不能安全駕駛罪.html" target="_blank">第185-3條．不能安全駕駛罪</a>》、《<a href="../講義/刑法186-186-1-187條-危險物罪體系.html" target="_blank">第186、186-1、187條．危險物罪體系</a>》相關：兩份講義於加重結果犯與故意致死之區辨段落中提及第271條，可對照閱讀第271條與加重結果犯類型（如傷害致死、不能安全駕駛致死）於主觀構成要件上之根本差異。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const links = [...document.querySelectorAll('nav.sidebar a, .topnav a')];
+  const sections = [...document.querySelectorAll('main .section, main .cover')];
+  const map = new Map();
+  links.forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el) map.set(el, links.filter(l=>l.getAttribute('href')==='#'+id));
+  });
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const els = map.get(entry.target);
+      if(!els) return;
+      if(entry.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        els.forEach(l=>l.classList.add('active'));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>{ if(map.has(s)) observer.observe(s); });
+
+  links.forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
