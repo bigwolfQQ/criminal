@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第335條．普通侵占罪 — 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45: rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif; line-height:1.75;
+  }
+  h1,h2,h3,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex; max-width:1200px; margin:0 auto;}
+  nav.sidebar{
+    width:240px; flex:none; position:sticky; top:0; align-self:flex-start;
+    height:100vh; overflow-y:auto; padding:28px 18px; border-right:1px solid var(--border);
+  }
+  nav.sidebar .brand{font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px; color:var(--indigo); margin-bottom:18px; letter-spacing:.05em;}
+  nav.sidebar ul{list-style:none; padding:0; margin:0;}
+  nav.sidebar li{margin-bottom:2px;}
+  nav.sidebar a{
+    display:block; padding:8px 10px; border-radius:6px; font-size:13.5px;
+    color:var(--ink); text-decoration:none; border-left:3px solid transparent;
+  }
+  nav.sidebar a.placeholder-link{color:var(--ink-45);}
+  nav.sidebar a.active, nav.sidebar a:hover{background:var(--paper-content); border-left-color:var(--brass); color:var(--indigo);}
+  main{flex:1; min-width:0; padding:0 0 80px; box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);}
+  .topnav{display:none;}
+  .section{padding:46px 56px; border-bottom:1px solid var(--border);}
+  .section:last-child{border-bottom:none;}
+  .eyebrow{font-size:12.5px; letter-spacing:.12em; color:var(--brass); font-weight:700; text-transform:uppercase; margin-bottom:8px;}
+  h2.stitle{font-size:22px; color:var(--ink); margin:0 0 22px; padding-left:14px; border-left:4px solid var(--indigo);}
+  h3.substitle{font-size:16.5px; color:var(--indigo); margin:28px 0 10px;}
+
+  .cover{
+    background:var(--paper-content); padding:64px 56px 48px; position:relative; overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .cover .eyebrow{font-size:13px;}
+  .cover h1{font-size:38px; font-weight:900; color:var(--ink); margin:0 0 14px; max-width:640px;}
+  .cover .sub{font-size:15px; color:var(--ink-45); max-width:560px; margin-bottom:18px;}
+  .cover-meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:10px;}
+  .ver-badge{border:1px solid var(--seal); color:var(--seal); font-size:12px; padding:3px 10px; border-radius:20px; font-weight:700;}
+  .meta-date{border:1px solid var(--indigo); color:var(--indigo); font-size:12px; padding:3px 10px; border-radius:20px;}
+  .visitor-badge img{display:block; height:20px;}
+  .seal-mark{
+    position:absolute; top:46px; right:60px; width:112px; height:112px; border-radius:50%;
+    border:3px solid var(--seal); color:var(--seal); display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg); font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px;
+    writing-mode:vertical-rl; letter-spacing:.15em; opacity:.85;
+  }
+  .toc{margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px 20px; max-width:640px;}
+  .toc a{font-size:13px; color:var(--indigo); text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  .article-box{
+    position:relative; background:var(--paper-card); border-left:3px solid var(--indigo);
+    border-radius:4px; padding:22px 24px; margin:16px 0; overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,.06);
+  }
+  .article-box .num-wm{
+    position:absolute; right:10px; bottom:-18px; font-family:"Noto Serif TC",serif; font-weight:900;
+    font-size:110px; color:var(--ink); opacity:.06; line-height:1; user-select:none;
+  }
+  .article-box .art-head{font-family:"Noto Serif TC",serif; font-weight:700; color:var(--indigo); margin-bottom:8px; font-size:15px;}
+  .article-box p{margin:6px 0; position:relative; z-index:1;}
+  .article-box.ref{border-left-color:var(--border); opacity:.94;}
+  .ref-group-title{font-size:13px; color:var(--ink-45); margin:26px 0 6px; font-weight:700;}
+
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:13.5px;}
+  thead th{background:var(--ink); color:var(--paper-content); padding:10px 12px; text-align:left; font-weight:700;}
+  tbody td, tbody th{padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--row-alt);}
+
+  .stage-badge{display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:700; margin-bottom:6px;}
+  .stage-badge.yes{background:rgba(44,74,118,.1); color:var(--indigo);}
+  .stage-badge.na{background:rgba(22,35,59,.08); color:var(--ink-45);}
+
+  .conclude-est{font-weight:700; color:var(--ink); background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .conclude-not{font-weight:700; color:var(--seal);}
+
+  .placeholder{
+    border:2px dashed var(--brass); border-radius:8px; padding:38px 24px; text-align:center;
+    background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, rgba(169,131,47,.09) 10px 20px);
+    color:var(--ink-45);
+  }
+  .placeholder .ic{font-size:26px; margin-bottom:8px;}
+  .placeholder .badge-todo{
+    display:inline-block; margin-top:10px; font-size:12px; padding:3px 12px; border-radius:20px;
+    border:1px solid var(--brass); color:var(--brass); font-weight:700;
+  }
+
+  .case-card{background:var(--paper-card); border-radius:8px; margin:20px 0; box-shadow:0 1px 3px rgba(22,35,59,.08), 0 6px 16px -10px rgba(22,35,59,.25); overflow:hidden;}
+  .case-card .ch{background:var(--indigo); color:var(--paper-content); padding:10px 18px; font-family:"Noto Serif TC",serif; font-weight:700; font-size:14.5px;}
+  .case-card.exam .ch{background:var(--ink);}
+  .case-card .cb{padding:20px 22px;}
+  .case-card .cb h4{margin:14px 0 6px; font-size:13.5px; color:var(--indigo);}
+  .case-card .cb h4:first-child{margin-top:0;}
+  .note-badge{font-size:12px; color:var(--seal); font-weight:700;}
+
+  .relation-wrap{margin:18px 0 6px; text-align:center;}
+  .relation-note{font-size:12.5px; color:var(--ink-45); margin-top:6px;}
+
+  .source-block{margin-top:16px; padding:12px 16px; background:var(--row-alt); border-radius:6px; font-size:13px; color:var(--ink-45);}
+  .source-block a{color:var(--indigo);}
+
+  .mnemonic-card{background:var(--ink); color:var(--paper-content); border-radius:10px; padding:32px 30px; position:relative; overflow:hidden;}
+  .mnemonic-card .wm{position:absolute; right:14px; bottom:-24px; font-family:"Noto Serif TC",serif; font-weight:900; font-size:130px; opacity:.08;}
+  .mnemonic-card h3{color:var(--paper-content); margin-top:0;}
+  .mnemonic-item{background:var(--seal); border-radius:6px; padding:12px 16px; margin:12px 0; font-family:"Noto Serif TC",serif; font-size:17px; font-weight:700; letter-spacing:.04em;}
+  .mnemonic-item small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:12.5px; opacity:.85; margin-top:4px; letter-spacing:0;}
+
+  .link-note{border:1px dashed var(--border); border-radius:8px; padding:16px 18px; font-size:13.5px; color:var(--ink-45); margin-top:10px;}
+  .link-note a{font-weight:700;}
+
+  @media (max-width: 980px){
+    nav.sidebar{display:none;}
+    .topnav{
+      display:flex; overflow-x:auto; gap:4px; position:sticky; top:0; z-index:10;
+      background:var(--paper-content); padding:10px 12px; border-bottom:1px solid var(--border);
+    }
+    .topnav a{
+      flex:none; padding:7px 14px; border-radius:20px; background:var(--paper); font-size:12.5px;
+      color:var(--ink); text-decoration:none; white-space:nowrap; border:1px solid var(--border);
+    }
+    .topnav a.placeholder-link{color:var(--ink-45);}
+    .topnav a.active{background:var(--indigo); color:#fff; border-color:var(--indigo);}
+    .section{padding:32px 20px;}
+    .cover{padding:40px 20px 32px;}
+    .cover h1{font-size:27px;}
+    .seal-mark{width:78px; height:78px; font-size:11px; top:24px; right:20px;}
+    .toc{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">刑法講義 · 分則</div>
+    <ul>
+      <li><a href="#s1">一、條文原文</a></li>
+      <li><a href="#s2">二、條文結構</a></li>
+      <li><a href="#s3">三、犯罪三階層解析</a></li>
+      <li><a href="#s4">四、學說見解</a></li>
+      <li><a href="#s5">五、實務見解</a></li>
+      <li><a href="#s6">六、教學案例</a></li>
+      <li><a href="#s7">七、申論練習題</a></li>
+      <li><a href="#s8">八、速查卡</a></li>
+      <li><a href="#s9">九、相關主題</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav" id="topnav">
+    <a href="#s1">條文原文</a>
+    <a href="#s2">條文結構</a>
+    <a href="#s3">三階層解析</a>
+    <a href="#s4">學說見解</a>
+    <a href="#s5">實務見解</a>
+    <a href="#s6">教學案例</a>
+    <a href="#s7">申論題</a>
+    <a href="#s8">速查卡</a>
+    <a href="#s9">相關主題</a>
+  </div>
+
+  <main>
+    <div class="cover">
+      <div class="seal-mark">易持有為所有</div>
+      <div class="eyebrow">第二編分則 · 第三十一章 侵占罪</div>
+      <h1>刑法第335條<br>普通侵占罪</h1>
+      <div class="sub">意圖為自己或第三人不法之所有，而侵占自己持有他人之物者，處五年以下有期徒刑、拘役或科或併科三萬元以下罰金。前項之未遂犯罰之。</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立／最後更新：2026-08-29</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.335" alt="訪客數"></span>
+      </div>
+      <div class="toc">
+        <a href="#s1">一、條文原文</a>
+        <a href="#s2">二、條文結構</a>
+        <a href="#s3">三、犯罪三階層解析</a>
+        <a href="#s4">四、學說見解</a>
+        <a href="#s5">五、實務見解</a>
+        <a href="#s6">六、教學案例</a>
+        <a href="#s7">七、申論練習題</a>
+        <a href="#s8">八、速查卡</a>
+        <a href="#s9">九、相關主題</a>
+      </div>
+    </div>
+
+    <!-- 一、條文原文 -->
+    <section class="section" id="s1">
+      <h2 class="stitle">一、條文原文</h2>
+
+      <div class="article-box">
+        <div class="art-head">刑法第335條（普通侵占罪）</div>
+        <p>Ⅰ　意圖為自己或第三人不法之所有，而侵占自己持有他人之物者，處五年以下有期徒刑、拘役或科或併科三萬元以下罰金。</p>
+        <p>Ⅱ　前項之未遂犯罰之。</p>
+        <div class="num-wm">335</div>
+      </div>
+
+      <div class="ref-group-title">關聯條文（同章加重規定／特別規定）</div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第336條（公務公益侵占罪、業務侵占罪）</div>
+        <p>Ⅰ　對於公務上或因公益所持有之物，犯前條第一項之罪者，處一年以上七年以下有期徒刑，得併科十五萬元以下罰金。</p>
+        <p>Ⅱ　對於業務上所持有之物，犯前條第一項之罪者，處六月以上五年以下有期徒刑，得併科九萬元以下罰金。</p>
+        <p>Ⅲ　前二項之未遂犯罰之。</p>
+        <div class="num-wm">336</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第337條（侵占遺失物罪）</div>
+        <p>意圖為自己或第三人不法之所有，而侵占遺失物、漂流物或其他離本人所持有之物者，處一萬五千元以下罰金。</p>
+        <div class="num-wm">337</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第338條（準用規定）</div>
+        <p>第三百二十三條及第三百二十四條之規定，於本章之罪準用之。</p>
+        <div class="num-wm">338</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第323條（電能等準動產，經第338條準用）</div>
+        <p>電能、熱能及其他能量，關於本章之罪，以動產論。</p>
+        <div class="num-wm">323</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第324條（親屬間犯罪特例，經第338條準用）</div>
+        <p>Ⅰ　於直系血親、配偶或同財共居親屬之間，犯本章之罪者，得免除其刑。</p>
+        <p>Ⅱ　前項親屬或其他五親等內血親或三親等內姻親之間，犯本章之罪者，須告訴乃論。</p>
+        <div class="num-wm">324</div>
+      </div>
+
+      <div class="ref-group-title">關聯條文（未遂犯三條，總則）</div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第25條（未遂犯）</div>
+        <p>Ⅰ　已著手於犯罪行為之實行而不遂者，為未遂犯。</p>
+        <p>Ⅱ　未遂犯之處罰，以有特別規定者為限，並得按既遂犯之刑減輕之。</p>
+        <div class="num-wm">25</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第26條（不能犯）</div>
+        <p>行為不能發生犯罪之結果，又無危險者，不罰。</p>
+        <div class="num-wm">26</div>
+      </div>
+      <div class="article-box ref">
+        <div class="art-head">刑法第27條（中止犯）</div>
+        <p>Ⅰ　已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，減輕或免除其刑。結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦同。</p>
+        <p>Ⅱ　前項規定，於正犯或共犯中之一人或數人，因己意防止犯罪結果之發生，或結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦適用之。</p>
+        <div class="num-wm">27</div>
+      </div>
+    </section>
+
+    <!-- 二、條文結構 -->
+    <section class="section" id="s2">
+      <h2 class="stitle">二、條文結構</h2>
+      <p>第335條為侵占罪章之基本規定，第1項為普通侵占罪之構成要件，第2項明文處罰未遂犯。同章第336條為加重類型：第1項公務公益侵占、第2項業務侵占，均以「持有原因之不同」作為加重依據，法定刑度依序遞升（公務公益＞業務＞普通）。第337條侵占遺失物罪則屬相對獨立之輕罪類型，客體限於遺失物、漂流物或其他脫離本人持有之物，與前三者以「合法持有他人之物」為前提不同。第338條將竊盜罪章之第323條（電能等準動產）與第324條（親屬間特例）準用於本章，使本章各罪之客體與親屬處理原則與竊盜罪章一致。</p>
+      <table>
+        <thead>
+          <tr><th>條號</th><th>性質</th><th>持有原因</th><th>涉及階層</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>第335條</td><td>普通侵占罪</td><td>一般合法原因持有（委託、保管等）</td><td><span class="stage-badge yes">構成要件該當性／違法性／有責性</span></td></tr>
+          <tr><td>第336條Ⅰ</td><td>公務公益侵占罪</td><td>因公務上或公益原因持有</td><td><span class="stage-badge yes">構成要件該當性（加重身分）／違法性／有責性</span></td></tr>
+          <tr><td>第336條Ⅱ</td><td>業務侵占罪</td><td>因業務上原因持有</td><td><span class="stage-badge yes">構成要件該當性（加重身分）／違法性／有責性</span></td></tr>
+          <tr><td>第337條</td><td>侵占遺失物罪</td><td>拾得脫離本人持有之物，非合法委託持有</td><td><span class="stage-badge yes">構成要件該當性（客體不同）／違法性／有責性</span></td></tr>
+          <tr><td>第335條Ⅱ、336條Ⅲ</td><td>未遂犯處罰明文</td><td>—</td><td><span class="stage-badge yes">構成要件該當性（結合第25、26、27條）</span></td></tr>
+        </tbody>
+      </table>
+      <p>本罪保護法益為個別財產所有權，其行為本質係「易持有為所有」——即行為人原已基於合法原因持有他人之物，嗣後變更持有意思為所有意思，並藉具體行為表現之。此與竊盜罪「破壞他人持有、建立自己新持有」之行為結構明顯不同（詳見學說見解、實務見解章節）。</p>
+    </section>
+
+    <!-- 三、犯罪三階層逐項解析 -->
+    <section class="section" id="s3">
+      <h2 class="stitle">三、犯罪三階層逐項解析</h2>
+
+      <h3 class="substitle">(一) 構成要件該當性</h3>
+      <table>
+        <thead><tr><th>要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行為主體</td><td>第335條為一般犯，任何自然人皆得為之；惟以「先合法持有他人之物」為前提，性質上具有一定之身分限制（限於已取得合法持有地位之人）。第336條則為加重身分犯：Ⅰ須具「公務上或因公益持有」之身分，Ⅱ須具「業務上持有」之身分</td></tr>
+          <tr><td>行為客體</td><td>自己持有中之他人之物（依第338條準用第323條，電能、熱能及其他能量亦以動產論）。依實務通說見解，此處之「持有」須以有法律或契約上原因（即合法原因）者為限；若行為人取得持有之原因本身即屬不法（如竊盜、詐欺、搶奪取得），應逕依各該罪論處，無成立侵占罪之餘地（詳見學說見解、實務見解章節）</td></tr>
+          <tr><td>實行行為（侵占）</td><td>「易持有為所有」，即行為人於合法持有他人之物之狀態繼續中，將原持有意思變更為所有意思，並以具體行為（如處分、拒不返還、隱匿等）表現之，自居於所有人地位而支配該物</td></tr>
+          <tr><td>結果／既遂時點</td><td>侵占罪為即成犯，行為人一有變易持有為所有之意思並具體表現於外，犯罪即同時完成，不以處分行為完了、或行為人現實取得財產上利益為必要；縱事後將侵占之物設法歸還，亦無解於罪名之成立（詳見實務見解章節）</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>主觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>故意</td><td>對「侵占自己持有他人之物」此一客觀事實須具備認識與意欲</td></tr>
+          <tr><td>不法所有意圖</td><td>意圖為自己或第三人不法之所有，須達到「變易持有為所有」之程度；若僅將持有物延不交還，或因其他原因致一時未能交還，尚缺乏此一主觀要件，難遽以本罪相繩（詳見實務見解章節）</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(二) 違法性</h3>
+      <p><span class="stage-badge yes">一般性判斷</span> 侵占行為原則上具違法性，實務上少見阻卻違法事由之適用情形（如正當防衛、緊急避難、依法令之行為等）。惟仍須依個案事實檢驗有無阻卻違法事由存在，若查無，即具違法性。</p>
+
+      <h3 class="substitle">(三) 有責性（罪責）</h3>
+      <p><span class="stage-badge yes">一般性判斷</span> 依第18條、第19條檢驗行為人有無責任能力，並檢驗有無違法性認識錯誤、期待可能性欠缺等阻卻或減輕罪責事由。若行為人具完全責任能力，且無阻卻或減輕罪責事由，即具有責性，成立本罪。</p>
+      <p><strong>親屬間特例（第338條準用第324條）提醒</strong>：此一準用規定並非阻卻違法或阻卻罪責事由，而屬刑罰阻卻／減免事由（直系血親、配偶或同財共居親屬間得免除其刑）與訴訟條件（五親等內血親或三親等內姻親間須告訴乃論），體系上應於罪責確認、犯罪成立後，另行審酌其法律效果，不影響前階段構成要件該當性與違法性之判斷。</p>
+
+      <h3 class="substitle">(四) 著手與既未遂判斷（結合第25、26、27條）</h3>
+      <table>
+        <thead><tr><th>條文</th><th>判斷內容</th></tr></thead>
+        <tbody>
+          <tr><td>第25條</td><td>已著手實行侵占（如已開始處分、隱匿等行為），但尚未達「表現變易持有為所有意思」之程度者，為未遂犯，得按既遂犯之刑減輕之。由於侵占罪之既遂時點極早（一有外顯表現即既遂），未遂之適用空間相對有限，實務上多見於行為人尚未完成處分行為即被發覺、制止之情形</td></tr>
+          <tr><td>第26條</td><td>行為在客觀上根本不能發生侵占結果、又無危險者（不能犯），不罰。侵占罪案例中較為少見，需視具體個案判斷</td></tr>
+          <tr><td>第27條</td><td>已著手實行後，若行為人「因己意」中止或防止結果發生，減輕或免除其刑。惟此一規定以「尚未既遂」為適用前提；若行為人已表現變易持有為所有之意思（即已既遂），縱事後主動返還財物、坦承犯行，亦僅屬既遂後之量刑事由（如自首），無成立中止犯之餘地，不可與未遂階段之「因己意中止」混淆（詳見教學案例四、申論題四）</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 四、學說見解 -->
+    <section class="section" id="s4">
+      <h2 class="stitle">四、學說見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下學說見解係經網路搜尋整理摘要改寫，出處僅列可查得之作者與文章來源，尚未逐一核對原始專書、期刊全文，建議使用者或後續進一步核實。</p>
+      <table>
+        <thead><tr><th>立場</th><th>見解摘要</th><th>出處</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>通說（多數實務見解、教科書見解）</td>
+            <td>侵占罪之「持有」須限於基於合法原因（法律或契約上原因，如委託、保管、借用等委託信賴關係）取得；若行為人取得持有之原因本身即屬不法（如以竊盜、詐欺、搶奪方式取得持有），應逕依各該罪論處，不生成立侵占罪之問題</td>
+            <td>綜合最高法院52年台上字第1418號判例意旨及多數教科書、考用書摘見解整理</td>
+          </tr>
+          <tr>
+            <td>批判見解（部分學者，如黃榮堅等）</td>
+            <td>質疑「合法原因持有」此一限制過於嚴格，認為侵占罪之本質係違背信賴關係而侵害所有權，縱使行為人取得持有之原因本身屬於不法（民事上不法，但未達成立其他財產犯罪之程度），理論上仍非當然無法評價為侵占；通說對持有原因合法性之堅持，可能造成處罰漏洞（即取得持有本身為民事不法行為但不構成犯罪，其後之侵占行為卻因持有非「合法」而同樣無法以侵占罪相繩）</td>
+            <td>黃榮堅，〈侵占罪之基本概念〉；另參考法研所講義整理之財產犯罪相關論述</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- 五、實務見解 -->
+    <section class="section" id="s5">
+      <h2 class="stitle">五、實務見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下判決／判例之案號與內容摘要係經網路搜尋整理，尚未逐一核對司法院原文，建議使用者或後續進一步核實。可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入案號查閱全文。</p>
+
+      <div class="case-card">
+        <div class="ch">最高法院19年上字第1052號刑事判例（舊判例）</div>
+        <div class="cb">
+          <p>侵占罪之成立，以擅自處分自己持有之他人所有物，或變易持有之意思為所有之意思為要件。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則屬民國108年法院組織法修正前之「判例」，該次修法後判例已不再選編，現僅作為裁判先例參考，不具過去之拘束力，惟仍為理解本罪成立要件之經典見解。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院52年台上字第1418號刑事判例（舊判例）</div>
+        <div class="cb">
+          <p>刑法上之侵占罪，以被侵占之物有法律或契約上之原因在其持有中者為限；持有原因須具備合法性，此為侵占罪與竊盜、詐欺等罪之重要區辨標準。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則屬民國108年法院組織法修正前之「判例」，現僅作為裁判先例參考，不具過去之拘束力。學界對本則見解之持有原因限制範圍尚有討論（詳見學說見解章節）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院68年度台上字第3146號刑事判例（舊判例）</div>
+        <div class="cb">
+          <p>刑法上之侵占罪，須持有人變易其原來之持有意思而為不法所有之意思，始能成立，如僅將持有物延不交還或有其他原因致一時未能交還，既缺乏主觀要件，即難遽以該罪相繩。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則屬民國108年法院組織法修正前之「判例」，現僅作為裁判先例參考，不具過去之拘束力，惟仍為判斷主觀「易持有為所有」意思之重要標準。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院70年台上字第2029號刑事判例（舊判例）</div>
+        <div class="cb">
+          <p>侵占罪為即成犯，凡對自己持有之他人所有物，有變易持有為所有之意思時，即應構成犯罪，縱事後將侵占之物設法歸還，亦無解於罪名之成立。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則屬民國108年法院組織法修正前之「判例」，現僅作為裁判先例參考，不具過去之拘束力，惟為理解本罪既遂時點之核心見解，與竊盜罪等其他財產犯罪之即成犯特性可相互參照。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院86年度台上字第7051號刑事判決</div>
+        <div class="cb">
+          <p>刑法上之侵占罪，以侵占自己持有他人之物為前提，須行為人先合法持有他人之物，而於持有狀態繼續中，易「持有」為「所有」之意思始可。如其持有係出於非法方法，並非合法持有，則應視其方法為何，而分別成立詐欺、竊盜、搶奪或強盜罪，無成立侵占罪之餘地。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院23年上字第1830號刑事判例（舊判例）</div>
+        <div class="cb">
+          <p>金錢或其他代替物，因消費借貸或消費寄託契約由當事人一方移轉所有權於他方者，他方雖負有種類、品質、數量相同之物返還之義務，但非代所有權人保管原物，其事後延不返還，屬民事上違約問題，與侵占罪之要件並不相符。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">※ 本則屬民國108年法院組織法修正前之「判例」，現僅作為裁判先例參考，不具過去之拘束力，惟為區辨「保管關係」與「所有權已移轉之消費借貸／寄託關係」之重要見解。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院110年度台上字第78號刑事判決</div>
+        <div class="cb">
+          <p>侵占罪係指不法「取得」自己合法持有中之他人之物；而其「取得」，須行為人內在有不法所有之意思，並有將此意思表現於外之具體行為，始足當之。</p>
+        </div>
+      </div>
+
+      <div class="source-block">
+        📂 資料整理來源：天秤座法律網、法律百科、法源法律網、謹禾法律事務所、智丞法律事務所、lawplayer.com、黃榮堅〈侵占罪之基本概念〉等網路轉引整理，尚未核對司法院原文全文。<br>
+        🔗 建議自行查證：<a href="https://judgment.judicial.gov.tw/" target="_blank">司法院裁判書查詢系統</a>
+      </div>
+    </section>
+
+    <!-- 六、教學案例 -->
+    <section class="section" id="s6">
+      <h2 class="stitle">六、教學案例</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下案例均為教學用途虛構，與條文要件高度對應，非真實判決事實。</p>
+
+      <div class="case-card">
+        <div class="ch">案例一：普通侵占既遂（第335條）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲受朋友乙委託，代為保管乙出國期間之筆記型電腦一台。甲於保管期間因缺錢花用，竟將該電腦出售予第三人，得款花用殆盡。</p>
+          <h4>爭點</h4>
+          <p>甲之行為是否該當「易持有為所有」？既遂時點為何？</p>
+          <h4>分析</h4>
+          <p>甲基於委託關係合法持有乙之筆記型電腦，屬有法律或契約上原因之持有。甲嗣後將電腦出售予第三人之行為，已將原本受託保管之持有意思，變更為自居所有人地位加以處分之所有意思，並以出售此一具體行為表現於外，該當「易持有為所有」之侵占行為。甲出售電腦、完成處分行為之時，即已表現其變易持有為所有之意思，侵占罪即行既遂，不以取得價金花用完畢為必要。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第335條第1項<span class="conclude-est">普通侵占罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例二：業務侵占與普通侵占之區辨（第336條第2項）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲為連鎖便利商店之店長，職務內容包含每日結算並保管店內營業現金，待翌日交由公司派員收取。某日甲將當日營業額中新臺幣5,000元取出，據為己有，事後於帳務紀錄上以「短款」記載掩飾。</p>
+          <h4>爭點</h4>
+          <p>甲對營業現金之持有，是否屬「業務上所持有之物」？應論以第335條抑或第336條第2項？</p>
+          <h4>分析</h4>
+          <p>甲基於店長職務，反覆持續執行結算、保管當日營業現金之業務，該款項屬甲「業務上所持有之物」，非僅偶然、單次之個人受託保管關係。甲將其中一部分據為己有之行為，已表現變易持有為所有之意思，該當侵占之實行行為；甲具有「業務上持有」之加重身分，應優先適用第336條第2項業務侵占罪之加重規定，而非第335條普通侵占罪。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第336條第2項<span class="conclude-est">業務侵占罪既遂</span>（不另論第335條普通侵占罪）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例三：侵占遺失物與普通侵占之區辨（第337條）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲於公園散步時，拾得路人乙不慎遺落之皮夾一只，內有現金新臺幣3,000元及證件。甲見四下無人，逕自取走皮夾內現金花用，證件則丟棄於路旁垃圾桶。</p>
+          <h4>爭點</h4>
+          <p>甲對皮夾並無事前委託持有關係，其行為應論以第335條或第337條？</p>
+          <h4>分析</h4>
+          <p>甲並非基於乙之委託或其他法律、契約上原因而持有該皮夾，而係於乙之持有支配關係已然中斷（遺失）後，方拾得取得事實上管領力，其持有客體屬「離本人所持有之物」，與第335條以「合法原因持有他人之物」為前提之情形不同。甲取得皮夾後，意圖為自己不法之所有，逕自取走現金花用，已表現變易持有為所有之意思，該當侵占遺失物之實行行為。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第337條<span class="conclude-est">侵占遺失物罪既遂</span>（非第335條普通侵占罪）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例四：業務侵占既遂後之返還與中止犯之誤用（第336條第2項，結合第25、27條）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲受雇於乙經營之貿易公司擔任會計，職務上負責代收廠商丙交付之貨款。某月甲收受丙交付之貨款新臺幣20萬元後，起意將其中8萬元侵吞入己，遂將該筆款項轉存入自己私人銀行帳戶，並著手申請該筆存款之提領。惟提領尚未完成前，乙即進行內部帳務稽核，發覺帳款短少之異常。甲於乙尚未當面質問前，即主動向乙坦承並將8萬元全數歸還。</p>
+
+          <div class="relation-wrap">
+            <svg viewBox="0 0 640 300" width="100%" style="max-width:560px;">
+              <rect x="40" y="30" rx="6" width="180" height="64" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.6"/>
+              <text x="130" y="54" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">丙（廠商）</text>
+              <text x="130" y="74" text-anchor="middle" font-family="Noto Sans TC" font-size="11.5" fill="#5b6472">交付貨款20萬元</text>
+
+              <rect x="230" y="120" rx="6" width="180" height="72" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.8"/>
+              <text x="320" y="145" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">甲（會計・業務持有）</text>
+              <text x="320" y="163" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">侵占8萬元・是否已既遂？</text>
+              <text x="320" y="178" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">中止犯是否有適用？</text>
+
+              <rect x="420" y="30" rx="6" width="180" height="64" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.6"/>
+              <text x="510" y="54" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">乙（雇主）</text>
+              <text x="510" y="74" text-anchor="middle" font-family="Noto Sans TC" font-size="11.5" fill="#5b6472">稽核發現・受返還</text>
+
+              <line x1="130" y1="94" x2="290" y2="120" stroke="#2c4a76" stroke-width="1.6" marker-end="url(#arrow335)"/>
+              <text x="180" y="102" font-family="Noto Sans TC" font-size="11" fill="#2c4a76">業務上交付</text>
+
+              <path d="M 350 120 Q 430 90 480 94" fill="none" stroke="#a9832f" stroke-width="1.6" stroke-dasharray="5 5" marker-end="url(#arrow335-brass)"/>
+              <text x="400" y="88" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#a9832f">自首歸還・是否成立中止犯</text>
+
+              <defs>
+                <marker id="arrow335" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2c4a76"/></marker>
+                <marker id="arrow335-brass" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#a9832f"/></marker>
+              </defs>
+            </svg>
+            <div class="relation-note">關鍵爭點：甲存入私人帳戶並著手提領時是否已「既遂」？既遂後之自首返還能否適用第27條中止犯？</div>
+          </div>
+
+          <h4>爭點</h4>
+          <p>甲將款項存入私人帳戶並著手提領之時點，是否已足以表現「易持有為所有」之意思而構成既遂？其後之坦承歸還行為，能否依第27條中止犯減輕或免除其刑？</p>
+          <h4>分析</h4>
+          <p>甲基於會計職務業務上持有丙交付之貨款，屬「業務上所持有之物」。甲將其中8萬元轉存入自己私人帳戶之行為，已足以表現其自居所有人地位、變易持有為所有之意思，依即成犯之特性，不以現實提領完成或現實花用為必要，該筆款項存入私人帳戶之時，業務侵占行為即已既遂。甲嗣後因乙稽核而主動坦承並歸還8萬元，係發生於既遂之後，而第27條中止犯規定係以「已著手實行而尚未既遂」為適用前提，甲之行為既已既遂，即無成立中止犯之空間；其歸還與坦承行為，僅得作為法院量刑時審酌自首、犯後態度良好等有利事由，不生減輕或免除其刑之法定效果。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第336條第2項<span class="conclude-est">業務侵占罪既遂</span>，<span class="conclude-not">不適用</span>第27條中止犯規定，僅得依刑法總則自首等一般量刑事由審酌。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 七、申論練習題 -->
+    <section class="section" id="s7">
+      <h2 class="stitle">七、申論練習題與模擬解答</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下題目經使用者授權由 AI 出題，模擬解答僅供教學參考。</p>
+
+      <div class="case-card exam">
+        <div class="ch">題目一（持有原因合法性：侵占與竊盜、詐欺之區辨）</div>
+        <div class="cb">
+          <p>甲受乙委託代為保管乙之貴重手錶一枚，其後甲將該手錶出售予第三人得款花用。試問甲之刑責為何？若甲原係以偽稱「借用一日即歸還」之欺瞞手段，使乙誤信而自願將手錶交付於甲，甲取得手錶後隨即將之出售花用，則甲之刑責是否相同？請比較說明。</p>
+          <h4>擬答</h4>
+          <p>就第一種情形而言，甲基於乙之委託，本於保管契約合法持有該手錶，屬有法律或契約上原因之持有。甲嗣後將手錶出售予第三人之行為，已將原本受託保管之持有意思，變更為自居所有人地位加以處分之所有意思，並以出售此一具體行為表現於外，該當「易持有為所有」之侵占行為，於出售完成時即已既遂。甲並無阻卻違法、阻卻罪責事由，應成立刑法第335條第1項普通侵占罪既遂。</p>
+          <p>就第二種情形而言，甲自始即以「借用一日即歸還」之虛偽事實，使乙陷於錯誤而交付手錶，甲取得手錶之持有，其原因本身即係基於施用詐術而來，並非基於乙真實、無瑕疵之委託信賴關係。依實務見解，侵占罪之持有須以合法原因為前提，若行為人取得持有之原因本身即屬不法（如以詐術取得），應逕依詐欺罪論處，無成立侵占罪之餘地。甲自始即無借用之真意，其取得手錶之整體行為過程，應評價為一個詐欺取財行為，甲應成立刑法第339條第1項詐欺取財罪既遂，不另論以侵占罪。</p>
+          <p>兩者之關鍵區別在於：行為人取得持有之「原因」是否合法、真實。前者甲取得持有時並無不法，僅事後起意變易為所有；後者甲自始即以不法手段取得持有，持有本身已屬詐欺既遂之一部，其後之處分行為不再重複評價為侵占。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目二（業務侵占之加重身分與罪數關係）</div>
+        <div class="cb">
+          <p>甲為某公司出納人員，職務上持有並保管公司備用金。甲於半年內先後五次，各自公司業務上持有之備用金中取出若干款項供己花用，每次金額不一，惟均係基於同一「藉職務之便貼補家用」之犯意所為。試附理由分析甲之刑責與罪數關係。</p>
+          <h4>擬答</h4>
+          <p>甲基於出納職務，反覆持續執行保管公司備用金之業務，該備用金屬甲「業務上所持有之物」。甲先後五次自備用金中取出款項供己花用之行為，每一次取款行為均已表現其變易持有為所有之意思，各自該當侵占之實行行為；甲具有業務上持有之加重身分，應適用第336條第2項業務侵占罪之加重規定。</p>
+          <p>就罪數關係而言，甲之五次侵占行為，均係基於同一「藉職務之便貼補家用」之單一犯意，於半年期間內反覆為之，侵害同一被害人（公司）之同一財產法益，各次行為之時間、空間緊密接續、犯罪手法完全相同，依接續犯之法理（可與竊盜罪章多次接續竊取案例類推適用），應評價為基於同一整體犯意接續實行之單一行為，僅論以一個業務侵占既遂罪，不予數罪併罰。</p>
+          <p>甲之行為並無阻卻違法、阻卻罪責事由，具完全責任能力，應成立刑法第336條第2項<span class="conclude-est">業務侵占罪既遂</span>一罪（接續犯，論以一罪），法院於量刑時得就其多次取款、侵占總額等情狀一併審酌。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目三（侵占遺失物與第338條準用第324條親屬特例）</div>
+        <div class="cb">
+          <p>甲於返家途中，拾得其姑丈乙（甲與乙為三親等內姻親關係）不慎遺落之皮夾，內有現金新臺幣2萬元。甲見皮夾內有乙之證件，明知失主為乙，仍逕自取走現金花用，未設法歸還或報請招領。試問甲之刑責為何？程序上有何特殊要求？</p>
+          <h4>擬答</h4>
+          <p>甲拾得乙遺落之皮夾，並無事前委託或其他法律、契約上原因而持有該皮夾，其取得持有之時點，乙對皮夾之持有支配關係業已中斷（遺失），該皮夾屬「離本人所持有之物」。甲明知失主為乙，仍意圖為自己不法之所有，逕自取走現金花用，已表現變易持有為所有之意思，該當侵占遺失物之實行行為，應成立刑法第337條侵占遺失物罪既遂。</p>
+          <p>惟依第338條規定，第324條親屬間犯罪特例準用於本章之罪。甲與乙為姑姪關係，屬三親等內姻親，依第324條第2項規定，於五親等內血親或三親等內姻親之間犯本章之罪者，須告訴乃論，非乙提出告訴，檢察官不得逕行偵查追訴（惟仍得知悉犯罪嫌疑而為必要之調查，僅偵查程序之開展以告訴為前提要件）。若甲與乙屬直系血親、配偶或同財共居親屬（第324條第1項），則甲得依規定免除其刑，非僅告訴乃論而已；惟本案甲、乙僅為三親等內姻親，未達第1項所定親屬範圍，故僅適用第2項告訴乃論之規定，甲之刑責本身不因親屬關係而免除，僅其追訴程序須以乙提出告訴為前提。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目四（既遂時點與中止犯之適用界限）</div>
+        <div class="cb">
+          <p>甲受託代管乙寄放之名貴機車一輛。某日甲私自將機車鑰匙交付予買家丙，並已收受丙交付之部分價金新臺幣5萬元，惟機車本身尚未現實交付予丙。乙返家發現機車鑰匙不見，質問甲，甲隨即坦承並自丙處取回鑰匙、將5萬元全數退還丙。試附理由分析甲之刑責，並說明第27條中止犯規定於本案是否有適用餘地。</p>
+          <h4>擬答</h4>
+          <p>甲基於乙之委託合法持有該機車，屬有法律或契約上原因之持有。甲私自將機車鑰匙交付予丙、並收受丙交付之部分價金之行為，已係自居所有人地位、就該機車進行實質處分之行為，足以表現其變易持有為所有之意思。依侵占罪即成犯之特性，其既遂與否，應以行為人是否已將原持有意思表現為所有意思之具體行為為斷，不以機車現實移轉占有於買方、或買賣交易全部完成為必要。甲交付鑰匙並收受價金之時，其變易持有為所有之意思業已具體表現於外，侵占行為於此時點即已既遂。</p>
+          <p>甲嗣後因乙質問而坦承並取回鑰匙、退還價金之行為，係發生於既遂之後，第27條中止犯規定以「已著手實行而尚未既遂」為適用前提，甲之侵占行為既已既遂，即無成立中止犯之空間；其返還、坦承行為，至多僅得作為法院量刑時審酌之有利事由（如犯後態度、損害是否回復），不生第27條減輕或免除其刑之法定效果，亦與「因己意中止」之未遂情形性質有別，不可混淆。</p>
+          <p>甲之行為並無阻卻違法、阻卻罪責事由，應成立刑法第335條第1項<span class="conclude-est">普通侵占罪既遂</span>，<span class="conclude-not">不適用</span>第27條中止犯規定。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 八、速查卡 -->
+    <section class="section" id="s8">
+      <h2 class="stitle">八、速查卡</h2>
+      <div class="mnemonic-card">
+        <div class="wm">速</div>
+        <h3>記憶口訣</h3>
+        <div class="mnemonic-item">合法持有起手式，易持為所即既遂
+          <small>成立侵占罪之前提須先合法持有他人之物；一旦表現變易持有為所有之意思，即已既遂，不以處分完了為必要</small>
+        </div>
+        <div class="mnemonic-item">既遂之後無中止，返還只能論自首
+          <small>侵占罪既遂後，縱行為人主動返還、坦承犯行，亦無第27條中止犯之適用，僅得依自首等一般量刑事由審酌</small>
+        </div>
+        <table style="margin-top:22px; color:var(--ink); background:var(--paper-card); border-radius:6px; overflow:hidden;">
+          <thead><tr><th>條號</th><th>類型</th><th>持有原因</th><th>法定刑</th><th>未遂處罰</th></tr></thead>
+          <tbody>
+            <tr><td>第335條</td><td>普通侵占</td><td>一般合法原因（委託、保管等）</td><td>5年以下有期徒刑、拘役或科或併科3萬元以下罰金</td><td>罰（§335Ⅱ）</td></tr>
+            <tr><td>第336條Ⅰ</td><td>公務公益侵占</td><td>公務上或因公益持有</td><td>1年以上7年以下，得併科15萬元以下罰金</td><td>罰（§336Ⅲ）</td></tr>
+            <tr><td>第336條Ⅱ</td><td>業務侵占</td><td>業務上持有</td><td>6月以上5年以下，得併科9萬元以下罰金</td><td>罰（§336Ⅲ）</td></tr>
+            <tr><td>第337條</td><td>侵占遺失物</td><td>拾得脫離本人持有之物（非合法委託持有）</td><td>1萬5千元以下罰金</td><td>不罰（無明文）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 九、相關主題 -->
+    <section class="section" id="s9">
+      <h2 class="stitle">九、相關主題</h2>
+      <div class="link-note">
+        本條之核心區辨點——「持有原因是否合法」——與既有講義《<a href="../講義/刑法320條-竊盜罪.html" target="_blank">第320條．普通竊盜罪／竊佔罪</a>》直接相關：兩罪之根本差異在於行為人對財物「有無事前持有」，竊盜罪係破壞他人持有、建立自己新持有，侵占罪則係就自己既有之合法持有變易為所有，建議對照閱讀以掌握財產犯罪「持有支配關係」此一核心概念之體系定位。<br><br>
+        本講義題目一（持有原因合法性與侵占、詐欺之區辨）另涉及既有講義《<a href="../講義/刑法339條-詐欺罪.html" target="_blank">第339條．詐欺罪</a>》：當行為人取得持有之原因本身即係施用詐術而來，應論以詐欺取財罪而非侵占罪，兩罪之區辨關鍵在於「持有取得原因是否出於不法」，建議對照閱讀。<br><br>
+        本條涉及既遂後不得適用中止犯之判斷，另涉及既有講義《<a href="../講義/刑法25-26-27條-未遂犯體系.html" target="_blank">第25、26、27條．未遂犯・不能犯・中止犯體系</a>》：該講義完整整理著手時點理論、既未遂區辨標準、中止犯「因己意」之判斷方式，建議對照閱讀以掌握總則未遂規定於本罪之具體適用（尤其第27條中止犯以「未遂」為適用前提此一體系限制）。（已收錄之其他講義，如第140條侮辱公務員罪、第346條恐嚇取財罪等，章節分類與本條無重疊。）
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const links = [...document.querySelectorAll('nav.sidebar a, .topnav a')];
+  const sections = [...document.querySelectorAll('main .section, main .cover')];
+  const map = new Map();
+  links.forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el) map.set(el, links.filter(l=>l.getAttribute('href')==='#'+id));
+  });
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const els = map.get(entry.target);
+      if(!els) return;
+      if(entry.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        els.forEach(l=>l.classList.add('active'));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>{ if(map.has(s)) observer.observe(s); });
+
+  links.forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
