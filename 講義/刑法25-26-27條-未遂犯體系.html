@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第25、26、27條－未遂犯體系｜法典卷宗講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper-outer:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --line:#ddd3bf;
+    --ink-45:rgba(22,35,59,.45);
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:"Noto Sans TC",sans-serif;
+    background:var(--paper-outer);
+    color:var(--ink);
+    line-height:1.75;
+  }
+  h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex;min-height:100vh;}
+  /* 側邊導覽 */
+  nav.side{
+    width:240px;flex-shrink:0;position:sticky;top:0;height:100vh;
+    background:var(--ink);color:var(--paper-outer);padding:28px 18px;overflow-y:auto;
+  }
+  nav.side .nav-title{font-family:"Noto Serif TC",serif;font-weight:700;font-size:15px;margin-bottom:18px;color:#fff;letter-spacing:.05em;}
+  nav.side a{
+    display:block;color:rgba(251,248,241,.75);text-decoration:none;font-size:13.5px;
+    padding:8px 10px;border-radius:4px;margin-bottom:2px;border-left:3px solid transparent;
+  }
+  nav.side a.todo{color:rgba(251,248,241,.4);}
+  nav.side a:hover,nav.side a.active{background:rgba(255,255,255,.08);border-left-color:var(--brass);color:#fff;}
+  main{flex:1;min-width:0;background:var(--paper-content);box-shadow:-6px 0 18px rgba(0,0,0,.04);}
+  .topnav{display:none;}
+  .wrap{max-width:880px;margin:0 auto;padding:0 28px 80px;}
+
+  /* 封面 */
+  .cover{padding:56px 28px 40px;max-width:880px;margin:0 auto;position:relative;}
+  .eyebrow{font-size:12.5px;letter-spacing:.12em;color:var(--brass);font-weight:700;margin-bottom:10px;}
+  .cover h1{font-size:32px;font-weight:900;color:var(--ink);margin:0 0 8px;line-height:1.35;}
+  .cover .sub{font-size:14.5px;color:var(--ink-45);margin-bottom:14px;}
+  .cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:26px;}
+  .ver-badge,.meta-date,.visitor-badge{
+    font-size:12px;border:1px solid var(--indigo);color:var(--indigo);
+    padding:3px 10px;border-radius:20px;background:var(--paper-card);
+  }
+  .ver-badge{border-color:var(--seal);color:var(--seal);font-weight:700;}
+  .visitor-badge img{vertical-align:middle;}
+  .seal-mark{
+    position:absolute;top:48px;right:28px;width:82px;height:82px;border:2.5px solid var(--seal);
+    border-radius:8px;transform:rotate(6deg);display:flex;align-items:center;justify-content:center;
+    color:var(--seal);writing-mode:vertical-rl;font-family:"Noto Serif TC",serif;font-weight:900;font-size:20px;
+    letter-spacing:.15em;background:rgba(156,43,58,.03);
+  }
+  .toc-box{background:var(--paper-card);border:1px solid var(--line);border-radius:8px;padding:18px 22px;}
+  .toc-box h4{margin:0 0 10px;font-size:13px;color:var(--brass);letter-spacing:.05em;}
+  .toc-box ol{margin:0;padding-left:20px;font-size:13.5px;color:var(--ink);}
+  .toc-box li{margin-bottom:5px;}
+
+  section{padding:46px 0;border-bottom:1px dashed var(--line);}
+  section:last-child{border-bottom:none;}
+  .section-head{display:flex;align-items:baseline;gap:10px;margin-bottom:22px;}
+  .section-num{font-family:"Noto Serif TC",serif;color:var(--brass);font-size:14px;font-weight:700;}
+  h2.stitle{font-size:22px;font-weight:900;color:var(--ink);margin:0;border-left:4px solid var(--indigo);padding-left:12px;}
+  h3.sub-title{font-size:16.5px;font-weight:700;color:var(--indigo);border-left:3px solid var(--indigo);padding-left:10px;margin:26px 0 12px;}
+
+  /* 條文框 */
+  .article-box{
+    position:relative;background:var(--paper-card);border-left:3px solid var(--indigo);
+    border-radius:4px;padding:20px 24px;margin-bottom:16px;overflow:hidden;
+    box-shadow:0 1px 3px rgba(22,35,59,.06);
+  }
+  .article-box .num-watermark{
+    position:absolute;right:6px;bottom:-18px;font-family:"Noto Serif TC",serif;font-weight:900;
+    font-size:96px;color:var(--ink);opacity:.06;line-height:1;pointer-events:none;
+  }
+  .article-box h4{margin:0 0 10px;font-size:15.5px;color:var(--ink);}
+  .article-box p{margin:0 0 6px;position:relative;z-index:1;}
+
+  table{width:100%;border-collapse:collapse;margin:14px 0 22px;font-size:13.5px;background:var(--paper-card);}
+  th,td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top;}
+  th{background:var(--ink);color:var(--paper-outer);font-weight:700;font-family:"Noto Serif TC",serif;}
+  tr:nth-child(even) td{background:#f6f1e6;}
+  tr:nth-child(odd) td{background:#fffdf8;}
+
+  .conclude-yes{font-weight:700;color:var(--ink);background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .conclude-no{font-weight:700;color:var(--seal);}
+
+  .case-card,.essay-card{
+    background:var(--paper-card);border-radius:8px;margin-bottom:20px;
+    box-shadow:0 1px 2px rgba(22,35,59,.06),0 6px 16px rgba(22,35,59,.05);overflow:hidden;
+  }
+  .case-card .card-head{background:var(--indigo);color:#fff;padding:10px 18px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:14.5px;}
+  .essay-card .card-head{background:var(--ink);color:#fff;padding:10px 18px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:14.5px;}
+  .case-card .card-body,.essay-card .card-body{padding:18px 20px;font-size:14px;}
+  .case-card .card-body p{margin:0 0 10px;}
+  .case-card .card-body p:last-child{margin-bottom:0;}
+  .tag{display:inline-block;font-size:11.5px;background:#eee3c8;color:var(--brass);border-radius:3px;padding:1px 8px;margin-right:6px;}
+
+  .placeholder{
+    border:2px dashed var(--line);border-radius:8px;padding:34px 20px;text-align:center;
+    background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, transparent 10px 20px);
+  }
+  .placeholder .icon{font-size:26px;margin-bottom:8px;}
+  .placeholder p{color:var(--ink-45);font-size:13.5px;margin:0 0 10px;}
+  .badge-todo{display:inline-block;background:var(--brass);color:#fff;font-size:11.5px;padding:3px 12px;border-radius:20px;}
+
+  .quickcard{background:var(--ink);color:var(--paper-outer);border-radius:10px;padding:28px 26px;position:relative;overflow:hidden;}
+  .quickcard::after{content:"速";position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-size:150px;font-weight:900;opacity:.08;}
+  .quickcard h3{color:#fff;margin-top:0;font-size:17px;}
+  .quickcard .motto{background:var(--seal);color:#fff;border-radius:6px;padding:12px 16px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:16px;margin:14px 0;letter-spacing:.05em;}
+  .quickcard ul{margin:0;padding-left:20px;font-size:13.5px;}
+  .quickcard li{margin-bottom:6px;}
+
+  .link-note{border:1px dashed var(--line);border-radius:8px;padding:16px 20px;font-size:13.5px;background:var(--paper-card);}
+  .link-note h4{margin:0 0 8px;font-size:13px;color:var(--brass);}
+  .link-note a{display:block;margin-bottom:4px;}
+
+  .source-box{border-top:1px dashed var(--line);margin-top:14px;padding-top:10px;font-size:12.5px;color:var(--ink-45);}
+  .source-box a{color:var(--indigo);}
+
+  @media (max-width:980px){
+    nav.side{display:none;}
+    .layout{display:block;}
+    .topnav{
+      display:flex;position:sticky;top:0;z-index:20;background:var(--ink);overflow-x:auto;
+      padding:10px 12px;gap:8px;white-space:nowrap;
+    }
+    .topnav a{color:rgba(251,248,241,.8);text-decoration:none;font-size:12.5px;padding:6px 12px;border:1px solid rgba(255,255,255,.15);border-radius:20px;}
+    .topnav a.active{background:var(--brass);color:#fff;border-color:var(--brass);}
+    .topnav a.todo{opacity:.5;}
+    main{box-shadow:none;}
+    .cover{padding:40px 20px 30px;}
+    .cover h1{font-size:24px;}
+    .seal-mark{position:static;margin-bottom:16px;transform:rotate(0);writing-mode:horizontal-tb;width:auto;height:auto;padding:6px 14px;display:inline-flex;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+  <nav class="side" id="sideNav">
+    <div class="nav-title">刑法第25・26・27條</div>
+    <a href="#cover">封面</a>
+    <a href="#art">一、條文原文</a>
+    <a href="#structure">二、條文結構</a>
+    <a href="#mindmap">三、體系心智圖</a>
+    <a href="#tier">四、三階層與體系定位</a>
+    <a href="#doctrine">五、學說見解</a>
+    <a href="#practice">六、實務見解</a>
+    <a href="#cases">七、教學案例</a>
+    <a href="#essay">八、申論練習題</a>
+    <a href="#quickcard">九、速查卡</a>
+  </nav>
+  <main>
+    <div class="topnav" id="topNav">
+      <a href="#cover">封面</a>
+      <a href="#art">條文</a>
+      <a href="#structure">結構</a>
+      <a href="#mindmap">心智圖</a>
+      <a href="#tier">三階層</a>
+      <a href="#doctrine">學說</a>
+      <a href="#practice">實務</a>
+      <a href="#cases">案例</a>
+      <a href="#essay">申論</a>
+      <a href="#quickcard">速查</a>
+    </div>
+
+    <div class="cover" id="cover">
+      <div class="seal-mark">未遂</div>
+      <div class="eyebrow">第一編總則・第三章 未遂犯（§25－§27）</div>
+      <h1>未遂犯・不能犯・中止犯<br>——刑法第25、26、27條體系解析</h1>
+      <div class="sub">普通未遂／不能未遂／中止未遂三條一體之教學講義</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.1</span>
+        <span class="meta-date">最後更新：2026-08-29</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.25-26-27" alt="訪客計數"></span>
+      </div>
+      <div class="toc-box">
+        <h4>本講義目錄</h4>
+        <ol>
+          <li>條文原文（§25／§26／§27）</li>
+          <li>條文結構：未遂犯體系總覽</li>
+          <li>體系心智圖</li>
+          <li>與犯罪三階層之體系定位</li>
+          <li>學說見解</li>
+          <li>實務見解</li>
+          <li>教學案例（四則）</li>
+          <li>申論練習題與模擬解答（四題）</li>
+          <li>速查卡</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="wrap">
+
+    <section id="art">
+      <div class="section-head"><span class="section-num">01</span><h2 class="stitle">條文原文</h2></div>
+
+      <div class="article-box">
+        <div class="num-watermark">25</div>
+        <h4>刑法第25條（未遂犯）</h4>
+        <p>Ⅰ　已著手於犯罪行為之實行而不遂者，為未遂犯。</p>
+        <p>Ⅱ　未遂犯之處罰，以有特別規定者為限，並得按既遂犯之刑減輕之。</p>
+      </div>
+
+      <div class="article-box">
+        <div class="num-watermark">26</div>
+        <h4>刑法第26條（不能犯）</h4>
+        <p>行為不能發生犯罪之結果，又無危險者，不罰。</p>
+      </div>
+
+      <div class="article-box">
+        <div class="num-watermark">27</div>
+        <h4>刑法第27條（中止犯）</h4>
+        <p>Ⅰ　已著手於犯罪行為之實行，而因己意中止或防止其結果之發生者，減輕或免除其刑。結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦同。</p>
+        <p>Ⅱ　前項規定，於正犯或共犯中之一人或數人，因己意防止犯罪結果之發生，或結果之不發生，非防止行為所致，而行為人已盡力為防止行為者，亦適用之。</p>
+      </div>
+    </section>
+
+    <section id="structure">
+      <div class="section-head"><span class="section-num">02</span><h2 class="stitle">條文結構：未遂犯體系總覽</h2></div>
+      <p>三條文具有明確之邏輯先後順序，判斷時不可跳躍、不可倒置：</p>
+      <table>
+        <tr><th>判斷順序</th><th>條文</th><th>核心問題</th><th>法律效果</th></tr>
+        <tr><td>①</td><td>§25</td><td>是否已「著手」於犯罪行為之實行，而未達既遂（不遂）？</td><td>成立未遂犯（前提：分則有處罰未遂之特別規定）</td></tr>
+        <tr><td>②</td><td>§26</td><td>該未遂行為是否「不能發生結果，又無危險」？</td><td>屬不能犯者，不罰（不成立犯罪）</td></tr>
+        <tr><td>③</td><td>§27</td><td>行為人是否「因己意」中止實行或防止結果發生？</td><td>屬中止犯者，減輕或免除其刑</td></tr>
+      </table>
+      <p style="font-size:13.5px;color:var(--ink-45);">關係說明：§26、§27 均以「已符合 §25 未遂犯之構成」為前提，二者彼此互斥、非同時併存——同一行為若屬不能犯（§26 不罰），即無須再論是否中止（§27）；反之若行為原屬有危險之障礙未遂，才需再進一步檢驗有無中止犯之適用。</p>
+    </section>
+
+    <section id="mindmap">
+      <div class="section-head"><span class="section-num">03</span><h2 class="stitle">體系心智圖</h2></div>
+      <p style="font-size:13.5px;color:var(--ink-45);margin-bottom:16px;">以下心智圖彙整§25－§27之判斷順序、各階段核心問題與對應理論／效果，輔助建立整體體系圖像。</p>
+      <div style="background:var(--paper-card);border:1px solid var(--line);border-radius:8px;padding:12px;overflow-x:auto;">
+      <svg viewBox="0 0 980 620" width="100%" style="min-width:760px;display:block;font-family:'Noto Sans TC',sans-serif;">
+        <defs>
+          <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#2c4a76"/>
+          </marker>
+        </defs>
+
+        <!-- 中心節點 -->
+        <rect x="390" y="10" width="200" height="56" rx="10" fill="#16233b"/>
+        <text x="490" y="34" text-anchor="middle" fill="#fbf8f1" font-family="Noto Serif TC" font-weight="700" font-size="16">未遂犯體系</text>
+        <text x="490" y="54" text-anchor="middle" fill="#fbf8f1" font-size="11">刑法§25－§27</text>
+
+        <!-- 連線：中心到三分支 -->
+        <line x1="490" y1="66" x2="180" y2="120" stroke="#2c4a76" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="490" y1="66" x2="490" y2="120" stroke="#2c4a76" stroke-width="2" marker-end="url(#arrow)"/>
+        <line x1="490" y1="66" x2="800" y2="120" stroke="#2c4a76" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <!-- §25 分支 -->
+        <rect x="60" y="122" width="240" height="54" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+        <text x="180" y="144" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">§25 未遂犯</text>
+        <text x="180" y="163" text-anchor="middle" font-size="11.5" fill="#5b6472">Step 1：已否著手？</text>
+
+        <line x1="180" y1="176" x2="180" y2="210" stroke="#a9832f" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <rect x="40" y="212" width="280" height="76" rx="6" fill="#fffdf8" stroke="#ddd3bf"/>
+        <text x="180" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#16233b">著手判斷理論</text>
+        <text x="180" y="250" text-anchor="middle" font-size="11" fill="#5b6472">形式客觀說／實質客觀說</text>
+        <text x="180" y="266" text-anchor="middle" font-size="11" fill="#5b6472">主觀說</text>
+        <text x="180" y="282" text-anchor="middle" font-size="11" font-weight="700" fill="#9c2b3a">通說：主客觀混合說（印象理論）</text>
+
+        <line x1="180" y1="288" x2="180" y2="320" stroke="#2c4a76" stroke-width="1.6"/>
+        <rect x="60" y="322" width="240" height="46" rx="6" fill="#f6f1e6" stroke="#ddd3bf"/>
+        <text x="180" y="349" text-anchor="middle" font-size="11.5" fill="#16233b">前提：分則須有處罰未遂之特別規定</text>
+
+        <!-- §26 分支 -->
+        <rect x="370" y="122" width="240" height="54" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+        <text x="490" y="144" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">§26 不能犯</text>
+        <text x="490" y="163" text-anchor="middle" font-size="11.5" fill="#5b6472">Step 2：有無具體危險？</text>
+
+        <line x1="490" y1="176" x2="490" y2="210" stroke="#a9832f" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <rect x="350" y="212" width="280" height="76" rx="6" fill="#fffdf8" stroke="#ddd3bf"/>
+        <text x="490" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#16233b">危險判斷標準</text>
+        <text x="490" y="250" text-anchor="middle" font-size="11" fill="#5b6472">具體危險說（一般人角度）</text>
+        <text x="490" y="266" text-anchor="middle" font-size="11" fill="#5b6472">重大無知說（僅供參考）</text>
+        <text x="490" y="282" text-anchor="middle" font-size="11" font-weight="700" fill="#9c2b3a">無危險＝不能犯，不罰</text>
+
+        <line x1="490" y1="288" x2="490" y2="320" stroke="#2c4a76" stroke-width="1.6"/>
+        <rect x="370" y="322" width="240" height="46" rx="6" fill="#f6f1e6" stroke="#ddd3bf"/>
+        <text x="490" y="349" text-anchor="middle" font-size="11.5" fill="#16233b">有危險，僅偶然未生結果＝障礙未遂</text>
+
+        <!-- §27 分支 -->
+        <rect x="680" y="122" width="240" height="54" rx="8" fill="#fffdf8" stroke="#2c4a76" stroke-width="2"/>
+        <text x="800" y="144" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="14" fill="#16233b">§27 中止犯</text>
+        <text x="800" y="163" text-anchor="middle" font-size="11.5" fill="#5b6472">Step 3：是否因己意？</text>
+
+        <line x1="800" y1="176" x2="800" y2="210" stroke="#a9832f" stroke-width="1.6" stroke-dasharray="5 5"/>
+        <rect x="660" y="212" width="280" height="76" rx="6" fill="#fffdf8" stroke="#ddd3bf"/>
+        <text x="800" y="232" text-anchor="middle" font-size="12" font-weight="700" fill="#16233b">因己意判斷標準</text>
+        <text x="800" y="250" text-anchor="middle" font-size="11" fill="#5b6472">得遂行卻不欲遂行＝因己意</text>
+        <text x="800" y="266" text-anchor="middle" font-size="11" fill="#5b6472">欲遂行卻不得遂行＝非因己意</text>
+        <text x="800" y="282" text-anchor="middle" font-size="11" font-weight="700" fill="#9c2b3a">因己意＝減輕或免除其刑</text>
+
+        <line x1="800" y1="288" x2="800" y2="320" stroke="#2c4a76" stroke-width="1.6"/>
+        <rect x="680" y="322" width="240" height="46" rx="6" fill="#f6f1e6" stroke="#ddd3bf"/>
+        <text x="800" y="349" text-anchor="middle" font-size="11.5" fill="#16233b">準中止犯：已盡力防止亦同</text>
+
+        <!-- 底部總結 -->
+        <line x1="180" y1="368" x2="180" y2="420" stroke="#2c4a76" stroke-width="1.6"/>
+        <line x1="490" y1="368" x2="490" y2="420" stroke="#2c4a76" stroke-width="1.6"/>
+        <line x1="800" y1="368" x2="800" y2="420" stroke="#2c4a76" stroke-width="1.6"/>
+        <line x1="180" y1="420" x2="800" y2="420" stroke="#2c4a76" stroke-width="1.6"/>
+        <line x1="490" y1="420" x2="490" y2="450" stroke="#2c4a76" stroke-width="2" marker-end="url(#arrow)"/>
+
+        <rect x="280" y="452" width="420" height="60" rx="10" fill="#16233b"/>
+        <text x="490" y="476" text-anchor="middle" fill="#fbf8f1" font-family="Noto Serif TC" font-weight="700" font-size="14">審查順序不可跳躍、不可倒置</text>
+        <text x="490" y="496" text-anchor="middle" fill="#fbf8f1" font-size="11.5">著手（§25）→ 有無危險（§26）→ 是否因己意（§27）</text>
+
+        <text x="490" y="540" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#9c2b3a">記憶口訣：著手未遂在先，危險己意在後</text>
+      </svg>
+      </div>
+    </section>
+
+    <section id="tier">
+      <div class="section-head"><span class="section-num">04</span><h2 class="stitle">與犯罪三階層之體系定位</h2></div>
+      <p style="font-size:13.5px;color:var(--ink-45);margin-bottom:16px;">本三條屬總則性質之特別規定，非個別罪名，不強行套用完整三階層架構，僅呈現與各條相關之階層定位。</p>
+
+      <h3 class="sub-title">§25 未遂犯——構成要件該當性層次</h3>
+      <table>
+        <tr><th>要素</th><th>內容</th></tr>
+        <tr><td>客觀構成要件</td><td>行為人已「著手」實行構成要件行為，但未發生分則所規定之既遂結果（結果或行為未完全實現）</td></tr>
+        <tr><td>主觀構成要件</td><td>行為人須出於既遂之故意（即行為人主觀上係欲使犯罪既遂，僅因故意以外之原因未遂）</td></tr>
+        <tr><td>處罰前提</td><td>限於刑法分則就該罪「有處罰未遂之特別規定」者，始得論以未遂犯（§25Ⅱ）</td></tr>
+      </table>
+      <p style="font-size:13.5px;">著手時點之判斷理論，詳見下方「學說見解」與「實務見解」。</p>
+
+      <h3 class="sub-title">§26 不能犯——不成立犯罪（構成要件層次之爭議）</h3>
+      <p style="font-size:13.5px;">學說對「不罰」之定性尚有爭議：有認屬阻卻構成要件（行為根本未製造法所不容許之風險，不成立未遂）；亦有認屬獨立之處罰阻卻事由（已該當未遂構成要件，僅因欠缺可罰性而不罰）。詳見「學說見解」。</p>
+
+      <h3 class="sub-title">§27 中止犯——個人減免刑罰事由</h3>
+      <p style="font-size:13.5px;">中止犯不影響犯罪之成立（構成要件該當性、違法性、有責性均已具備），僅係立法者基於刑事政策考量（獎勵行為人自願回頭、給予「黃金橋」），所設之個人減免刑罰事由，性質上非傳統三階層之要素，學說上多將其歸類為獨立於三階層之外的量刑寬典規定。</p>
+      <p style="font-size:13.5px;">本條不涉及違法性階層之判斷（未遂／不能／中止之爭點均發生於構成要件該當性確定與否、及既遂前之特別規定層次）。</p>
+    </section>
+
+    <section id="doctrine">
+      <div class="section-head"><span class="section-num">05</span><h2 class="stitle">學說見解</h2></div>
+
+      <h3 class="sub-title">§25　著手時點之判斷理論</h3>
+      <table>
+        <tr><th>學者／見解</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>林山田</td>
+          <td>系統整理著手理論之客觀說（形式客觀說／實質客觀說）與主觀說，並指出我國實務在個案中究竟採形式客觀說或實質客觀說，尚無統一見解。</td>
+          <td>《刑法通論上冊》，2006年增訂9版，頁446-453</td>
+        </tr>
+        <tr>
+          <td>通說（多數學者，如林鈺雄、王皇玉等）</td>
+          <td>採「主客觀混合理論（印象理論）」：以行為人主觀之犯罪計畫為判斷基礎，客觀上該行為須已對構成要件保護之法益形成直接、具體之危險，始屬著手。此說兼顧主觀犯意與客觀危險，避免形式客觀說過度限縮、主觀說過度擴張未遂犯範圍。</td>
+          <td>王皇玉《刑法總則》；林鈺雄《新刑法總則》（原始頁碼待日後補查核實）</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">§26　不能犯「不罰」之定性與危險判斷標準</h3>
+      <table>
+        <tr><th>學者／見解</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>蕭宏宜（學說整理引註）</td>
+          <td>主張不能犯屬「阻卻構成要件」：行為未製造法所不容許之風險，根本未達著手程度，無所謂未遂可言，因欠缺應罰性而犯罪不成立。</td>
+          <td>轉引自高點法律專班判解集第72期，頁28（原始出處待日後補查核實）</td>
+        </tr>
+        <tr>
+          <td>學說爭議（具體危險說 vs. 重大無知說）</td>
+          <td>具體危險說：綜合行為時一般人所認識及行為人主觀特別認識之事實，以一般人角度判斷有無侵害法益之具體危險。重大無知說：以行為人主觀認識之事實為基礎，判斷行為人是否「重大無知」而誤認。通說認為「重大無知」僅得作為判斷有無危險之參考之一，不宜作為唯一判準，因刑法明確性原則下，「無危險」與「重大無知」文義相距過遠。</td>
+          <td>綜合整理自實務判決引用之學說討論（原始學者專書出處待日後補查核實）</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">§27　中止犯「因己意」與「準中止犯」</h3>
+      <table>
+        <tr><th>學者／見解</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>黃榮堅</td>
+          <td>討論「己意中止」之判斷不應要求具備倫理價值之動機，行為人主觀上出於自主意願、產生完全永久放棄犯罪計畫之意思即足。並闡述2005年修法增訂之「準中止犯」（結果不發生非防止行為所致，但行為人已盡力防止者，亦同）之立法沿革與定位。</td>
+          <td>《基礎刑法學（下）》，2012年四版，頁566</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="practice">
+      <div class="section-head"><span class="section-num">06</span><h2 class="stitle">實務見解</h2></div>
+
+      <h3 class="sub-title">§25　著手時點</h3>
+      <table>
+        <tr><th>案號</th><th>要旨</th></tr>
+        <tr>
+          <td>最高法院111年度台上字第5588號刑事判決</td>
+          <td>詳細評述形式客觀說、實質客觀說、主觀說三者之缺失，肯認「主客觀混合說」較可採：以行為人主觀認識之事實為基礎背景，加上客觀層面對保護客體形成直接危險之限制，判斷著手時點，並以此判斷強制性交罪之著手。</td>
+        </tr>
+        <tr>
+          <td>最高法院48年台上字第1367號判例（舊字號，僅供參考）</td>
+          <td>刑法上所謂著手，係指對於構成犯罪要件之行為，已開始實行者而言；著手前之準備行動，屬預備行為，尚未達著手程度。</td>
+        </tr>
+      </table>
+      <p style="font-size:12.5px;color:var(--ink-45);">說明：「判例」制度已於民國108年法院組織法修正後不再選編，48年台上字第1367號判例現僅作為裁判先例參考，不具過去之拘束力。</p>
+
+      <h3 class="sub-title">§26　不能未遂之危險判斷</h3>
+      <table>
+        <tr><th>案號</th><th>要旨</th></tr>
+        <tr>
+          <td>最高法院101年度台上字第4182號刑事判決</td>
+          <td>不能犯係因行為人雖已將主觀惡意表現於外，但客觀上對行為客體絕無可能發生行為人所希望之實害或危險，對整體法秩序亦不致產生不安或干擾，刑法乃予容忍不加處罰。</td>
+        </tr>
+        <tr>
+          <td>最高法院101年度台上字第4645號刑事判決</td>
+          <td>說明具體危險說與重大無知說之內容與差異，並指出二說絕大部分結論並無二致；重大無知不宜作為認定有無危險之唯一判準，僅得作為參考因素之一。</td>
+        </tr>
+        <tr>
+          <td>最高法院99年度台上字第2419號刑事判決</td>
+          <td>若行為有侵害法益之危險，僅因一時、偶然之原因致未對法益造成侵害，則屬障礙未遂（§25），而非不能未遂（§26）。</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">§27　因己意之判斷</h3>
+      <table>
+        <tr><th>案號</th><th>要旨</th></tr>
+        <tr>
+          <td>最高法院107年度台上字第674號刑事判決</td>
+          <td>區別中止未遂與障礙未遂之基本標準：「縱使得以遂行，卻不欲遂行」為因己意中止；「縱使欲遂行，卻不得遂行」為非因己意中止。</td>
+        </tr>
+        <tr>
+          <td>最高法院89年度台上字第3009號刑事判決</td>
+          <td>中止未遂與障礙未遂之區別，在於行為人終止犯罪行為或防止結果發生，是否出於自由意志，而非受外界事務影響；縱終止動機源於他人勸說，仍不妨害因己意中止之認定。</td>
+        </tr>
+      </table>
+
+      <div class="source-box">
+        以上判決全文可至司法院裁判書查詢系統（<a href="https://judgment.judicial.gov.tw/" target="_blank">https://judgment.judicial.gov.tw/</a>）輸入對應案號查閱。<br>
+        本條（§25－§27）目前查無大法官解釋或憲法法庭判決，理由推測為條文構成要件明確、爭議屬解釋適用層次，尚未有人以此聲請違憲審查。
+      </div>
+    </section>
+
+    <section id="cases">
+      <div class="section-head"><span class="section-num">07</span><h2 class="stitle">教學案例</h2></div>
+      <p style="font-size:12.5px;color:var(--ink-45);margin-bottom:18px;">以下四則案例均為教學用途虛構，人物、地點、情節純屬設計，用於輔助理解條文要件，非真實事件。</p>
+
+      <div class="case-card">
+        <div class="card-head">案例一・著手時點的認定（§25）</div>
+        <div class="card-body">
+          <p><b>事實：</b>甲欲竊取乙住宅內財物，深夜翻牆進入乙家庭院，正伸手扳動窗戶鎖欲開窗進入屋內時，因驚動看門犬而倉皇逃離，尚未進入屋內。</p>
+          <p><b>爭點：</b>甲扳動窗鎖之行為，是否已達竊盜罪之「著手」？</p>
+          <p><b>分析：</b>依主客觀混合說，須以甲之犯罪計畫為背景，判斷其行為是否對乙之財產法益形成直接危險。甲翻牆入院僅屬接近犯罪客體之預備行為；然扳動窗鎖已係為進入屋內取財之直接前置行為，依一般社會觀念，此行為若未受阻，將緊接發生入室搜尋財物之行為，對財產法益已形成密切、直接之危險，應認已達著手。</p>
+          <p><b>結論：</b>甲成立<span class="conclude-yes">加重竊盜未遂罪</span>（刑法第321條第1項第1款、第25條）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="card-head">案例二・不能犯（§26）</div>
+        <div class="card-body">
+          <p><b>事實：</b>丙誤信民間偏方，認為長期服用過量食鹽可致人於死，遂於丁的飲料中摻入大量食鹽，欲毒殺丁。丁飲用後僅感噁心，並無生命危險。</p>
+          <p><b>爭點：</b>丙之行為是否構成殺人未遂，或屬不能犯而不罰？</p>
+          <p><b>分析：</b>依具體危險說，應綜合行為時一般人所認識及丙主觀特別認識之事實，判斷該行為是否對丁之生命法益形成具體危險。食鹽於通常攝取量下並無致死之藥理作用，此為一般人依生活經驗與科學知識所公認之因果法則；丙誤信偏方之認識，屬其個人重大無知之誤認，並未使行為產生客觀上之致死危險。</p>
+          <p><b>結論：</b>丙之行為<span class="conclude-no">不能發生犯罪結果，又無危險</span>，依刑法第26條規定<span class="conclude-no">不罰</span>（不成立殺人未遂罪）。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="card-head">案例三・因己意中止（§27Ⅰ前段）</div>
+        <div class="card-body">
+          <p><b>事實：</b>戊與己發生口角後持刀作勢欲刺向己胸口，己驚恐求饒，戊見狀心生不忍，主動放下刀子並向己道歉離去，己並未受傷。</p>
+          <p><b>爭點：</b>戊之棄刀離去，是否屬「因己意」中止？</p>
+          <p><b>分析：</b>依實務見解，判斷標準在於「縱使得以遂行，卻不欲遂行」。戊當時仍有繼續行凶之客觀能力（刀在手中、己未逃離、無第三人介入），僅因己身心生不忍之主觀轉念而放棄，並無外界障礙事由介入，故屬因己意中止。</p>
+          <p><b>結論：</b>戊成立<span class="conclude-yes">殺人未遂罪</span>（刑法第271條第2項、第25條），惟因己意中止而未生結果，依<span class="conclude-yes">刑法第27條第1項前段</span>減輕或免除其刑。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="card-head">案例四・準中止犯（§27Ⅰ後段）</div>
+        <div class="card-body">
+          <p><b>事實：</b>庚於辛之飲品中下毒欲致辛於死，下毒後庚心生悔意，立即撥打119將辛送醫並如實告知醫護人員中毒成分，惟辛仍因毒性發作過快而不治死亡。</p>
+          <p><b>爭點：</b>庚已盡力防止結果發生，但結果仍發生，能否適用中止犯規定？</p>
+          <p><b>分析：</b>2005年修法增訂之「準中止犯」明文規定：結果之不發生非防止行為所致，而行為人已盡力為防止行為者，亦同。本案結果（死亡）雖仍發生而非「不發生」，與條文文義所指之「結果不發生」情形有別——此處應注意：本案結果既已發生，即無成立未遂之空間，應直接論以既遂罪，無§27適用之餘地；準中止犯之適用前提，仍以結果最終未發生為必要。</p>
+          <p><b>結論：</b>庚成立<span class="conclude-no">殺人既遂罪</span>（刑法第271條第1項），其送醫及自首行為僅得作為<span class="conclude-no">刑法第62條自首</span>或量刑之酌減事由，<span class="conclude-no">不適用</span>第27條中止犯規定（本案作為對照組，用以釐清中止犯僅適用於結果未發生之未遂階段）。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="essay">
+      <div class="section-head"><span class="section-num">08</span><h2 class="stitle">申論練習題與模擬解答</h2></div>
+      <p style="font-size:12.5px;color:var(--ink-45);margin-bottom:18px;"><span class="tag">AI出題</span>經使用者授權由AI設計，供練習使用，非真實考題。</p>
+
+      <div class="essay-card">
+        <div class="card-head">申論題一</div>
+        <div class="card-body">
+          <p><b>題目：</b>甲意圖殺害仇人乙，於乙住家附近埋伏，見一人身影酷似乙，遂持刀刺向該人身影，事後發現遭刺者實為路人丙。試問：（一）甲之行為應如何評價其著手時點？（二）此與客體錯誤／打擊錯誤之定性有無關聯？</p>
+          <p><b>模擬解答：</b></p>
+          <p>依刑法第25條第1項，已著手於犯罪行為之實行而不遂者，為未遂犯。著手時點之判斷，實務與通說均採主客觀混合說（印象理論），以行為人之犯罪計畫為主觀背景，並以該行為是否已對構成要件保護之法益形成直接、具體之危險為客觀限制。甲埋伏後持刀刺向該人身影之行為，其主觀上已具備殺人故意，客觀上刺擊動作已直接對他人生命法益形成緊迫危險，應認已達殺人罪之著手，成立殺人未遂罪（刑法第271條第2項、第25條）。</p>
+          <p>至於甲誤認丙為乙而下手，屬行為人對行為客體之認識錯誤，通說依法定符合說處理：因殺人罪之保護法益為「人」之生命，不因被害人具體身分而異，甲主觀上有殺人故意，客觀上亦發生死亡結果之危險，此一認識錯誤不阻卻故意，仍成立對丙之殺人未遂罪，與著手時點之判斷係屬二事，惟均以甲之行為已否對法益形成直接危險作為共通判斷基礎。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="card-head">申論題二</div>
+        <div class="card-body">
+          <p><b>題目：</b>丁欲以符咒詛咒仇人戊，深信此舉能使戊生病死亡，遂於自家焚燒符咒作法。試問丁之行為應如何論罪？</p>
+          <p><b>模擬解答：</b></p>
+          <p>丁主觀上具有殺人故意並已著手實行（焚符作法），惟依一般人之生活經驗與科學認知，焚燒符咒並無致人於死之因果作用力，客觀上絕無可能對戊之生命法益產生任何實害或危險，亦不致對整體法秩序造成不安或干擾。依具體危險說，應綜合行為時一般人所認識及丁主觀特別認識之事實，本諸客觀上一般人依知識、經驗及觀念所公認之因果法則判斷，丁之行為顯係出於對因果法則之重大誤認（重大無知），不具備發生結果之現實可能性，亦無侵害法益之具體危險。</p>
+          <p>依刑法第26條規定，行為不能發生犯罪之結果，又無危險者，不罰。丁之行為應論以不能犯，<span class="conclude-no">不成立殺人未遂罪</span>。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="card-head">申論題三</div>
+        <div class="card-body">
+          <p><b>題目：</b>己意圖縱火燒毀鄰居庚之倉庫，已點燃引火物，火苗剛起，己聽聞遠處警笛聲，誤以為警察已發現而心生恐懼，隨即以水撲滅火苗離去。事後查明該警笛聲僅係救護車經過，與己之犯行無關。試問己得否主張中止犯？</p>
+          <p><b>模擬解答：</b></p>
+          <p>己已著手放火燒毀他人所有建築物罪之實行（點燃引火物），並已盡力防止結果發生（以水撲滅），結果最終未發生，形式上似合致刑法第27條第1項之要件。惟中止犯之核心要件在於「因己意」，依實務見解之判斷標準，須區辨「縱使得以遂行，卻不欲遂行」（因己意）與「縱使欲遂行，卻不得遂行」（非因己意）。</p>
+          <p>己係因誤信警察已發現而心生恐懼始撲滅火苗，其中止之動機源於對外界障礙事由之誤認（誤以為即將被查獲），並非單純基於自主意願之翻然悔悟。依通說與實務見解，行為人縱因誤想的外界障礙而中止，仍應依其主觀認識之情狀判斷：若行為人主觀上認為存在足以形成障礙之外界事由，即便該事由客觀上不存在，仍屬「非因己意」中止，而非因己意中止。</p>
+          <p>故己之行為應論以放火罪之<span class="conclude-no">障礙未遂</span>（刑法第173條第1項、第25條），<span class="conclude-no">不適用</span>第27條中止犯減輕或免除其刑之規定；至多得依刑法第57條量刑審酌其撲滅火苗、未生實害之犯後態度。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="card-head">申論題四</div>
+        <div class="card-body">
+          <p><b>題目：</b>試申論刑法第25條、第26條、第27條三者於體系上之邏輯關係，並說明審查案例時應如何依序適用。</p>
+          <p><b>模擬解答：</b></p>
+          <p>刑法第25條至第27條乃我國刑法總則就未遂犯所建構之完整體系，三者具有明確之邏輯先後順序，審查時不可跳躍或倒置。首先，應依第25條判斷行為人是否已「著手」於犯罪行為之實行而未達既遂，此為未遂犯體系判斷之起點；著手時點之認定，實務與通說均採主客觀混合說，以行為人主觀犯罪計畫為背景，並以客觀上是否對保護法益形成直接危險為限制。若行為人尚未著手，僅屬預備行為，除法律有處罰預備犯之特別規定外，不為罪；若已著手而分則罪名復無處罰未遂之特別規定者，依第25條第2項反面解釋，亦不罰。</p>
+          <p>其次，於肯認成立未遂犯之前提下，應依第26條進一步審查該行為是否「不能發生犯罪之結果，又無危險」。此一判斷與第25條之著手判斷層次不同：著手判斷行為之危險是否已達「開始」之程度，第26條則進一步審查該已著手之行為，客觀上有無發生結果之具體危險。若行為出於對因果法則之重大誤認，客觀上絕無侵害法益之可能與危險，應論以不能犯而不罰；反之，若僅因偶然原因未生結果，但仍有侵害法益之危險，則屬障礙未遂，非不能未遂，仍應依第25條論以未遂犯。</p>
+          <p>最後，於確定行為屬有處罰必要之障礙未遂（而非不能犯）之前提下，始有討論第27條中止犯之空間，審查行為人是否「因己意」中止實行或防止結果發生。此一判斷聚焦於行為人主觀上之中止動機是否出於自主意願，抑或受外界障礙事由（含誤想之障礙）所迫；若屬前者，依第27條減輕或免除其刑，若屬後者，仍為單純之障礙未遂。三條文環環相扣，其審查順序不可任意調換，蓋不能犯與中止犯之判斷，均以先肯認未遂犯之成立為邏輯前提。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="quickcard">
+      <div class="section-head"><span class="section-num">09</span><h2 class="stitle">速查卡</h2></div>
+      <div class="quickcard">
+        <h3>未遂犯體系三步驟</h3>
+        <div class="motto">著手未遂在先，危險己意在後</div>
+        <ul>
+          <li><b>Step 1（§25）：</b>已否著手？分則有無處罰未遂之特別規定？</li>
+          <li><b>Step 2（§26）：</b>該未遂行為有無侵害法益之具體危險？無危險＝不能犯，不罰。</li>
+          <li><b>Step 3（§27）：</b>是否因己意中止或盡力防止結果？因己意＝中止犯，減輕或免除其刑；非因己意（含誤想障礙）＝仍為障礙未遂。</li>
+        </ul>
+      </div>
+    </section>
+
+    </div>
+  </main>
+</div>
+
+<script>
+  (function(){
+    var sections = document.querySelectorAll('section[id], .cover[id]');
+    var sideLinks = document.querySelectorAll('nav.side a');
+    var topLinks = document.querySelectorAll('.topnav a');
+    function setActive(id){
+      [sideLinks, topLinks].forEach(function(group){
+        group.forEach(function(a){
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      });
+    }
+    if('IntersectionObserver' in window){
+      var obs = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){ setActive(e.target.id); }
+        });
+      }, {rootMargin:'-40% 0px -55% 0px'});
+      sections.forEach(function(s){ obs.observe(s); });
+    }
+    document.querySelectorAll('nav.side a, .topnav a').forEach(function(a){
+      a.addEventListener('click', function(ev){
+        ev.preventDefault();
+        var target = document.querySelector(a.getAttribute('href'));
+        if(target){ target.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
