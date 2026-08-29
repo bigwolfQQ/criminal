@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第210條｜偽造私文書罪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b; --indigo:#2c4a76; --indigo-soft:#3f5f8f;
+  --parchment:#f3ede0; --paper:#fbf8f1; --paper-panel:#fffdf8;
+  --seal:#9c2b3a; --brass:#a9832f; --line:#ddd3bf;
+  --ink-70:rgba(22,35,59,.7); --ink-45:rgba(22,35,59,.45);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"Noto Sans TC",sans-serif;background:var(--parchment);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+h1,h2,h3{font-family:"Noto Serif TC",serif;}
+.shell{display:flex;max-width:1280px;margin:0 auto;}
+.sidenav{width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;border-right:1px solid var(--line);}
+.sidenav .brand{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1rem;color:var(--seal);margin-bottom:6px;}
+.sidenav .brand-sub{font-size:.72rem;color:var(--ink-45);margin-bottom:26px;}
+.sidenav ul{list-style:none;margin:0;padding:0;}
+.sidenav li{margin-bottom:2px;}
+.sidenav a{display:block;font-size:.86rem;padding:8px 10px;border-radius:6px;color:var(--ink-70);text-decoration:none;border-left:3px solid transparent;transition:.15s;}
+.sidenav a:hover{background:var(--paper-panel);}
+.sidenav a.active{background:var(--paper-panel);border-left-color:var(--seal);color:var(--ink);font-weight:700;}
+.sidenav a.dim{color:var(--ink-45);}
+.main{flex:1;min-width:0;box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);background:var(--paper);}
+.topnav{display:none;position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.topnav a{display:inline-block;font-size:.78rem;padding:7px 14px;margin-right:6px;border-radius:999px;background:var(--paper-panel);border:1px solid var(--line);color:var(--ink-70);text-decoration:none;}
+.topnav a.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.topnav a.dim{color:var(--ink-45);}
+@media (max-width:980px){.sidenav{display:none;}.topnav{display:block;}}
+.cover{position:relative;padding:56px 40px 40px;border-bottom:1px solid var(--line);}
+.cover .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.24em;color:var(--brass);font-weight:700;margin-bottom:16px;}
+.cover .eyebrow::before{content:"";width:22px;height:1px;background:var(--brass);}
+.cover h1{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 10px;letter-spacing:.01em;}
+.cover .sub{font-size:1rem;color:var(--indigo);font-weight:500;margin:0;}
+.cover-meta{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.ver-badge{font-weight:700;font-size:.78rem;color:var(--seal);border:1px solid var(--seal);border-radius:20px;padding:3px 12px;letter-spacing:.03em;}
+.meta-date{font-size:.8rem;color:var(--ink-45);}
+.cover .seal-mark{position:absolute;top:48px;right:40px;width:78px;height:78px;border:2.5px solid var(--seal);border-radius:6px;color:var(--seal);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:900;writing-mode:vertical-rl;font-size:1.05rem;letter-spacing:.15em;transform:rotate(3deg);background:rgba(156,43,58,.03);}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.toc span{font-size:.74rem;background:var(--paper-panel);border:1px solid var(--line);padding:4px 10px;border-radius:6px;color:var(--ink-70);}
+@media(max-width:600px){.cover{padding:40px 20px 28px;}.cover .seal-mark{display:none;}}
+section{padding:44px 40px;border-bottom:1px solid var(--line);}
+@media(max-width:600px){section{padding:32px 20px;}}
+.eyebrow-sec{font-size:.72rem;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:8px;}
+section h2{font-size:1.4rem;margin:0 0 22px;color:var(--ink);}
+.article-box{position:relative;background:var(--paper-panel);border-left:3px solid var(--indigo);border-radius:4px;padding:20px 22px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,.06);}
+.article-box .num-wm{position:absolute;right:10px;bottom:-14px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:5rem;color:var(--ink);opacity:.06;pointer-events:none;line-height:1;}
+.article-box h3{margin:0 0 10px;font-size:1.05rem;color:var(--indigo);}
+.article-box p{margin:0 0 6px;line-height:1.9;font-size:.95rem;}
+.article-box .tag-role{display:inline-block;font-size:.7rem;background:var(--parchment);border:1px solid var(--line);color:var(--ink-70);padding:2px 8px;border-radius:4px;margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.88rem;}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:10px 12px;font-weight:700;}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f6f1e6;}
+tr:nth-child(odd) td{background:var(--paper-panel);}
+.result-pos{color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.result-neg{color:var(--seal);font-weight:700;}
+.tier-block{margin-bottom:26px;}
+.tier-block h3{font-size:1.02rem;color:var(--indigo);margin:0 0 10px;padding-left:10px;border-left:3px solid var(--brass);}
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:28px 20px;text-align:center;background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, transparent 10px 20px);}
+.placeholder .icon{font-size:1.6rem;margin-bottom:8px;}
+.placeholder p{margin:4px 0;font-size:.86rem;color:var(--ink-70);}
+.placeholder .badge{display:inline-block;margin-top:8px;font-size:.72rem;background:var(--brass);color:var(--paper);padding:3px 12px;border-radius:999px;}
+.doc-card{background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:12px;}
+.doc-card .name{font-weight:700;color:var(--indigo);margin-bottom:6px;font-size:.94rem;}
+.doc-card .body{font-size:.88rem;line-height:1.8;color:var(--ink);margin-bottom:8px;}
+.doc-card .src{font-size:.74rem;color:var(--ink-45);}
+.case-card{background:var(--paper-panel);border-radius:10px;box-shadow:0 1px 2px rgba(22,35,59,.08), 0 6px 18px -10px rgba(22,35,59,.25);margin-bottom:22px;overflow:hidden;}
+.case-card .head{background:var(--indigo);color:var(--paper);padding:12px 18px;font-weight:700;font-size:.94rem;}
+.case-card .body-inner{padding:18px;}
+.case-card h4{margin:14px 0 6px;font-size:.86rem;color:var(--brass);letter-spacing:.05em;}
+.case-card h4:first-child{margin-top:0;}
+.case-card p{margin:0 0 8px;font-size:.9rem;line-height:1.9;}
+.essay-card .head{background:var(--ink);}
+.cheatsheet{background:var(--ink);color:var(--paper);border-radius:12px;padding:30px 26px;position:relative;overflow:hidden;}
+.cheatsheet::after{content:"速";position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:9rem;color:rgba(251,248,241,.06);}
+.cheatsheet h3{margin:0 0 14px;font-size:1.1rem;color:var(--paper);}
+.cheatsheet ul{margin:0 0 18px;padding-left:1.2em;font-size:.88rem;line-height:2;}
+.mnemonic{background:var(--seal);border-radius:8px;padding:14px 16px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:1rem;text-align:center;letter-spacing:.05em;}
+.link-note{border:1px dashed var(--indigo);border-radius:8px;padding:16px 18px;font-size:.86rem;color:var(--ink-70);}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="sidenav" id="sidenav">
+  <div class="brand">criminal-law-interpretation</div>
+  <div class="brand-sub">刑法教學講義</div>
+  <ul>
+    <li><a href="#cover" class="nav-link">封面</a></li>
+    <li><a href="#articles" class="nav-link">一、條文原文</a></li>
+    <li><a href="#structure" class="nav-link">二、條文結構</a></li>
+    <li><a href="#tiers" class="nav-link">三、犯罪三階層解析</a></li>
+    <li><a href="#doctrine" class="nav-link">四、學說見解</a></li>
+    <li><a href="#practice" class="nav-link">五、實務見解</a></li>
+    <li><a href="#cases" class="nav-link">六、教學案例</a></li>
+    <li><a href="#essays" class="nav-link">七、申論練習題</a></li>
+    <li><a href="#cheatsheet" class="nav-link">八、速查卡</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+<nav class="topnav" id="topnav">
+  <a href="#cover" class="nav-link">封面</a>
+  <a href="#articles" class="nav-link">原文</a>
+  <a href="#structure" class="nav-link">結構</a>
+  <a href="#tiers" class="nav-link">三階層</a>
+  <a href="#doctrine" class="nav-link">學說</a>
+  <a href="#practice" class="nav-link">實務</a>
+  <a href="#cases" class="nav-link">案例</a>
+  <a href="#essays" class="nav-link">申論題</a>
+  <a href="#cheatsheet" class="nav-link">速查卡</a>
+</nav>
+
+<header class="cover" id="cover">
+  <div class="eyebrow">第二編 分則 · 第十五章 偽造文書印文罪</div>
+  <h1>刑法第210條｜偽造私文書罪</h1>
+  <p class="sub">有形偽造之核心規定——保護文書之公共信用</p>
+  <div class="cover-meta">
+    <span class="ver-badge">v1.0</span>
+    <span class="meta-date">建立日期：2026-08-29</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.210-211-212-216-220" alt="visitor badge" style="height:20px;">
+  </div>
+  <div class="toc">
+    <span>§210 偽造私文書</span><span>§211 偽造公文書</span>
+    <span>§212 偽造特種文書</span><span>§216 行使偽造文書</span><span>§220 準文書</span>
+  </div>
+  <div class="seal-mark">有罪</div>
+</header>
+
+<!-- 一、條文原文 -->
+<section id="articles">
+  <div class="eyebrow-sec">ARTICLES</div>
+  <h2>一、條文原文</h2>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第210條（偽造私文書罪）</h3>
+    <p>偽造、變造私文書，足以生損害於公眾或他人者，處五年以下有期徒刑。</p>
+    <div class="num-wm">210</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜偽造公文書（對照）</span>
+    <h3>第211條</h3>
+    <p>偽造、變造公文書，足以生損害於公眾或他人者，處一年以上七年以下有期徒刑。</p>
+    <div class="num-wm">211</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜偽造特種文書</span>
+    <h3>第212條</h3>
+    <p>偽造、變造護照、旅券、免許證、特許證及關於品行、能力、服務或其他相類之證書、介紹書，足以生損害於公眾或他人者，處一年以下有期徒刑、拘役或九千元以下罰金。</p>
+    <div class="num-wm">212</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜行使偽造文書罪</span>
+    <h3>第216條</h3>
+    <p>行使第二百一十條至第二百一十五條之文書者，依偽造、變造文書或登載不實事項或使登載不實事項之規定處斷。</p>
+    <div class="num-wm">216</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">關聯條文｜準文書之定義</span>
+    <h3>第220條</h3>
+    <p>在紙上或物品上之文字、符號、圖畫、照像，依習慣或特約，足以為表示其用意之證明者，關於本章及本章以外各罪，以文書論。</p>
+    <p>錄音、錄影或電磁紀錄，藉機器或電腦之處理所顯示之聲音、影像或符號，足以為表示其用意之證明者，亦同。</p>
+    <div class="num-wm">220</div>
+  </div>
+</section>
+
+<!-- 二、條文結構 -->
+<section id="structure">
+  <div class="eyebrow-sec">STRUCTURE</div>
+  <h2>二、條文結構——偽造文書罪章體系</h2>
+  <p style="font-size:.9rem;color:var(--ink-70);line-height:1.9;">偽造文書罪依「文書種類」與「偽造態樣」交錯區分。第210～212條均屬「有形偽造」（無製作權人冒用他人名義製作），差異僅在文書種類；第216條則是「行使」偽造文書之後續行為；第220條擴張文書之範圍及於準文書。</p>
+
+  <table>
+    <thead><tr><th>條文</th><th>文書種類</th><th>法定刑</th></tr></thead>
+    <tbody>
+      <tr><td>§210</td><td>私文書（一般個人、團體、公司間之文書）</td><td>5年以下有期徒刑</td></tr>
+      <tr><td>§211</td><td>公文書（公務員職務上製作之文書）</td><td>1年以上7年以下有期徒刑</td></tr>
+      <tr><td>§212</td><td>特種文書（護照、旅券、免許證、特許證及品行能力服務證書、介紹書）</td><td>1年以下有期徒刑、拘役或9千元以下罰金</td></tr>
+      <tr><td>§216</td><td>行使§210～215之偽造文書（非另立文書種類，係後續行使行為）</td><td>依所行使之偽造文書規定處斷</td></tr>
+      <tr><td>§220</td><td>準文書（依習慣或特約足以表示用意之證明者；含電磁紀錄）</td><td>準用本章及本章以外各罪</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1rem;color:var(--indigo);margin-top:20px;">有形偽造 vs 無形偽造</h3>
+  <table>
+    <thead><tr><th>類型</th><th>定義</th><th>對應條文</th></tr></thead>
+    <tbody>
+      <tr><td>有形偽造</td><td>無製作權人冒用他人名義製作虛偽文書（作成名義不實）</td><td>§210、§211（本講義討論範圍）</td></tr>
+      <tr><td>無形偽造</td><td>有製作權之公務員或從事業務之人，就其製作之文書為不實之記載（作成名義真實，內容不實）</td><td>§213、§215（不在本次討論範圍）</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 三、犯罪三階層解析 -->
+<section id="tiers">
+  <div class="eyebrow-sec">THREE-TIER ANALYSIS</div>
+  <h2>三、犯罪三階層逐項解析</h2>
+
+  <div class="tier-block">
+    <h3>（一）構成要件該當性</h3>
+    <table>
+      <thead><tr><th>要件</th><th>內容</th></tr></thead>
+      <tbody>
+        <tr><td>行為主體</td><td>無製作權之人（一般主體，任何人皆可能構成，惟須無該私文書之製作權）</td></tr>
+        <tr><td>行為客體</td><td>私文書——具備文字性、有體性、意思性、持續性、名義性五要件之有體物，或依§220擬制為文書之準文書</td></tr>
+        <tr><td>實行行為①偽造</td><td>無製作權之人，假冒或捏造他人名義，製作虛偽之私文書（無中生有）</td></tr>
+        <tr><td>實行行為②變造</td><td>無權修改之人，就他人已完成之真正文書，擅自更改其內容（就真改假）</td></tr>
+        <tr><td>結果／客觀處罰條件</td><td>足以生損害於公眾或他人——僅須有損害之虞為已足，不以實際發生損害為必要，損害亦不以經濟價值為限</td></tr>
+        <tr><td>主觀構成要件</td><td>故意，即行為人須具備「無製作權之認識」而仍冒用他人名義製作文書之故意。若誤認自己有權製作，或誤信已得授權委託，即欠缺本罪故意</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.86rem;line-height:1.9;margin-top:10px;"><strong>爭議點：</strong>依甘添貴見解，偽造尚須「內容亦屬虛構」始成立；惟晚近多數實務見解僅要求「作成名義不實」，縱使內容真實，仍可能該當有形偽造（僅於「足以生損害」要件上，因內容真實而較難認定損害之虞，兩說實際操作結果常趨於一致）。</p>
+  </div>
+
+  <div class="tier-block">
+    <h3>（二）違法性</h3>
+    <p style="font-size:.9rem;line-height:1.9;">本罪較少涉及正當防衛、緊急避難等傳統阻卻違法事由。實務上常見之爭議毋寧發生於構成要件層次——即行為人是否「經本人同意或授權」而製作文書：若確有同意或授權，因行為人本即具有製作權，根本不該當「無製作權人冒用他人名義」之構成要件，應於構成要件該當性階段即予排除，而非於違法性階段討論阻卻違法事由。本條原則上不涉及特殊違法性階層判斷。</p>
+  </div>
+
+  <div class="tier-block">
+    <h3>（三）有責性（罪責）</h3>
+    <p style="font-size:.9rem;line-height:1.9;">行為人須具備責任能力（§18、§19），且無阻卻或減輕罪責事由。實務上常見之抗辯——「誤信已得他人授權委託」——性質上屬於阻卻故意事由（構成要件錯誤），已於構成要件該當性之主觀要件階段處理，而非罪責階層之違法性認識錯誤問題，操作上不宜混淆。本條原則上不涉及特殊罪責阻卻事由之討論。</p>
+  </div>
+</section>
+
+<!-- 四、學說見解 -->
+<section id="doctrine">
+  <div class="eyebrow-sec">DOCTRINE</div>
+  <h2>四、學說見解</h2>
+  <div class="doc-card">
+    <div class="name">甘添貴</div>
+    <div class="body">偽造文書罪之「偽造」，不僅作成名義人須出於虛捏或假冒，文書內容本身亦必出於虛構，始負偽造之責。換言之，如果文書之內容與真實一致，縱有冒名情事，亦因不足以生損害於公眾或他人而不予處罰。（早期實務20年上字第1050號判例亦採相同見解，惟晚近實務見解已有不同傾向，詳見「五、實務見解」）</div>
+    <div class="src">出處：甘添貴，見三民輔考知識百科整理之學說彙編</div>
+  </div>
+  <div class="doc-card">
+    <div class="name">陳宜君</div>
+    <div class="body">文書之特徵包括有體性、文字性、持續性、意思性與名義性五者；文書之功能則有存續性、保證性及證明性三種。透過此一「五特徵、三機能」架構，有助於理解文書概念之本質，並作為判斷特定客體是否該當刑法上「文書」之操作標準。</div>
+    <div class="src">出處：陳宜君，〈論偽造文書罪——以審查要件為中心〉，國立中正大學法律學研究所碩士論文，2014年</div>
+  </div>
+</section>
+
+<!-- 五、實務見解 -->
+<section id="practice">
+  <div class="eyebrow-sec">PRACTICE</div>
+  <h2>五、實務見解</h2>
+
+  <div class="doc-card">
+    <div class="name">最高法院51年台上字第1111號判例</div>
+    <div class="body">刑法處罰偽造文書罪之主旨，在於保護文書之實質真正，雖以足生損害於公眾或他人為要件之一，亦僅以有損害之虞為已足，有無實受損害，在所不問，且此所謂損害，亦不以經濟價值為限。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：「判例」制度已於民國108年法院組織法修正後不再選編，本則現僅作為裁判先例參考，不具過去之拘束力。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院50年台上字第1268號判例</div>
+    <div class="body">所謂偽造故意，係指行為人具備「無製作權之認識」而冒用他人名義製作私文書之故意，始能構成本罪。如行為人誤認自己有權製作文書，即欠缺偽造文書之故意，不在處罰之列；若行為人誤信已得他人授權委託，亦不能謂其主觀上明知無製作權，自不成立本罪。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：「判例」制度已於民國108年法院組織法修正後不再選編，本則現僅作為裁判先例參考，不具過去之拘束力。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院107年度台上字第2484號判決</div>
+    <div class="body">偽造文書罪既在保護文書之公共信用，則作成名義雖出於虛偽，如內容為真實，不足以生損害於公眾或他人，尚不成立偽造文書罪。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：107年度台上字第2484號</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院110年度台上字第5080號判決</div>
+    <div class="body">行使或偽造私文書罪屬故意犯之處罰規定，自應以行為人明知自己無製作權仍冒用他人名義製作文書，始能構成是項罪名。如行為人誤認自己有權製作文書，即欠缺偽造文書之故意；若行為人誤信已得他人授權委託，亦不能謂其主觀上明知無製作權，自不成立該條之罪。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：110年度台上字第5080號</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院107年度台上字第3038號判決</div>
+    <div class="body">闡明刑法上「文書」之定義：係指使用文字、記號或其他符號記載一定思想或意思表示之有體物，除屬第220條之準文書外，祇要該有體物以目視即足明瞭其思想或意思表示之內容，該內容復能持久且可證明法律關係或社會活動之重要事實，並具有明示或可得而知之作成名義人者，即足當之。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：107年度台上字第3038號</div>
+  </div>
+
+  <h3 style="font-size:.92rem;color:var(--indigo);margin-top:24px;">大法官解釋／憲法法庭判決</h3>
+  <div class="placeholder">
+    <div class="icon">⚖️</div>
+    <p>本條（§210）目前查無大法官解釋或憲法法庭判決。</p>
+    <p>理由：本條構成要件明確、爭議多集中於個案事實認定（是否經授權、是否足生損害）而非法律違憲性，尚未有人以此聲請違憲審查。</p>
+    <span class="badge">查無資料</span>
+  </div>
+</section>
+
+<!-- 六、教學案例 -->
+<section id="cases">
+  <div class="eyebrow-sec">CASES（教學用途・AI虛構）</div>
+  <h2>六、教學案例</h2>
+
+  <div class="case-card">
+    <div class="head">案例一｜典型有形偽造——代簽他人姓名</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>甲在朋友乙不知情、亦未授權之情形下，於一份對外提出之協議書簽署欄位上，模仿乙之筆跡簽署乙之姓名，使對方誤信該協議書已經乙本人同意。</p>
+      <h4>爭點</h4>
+      <p>甲之代簽行為是否成立偽造私文書罪？</p>
+      <h4>分析</h4>
+      <p>甲並無製作權，卻冒用乙之名義於協議書上簽名，使該文書外觀上呈現係乙本人所簽署，此該當「偽造」之有形偽造要件。該協議書一旦對外提出，足以使相對人誤信其為乙親自同意之文書，而有生損害於乙或公眾之虞（不以實際損害發生為必要）。甲主觀上明知自己無製作權仍冒用乙之名義，具備偽造故意。</p>
+      <h4>結論</h4>
+      <p>甲之行為<span class="result-pos">該當偽造私文書罪（§210）</span>。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例二｜誤信已得授權——阻卻故意</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>丙受父親丁口頭告知「以後健保相關文件你都可以幫我簽」，丁其後因病住院意識不清，丙依循以往慣例代丁簽署一份醫療同意書。事後丁之其他家屬質疑該授權範圍是否及於此份文件，並提告丙偽造文書。</p>
+      <h4>爭點</h4>
+      <p>丙主觀上是否具備偽造故意？</p>
+      <h4>分析</h4>
+      <p>依第50年台上字第1268號判例及110年度台上字第5080號判決意旨，偽造故意須以行為人明知自己無製作權仍冒用他人名義為前提。丙基於丁生前之概括口頭授權及過往代簽慣例，主觀上確信自己有權代簽，縱使該授權範圍嗣後發生爭議，丙既非明知無製作權而仍為之，即欠缺偽造故意（此屬構成要件錯誤，阻卻故意）。</p>
+      <h4>結論</h4>
+      <p>丙之行為<span class="result-neg">不成立偽造私文書罪</span>，因欠缺偽造故意，構成要件不該當。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例三｜名義虛偽但內容真實</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>戊積欠己一筆款項，戊之友人庚未經戊同意，逕自以戊之名義書立一份「借款清償承諾書」，惟該承諾書所載金額、清償期限等內容均與戊、己間真實約定完全一致，僅簽名並非戊親自簽署。</p>
+      <h4>爭點</h4>
+      <p>庚之行為是否成立偽造私文書罪？</p>
+      <h4>分析</h4>
+      <p>依107年度台上字第2484號判決意旨，作成名義雖出於虛偽（庚冒用戊之名義），但文書內容與真實一致，並未增加或扭曲原有法律關係，難認有生損害於公眾或他人之虞，本罪之「足以生損害」要件不該當。惟此見解與甘添貴主張之「名義與內容均須虛偽」理論相呼應，但操作基礎不同——前者著眼於「損害要件」之欠缺，後者著眼於「偽造行為」本身之定性，兩者殊途同歸，均得出不成立本罪之結論。</p>
+      <h4>結論</h4>
+      <p>庚之行為<span class="result-neg">不成立偽造私文書罪</span>，因欠缺「足以生損害於公眾或他人」之要件。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例四｜偽造後行使——§210與§216之關係</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>辛偽造一份不動產買賣同意書，冒用地主壬之名義簽署後，持該偽造文書向地政機關辦理過戶登記申請。</p>
+      <h4>爭點</h4>
+      <p>辛之偽造與行使行為應如何論罪？兩者關係為何？</p>
+      <h4>分析</h4>
+      <p>辛先偽造同意書（該當§210），再持以向地政機關提出行使（該當§216行使偽造私文書罪）。依實務通說，偽造私文書進而行使者，偽造之低度行為應為行使之高度行為所吸收，僅論以行使偽造私文書罪一罪，不再併罰偽造罪，此為法條競合（吸收關係）之典型適用。</p>
+      <h4>結論</h4>
+      <p>辛應論以<span class="result-pos">行使偽造私文書罪（§216，依§210規定處斷）</span>一罪，偽造行為不另論罪。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 七、申論題 -->
+<section id="essays">
+  <div class="eyebrow-sec">ESSAY QUESTIONS（AI自行出題，已獲使用者授權）</div>
+  <h2>七、申論練習題與模擬解答</h2>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題一</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：甲未經公司負責人乙同意，於一份對外發出之報價單上盜蓋乙保管於辦公室內、供公務使用之職章，並持以交付客戶。試問甲之行為是否成立偽造私文書罪？其與偽造署押罪（第217條）之關係為何？</p>
+      <h4>模擬解答</h4>
+      <p>報價單為記載一定意思表示、可持續證明法律關係之有體物，且具明示之作成名義人（乙／公司），該當刑法上私文書之要件。甲未經授權，於報價單上盜蓋乙之職章，使該報價單外觀上呈現係乙本人核可製作之文書，此已非單純偽造印文或署押之問題，而係利用該偽造之印文完成一份具有申請書、報價單等類性質、對外足生一定法律效果之文書，依實務見解，在制式書類上偽造他人印文或簽名，已為一定意思表示，具有申請書等類性質者，應論以偽造文書罪，而非單獨之偽造署押罪（第217條僅係偽造印文本身之低度行為，於偽造文書既遂時應為偽造文書罪所吸收）。該報價單一經交付客戶，足使客戶誤信其內容業經乙同意，而有生損害於乙或公司之虞。從而，甲之行為該當偽造私文書罪（第210條），偽造印文之行為為偽造文書之部分行為，不另論第217條之罪。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題二</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：乙受僱於某公司擔任行政人員，職務上經常代表公司與客戶簽訂制式合約，其代簽權限僅限於金額新臺幣十萬元以下之合約。某次乙明知某筆交易金額達五十萬元，仍逾越授權範圍逕自代表公司簽署該合約。試問乙之行為是否成立偽造私文書罪？</p>
+      <h4>模擬解答</h4>
+      <p>乙原本於金額十萬元以下之範圍內，具有代表公司簽約之製作權，惟本件交易金額達五十萬元，已逾越乙之授權範圍。關鍵在於：逾越授權範圍之代簽，是否仍屬「無製作權」而該當偽造？依偽造故意之判斷標準（50年台上字第1268號判例、110年度台上字第5080號判決），若乙明知其代簽權限僅及十萬元以下，仍執意於逾越授權範圍之交易上代簽，即非「誤信已得授權」之情形，而是明知逾越授權仍冒用公司名義為之，具備偽造故意。就客觀構成要件而言，逾越具體授權範圍之代簽，本質上仍屬「無製作權人冒用他人名義製作文書」，因製作權之範圍應以實際授權內容為準，不能以曾獲部分授權即推論就任何金額均有製作權。從而，乙就此筆五十萬元合約之代簽行為，該當偽造私文書罪（第210條）之構成要件，因其明知逾越授權範圍仍為之，具備偽造故意，且該合約足以使公司或交易相對人誤認其已生法律拘束力，而有生損害之虞。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題三</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：丙為銀行貸款申請人，因徵信資料不足，遂自行偽造一份記載不實在職證明之公司在職證明書（該公司確實存在，惟丙從未在該公司任職），並持以向銀行申請貸款。試問丙之行為應如何論處？其與第212條特種文書之關係為何？</p>
+      <h4>模擬解答</h4>
+      <p>本題須先辨明在職證明書之文書性質。在職證明書性質上屬證明「服務」關係之證書，第212條明文列舉「關於品行、能力、服務或其他相類之證書、介紹書」屬特種文書之範疇，故在職證明書應優先適用第212條而非第210條之一般私文書規定，此為特別規定優先於普通規定之法條競合關係。丙並非該公司之人事或有權製作在職證明之人員，卻冒用該公司名義製作記載丙在職之不實證明書，該當「偽造」要件；該證明書內容全屬虛構（丙從未任職），若持以向銀行申請貸款，足以使銀行誤信丙具備穩定收入來源而核准貸款，顯有生損害於銀行之虞。丙其後持該偽造之特種文書向銀行提出申請，另該當第216條行使偽造文書罪（依第212條規定處斷），偽造之低度行為應為行使之高度行為所吸收。從而，丙應論以行使偽造特種文書罪一罪（第216條，依第212條規定處斷）。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題四</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：丁在網路交易平台上以電子表單方式，冒用賣家戊之帳號密碼登入其帳戶，並以戊之名義發送一則載明「已確認出貨」之電磁紀錄訊息予買家己，致己誤信貨物已寄出而依約付清尾款。試問該電磁紀錄訊息是否該當刑法上之「文書」？丁之行為應如何論處？</p>
+      <h4>模擬解答</h4>
+      <p>該電磁紀錄訊息本身並非傳統紙本文書，惟依第220條第2項，錄音、錄影或電磁紀錄，藉機器或電腦之處理所顯示之聲音、影像或符號，足以為表示其用意之證明者，以文書論，此即所謂「準文書」之擬制規定。本案「已確認出貨」之訊息，係藉電腦處理所顯示之符號，足以表示戊已完成出貨義務之用意，並可持續作為己請求付款之證明依據，該當準文書之要件，依第220條第2項準用本章關於文書之規定。丁未經戊同意，冒用戊之帳號名義發送不實出貨訊息，該當「偽造」準文書之要件；己因誤信該訊息而付清尾款，顯已生損害於己之財產法益（或至少有生損害之虞）。丁主觀上明知自己無權以戊名義發送該訊息，具備偽造故意。從而，丁之行為該當偽造準文書罪（依第220條第2項準用第210條），因其發送行為本身兼具偽造與提出（行使）之性質，應逕論以行使偽造私文書罪（第216條，依第210條規定處斷）。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 八、速查卡 -->
+<section id="cheatsheet">
+  <div class="eyebrow-sec">CHEAT SHEET</div>
+  <h2>八、速查卡</h2>
+  <div class="cheatsheet">
+    <h3>偽造私文書罪一覽</h3>
+    <ul>
+      <li>有形偽造（§210、211）：作成名義不實（無製作權人冒用他人名義）</li>
+      <li>無形偽造（§213、215）：作成名義真實，內容不實——本次未討論</li>
+      <li>足以生損害：僅須有損害之虞，不以實際發生、不以經濟價值為限</li>
+      <li>偽造故意：須「明知無製作權」，誤信已獲授權則阻卻故意</li>
+      <li>偽造＋行使：偽造為低度行為，被行使（§216）之高度行為吸收，論一罪</li>
+      <li>§220準文書：電磁紀錄、錄音錄影亦得以文書論</li>
+    </ul>
+    <div class="mnemonic">名不符實即為偽，損害之虞已足矣</div>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link');
+const sections = ['cover','articles','structure','tiers','doctrine','practice','cases','essays','cheatsheet'].map(id => document.getElementById(id));
+function setActive(id){
+  links.forEach(a => {
+    const match = a.getAttribute('href') === '#' + id;
+    a.classList.toggle('active', match);
+  });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting){ setActive(entry.target.id); } });
+}, {rootMargin: '-40% 0px -50% 0px', threshold: 0});
+sections.forEach(s => { if(s) observer.observe(s); });
+links.forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = a.getAttribute('href').slice(1);
+    document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
