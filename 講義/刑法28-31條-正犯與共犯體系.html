@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第28～31條｜正犯與共犯體系</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b; --indigo:#2c4a76; --indigo-soft:#3f5f8f;
+  --parchment:#f3ede0; --paper:#fbf8f1; --paper-panel:#fffdf8;
+  --seal:#9c2b3a; --brass:#a9832f; --line:#ddd3bf;
+  --ink-70:rgba(22,35,59,.7); --ink-45:rgba(22,35,59,.45);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"Noto Sans TC",sans-serif;background:var(--parchment);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+h1,h2,h3{font-family:"Noto Serif TC",serif;}
+.shell{display:flex;max-width:1280px;margin:0 auto;}
+.sidenav{width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;border-right:1px solid var(--line);}
+.sidenav .brand{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1rem;color:var(--seal);margin-bottom:6px;}
+.sidenav .brand-sub{font-size:.72rem;color:var(--ink-45);margin-bottom:26px;}
+.sidenav ul{list-style:none;margin:0;padding:0;}
+.sidenav li{margin-bottom:2px;}
+.sidenav a{display:block;font-size:.86rem;padding:8px 10px;border-radius:6px;color:var(--ink-70);text-decoration:none;border-left:3px solid transparent;transition:.15s;}
+.sidenav a:hover{background:var(--paper-panel);}
+.sidenav a.active{background:var(--paper-panel);border-left-color:var(--seal);color:var(--ink);font-weight:700;}
+.sidenav a.dim{color:var(--ink-45);}
+.main{flex:1;min-width:0;box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);background:var(--paper);}
+.topnav{display:none;position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.topnav a{display:inline-block;font-size:.78rem;padding:7px 14px;margin-right:6px;border-radius:999px;background:var(--paper-panel);border:1px solid var(--line);color:var(--ink-70);text-decoration:none;}
+.topnav a.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.topnav a.dim{color:var(--ink-45);}
+@media (max-width:980px){.sidenav{display:none;}.topnav{display:block;}}
+.cover{position:relative;padding:56px 40px 40px;border-bottom:1px solid var(--line);}
+.cover .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.24em;color:var(--brass);font-weight:700;margin-bottom:16px;}
+.cover .eyebrow::before{content:"";width:22px;height:1px;background:var(--brass);}
+.cover h1{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 10px;letter-spacing:.01em;}
+.cover .sub{font-size:1rem;color:var(--indigo);font-weight:500;margin:0;}
+.cover-meta{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.ver-badge{font-weight:700;font-size:.78rem;color:var(--seal);border:1px solid var(--seal);border-radius:20px;padding:3px 12px;letter-spacing:.03em;}
+.meta-date{font-size:.8rem;color:var(--ink-45);}
+.cover .seal-mark{position:absolute;top:48px;right:40px;width:78px;height:78px;border:2.5px solid var(--seal);border-radius:6px;color:var(--seal);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:900;writing-mode:vertical-rl;font-size:1.05rem;letter-spacing:.15em;transform:rotate(3deg);background:rgba(156,43,58,.03);}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.toc span{font-size:.74rem;background:var(--paper-panel);border:1px solid var(--line);padding:4px 10px;border-radius:6px;color:var(--ink-70);}
+@media(max-width:600px){.cover{padding:40px 20px 28px;}.cover .seal-mark{display:none;}}
+section{padding:44px 40px;border-bottom:1px solid var(--line);}
+@media(max-width:600px){section{padding:32px 20px;}}
+.eyebrow-sec{font-size:.72rem;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:8px;}
+section h2{font-size:1.4rem;margin:0 0 22px;color:var(--ink);}
+.article-box{position:relative;background:var(--paper-panel);border-left:3px solid var(--indigo);border-radius:4px;padding:20px 22px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,.06);}
+.article-box .num-wm{position:absolute;right:10px;bottom:-14px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:5rem;color:var(--ink);opacity:.06;pointer-events:none;line-height:1;}
+.article-box h3{margin:0 0 10px;font-size:1.05rem;color:var(--indigo);}
+.article-box p{margin:0 0 6px;line-height:1.9;font-size:.95rem;}
+.article-box .tag-role{display:inline-block;font-size:.7rem;background:var(--parchment);border:1px solid var(--line);color:var(--ink-70);padding:2px 8px;border-radius:4px;margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.88rem;}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:10px 12px;font-weight:700;}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f6f1e6;}
+tr:nth-child(odd) td{background:var(--paper-panel);}
+.result-pos{color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.result-neg{color:var(--seal);font-weight:700;}
+.spectrum{display:flex;gap:10px;margin:20px 0;flex-wrap:wrap;}
+.spectrum .node{flex:1;min-width:130px;background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:14px 12px;text-align:center;}
+.spectrum .node h4{margin:0 0 6px;font-size:.86rem;color:var(--indigo);}
+.spectrum .node p{margin:0;font-size:.76rem;color:var(--ink-70);line-height:1.6;}
+.spectrum .arrow{align-self:center;color:var(--ink-45);font-size:1.1rem;}
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:28px 20px;text-align:center;background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, transparent 10px 20px);}
+.placeholder .icon{font-size:1.6rem;margin-bottom:8px;}
+.placeholder p{margin:4px 0;font-size:.86rem;color:var(--ink-70);}
+.placeholder .badge{display:inline-block;margin-top:8px;font-size:.72rem;background:var(--brass);color:var(--paper);padding:3px 12px;border-radius:999px;}
+.doc-card{background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:12px;}
+.doc-card .name{font-weight:700;color:var(--indigo);margin-bottom:6px;font-size:.94rem;}
+.doc-card .body{font-size:.88rem;line-height:1.8;color:var(--ink);margin-bottom:8px;}
+.doc-card .src{font-size:.74rem;color:var(--ink-45);}
+.case-card{background:var(--paper-panel);border-radius:10px;box-shadow:0 1px 2px rgba(22,35,59,.08), 0 6px 18px -10px rgba(22,35,59,.25);margin-bottom:22px;overflow:hidden;}
+.case-card .head{background:var(--indigo);color:var(--paper);padding:12px 18px;font-weight:700;font-size:.94rem;}
+.case-card .body-inner{padding:18px;}
+.case-card h4{margin:14px 0 6px;font-size:.86rem;color:var(--brass);letter-spacing:.05em;}
+.case-card h4:first-child{margin-top:0;}
+.case-card p{margin:0 0 8px;font-size:.9rem;line-height:1.9;}
+.essay-card .head{background:var(--ink);}
+.relation-wrap{margin:16px 0;}
+.relation-note{text-align:center;font-size:.78rem;color:var(--ink-45);margin-top:6px;}
+.cheatsheet{background:var(--ink);color:var(--paper);border-radius:12px;padding:30px 26px;position:relative;overflow:hidden;}
+.cheatsheet::after{content:"速";position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:9rem;color:rgba(251,248,241,.06);}
+.cheatsheet h3{margin:0 0 14px;font-size:1.1rem;color:var(--paper);}
+.cheatsheet ul{margin:0 0 18px;padding-left:1.2em;font-size:.88rem;line-height:2;}
+.mnemonic{background:var(--seal);border-radius:8px;padding:14px 16px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:1rem;text-align:center;letter-spacing:.05em;}
+.link-note{border:1px dashed var(--indigo);border-radius:8px;padding:16px 18px;font-size:.86rem;color:var(--ink-70);}
+.link-note a{color:var(--indigo);font-weight:700;text-decoration:underline;}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="sidenav" id="sidenav">
+  <div class="brand">criminal-law-interpretation</div>
+  <div class="brand-sub">刑法教學講義</div>
+  <ul>
+    <li><a href="#cover" class="nav-link">封面</a></li>
+    <li><a href="#articles" class="nav-link">一、條文原文</a></li>
+    <li><a href="#structure" class="nav-link">二、條文結構</a></li>
+    <li><a href="#tiers" class="nav-link">三、正犯性／共犯性認定</a></li>
+    <li><a href="#doctrine" class="nav-link">四、學說見解</a></li>
+    <li><a href="#practice" class="nav-link">五、實務見解</a></li>
+    <li><a href="#cases" class="nav-link">六、教學案例</a></li>
+    <li><a href="#essays" class="nav-link">七、申論練習題</a></li>
+    <li><a href="#cheatsheet" class="nav-link">八、速查卡</a></li>
+    <li><a href="#related" class="nav-link dim">相關主題</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+<nav class="topnav" id="topnav">
+  <a href="#cover" class="nav-link">封面</a>
+  <a href="#articles" class="nav-link">原文</a>
+  <a href="#structure" class="nav-link">結構</a>
+  <a href="#tiers" class="nav-link">認定標準</a>
+  <a href="#doctrine" class="nav-link">學說</a>
+  <a href="#practice" class="nav-link">實務</a>
+  <a href="#cases" class="nav-link">案例</a>
+  <a href="#essays" class="nav-link">申論題</a>
+  <a href="#cheatsheet" class="nav-link">速查卡</a>
+  <a href="#related" class="nav-link dim">相關</a>
+</nav>
+
+<header class="cover" id="cover">
+  <div class="eyebrow">第一編 總則 · 第四章 正犯與共犯</div>
+  <h1>刑法第28～31條｜正犯與共犯體系<br>（共同正犯・教唆犯・幫助犯・身分犯）</h1>
+  <p class="sub">「一部行為，全部責任」——台灣刑法共犯體系的核心架構</p>
+  <div class="cover-meta">
+    <span class="ver-badge">v1.0</span>
+    <span class="meta-date">建立日期：2026-08-29</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.28-29-30-31" alt="visitor badge" style="height:20px;">
+  </div>
+  <div class="toc">
+    <span>§28 共同正犯</span><span>§29 教唆犯</span>
+    <span>§30 幫助犯</span><span>§31 身分或特定關係與共犯</span>
+  </div>
+  <div class="seal-mark">共同歸責</div>
+</header>
+
+<!-- 一、條文原文 -->
+<section id="articles">
+  <div class="eyebrow-sec">ARTICLES</div>
+  <h2>一、條文原文</h2>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第28條（共同正犯）</h3>
+    <p>二人以上共同實行犯罪之行為者，皆為正犯。</p>
+    <div class="num-wm">28</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第29條（教唆犯）</h3>
+    <p>教唆他人使之實行犯罪行為者，為教唆犯。</p>
+    <p>教唆犯之處罰，依其所教唆之罪處罰之。</p>
+    <div class="num-wm">29</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第30條（幫助犯）</h3>
+    <p>幫助他人實行犯罪行為者，為幫助犯。雖他人不知幫助之情者，亦同。</p>
+    <p>幫助犯之處罰，得按正犯之刑減輕之。</p>
+    <div class="num-wm">30</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第31條（身分或特定關係與共犯）</h3>
+    <p>因身分或其他特定關係成立之罪，其共同實行、教唆或幫助者，雖無特定關係，仍以正犯或共犯論。但得減輕其刑。</p>
+    <p>因身分或其他特定關係致刑有重輕或免除者，其無特定關係之人，科以通常之刑。</p>
+    <div class="num-wm">31</div>
+  </div>
+</section>
+
+<!-- 二、條文結構 -->
+<section id="structure">
+  <div class="eyebrow-sec">STRUCTURE</div>
+  <h2>二、條文結構——正犯與共犯體系圖</h2>
+  <p style="font-size:.9rem;color:var(--ink-70);line-height:1.9;">台灣刑法就參與犯罪之人分為「正犯」與「共犯」兩大類，正犯依人數再分單獨正犯與共同正犯，共犯則分教唆犯與幫助犯。第31條另就「身分犯」之特殊情形（無特定身分者參與有身分者始能成立之罪）補充處理規則。</p>
+
+  <div class="spectrum">
+    <div class="node"><h4>正犯</h4><p>單獨正犯（自己實行）<br>共同正犯 §28（二人以上共同實行）<br>間接正犯（利用他人為工具，無成文規定，學理承認）</p></div>
+    <div class="arrow">↔</div>
+    <div class="node"><h4>共犯</h4><p>教唆犯 §29（唆使他人萌生犯意）<br>幫助犯 §30（就他人已有之犯意予以助力）</p></div>
+  </div>
+
+  <table>
+    <thead><tr><th>類型</th><th>成立要件</th><th>處罰方式</th></tr></thead>
+    <tbody>
+      <tr><td>共同正犯（§28）</td><td>二人以上、犯意聯絡、行為分擔（或依功能性犯罪支配理論參與犯罪之實現）</td><td>依其所犯之罪處罰，一部行為全部責任</td></tr>
+      <tr><td>教唆犯（§29）</td><td>使原無犯意之人萌生犯意，並進而實行犯罪</td><td>依其所教唆之罪處罰之（與正犯同科，非必減輕）</td></tr>
+      <tr><td>幫助犯（§30）</td><td>就他人已決意實行之犯罪予以助力，本身不參與構成要件行為</td><td>得按正犯之刑減輕之（得減，非必減）</td></tr>
+      <tr><td>身分犯之共同正犯／共犯（§31Ⅰ）</td><td>無特定身分之人參與有身分者始能成立之罪（如公務員瀆職罪）</td><td>仍以正犯或共犯論，但得減輕其刑</td></tr>
+      <tr><td>身分影響刑度之情形（§31Ⅱ）</td><td>身分致刑有加重、減輕或免除（如義憤殺人、生母殺嬰）</td><td>無特定關係之人科以通常之刑，不隨身分變動</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 三、正犯性／共犯性認定 -->
+<section id="tiers">
+  <div class="eyebrow-sec">DETERMINATION TEST</div>
+  <h2>三、正犯性／共犯性認定</h2>
+  <div class="placeholder" style="border-color:var(--indigo);background:none;margin-bottom:20px;">
+    <p style="color:var(--ink);font-weight:700;">本條屬總則「行為人角色歸屬」規定，不涉及具體罪名之「構成要件該當性／違法性／有責性」三階層判斷，本節改以「正犯性／共犯性認定標準」取代。</p>
+    <p>實際操作時，正犯性／共犯性之判斷須先於具體罪名之三階層檢驗，先確定行為人係以正犯或共犯地位參與，再回頭適用該罪名之構成要件。</p>
+  </div>
+
+  <h3 style="font-size:1rem;color:var(--indigo);">功能性犯罪支配理論之檢驗步驟</h3>
+  <table>
+    <thead><tr><th>步驟</th><th>檢驗內容</th></tr></thead>
+    <tbody>
+      <tr><td>Step 1</td><td>行為人是否單獨完成全部構成要件行為？若是，逕為單獨正犯，不需適用§28</td></tr>
+      <tr><td>Step 2</td><td>行為人是否與他人有犯意聯絡（明示或默示、事前或事中皆可）？</td></tr>
+      <tr><td>Step 3</td><td>行為人是否參與構成要件行為之分擔？或雖未參與構成要件行為，但其參與（如謀劃、指揮、把風）對犯罪之實現具有功能上不可或缺之重要性？</td></tr>
+      <tr><td>Step 4</td><td>若Step 2、3均具備，成立共同正犯（§28），對全部結果負責；若僅唆使他人萌生犯意而不參與實行，論教唆犯（§29）；若僅就他人已有犯意予以助力而未達功能性支配程度，論幫助犯（§30）</td></tr>
+      <tr><td>Step 5</td><td>若該罪名以特定身分為要件，行為人是否具備該身分？不具備者依§31判斷是否仍以正犯或共犯論、有無減刑</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1rem;color:var(--indigo);margin-top:20px;">共同正犯／教唆犯／幫助犯之區辨</h3>
+  <table>
+    <thead><tr><th>區辨要素</th><th>共同正犯</th><th>教唆犯</th><th>幫助犯</th></tr></thead>
+    <tbody>
+      <tr><td>犯意來源</td><td>自己本有犯罪之意思</td><td>使他人萌生原無之犯意</td><td>他人已有犯意，僅予助力</td></tr>
+      <tr><td>參與程度</td><td>對犯罪是否／如何實現具功能性支配</td><td>不參與構成要件行為</td><td>不參與構成要件行為，居於次要輔助地位</td></tr>
+      <tr><td>責任範圍</td><td>對全部行為結果負責</td><td>依所教唆之罪處罰</td><td>得按正犯之刑減輕</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- 四、學說見解 -->
+<section id="doctrine">
+  <div class="eyebrow-sec">DOCTRINE</div>
+  <h2>四、學說見解</h2>
+  <div class="doc-card">
+    <div class="name">陳子平</div>
+    <div class="body">就共同正犯之本質，學說上有犯罪共同說、行為共同說、共同意思主體說、犯罪支配論（行為支配論）等不同立場。就「共謀共同正犯」（僅參與謀議而未實際下手實行者，是否仍論以共同正犯）之爭議，陳教授採類似間接正犯之利用關係說，認為共謀者彼此之心理狀態均係欲利用各共同者之行為，使犯罪容易且確實地遂行、實現，此種相互利用之關係，於各成員間類似間接正犯之利用關係，亦即將他人之行為轉化為自己之實行行為。</div>
+    <div class="src">出處：陳子平教授於臺灣高等法院「正犯、共犯之理論與實務」講座內容</div>
+  </div>
+</section>
+
+<!-- 五、實務見解 -->
+<section id="practice">
+  <div class="eyebrow-sec">PRACTICE</div>
+  <h2>五、實務見解</h2>
+
+  <div class="doc-card">
+    <div class="name">司法院釋字第109號解釋</div>
+    <div class="body">肯認「共謀共同正犯」之概念：以自己共同犯罪之意思，參與實施犯罪構成要件以外之行為，或以自己共同犯罪之意思，事先同謀，而由其中一部分人實施犯罪之行為者，均為共同正犯，使之對於全部行為所發生之結果，負其責任。此為我國實務承認共謀共同正犯之主要憲法解釋依據。</div>
+    <div class="src">來源：cons.judicial.gov.tw（司法院大法官解釋），解釋字號：釋字第109號</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院108年度台上字第3658號判決</div>
+    <div class="body">具體闡明共謀共同正犯之操作方式：以自己共同犯罪之意思，事先同謀，而分工合作，僅由其中一部分人員動手實行犯罪之行為，但其餘未下手實行之人，因有犯意聯絡，故亦論以共同正犯。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：108年度台上字第3658號</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院108年度台上字第334號判決</div>
+    <div class="body">闡述「相續共同正犯」（承繼共同正犯）之要件：後行為人於先行為人之行為接續或繼續進行中，以合同之意思，參與分擔實行，其對於介入前先行為人之行為，苟有就既成之條件加以利用而繼續共同實行犯罪之意思，應負共同正犯之全部責任。</div>
+    <div class="src">來源：司法院裁判書查詢系統（https://judgment.judicial.gov.tw/），案號：108年度台上字第334號</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">最高法院76年台上字第7210號判例</div>
+    <div class="body">刑法分則或特別法中規定之結夥二人或三人以上之犯罪（如加重竊盜之結夥犯規定），應以在場共同實施或在場參與分擔實施犯罪之人為限，不包括同謀共同正犯在內。</div>
+    <div class="src">來源：law.moj.gov.tw 判例查詢。提醒：「判例」制度已於民國108年法院組織法修正後不再選編，本則現僅作為裁判先例參考，不具過去之拘束力。</div>
+  </div>
+
+  <h3 style="font-size:.92rem;color:var(--indigo);margin-top:24px;">憲法法庭判決</h3>
+  <div class="placeholder">
+    <div class="icon">⚖️</div>
+    <p>本條（§28～§31）目前查無獨立之憲法法庭判決。</p>
+    <p>理由：釋字第109號已就共同正犯核心爭議作成解釋，其後爭議多循一般訴訟程序由最高法院統一見解，尚未另有人以此聲請違憲審查。</p>
+    <span class="badge">查無資料</span>
+  </div>
+</section>
+
+<!-- 六、教學案例 -->
+<section id="cases">
+  <div class="eyebrow-sec">CASES（教學用途・AI虛構）</div>
+  <h2>六、教學案例</h2>
+
+  <div class="case-card">
+    <div class="head">案例一｜共謀共同正犯——僅謀議未下手</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>甲、乙、丙三人事前謀議入室竊盜，並約定由乙、丙下手行竊，甲則負責提供犯案地點資訊與銷贓管道，全程未到現場。</p>
+      <h4>爭點</h4>
+      <p>甲未參與構成要件行為（未實際進入行竊），是否仍論以共同正犯？</p>
+      <h4>分析</h4>
+      <p>依釋字第109號及功能性犯罪支配理論，甲雖未參與竊盜構成要件行為，但其提供犯案地點資訊與銷贓管道，對犯罪之實現具有功能上不可或缺之重要性，屬「共謀共同正犯」，與乙、丙同具功能性犯罪支配地位。</p>
+      <h4>結論</h4>
+      <p>甲<span class="result-pos">論以共同正犯（§28）</span>，就乙、丙竊盜既遂之全部結果與甲、乙、丙同負責任。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例二｜教唆犯與幫助犯之區辨</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>丁本無傷害戊之意圖，經己再三慫恿並提供詳細犯罪計畫後，丁決意並實行傷害戊之行為。庚則於丁行兇當日，主動借予丁一把刀具，但庚對丁是否犯罪並無影響力，丁縱使無此刀具亦會以他法犯之。</p>
+      <h4>爭點</h4>
+      <p>己與庚各應論以何種共犯類型？</p>
+      <h4>分析</h4>
+      <p>己使丁萌生原無之傷害犯意，屬「教唆他人使之實行犯罪行為」，該當第29條教唆犯要件，依其所教唆之罪（傷害罪）處罰之。庚則係就丁已決意之犯罪提供物理上之助力（借刀），未參與構成要件行為，亦未達功能性支配之程度，屬第30條幫助犯，得按正犯之刑減輕之。</p>
+      <h4>結論</h4>
+      <p>己論以<span class="result-pos">教唆犯（§29）</span>，庚論以<span class="result-pos">幫助犯（§30）</span>，得減輕其刑。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例三｜身分犯之共同正犯——§31第1項</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>公務員辛負責採購業務，其友人壬（無公務員身分）與辛犯意聯絡、行為分擔，共同對廠商索取回扣，涉犯貪污治罪條例之圖利罪（以公務員身分為構成要件要素）。</p>
+      <h4>爭點</h4>
+      <p>壬不具公務員身分，是否仍成立圖利罪之共同正犯？</p>
+      <h4>分析</h4>
+      <p>圖利罪以「公務員」身分為成立要件，屬純正身分犯。依第31條第1項，因身分成立之罪，其共同實行、教唆或幫助者，雖無特定關係，仍以正犯或共犯論，但得減輕其刑。壬與辛有犯意聯絡、行為分擔，雖不具公務員身分，仍論以共同正犯，僅得依但書規定減輕其刑。</p>
+      <h4>結論</h4>
+      <p>壬<span class="result-pos">仍以共同正犯論（§31Ⅰ）</span>，法院得依裁量減輕其刑。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例四｜身分致刑加重減輕——§31第2項</div>
+    <div class="body-inner">
+      <h4>事實</h4>
+      <p>癸甫生產之生母，與其男友子共同將剛出生之嬰兒殺害。生母癸依當時處於生產影響下之特殊身分，若涉犯生母殺嬰罪（法定刑較普通殺人罪為輕），子則無此身分關係。</p>
+      <h4>爭點</h4>
+      <p>子（無特定身分之人）應論以何罪之共同正犯，是否亦享有生母殺嬰罪之較輕法定刑？</p>
+      <h4>分析</h4>
+      <p>本案屬「因身分致刑有重輕」之情形（不純正身分犯），依第31條第2項，因身分致刑有重輕或免除者，其無特定關係之人，科以通常之刑，不隨身分而變動。故癸依其生母身分得適用較輕之罪名／刑度，子則不具此身分，應論以通常之殺人罪（較重之刑），二人雖為共同正犯，量刑基礎卻各自獨立判斷。</p>
+      <h4>結論</h4>
+      <p>癸依身分犯罪名論處，子則<span class="result-pos">科以通常之刑（普通殺人罪，§31Ⅱ）</span>，不因癸之身分而減輕。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 七、申論題 -->
+<section id="essays">
+  <div class="eyebrow-sec">ESSAY QUESTIONS（AI自行出題，已獲使用者授權）</div>
+  <h2>七、申論練習題與模擬解答</h2>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題一</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：甲糾集乙、丙二人謀議搶劫，並約定由乙、丙持刀實行，甲則在外把風並負責接應逃逸。試問甲之行為應如何論處？</p>
+      <h4>模擬解答</h4>
+      <p>甲雖未參與強盜罪之構成要件行為（未持刀施強暴脅迫、未取得財物），但依功能性犯罪支配理論，甲事前參與謀議並於犯罪過程中在外把風、負責接應逃逸，此等行為對於犯罪是否得以順利實現具有功能上不可或缺之重要性，與乙、丙同具功能性犯罪支配地位。依司法院釋字第109號解釋意旨，以自己共同犯罪之意思參與犯罪構成要件以外之行為者，仍應論以共同正犯，使之對於全部行為所生結果負責。從而，甲應論以強盜罪之共同正犯（第28條），就乙、丙強盜既遂之結果與其等同負全部責任，不因未實際持刀行搶而減免。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題二</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：丁原無殺人犯意，經戊多次遊說並允諾事成後給予報酬，丁始決意殺害己並著手實行，惟因己及時逃脫而未遂。試問戊應如何論處？</p>
+      <h4>模擬解答</h4>
+      <p>戊之行為使丁自無犯意進而決意殺人，該當第29條「教唆他人使之實行犯罪行為」之要件，成立教唆犯。教唆犯之處罰依第29條第2項，依其所教唆之罪處罰之，亦即與正犯適用同一法定刑，並非當然減輕。就未遂部分，因正犯丁已著手實行殺人行為而不遂，依第25條未遂犯之從屬性原理，教唆犯之成立與科刑以正犯已著手實行為前提，丁既已著手而不遂，戊應論以殺人未遂罪之教唆犯，依殺人罪之法定刑，並依第25條第2項按既遂犯之刑減輕之。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題三</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：庚明知友人辛欲行竊，遂借予辛一組開鎖工具，辛以該工具順利入室行竊得手。試問庚之刑事責任為何？倘庚借出工具時，辛縱使無此工具，仍能以其他方式輕易破壞門鎖入室，是否影響庚之定性？</p>
+      <h4>模擬解答</h4>
+      <p>庚就辛已決意之竊盜犯罪提供物理上之助力（借予開鎖工具），本身未參與竊盜罪之構成要件行為（未實行侵入住宅、竊取財物之行為），依第30條第1項，成立幫助犯，依同條第2項得按正犯之刑減輕之。至於辛縱無該工具仍能以他法入室之假設，僅涉及該幫助行為對犯罪結果之因果貢獻程度，不影響幫助犯之成立——蓋幫助犯之處罰基礎在於行為人以幫助之意思給予助力，而非要求該助力為犯罪結果發生之必要條件，此亦為第30條第1項後段「雖他人不知幫助之情者，亦同」所欲貫徹之片面幫助犯法理的延伸。從而，庚仍應論以竊盜罪之幫助犯，法院得依裁量減輕其刑。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題四</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：稅務員壬（具公務員身分）明知納稅義務人癸逃漏鉅額稅捐，仍與癸犯意聯絡、行為分擔，共同偽造帳冊協助癸逃漏稅捐，涉犯稅捐稽徵法上以公務員身分為加重要件之罪。癸不具公務員身分。試問癸之刑事責任應如何論定？</p>
+      <h4>模擬解答</h4>
+      <p>本罪以「公務員」身分為加重處罰之要素，屬不純正身分犯（無此身分仍可能成立基本犯罪，僅刑度因身分而加重）。癸雖不具公務員身分，但與壬有犯意聯絡、行為分擔，共同實行偽造帳冊協助逃漏稅捐之行為，依第31條第1項本文，雖無特定關係，仍以正犯或共犯論，惟依同條項但書，法院得減輕其刑。另須留意者，若本罪性質應解為「因身分致刑有重輕」（即癸縱不具身分仍成立基本犯罪，僅壬因公務員身分而加重），則應改依第31條第2項處理，癸應科以通常之刑（即基本犯罪之刑度），不隨壬之公務員身分而加重。具體應依該罪之立法體例（純正或不純正身分犯）判斷應適用第31條第1項或第2項，惟無論如何，癸均不因壬之公務員身分而承擔加重後之刑度。</p>
+    </div>
+  </div>
+</section>
+
+<!-- 八、速查卡 -->
+<section id="cheatsheet">
+  <div class="eyebrow-sec">CHEAT SHEET</div>
+  <h2>八、速查卡</h2>
+  <div class="cheatsheet">
+    <h3>正犯與共犯體系一覽</h3>
+    <ul>
+      <li>共同正犯（§28）：犯意聯絡＋行為分擔（或功能性犯罪支配），一部行為全部責任</li>
+      <li>教唆犯（§29）：使原無犯意者萌生犯意，依所教唆之罪處罰（不當然減輕）</li>
+      <li>幫助犯（§30）：就他人已有犯意予以助力，得按正犯之刑減輕</li>
+      <li>§31Ⅰ：無身分之人參與身分犯，仍以正犯或共犯論，但得減輕其刑</li>
+      <li>§31Ⅱ：身分致刑重輕免除者，無身分之人科以通常之刑</li>
+      <li>釋字109號：肯認共謀共同正犯，僅參與謀議亦可能成立共同正犯</li>
+    </ul>
+    <div class="mnemonic">正犯支配・教唆生意・幫助助力・身分減依</div>
+  </div>
+</section>
+
+<!-- 相關主題 -->
+<section id="related">
+  <div class="eyebrow-sec">RELATED</div>
+  <h2>相關主題</h2>
+  <div class="link-note">
+    共同正犯、教唆犯、幫助犯經常與未遂犯體系合併討論（如「未遂之教唆犯」「共同正犯部分既遂部分未遂」等問題），可延伸閱讀：<br>
+    <a href="../講義/刑法25-26-27條-未遂犯體系.html">《第25、26、27條——未遂犯・不能犯・中止犯體系》</a>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link');
+const sections = ['cover','articles','structure','tiers','doctrine','practice','cases','essays','cheatsheet','related'].map(id => document.getElementById(id));
+function setActive(id){
+  links.forEach(a => {
+    const match = a.getAttribute('href') === '#' + id;
+    a.classList.toggle('active', match);
+  });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting){ setActive(entry.target.id); } });
+}, {rootMargin: '-40% 0px -50% 0px', threshold: 0});
+sections.forEach(s => { if(s) observer.observe(s); });
+links.forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = a.getAttribute('href').slice(1);
+    document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
