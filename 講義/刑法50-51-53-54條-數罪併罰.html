@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第50條｜數罪併罰</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper-outer:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45:rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper-outer);
+    color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif;
+    line-height:1.75;
+  }
+  h1,h2,h3,h4,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex;max-width:1180px;margin:0 auto;}
+  nav.sidebar{
+    width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;
+    height:100vh;overflow-y:auto;padding:32px 18px;
+    border-right:1px solid var(--border);
+  }
+  nav.sidebar .eyebrow{font-size:12px;letter-spacing:.12em;color:var(--brass);margin-bottom:18px;}
+  nav.sidebar ul{list-style:none;padding:0;margin:0;}
+  nav.sidebar li{margin-bottom:4px;}
+  nav.sidebar a{
+    display:block;padding:8px 10px;border-radius:6px;text-decoration:none;
+    color:var(--ink);font-size:14px;border-left:3px solid transparent;
+  }
+  nav.sidebar a.placeholder-link{color:var(--ink-45);}
+  nav.sidebar a.active{background:rgba(44,74,118,.08);border-left-color:var(--indigo);font-weight:700;}
+  main{flex:1;min-width:0;padding:0 0 80px;box-shadow:-6px 0 24px rgba(22,35,59,.04);background:var(--paper-content);}
+  .cover{
+    padding:64px 56px 48px;position:relative;overflow:hidden;
+    background:linear-gradient(180deg,#fffdf8 0%,var(--paper-content) 100%);
+    border-bottom:1px solid var(--border);
+  }
+  .eyebrow-tag{
+    display:inline-block;font-size:12px;letter-spacing:.14em;color:var(--brass);
+    border:1px solid var(--brass);padding:4px 12px;border-radius:999px;margin-bottom:18px;
+  }
+  .cover h1{font-size:clamp(30px,4vw,44px);font-weight:900;margin:0 0 8px;color:var(--ink);}
+  .cover .subtitle{font-size:16px;color:var(--ink-45);margin:0 0 14px;}
+  .cover-meta{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:26px;}
+  .ver-badge{border:1px solid var(--seal);color:var(--seal);font-size:12px;padding:3px 10px;border-radius:999px;font-weight:700;}
+  .meta-date{font-size:12px;color:var(--ink-45);border:1px solid var(--border);padding:3px 10px;border-radius:999px;}
+  .visitor-badge img{display:block;height:20px;}
+  .seal-mark{
+    position:absolute;top:38px;right:56px;width:92px;height:92px;border:3px solid var(--seal);
+    border-radius:10px;transform:rotate(8deg);display:flex;align-items:center;justify-content:center;
+    color:var(--seal);writing-mode:vertical-rl;font-family:"Noto Serif TC",serif;font-weight:900;
+    font-size:22px;letter-spacing:6px;opacity:.85;
+  }
+  .cover-toc{margin-top:20px;padding:18px 20px;background:var(--paper-card);border:1px solid var(--border);border-radius:8px;}
+  .cover-toc h4{margin:0 0 8px;font-size:13px;color:var(--brass);letter-spacing:.08em;}
+  .cover-toc ol{margin:0;padding-left:18px;font-size:14px;columns:2;column-gap:24px;}
+  .cover-toc li{margin-bottom:4px;}
+  section.chapter{padding:44px 56px;border-bottom:1px solid var(--border);scroll-margin-top:20px;}
+  section.chapter h2{
+    font-size:22px;font-weight:700;color:var(--ink);margin:0 0 24px;
+    padding-left:14px;border-left:4px solid var(--brass);
+  }
+  section.chapter h3{font-size:17px;font-weight:700;color:var(--indigo);margin:28px 0 12px;padding-left:10px;border-left:3px solid var(--indigo);}
+  .article-box{
+    position:relative;background:var(--paper-card);border:1px solid var(--border);border-left:3px solid var(--indigo);
+    border-radius:6px;padding:20px 24px;margin-bottom:18px;overflow:hidden;
+  }
+  .article-box .num-watermark{
+    position:absolute;right:10px;bottom:-6px;font-size:96px;font-weight:900;color:var(--ink);opacity:.06;
+    font-family:"Noto Serif TC",serif;line-height:1;pointer-events:none;
+  }
+  .article-box .art-head{font-weight:700;color:var(--indigo);margin-bottom:8px;font-family:"Noto Serif TC",serif;}
+  .article-box p{margin:4px 0;}
+  table{width:100%;border-collapse:collapse;margin:14px 0 20px;font-size:14px;}
+  th{background:var(--ink);color:var(--paper-content);text-align:left;padding:10px 12px;font-weight:700;}
+  td{padding:10px 12px;border-bottom:1px solid var(--border);}
+  tr:nth-child(even) td{background:var(--row-alt);}
+  tr:nth-child(odd) td{background:#fffdf8;}
+  .concl-pos{font-weight:700;color:var(--ink);background:linear-gradient(transparent 60%,rgba(169,131,47,.35) 60%);}
+  .concl-neg{font-weight:700;color:var(--seal);}
+  .placeholder{
+    border:2px dashed var(--border);border-radius:8px;padding:32px;text-align:center;
+    background:repeating-linear-gradient(135deg,rgba(169,131,47,.05) 0 10px,transparent 10px 20px);
+  }
+  .placeholder .icon{font-size:26px;margin-bottom:8px;}
+  .placeholder .badge{display:inline-block;margin-top:10px;font-size:12px;padding:3px 12px;border-radius:999px;border:1px solid var(--brass);color:var(--brass);}
+  .case-card, .essay-card{
+    background:var(--paper-card);border-radius:8px;margin-bottom:22px;
+    box-shadow:0 1px 2px rgba(22,35,59,.08),0 8px 20px -8px rgba(22,35,59,.12);
+    overflow:hidden;
+  }
+  .case-card .card-head{background:var(--indigo);color:#fff;padding:10px 18px;font-weight:700;font-family:"Noto Serif TC",serif;}
+  .essay-card .card-head{background:var(--ink);color:#fff;padding:10px 18px;font-weight:700;font-family:"Noto Serif TC",serif;}
+  .case-card .card-body,.essay-card .card-body{padding:18px 22px;}
+  .case-card .card-body h5,.essay-card .card-body h5{margin:14px 0 6px;font-size:13px;color:var(--brass);letter-spacing:.06em;}
+  .source-note{margin-top:10px;font-size:13px;color:var(--ink-45);border-top:1px dashed var(--border);padding-top:10px;}
+  .quickcard{
+    background:var(--ink);color:var(--paper-content);border-radius:10px;padding:32px 30px;position:relative;overflow:hidden;
+  }
+  .quickcard::after{
+    content:"速";position:absolute;right:6px;bottom:-30px;font-size:180px;font-family:"Noto Serif TC",serif;
+    color:rgba(255,255,255,.05);font-weight:900;
+  }
+  .quickcard h4{margin:0 0 14px;color:#fff;}
+  .quickcard ul{margin:0 0 18px;padding-left:20px;}
+  .mnemonic{background:var(--seal);color:#fff;padding:14px 18px;border-radius:8px;font-family:"Noto Serif TC",serif;font-size:18px;text-align:center;letter-spacing:.05em;}
+  .link-note{border:1px dashed var(--border);border-radius:8px;padding:16px 20px;font-size:14px;color:var(--ink-45);margin-top:8px;}
+  .link-note a{color:var(--indigo);font-weight:700;}
+  .mobile-nav{display:none;}
+  @media (max-width:980px){
+    .layout{display:block;}
+    nav.sidebar{display:none;}
+    .mobile-nav{
+      display:flex;gap:8px;overflow-x:auto;position:sticky;top:0;z-index:10;
+      background:var(--paper-outer);padding:10px 14px;border-bottom:1px solid var(--border);
+    }
+    .mobile-nav a{
+      flex-shrink:0;font-size:13px;padding:6px 14px;border-radius:999px;background:var(--paper-card);
+      border:1px solid var(--border);color:var(--ink);text-decoration:none;white-space:nowrap;
+    }
+    .mobile-nav a.active{background:var(--indigo);color:#fff;border-color:var(--indigo);}
+    .mobile-nav a.placeholder-link{color:var(--ink-45);}
+    .cover,section.chapter{padding:32px 20px;}
+    .cover-toc ol{columns:1;}
+    .seal-mark{top:20px;right:20px;width:70px;height:70px;font-size:16px;letter-spacing:3px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-nav" id="mobileNav"></div>
+
+<div class="layout">
+  <nav class="sidebar" id="sidebarNav">
+    <div class="eyebrow">第一編總則．第七章 數罪併罰</div>
+    <ul id="navList"></ul>
+  </nav>
+
+  <main>
+    <section class="cover" id="cover">
+      <div class="seal-mark">併罰</div>
+      <div class="eyebrow-tag">刑法第一編總則．第七章 數罪併罰</div>
+      <h1>刑法第50條</h1>
+      <p class="subtitle">數罪併罰之要件與易刑處分之排除｜關聯條文：第51條・第53條・第54條・第55條</p>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">2026-08-29</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.50-51-53-54-55" alt="visitor badge"></span>
+      </div>
+      <div class="cover-toc">
+        <h4>本講義目錄</h4>
+        <ol>
+          <li>條文原文</li>
+          <li>條文結構總覽</li>
+          <li>要件與方法解析</li>
+          <li>學說見解</li>
+          <li>實務見解</li>
+          <li>教學案例</li>
+          <li>申論練習題與模擬解答</li>
+          <li>速查卡</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="chapter" id="sec-articles">
+      <h2>一、條文原文</h2>
+
+      <div class="article-box">
+        <span class="num-watermark">50</span>
+        <div class="art-head">刑法第50條（數罪併罰之要件）</div>
+        <p>Ⅰ　裁判確定前犯數罪者，併合處罰之。但有下列情形之一者，不在此限：</p>
+        <p>　　一、得易科罰金之罪與不得易科罰金之罪。</p>
+        <p>　　二、得易科罰金之罪與不得易服社會勞動之罪。</p>
+        <p>　　三、得易服社會勞動之罪與不得易科罰金之罪。</p>
+        <p>　　四、得易服社會勞動之罪與不得易服社會勞動之罪。</p>
+        <p>Ⅱ　前項但書情形，受刑人請求檢察官聲請定應執行刑者，依第五十一條規定定之。</p>
+      </div>
+
+      <div class="article-box">
+        <span class="num-watermark">51</span>
+        <div class="art-head">刑法第51條（數罪併罰之方法）</div>
+        <p>數罪併罰，分別宣告其罪之刑，依下列各款定其應執行者：</p>
+        <p>　　一、宣告多數死刑者，執行其一。</p>
+        <p>　　二、宣告之最重刑為死刑者，不執行他刑。但罰金及從刑不在此限。</p>
+        <p>　　三、宣告多數無期徒刑者，執行其一。</p>
+        <p>　　四、宣告之最重刑為無期徒刑者，不執行他刑。但罰金及從刑不在此限。</p>
+        <p>　　五、宣告多數有期徒刑者，於各刑中之最長期以上，各刑合併之刑期以下，定其刑期。但不得逾三十年。</p>
+        <p>　　六、宣告多數拘役者，比照前款定其刑期。但不得逾一百二十日。</p>
+        <p>　　七、宣告多數罰金者，於各刑中之最多額以上，各刑合併之金額以下，定其金額。</p>
+        <p>　　八、宣告多數褫奪公權者，僅就其中最長期間執行之。</p>
+        <p>　　九、依第五款至前款所定之刑，併執行之。但應執行者為三年以上有期徒刑與拘役時，不執行拘役。</p>
+      </div>
+
+      <div class="article-box">
+        <span class="num-watermark">53</span>
+        <div class="art-head">刑法第53條（執行刑）</div>
+        <p>數罪併罰，有二裁判以上者，依第五十一條之規定，定其應執行之刑。</p>
+      </div>
+
+      <div class="article-box">
+        <span class="num-watermark">54</span>
+        <div class="art-head">刑法第54條（各罪中有受赦免時之執行刑）</div>
+        <p>數罪併罰，已經處斷，如各罪中有受赦免者，餘罪仍依第五十一條之規定，定其應執行之刑，僅餘一罪者，依其宣告之刑執行。</p>
+      </div>
+
+      <div class="article-box">
+        <span class="num-watermark">55</span>
+        <div class="art-head">刑法第55條（想像競合犯，對照條文）</div>
+        <p>一行為而觸犯數罪名者，從一重處斷。但不得科以較輕罪名所定最輕本刑以下之刑。</p>
+      </div>
+    </section>
+
+    <section class="chapter" id="sec-structure">
+      <h2>二、條文結構總覽</h2>
+      <p>第50條以下屬「實質競合（數行為數罪）」之科刑規定，與第55條「想像競合（一行為數罪）」之判斷邏輯不同，先後順序不可混用。整體架構如下：</p>
+      <table>
+        <tr><th>條號</th><th>規範內容</th><th>性質</th></tr>
+        <tr><td>§50</td><td>併合處罰原則＋易刑處分排除但書（四款）＋受刑人聲請權</td><td>要件規定</td></tr>
+        <tr><td>§51</td><td>九款定應執行刑之具體方法（死刑／無期／有期／拘役／罰金／褫奪公權）</td><td>法律效果／方法規定</td></tr>
+        <tr><td>§53</td><td>數裁判以上時，仍依§51定應執行刑</td><td>程序銜接規定</td></tr>
+        <tr><td>§54</td><td>已定執行刑後，其中一罪受赦免者，餘罪重新依§51定執行刑</td><td>後續變更規定</td></tr>
+        <tr><td>§55（對照）</td><td>一行為觸犯數罪名，從一重處斷</td><td>想像競合，與§50體系不同</td></tr>
+      </table>
+    </section>
+
+    <section class="chapter" id="sec-elements">
+      <h2>三、要件與方法解析</h2>
+      <p style="color:var(--ink-45);font-size:13px;">說明：第50條屬總則科刑階段規定，非個罪構成要件，故本講義不套用犯罪三階層（構成要件該當性／違法性／有責性）架構，改以「要件—法律效果—方法」三層次解析。</p>
+
+      <h3>（一）適用要件：裁判確定前犯數罪</h3>
+      <table>
+        <tr><th>要素</th><th>內容</th></tr>
+        <tr><td>時點界定</td><td>以行為人「最後犯罪之裁判確定前」為準，數罪須均發生在同一裁判確定時點之前</td></tr>
+        <tr><td>數罪之認定</td><td>須為「數行為、數罪名」之實質競合，與§55「一行為、數罪名」之想像競合有別，不可混用判斷順序</td></tr>
+      </table>
+
+      <h3>（二）法律效果：原則併合處罰</h3>
+      <p>符合前述要件者，原則上依§51方法<span class="concl-pos">併合處罰、定應執行刑</span>。</p>
+
+      <h3>（三）例外：易刑處分不相容之四款排除事由（§50但書）</h3>
+      <table>
+        <tr><th>款次</th><th>情形</th></tr>
+        <tr><td>第一款</td><td>得易科罰金之罪　與　不得易科罰金之罪</td></tr>
+        <tr><td>第二款</td><td>得易科罰金之罪　與　不得易服社會勞動之罪</td></tr>
+        <tr><td>第三款</td><td>得易服社會勞動之罪　與　不得易科罰金之罪</td></tr>
+        <tr><td>第四款</td><td>得易服社會勞動之罪　與　不得易服社會勞動之罪</td></tr>
+      </table>
+      <p>符合上述情形者，原則<span class="concl-neg">不併合處罰</span>，各罪分別確定、分別執行，以保留受刑人原有之易刑處分機會。惟§50第2項賦予受刑人程序選擇權：受刑人仍得請求檢察官聲請法院依§51定應執行刑（等於自願放棄易刑處分機會，換取較低之整體刑期）。</p>
+
+      <h3>（四）第51條九款定刑方法</h3>
+      <table>
+        <tr><th>款次</th><th>宣告刑態樣</th><th>定執行刑方式</th></tr>
+        <tr><td>1</td><td>多數死刑</td><td>執行其一</td></tr>
+        <tr><td>2</td><td>最重刑為死刑</td><td>不執行他刑（罰金、從刑除外）</td></tr>
+        <tr><td>3</td><td>多數無期徒刑</td><td>執行其一</td></tr>
+        <tr><td>4</td><td>最重刑為無期徒刑</td><td>不執行他刑（罰金、從刑除外）</td></tr>
+        <tr><td>5</td><td>多數有期徒刑</td><td>最長期以上，合併刑期以下，不逾30年（限制加重主義）</td></tr>
+        <tr><td>6</td><td>多數拘役</td><td>比照第5款，不逾120日</td></tr>
+        <tr><td>7</td><td>多數罰金</td><td>最多額以上，合併金額以下</td></tr>
+        <tr><td>8</td><td>多數褫奪公權</td><td>僅執行最長期間</td></tr>
+        <tr><td>9</td><td>上開刑併存</td><td>併執行，但執行刑為3年以上有期徒刑與拘役併存時，不執行拘役</td></tr>
+      </table>
+
+      <h3>（五）程序銜接：§53與§54</h3>
+      <table>
+        <tr><th>情形</th><th>處理方式</th></tr>
+        <tr><td>§53：數罪分見於二份以上裁判</td><td>仍依§51方法定應執行刑，不因裁判份數增加而改變定刑邏輯</td></tr>
+        <tr><td>§54：已定執行刑後，其中一罪受赦免</td><td>其餘罪重新依§51定應執行刑；若僅餘一罪，則逕依該罪原宣告刑執行</td></tr>
+      </table>
+    </section>
+
+    <section class="chapter" id="sec-scholar">
+      <h2>四、學說見解</h2>
+
+      <table>
+        <tr><th>立法模式</th><th>內容</th></tr>
+        <tr><td>吸收主義</td><td>性質無法並存者，重刑吸收輕刑，如死刑吸收其他自由刑（§51第1～4款）</td></tr>
+        <tr><td>併科主義</td><td>性質得並存者，各刑併予執行，如自由刑與罰金、褫奪公權併存（§51第9款）</td></tr>
+        <tr><td>限制加重主義</td><td>同性質自由刑合併時，於最長期以上、合併刑期以下，酌定一執行刑，並設絕對上限（有期徒刑30年、拘役120日），為§51第5、6款所採之核心方法</td></tr>
+      </table>
+      <p style="font-size:13px;color:var(--ink-45);">上開三種立法模式之分類，為刑法總則競合論之通說架構，散見於各家刑法總則教科書對數罪併罰制度之說明。</p>
+
+      <table>
+        <tr><th>學者</th><th>見解摘要</th><th>出處</th></tr>
+        <tr>
+          <td>張明偉</td>
+          <td>聚焦數罪併罰與易科罰金交錯適用之難題，檢討釋字第366號、第662號解釋作成後，定應執行刑逾6月即喪失易科罰金機會之制度性衝突，並主張應就併罰後之易刑處分機會另設調和機制。</td>
+          <td>〈數罪併罰與易科罰金－以釋字第366號解釋與釋字第662號解釋為中心〉，收錄於《數罪併罰之易科罰金》</td>
+        </tr>
+        <tr>
+          <td>柯耀程</td>
+          <td>從第41條易科罰金之限制性要件出發，質疑以「定應執行刑」作為判斷得否易科罰金之基準是否妥適，主張應回歸個別宣告刑判斷易刑資格。</td>
+          <td>〈易科罰金的數罪併罰問題探討〉，收錄於蔡墩銘主編《刑法爭議問題研究》，五南圖書</td>
+        </tr>
+        <tr>
+          <td>林山田</td>
+          <td>檢討併合處罰制度下易科罰金之運作方式，並就91年修法後之易科罰金規範提出評釋。</td>
+          <td>〈論併合處罰之易科罰金〉，《刑事法雜誌》第39卷第1期，頁23-31</td>
+        </tr>
+      </table>
+    </section>
+
+    <section class="chapter" id="sec-practice">
+      <h2>五、實務見解</h2>
+      <table>
+        <tr><th>案號</th><th>爭點</th><th>要旨</th><th>連結</th></tr>
+        <tr>
+          <td>釋字第366號（83年）</td>
+          <td>數罪併罰因定執行刑逾6月而喪失易科罰金機會，是否違憲？</td>
+          <td>裁判確定前犯數罪，各宣告刑均未逾6月、依§41原均得易科罰金，卻因依§51併合定應執行刑逾6月而不得易科罰金，對人民自由權利造成不必要限制，與憲法第23條未盡相符，相關規定應檢討修正。此號解釋為102年修法增訂§50第1項但書（易刑處分排除規定）之立法背景。</td>
+          <td><a href="https://cons.judicial.gov.tw/jcc/zh-tw/jep03/show?expno=366" target="_blank">cons.judicial.gov.tw</a></td>
+        </tr>
+        <tr>
+          <td>釋字第662號（98年）</td>
+          <td>數宣告刑均得易科罰金，因定執行刑逾6月而排除易科罰金，是否違憲？</td>
+          <td>94年修正之刑法第41條第2項規定，關於併合處罰之數罪均得易科罰金而定應執行刑逾6月者，排除得易科罰金之規定部分，與憲法第23條有違，並與釋字第366號解釋意旨不符，應失其效力。</td>
+          <td><a href="https://cons.judicial.gov.tw/docdata.aspx?fid=100&id=310956" target="_blank">cons.judicial.gov.tw</a>（此為程序關聯之775號頁面，662號請另行查詢司法院網站）</td>
+        </tr>
+        <tr>
+          <td>釋字第775號（108年）</td>
+          <td>累犯加重本刑（舊§47）、裁判確定後更定其刑（舊§48）是否違憲？</td>
+          <td>本號解釋主要標的為舊法第47條、第48條有關累犯更定其刑部分，非直接針對第50、51、53、54條。惟因刑事訴訟法第477條第1項原將「依§48更定其刑」與「依§53、§54應依§51第5款至第7款定應執行之刑」規定於同一條文，程序上常一併討論，故仍列為關聯性參考解釋。</td>
+          <td><a href="https://cons.judicial.gov.tw/jcc/zh-tw/jep03/show?expno=775" target="_blank">cons.judicial.gov.tw</a></td>
+        </tr>
+      </table>
+      <p style="font-size:13px;color:var(--ink-45);">個案判決部分：數罪併罰定應執行刑屬法院自由裁量事項，實務見解普遍認為法院裁量除不得逾越法定範圍之外部性界限外，尚應受比例原則、公平正義原則等內部性界限拘束（各地方法院、高等法院裁定散見，案號請至司法院裁判書查詢系統〔https://judgment.judicial.gov.tw/〕自行查閱）。</p>
+    </section>
+
+    <section class="chapter" id="sec-cases">
+      <h2>六、教學案例</h2>
+      <p style="font-size:13px;color:var(--ink-45);">以下案例均為教學用途虛構，人物與情節純屬假設，用以輔助理解條文操作。</p>
+
+      <div class="case-card">
+        <div class="card-head">案例一｜§50但書之易刑處分排除</div>
+        <div class="card-body">
+          <h5>事實</h5>
+          <p>甲於同一年內先後犯詐欺罪與傷害罪，均在裁判確定前所為。詐欺罪經法院判處有期徒刑4月，得易科罰金；傷害罪經法院判處有期徒刑8月，因犯罪情節較重，法院未准易科罰金。兩罪先後判決確定。</p>
+          <h5>爭點</h5>
+          <p>兩罪是否應併合處罰？甲原本就詐欺罪享有之易科罰金機會，是否因併罰而喪失？</p>
+          <h5>分析</h5>
+          <p>依§50第1項本文，甲於裁判確定前犯數罪，原則應併合處罰。惟本案詐欺罪「得易科罰金」，傷害罪「不得易科罰金」，正符合§50第1項但書第1款所定情形，依法<span class="concl-neg">不併合處罰</span>，兩罪分別確定、分別執行，甲就詐欺罪原有之易科罰金機會得以保留，不因傷害罪之併罰而喪失。</p>
+          <p>惟依§50第2項，甲仍得請求檢察官聲請法院依§51規定合併定應執行刑（例如若甲評估合併後之整體刑期較短，願意換取放棄易科罰金機會）。</p>
+          <h5>結論</h5>
+          <p>本案原則上<span class="concl-neg">不併合處罰</span>，兩罪分別執行；是否轉為併罰，取決於甲是否行使§50第2項之聲請權。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="card-head">案例二｜§51九款之定刑操作（多罪多刑併存）</div>
+        <div class="card-body">
+          <h5>事實</h5>
+          <p>乙於裁判確定前犯竊盜罪（宣告有期徒刑1年）、毀損罪（宣告有期徒刑6月）、公然侮辱罪（宣告拘役30日），三罪均得易科罰金／易服社會勞動要件相容，無§50但書情形。</p>
+          <h5>爭點</h5>
+          <p>法院應如何依§51定應執行刑？拘役是否仍須單獨執行？</p>
+          <h5>分析</h5>
+          <p>三罪均得併合處罰。其中竊盜罪與毀損罪均為有期徒刑，依§51第5款，應於最長期（1年）以上、合併刑期（1年6月）以下，酌定應執行刑，且不得逾30年。公然侮辱罪為拘役，依§51第9款但書，若前述有期徒刑之應執行刑已達3年以上，則不執行拘役；惟本案有期徒刑執行刑顯然低於3年，故拘役仍應與有期徒刑併執行。</p>
+          <h5>結論</h5>
+          <p>法院應先就竊盜、毀損兩有期徒刑罪依§51第5款<span class="concl-pos">於1年以上、1年6月以下酌定執行刑</span>，再依第9款本文將拘役30日一併執行。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="card-head">案例三｜§53數裁判以上之併罰</div>
+        <div class="card-body">
+          <h5>事實</h5>
+          <p>丙因A罪經某地方法院判決有期徒刑1年確定；其後，因發生於A罪判決確定前之B罪，又經另一法院判決有期徒刑8月確定。兩份裁判分屬不同法院、不同時間作成。</p>
+          <h5>爭點</h5>
+          <p>裁判份數有二份以上，是否仍適用§51之定刑方法？由何機關聲請？</p>
+          <h5>分析</h5>
+          <p>依§53，數罪併罰有二裁判以上者，仍依§51之規定定其應執行之刑，裁判份數之多寡不影響定刑方法本身。實務上，由檢察官向該案犯罪事實最後判決之法院聲請裁定應執行刑。</p>
+          <h5>結論</h5>
+          <p>法院應依§51第5款，於最長期（1年）以上、合併刑期（1年8月）以下、不逾30年之範圍內，<span class="concl-pos">酌定一應執行刑</span>，不因裁判分見於二份判決而異其處理。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="card-head">案例四｜§54部分罪受赦免後之處理</div>
+        <div class="card-body">
+          <h5>事實</h5>
+          <p>丁因C罪（有期徒刑1年）、D罪（有期徒刑6月）、E罪（有期徒刑8月）經數罪併罰，法院依§51定應執行刑為有期徒刑2年確定。嗣後，D罪經總統依法赦免其刑。</p>
+          <h5>爭點</h5>
+          <p>D罪受赦免後，原已確定之執行刑2年是否當然隨之減縮？應如何重新處理？</p>
+          <h5>分析</h5>
+          <p>依§54，數罪併罰已經處斷後，若各罪中有受赦免者，餘罪（C罪、E罪）仍應依§51之規定，重新定其應執行之刑；此時應執行刑不再包含已受赦免之D罪。若併罰後僅餘一罪（例如C、E罪其中一罪本身另受其他原因排除），則逕依該罪原宣告刑執行，不再另行定執行刑。</p>
+          <h5>結論</h5>
+          <p>本案D罪受赦免後，法院應就餘罪C罪（1年）、E罪（8月）依§51第5款<span class="concl-pos">重新於1年以上、1年8月以下酌定應執行刑</span>，原2年之執行刑因赦免而失所附麗，不當然繼續適用。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="sec-essay">
+      <h2>七、申論練習題與模擬解答</h2>
+      <p style="font-size:13px;color:var(--ink-45);">以下題目由AI依條文重點自行擬定，模擬解答僅供教學參考，論述架構已內化「法條規定→涵攝事實→得出結論」三段層次，不明文標示段落標籤。</p>
+
+      <div class="essay-card">
+        <div class="card-head">題目一</div>
+        <div class="card-body">
+          <p>甲於同一年度內犯A罪（宣告有期徒刑5月，得易科罰金）與B罪（宣告有期徒刑7月，不得易科罰金），均於裁判確定前所犯，兩罪先後判決確定。試問：甲得否就A罪主張易科罰金？法院應如何處理本案之併罰問題？</p>
+          <h5>模擬解答</h5>
+          <p>刑法第50條第1項本文規定，裁判確定前犯數罪者，原則應併合處罰；惟同項但書第1款明定，得易科罰金之罪與不得易科罰金之罪併存時，不在併合處罰之列。本案甲所犯A罪得易科罰金、B罪不得易科罰金，兩罪性質正屬該款所定情形，依法不應併合處罰，而應分別確定、分別執行。</p>
+          <p>就A罪而言，因不與B罪併罰，其宣告刑仍維持有期徒刑5月，未超過易科罰金之刑度上限，甲自得就A罪單獨主張易科罰金，不受B罪不得易科罰金之影響。此一制度設計，正是為回應釋字第366號、第662號解釋所揭示之精神——避免因併合定執行刑逾6月，致原本各自符合易科罰金要件之受刑人，喪失以罰金代替自由刑之機會。</p>
+          <p>惟依第50條第2項，甲仍得請求檢察官聲請法院依第51條規定合併定應執行刑；若甲選擇行使此聲請權，即視同放棄A罪之易科罰金機會，改依限制加重主義合併定刑。是否行使，屬甲之程序選擇權，法院不得逕行併罰。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="card-head">題目二</div>
+        <div class="card-body">
+          <p>乙因裁判確定前所犯C罪（宣告死刑）、D罪（宣告有期徒刑10年）、E罪（宣告罰金新臺幣10萬元），三罪均得併合處罰。試問法院應如何依刑法第51條定其應執行之刑？</p>
+          <h5>模擬解答</h5>
+          <p>刑法第51條就數罪併罰之定刑方法，依宣告刑之態樣分別以九款規定其執行方式。本案乙所犯三罪，宣告刑分別為死刑、有期徒刑10年、罰金10萬元，性質互異，應分別適用相應款次判斷。</p>
+          <p>就C罪死刑與D罪有期徒刑而言，依第51條第2款，宣告之最重刑為死刑者，不執行他刑，但罰金及從刑不在此限；本案C罪宣告死刑已屬最重刑，故D罪有期徒刑10年不予執行。至於E罪之罰金10萬元，依同款但書規定不受排除，仍應與死刑併執行；此亦與第9款「依第五款至前款所定之刑，併執行之」之併科精神相符，蓋罰金與生命刑性質上得以並存執行，不生吸收關係。</p>
+          <p>是以，本案應執行者為死刑併科罰金10萬元，有期徒刑10年之D罪則不予執行，此結果兼顧生命刑之終局性與財產刑之獨立可執行性，非機械式將三罪宣告刑相加計算。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="card-head">題目三</div>
+        <div class="card-body">
+          <p>丙先因F罪經甲地方法院判決有期徒刑2年確定；嗣因發生於F罪判決確定前之G罪，另經乙地方法院判決有期徒刑1年6月確定。試問：本案是否仍屬刑法第50條所定之數罪併罰？應由何依據定應執行之刑？</p>
+          <h5>模擬解答</h5>
+          <p>刑法第50條第1項本文所稱「裁判確定前犯數罪」，其認定重點在於行為時點，而非裁判份數或審理法院是否相同。本案G罪之犯罪時點在F罪判決確定之前，縱兩罪分別由不同法院、於不同時間判決確定，仍屬裁判確定前所犯之數罪，符合第50條之併罰要件，且無第1項但書所列易刑處分不相容之情形。</p>
+          <p>又因F罪、G罪分見於甲、乙兩地方法院所為之二份裁判，依刑法第53條規定，數罪併罰有二裁判以上者，仍依第51條之規定，定其應執行之刑，裁判份數之多寡不影響定刑方法本身之適用。本案兩罪均為有期徒刑，應依第51條第5款，於最長期（2年）以上、各刑合併之刑期（3年6月）以下，酌定其應執行刑，且不得逾30年。</p>
+          <p>綜上，本案應由檢察官向最後判決之法院聲請，依第53條準用第51條第5款之方法，於2年以上、3年6月以下之範圍內，酌定丙應執行之刑。</p>
+        </div>
+      </div>
+
+      <div class="essay-card">
+        <div class="card-head">題目四</div>
+        <div class="card-body">
+          <p>丁因H罪（有期徒刑1年）、I罪（有期徒刑6月）依數罪併罰定應執行刑為有期徒刑1年3月確定後，I罪嗣經法定原因赦免其刑。試問法院應如何處理丁之執行刑？</p>
+          <h5>模擬解答</h5>
+          <p>刑法第54條規定，數罪併罰已經處斷，如各罪中有受赦免者，餘罪仍依第51條之規定，定其應執行之刑；僅餘一罪者，則依其宣告之刑執行。本案丁原依第51條就H、I兩罪合併定執行刑為1年3月，嗣I罪受赦免，已非屬應執行刑範圍內之有效宣告刑，故原定之執行刑不應繼續維持。</p>
+          <p>依第54條規定，I罪赦免後，本案僅餘H罪一罪，已非「數罪」併罰之情形，故不再依第51條重新酌定執行刑區間，而應逕依H罪原宣告之刑期——有期徒刑1年——執行，不受先前1年3月執行刑之拘束。</p>
+          <p>是以，法院或執行機關應更正丁之執行刑為有期徒刑1年，此一結果亦與第54條「僅餘一罪者，依其宣告之刑執行」之明文規定相符，避免受刑人因他罪受赦免而仍受原併罰執行刑之不利拘束。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter" id="sec-quickcard">
+      <h2>八、速查卡</h2>
+      <div class="quickcard">
+        <h4>核心速記</h4>
+        <ul>
+          <li>要件：裁判確定前犯數罪（實質競合，別於§55想像競合）</li>
+          <li>原則：併合處罰，依§51方法定應執行刑</li>
+          <li>例外：§50但書四款（易科罰金／易服社會勞動不相容）→ 不併罰，除非受刑人依§50Ⅱ聲請</li>
+          <li>方法（§51）：死刑執一／無期執一／有期徒刑限制加重（最長期以上、合計以下，不逾30年）／拘役同理（不逾120日）／罰金區間酌定／褫奪公權取最長／得併存刑種併執行（3年以上有期徒刑不執行拘役）</li>
+          <li>§53：二裁判以上，方法不變，仍依§51</li>
+          <li>§54：部分罪受赦免，餘罪重新依§51定刑；僅餘一罪則逕依原宣告刑</li>
+        </ul>
+        <div class="mnemonic">裁判確定前併罰，限制加重卅封頂</div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+(function(){
+  const sections = [
+    {id:'cover', label:'封面', done:true},
+    {id:'sec-articles', label:'一、條文原文', done:true},
+    {id:'sec-structure', label:'二、條文結構', done:true},
+    {id:'sec-elements', label:'三、要件與方法解析', done:true},
+    {id:'sec-scholar', label:'四、學說見解', done:true},
+    {id:'sec-practice', label:'五、實務見解', done:true},
+    {id:'sec-cases', label:'六、教學案例', done:true},
+    {id:'sec-essay', label:'七、申論題與解答', done:true},
+    {id:'sec-quickcard', label:'八、速查卡', done:true},
+  ];
+
+  const navList = document.getElementById('navList');
+  const mobileNav = document.getElementById('mobileNav');
+
+  sections.forEach(s=>{
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#'+s.id;
+    a.textContent = s.label;
+    a.dataset.target = s.id;
+    if(!s.done) a.classList.add('placeholder-link');
+    li.appendChild(a);
+    navList.appendChild(li);
+
+    const ma = document.createElement('a');
+    ma.href = '#'+s.id;
+    ma.textContent = s.label;
+    ma.dataset.target = s.id;
+    if(!s.done) ma.classList.add('placeholder-link');
+    mobileNav.appendChild(ma);
+  });
+
+  document.querySelectorAll('nav a, .mobile-nav a').forEach(a=>{
+    a.addEventListener('click', function(e){
+      e.preventDefault();
+      const el = document.getElementById(this.dataset.target);
+      if(el) el.scrollIntoView({behavior:'smooth'});
+    });
+  });
+
+  const allLinks = document.querySelectorAll('nav a, .mobile-nav a');
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        const id = entry.target.id;
+        allLinks.forEach(a=>{
+          a.classList.toggle('active', a.dataset.target === id);
+        });
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px', threshold:0});
+
+  sections.forEach(s=>{
+    const el = document.getElementById(s.id);
+    if(el) observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
