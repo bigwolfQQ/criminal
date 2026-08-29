@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第201條．偽造有價證券罪 — 教學講義</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16233b;
+    --indigo:#2c4a76;
+    --paper:#f3ede0;
+    --paper-content:#fbf8f1;
+    --paper-card:#fffdf8;
+    --seal:#9c2b3a;
+    --brass:#a9832f;
+    --border:#ddd3bf;
+    --ink-45: rgba(22,35,59,.45);
+    --row-alt:#f6f1e6;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:"Noto Sans TC",sans-serif; line-height:1.75;
+  }
+  h1,h2,h3,.serif{font-family:"Noto Serif TC",serif;}
+  a{color:var(--indigo);}
+  .layout{display:flex; max-width:1200px; margin:0 auto;}
+  nav.sidebar{
+    width:240px; flex:none; position:sticky; top:0; align-self:flex-start;
+    height:100vh; overflow-y:auto; padding:28px 18px; border-right:1px solid var(--border);
+  }
+  nav.sidebar .brand{font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px; color:var(--indigo); margin-bottom:18px; letter-spacing:.05em;}
+  nav.sidebar ul{list-style:none; padding:0; margin:0;}
+  nav.sidebar li{margin-bottom:2px;}
+  nav.sidebar a{
+    display:block; padding:8px 10px; border-radius:6px; font-size:13.5px;
+    color:var(--ink); text-decoration:none; border-left:3px solid transparent;
+  }
+  nav.sidebar a.placeholder-link{color:var(--ink-45);}
+  nav.sidebar a.active, nav.sidebar a:hover{background:var(--paper-content); border-left-color:var(--brass); color:var(--indigo);}
+  main{flex:1; min-width:0; padding:0 0 80px; box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);}
+  .topnav{display:none;}
+  .section{padding:46px 56px; border-bottom:1px solid var(--border);}
+  .section:last-child{border-bottom:none;}
+  .eyebrow{font-size:12.5px; letter-spacing:.12em; color:var(--brass); font-weight:700; text-transform:uppercase; margin-bottom:8px;}
+  h2.stitle{font-size:22px; color:var(--ink); margin:0 0 22px; padding-left:14px; border-left:4px solid var(--indigo);}
+  h3.substitle{font-size:16.5px; color:var(--indigo); margin:28px 0 10px;}
+
+  .cover{
+    background:var(--paper-content); padding:64px 56px 48px; position:relative; overflow:hidden;
+    border-bottom:1px solid var(--border);
+  }
+  .cover .eyebrow{font-size:13px;}
+  .cover h1{font-size:38px; font-weight:900; color:var(--ink); margin:0 0 14px; max-width:640px;}
+  .cover .sub{font-size:15px; color:var(--ink-45); max-width:560px; margin-bottom:18px;}
+  .cover-meta{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:10px;}
+  .ver-badge{border:1px solid var(--seal); color:var(--seal); font-size:12px; padding:3px 10px; border-radius:20px; font-weight:700;}
+  .meta-date{border:1px solid var(--indigo); color:var(--indigo); font-size:12px; padding:3px 10px; border-radius:20px;}
+  .visitor-badge img{display:block; height:20px;}
+  .seal-mark{
+    position:absolute; top:46px; right:60px; width:112px; height:112px; border-radius:50%;
+    border:3px solid var(--seal); color:var(--seal); display:flex; align-items:center; justify-content:center;
+    transform:rotate(-14deg); font-family:"Noto Serif TC",serif; font-weight:900; font-size:15px;
+    writing-mode:vertical-rl; letter-spacing:.15em; opacity:.85;
+  }
+  .toc{margin-top:26px; display:grid; grid-template-columns:repeat(3,1fr); gap:8px 20px; max-width:640px;}
+  .toc a{font-size:13px; color:var(--indigo); text-decoration:none;}
+  .toc a:hover{text-decoration:underline;}
+
+  .article-box{
+    position:relative; background:var(--paper-card); border-left:3px solid var(--indigo);
+    border-radius:4px; padding:22px 24px; margin:16px 0; overflow:hidden;
+    box-shadow:0 1px 2px rgba(22,35,59,.06);
+  }
+  .article-box .num-wm{
+    position:absolute; right:10px; bottom:-18px; font-family:"Noto Serif TC",serif; font-weight:900;
+    font-size:110px; color:var(--ink); opacity:.06; line-height:1; user-select:none;
+  }
+  .article-box .art-head{font-family:"Noto Serif TC",serif; font-weight:700; color:var(--indigo); margin-bottom:8px; font-size:15px;}
+  .article-box p{margin:6px 0; position:relative; z-index:1;}
+  .article-box.ref{border-left-color:var(--border); opacity:.94;}
+  .ref-group-title{font-size:13px; color:var(--ink-45); margin:26px 0 6px; font-weight:700;}
+
+  table{width:100%; border-collapse:collapse; margin:14px 0; font-size:13.5px;}
+  thead th{background:var(--ink); color:var(--paper-content); padding:10px 12px; text-align:left; font-weight:700;}
+  tbody td, tbody th{padding:9px 12px; border-bottom:1px solid var(--border); vertical-align:top;}
+  tbody tr:nth-child(even){background:var(--row-alt);}
+
+  .stage-badge{display:inline-block; padding:2px 10px; border-radius:12px; font-size:12px; font-weight:700; margin-bottom:6px;}
+  .stage-badge.yes{background:rgba(44,74,118,.1); color:var(--indigo);}
+  .stage-badge.na{background:rgba(22,35,59,.08); color:var(--ink-45);}
+
+  .conclude-est{font-weight:700; color:var(--ink); background:linear-gradient(transparent 65%, rgba(169,131,47,.35) 65%);}
+  .conclude-not{font-weight:700; color:var(--seal);}
+
+  .placeholder{
+    border:2px dashed var(--brass); border-radius:8px; padding:38px 24px; text-align:center;
+    background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, rgba(169,131,47,.09) 10px 20px);
+    color:var(--ink-45);
+  }
+  .placeholder .ic{font-size:26px; margin-bottom:8px;}
+  .placeholder .badge-todo{
+    display:inline-block; margin-top:10px; font-size:12px; padding:3px 12px; border-radius:20px;
+    border:1px solid var(--brass); color:var(--brass); font-weight:700;
+  }
+
+  .case-card{background:var(--paper-card); border-radius:8px; margin:20px 0; box-shadow:0 1px 3px rgba(22,35,59,.08), 0 6px 16px -10px rgba(22,35,59,.25); overflow:hidden;}
+  .case-card .ch{background:var(--indigo); color:var(--paper-content); padding:10px 18px; font-family:"Noto Serif TC",serif; font-weight:700; font-size:14.5px;}
+  .case-card.exam .ch{background:var(--ink);}
+  .case-card .cb{padding:20px 22px;}
+  .case-card .cb h4{margin:14px 0 6px; font-size:13.5px; color:var(--indigo);}
+  .case-card .cb h4:first-child{margin-top:0;}
+  .note-badge{font-size:12px; color:var(--seal); font-weight:700;}
+
+  .relation-wrap{margin:18px 0 6px; text-align:center;}
+  .relation-note{font-size:12.5px; color:var(--ink-45); margin-top:6px;}
+
+  .source-block{margin-top:16px; padding:12px 16px; background:var(--row-alt); border-radius:6px; font-size:13px; color:var(--ink-45);}
+  .source-block a{color:var(--indigo);}
+
+  .mnemonic-card{background:var(--ink); color:var(--paper-content); border-radius:10px; padding:32px 30px; position:relative; overflow:hidden;}
+  .mnemonic-card .wm{position:absolute; right:14px; bottom:-24px; font-family:"Noto Serif TC",serif; font-weight:900; font-size:130px; opacity:.08;}
+  .mnemonic-card h3{color:var(--paper-content); margin-top:0;}
+  .mnemonic-item{background:var(--seal); border-radius:6px; padding:12px 16px; margin:12px 0; font-family:"Noto Serif TC",serif; font-size:17px; font-weight:700; letter-spacing:.04em;}
+  .mnemonic-item small{display:block; font-family:"Noto Sans TC",sans-serif; font-weight:400; font-size:12.5px; opacity:.85; margin-top:4px; letter-spacing:0;}
+
+  .link-note{border:1px dashed var(--border); border-radius:8px; padding:16px 18px; font-size:13.5px; color:var(--ink-45); margin-top:10px;}
+  .link-note a{font-weight:700;}
+
+  @media (max-width: 980px){
+    nav.sidebar{display:none;}
+    .topnav{
+      display:flex; overflow-x:auto; gap:4px; position:sticky; top:0; z-index:10;
+      background:var(--paper-content); padding:10px 12px; border-bottom:1px solid var(--border);
+    }
+    .topnav a{
+      flex:none; padding:7px 14px; border-radius:20px; background:var(--paper); font-size:12.5px;
+      color:var(--ink); text-decoration:none; white-space:nowrap; border:1px solid var(--border);
+    }
+    .topnav a.placeholder-link{color:var(--ink-45);}
+    .topnav a.active{background:var(--indigo); color:#fff; border-color:var(--indigo);}
+    .section{padding:32px 20px;}
+    .cover{padding:40px 20px 32px;}
+    .cover h1{font-size:27px;}
+    .seal-mark{width:78px; height:78px; font-size:11px; top:24px; right:20px;}
+    .toc{grid-template-columns:1fr 1fr;}
+  }
+</style>
+</head>
+<body>
+<div class="layout">
+
+  <nav class="sidebar" id="sidebar">
+    <div class="brand">刑法講義 · 分則</div>
+    <ul>
+      <li><a href="#s1">一、條文原文</a></li>
+      <li><a href="#s2">二、條文結構</a></li>
+      <li><a href="#s3">三、犯罪三階層解析</a></li>
+      <li><a href="#s4" class="placeholder-link">四、學說見解</a></li>
+      <li><a href="#s5">五、實務見解</a></li>
+      <li><a href="#s6">六、教學案例</a></li>
+      <li><a href="#s7">七、申論練習題</a></li>
+      <li><a href="#s8">八、速查卡</a></li>
+      <li><a href="#s9">九、相關主題</a></li>
+    </ul>
+  </nav>
+
+  <div class="topnav" id="topnav">
+    <a href="#s1">條文原文</a>
+    <a href="#s2">條文結構</a>
+    <a href="#s3">三階層解析</a>
+    <a href="#s4" class="placeholder-link">學說見解</a>
+    <a href="#s5">實務見解</a>
+    <a href="#s6">教學案例</a>
+    <a href="#s7">申論題</a>
+    <a href="#s8">速查卡</a>
+    <a href="#s9">相關主題</a>
+  </div>
+
+  <main>
+    <div class="cover">
+      <div class="seal-mark">有價證券</div>
+      <div class="eyebrow">第二編分則 · 第十三章 偽造有價證券罪</div>
+      <h1>刑法第201條<br>偽造有價證券罪</h1>
+      <div class="sub">意圖供行使之用，而偽造、變造公債票、公司股票或其他有價證券者，處三年以上十年以下有期徒刑。行使偽造、變造之公債票、公司股票或其他有價證券，或意圖供行使之用而收集或交付於人者，處一年以上七年以下有期徒刑。</div>
+      <div class="cover-meta">
+        <span class="ver-badge">v1.0</span>
+        <span class="meta-date">建立／最後更新：2026-08-30</span>
+        <span class="visitor-badge"><img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.201" alt="訪客數"></span>
+      </div>
+      <div class="toc">
+        <a href="#s1">一、條文原文</a>
+        <a href="#s2">二、條文結構</a>
+        <a href="#s3">三、犯罪三階層解析</a>
+        <a href="#s4">四、學說見解</a>
+        <a href="#s5">五、實務見解</a>
+        <a href="#s6">六、教學案例</a>
+        <a href="#s7">七、申論練習題</a>
+        <a href="#s8">八、速查卡</a>
+        <a href="#s9">九、相關主題</a>
+      </div>
+    </div>
+
+    <!-- 一、條文原文 -->
+    <section class="section" id="s1">
+      <h2 class="stitle">一、條文原文</h2>
+
+      <div class="article-box">
+        <div class="art-head">刑法第201條（偽造變造有價證券罪）</div>
+        <p>Ⅰ　意圖供行使之用，而偽造、變造公債票、公司股票或其他有價證券者，處三年以上十年以下有期徒刑，得併科九萬元以下罰金。</p>
+        <p>Ⅱ　行使偽造、變造之公債票、公司股票或其他有價證券，或意圖供行使之用而收集或交付於人者，處一年以上七年以下有期徒刑，得併科九萬元以下罰金。</p>
+        <div class="num-wm">201</div>
+      </div>
+    </section>
+
+    <!-- 二、條文結構 -->
+    <section class="section" id="s2">
+      <h2 class="stitle">二、條文結構</h2>
+      <p>第201條為偽造有價證券罪章之基本規定，保護法益為有價證券之公共信用。與第195、196條分別以兩條規範「偽造」與「行使」之立法體例不同，本條將兩種行為態樣合併於同一條文之兩項規範：第1項規範偽造、變造本身，第2項規範完成偽造後之流通行為（行使、收集、交付）。</p>
+      <table>
+        <thead>
+          <tr><th>項次</th><th>類型</th><th>行為態樣</th><th>未遂</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>第1項</td><td>偽造變造既遂</td><td>偽造、變造公債票、公司股票或其他有價證券</td><td>未設明文，不罰</td></tr>
+          <tr><td>第2項</td><td>行使／收集／交付既遂</td><td>行使，或意圖供行使而收集、交付</td><td>未設明文，不罰</td></tr>
+        </tbody>
+      </table>
+      <p><strong>特別提醒——本罪不處罰未遂犯</strong>：第201條第1項、第2項均未設「前項之未遂犯罰之」之明文，依第25條第2項「未遂犯之處罰，以有特別規定者為限」，本罪不處罰未遂犯，此與第195、196條均明文處罰未遂之立法體例不同（詳見申論題四之比較）。</p>
+    </section>
+
+    <!-- 三、犯罪三階層逐項解析 -->
+    <section class="section" id="s3">
+      <h2 class="stitle">三、犯罪三階層逐項解析</h2>
+
+      <h3 class="substitle">(一) 構成要件該當性——第1項偽造變造罪</h3>
+      <table>
+        <thead><tr><th>客觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行為主體</td><td>一般犯，任何自然人皆得為之；若行為人原具一定製作或代理權限，逾越授權範圍製作者，依實務見解仍可能該當偽造（詳見教學案例二）</td></tr>
+          <tr><td>行為客體</td><td>公債票、公司股票或其他有價證券；依實務見解，凡權利之發生、移轉或行使與占有證券本身不可分離者，均屬有價證券，範圍廣泛涵蓋本票、支票、匯票、提單、倉單等</td></tr>
+          <tr><td>實行行為（偽造）</td><td>無權製作之人假冒他人名義，製作外觀上具有價證券形式之虛偽證券</td></tr>
+          <tr><td>實行行為（變造）</td><td>於真正有價證券基礎上加工變更內容，如變更票面金額</td></tr>
+          <tr><td>既遂判斷</td><td>偽造物須在形式上已具備該類有價證券之基本要件（如本票須已記載發票人簽名、金額、發票日等票據法所定應記載事項），達足以使人誤信為真正有價證券之程度，始屬既遂；應記載事項尚未齊備者，尚未達既遂（詳見申論題三）</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <thead><tr><th>主觀要件</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>故意＋意圖供行使之用</td><td>須具備日後供作真正有價證券行使之目的</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(二) 構成要件該當性——第2項行使等罪</h3>
+      <table>
+        <thead><tr><th>行為態樣</th><th>內容</th></tr></thead>
+        <tbody>
+          <tr><td>行使</td><td>將偽造變造之有價證券當作真正證券提示、使用，如持偽造本票向他人請求付款</td></tr>
+          <tr><td>收集</td><td>意圖供行使之用而蒐集持有</td></tr>
+          <tr><td>交付</td><td>意圖供行使之用而移轉予他人持有</td></tr>
+        </tbody>
+      </table>
+
+      <h3 class="substitle">(三) 行使偽造有價證券與詐欺罪之關係（重要爭點）</h3>
+      <p>依實務見解，行使偽造有價證券之行為本身已內含詐欺之性質——若行為人持以行使並取得相當於票面價值之對價，其詐欺部分應認已包含於行使偽造有價證券罪之當然評價範圍內，<span class="conclude-not">不另論</span>詐欺罪，以免重複評價同一詐欺不法內涵（詳見教學案例三）。惟若行為人於行使之外，另有超出票面價值範圍之欺罔取財行為（如以偽造證券設定擔保並另外詐得逾額借款），該逾越部分應<span class="conclude-est">另論</span>詐欺罪，與行使偽造有價證券罪視具體情形論以數罪併罰或想像競合（詳見教學案例四）。</p>
+
+      <h3 class="substitle">(四) 違法性 / (五) 有責性（罪責）</h3>
+      <p><span class="stage-badge yes">個案判斷</span> 依第18條、第19條檢驗行為人有無責任能力，並個案審酌有無阻卻違法、阻卻或減輕罪責事由。</p>
+
+      <h3 class="substitle">(六) 未遂——本罪不處罰未遂之體系理由</h3>
+      <p>第201條第1項、第2項均未設未遂犯處罰明文，依第25條第2項，本罪不處罰未遂犯。縱行為人已著手偽造有價證券而未完成應記載事項（如本票尚未記載發票日等票據法所定事項），依實務見解，於此之前僅屬犯罪之預備或未完成階段，尚不成立本罪既遂，亦無未遂犯可資論罪（詳見申論題三、四）。</p>
+    </section>
+
+    <!-- 四、學說見解 -->
+    <section class="section" id="s4">
+      <h2 class="stitle">四、學說見解</h2>
+      <div class="placeholder">
+        <div class="ic">📖</div>
+        <p>尚未加入具明確學者姓名與出處之學說見解內容。</p>
+        <p style="font-size:12.5px;">搜尋結果僅查得「偽造行為之定義」「有價證券範圍」等通說性整理，未查得具體學者姓名、著作與頁碼可供核實，依防幻覺規則暫不列入，待你提供或後續進一步搜尋確認來源後再補入。</p>
+        <span class="badge-todo">待補充</span>
+      </div>
+    </section>
+
+    <!-- 五、實務見解 -->
+    <section class="section" id="s5">
+      <h2 class="stitle">五、實務見解</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下判決／決議之內容摘要係經網路搜尋轉引整理，尚未逐一核對司法院原文全文，建議使用者自行查證。</p>
+
+      <div class="case-card">
+        <div class="ch">最高法院95年度第19次刑事庭會議決議（95年9月26日）</div>
+        <div class="cb">
+          <p>無代理權（或逾越代理權限）之人假冒本人之代理人名義，於有價證券發票人欄記載本人姓名並加註代理字樣而製作有價證券，因該證券在形式上仍係以本人名義發生票據上權利義務，使被偽冒之本人成為該有價證券形式上之發票人，對本人權益及有價證券之公共信用造成危害，與直接冒用他人名義偽造有價證券並無二致，仍應構成偽造有價證券罪。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">✅ 本則已查得司法院最高法院官方會議紀錄頁面可核對：<a href="https://tps.judicial.gov.tw/tw/cp-1283-34833-746e7-011.html" target="_blank">最高法院九十五年度第十九次刑事庭會議紀錄</a>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">最高法院112年度台上字第630號刑事判決</div>
+        <div class="cb">
+          <p>行使偽造有價證券，若行為人因而取得相當於票面價值之對價者，其詐欺部分應認已包含於行使偽造有價證券罪之當然評價範圍內，不另論以詐欺罪。</p>
+          <p style="font-size:12.5px; color:var(--ink-45);">⚠️ 本則出現於元照出版案例評釋標題，主題明確，惟尚未逐字核對判決全文，建議使用者自行至司法院裁判書查詢系統查閱核實。</p>
+        </div>
+      </div>
+
+      <div class="source-block">
+        📂 資料整理來源：司法院全球資訊網（95年決議已官方核對）、元照出版、喆律法律事務所、智丞法律事務所等網路轉引整理。<br>
+        🔗 建議自行查證：<a href="https://judgment.judicial.gov.tw/" target="_blank">司法院裁判書查詢系統</a>
+      </div>
+    </section>
+
+    <!-- 六、教學案例 -->
+    <section class="section" id="s6">
+      <h2 class="stitle">六、教學案例</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下案例均為教學用途虛構，與條文要件高度對應，非真實判決事實。</p>
+
+      <div class="case-card">
+        <div class="ch">案例一：偽造有價證券既遂（第201條第1項）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>甲未經任何授權，擅自以某上市公司名義製作外觀近似該公司股票之憑證一批，意圖日後持以向他人融資借款。</p>
+          <h4>爭點</h4>
+          <p>甲之行為是否成立偽造有價證券既遂？</p>
+          <h4>分析</h4>
+          <p>甲未經授權，擅自製作外觀上具公司股票形式之虛偽證券，主觀上具供行使之用之意圖，該當第201條第1項偽造有價證券罪之構成要件。甲並無阻卻違法、阻卻罪責事由。</p>
+          <h4>結論</h4>
+          <p>甲成立刑法第201條第1項<span class="conclude-est">偽造有價證券罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例二：逾越代理權限偽造（呼應95年度第19次刑事庭決議）</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>乙受本人丙合法授權，得於一定額度內代理丙簽發本票，某次乙逾越丙授權之額度，於本票發票人欄記載丙之姓名，並於旁註記「乙代」字樣，簽發一張遠超授權額度之本票交付第三人丁，供丁作為債權憑證。</p>
+          <h4>爭點</h4>
+          <p>乙以「代理人」名義而非直接冒用丙本人名義簽發本票，是否仍構成偽造有價證券罪？</p>
+          <h4>分析</h4>
+          <p>依最高法院95年度第19次刑事庭會議決議意旨，無代理權（或逾越代理權限）之人假冒本人之代理人名義，於有價證券發票人欄記載本人姓名並加註代理字樣而製作有價證券，因該證券在形式上仍係以本人名義發生票據上權利義務，使被偽冒之本人成為該有價證券形式上之發票人，對本人權益及有價證券之公共信用造成危害，與直接冒用他人名義偽造有價證券並無二致，仍應構成偽造有價證券罪。乙逾越丙授權之額度而製作本票，其逾越授權部分已非丙本人意思所及，該部分之本票應評價為乙未經授權而擅自製作，仍該當偽造有價證券罪之構成要件。</p>
+          <h4>結論</h4>
+          <p>乙就逾越授權部分，成立刑法第201條第1項<span class="conclude-est">偽造有價證券罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例三：行使偽造有價證券取得對價，不另論詐欺罪</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>丙偽造一張面額新臺幣50萬元之本票後，持該偽造本票向不知情之丁借款，丁陷於錯誤誤信本票為真正，交付現金50萬元予丙，並取得該本票作為債權憑證。</p>
+          <h4>爭點</h4>
+          <p>丙除成立行使偽造有價證券罪外，是否另成立詐欺罪？</p>
+          <h4>分析</h4>
+          <p>丙偽造本票之行為該當第201條第1項偽造有價證券罪；其持以向丁行使並取得現金之行為，另該當第201條第2項行使偽造有價證券罪。依實務見解，行使偽造有價證券之行為本身已內含詐欺之性質，若行為人係持偽造有價證券直接行使並因而取得相當於證券票面價值之對價（如本案丙持面額50萬元之偽造本票，取得丁交付之50萬元現金），其詐欺部分應認已包含於行使偽造有價證券罪之當然評價範圍內，不另論以詐欺罪，以免重複評價同一詐欺不法內涵。</p>
+          <h4>結論</h4>
+          <p>丙成立刑法第201條第1項偽造有價證券罪，及第201條第2項<span class="conclude-est">行使偽造有價證券罪既遂</span>（偽造與行使二階段行為之罪數關係，比照195、196條說明，通常分論併罰），<span class="conclude-not">不另論</span>詐欺罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="ch">案例四：偽造後另有欺罔取財行為，另論詐欺罪</div>
+        <div class="cb">
+          <h4>事實</h4>
+          <p>戊偽造一張面額新臺幣30萬元之公司股票憑證後，持該偽造股票向不知情之己佯稱急需資金週轉，以該股票設定質權為擔保，另外向己借得現金50萬元（借款金額超出股票偽造面額）。</p>
+          <h4>爭點</h4>
+          <p>戊除成立行使偽造有價證券罪外，是否另成立詐欺罪？</p>
+          <h4>分析</h4>
+          <p>戊持偽造股票向己設定質權借款之行為，固然包含行使偽造有價證券之部分，惟戊借得之現金50萬元已超出該偽造股票票面價值（30萬元）之範圍，逾越部分之借款，並非單純行使偽造證券當然可取得之對價，而係戊另以偽造股票作為擔保外觀，佐以其他佯稱急需週轉等欺罔言詞，使己另陷於錯誤而多交付現金，此逾越票面價值之部分，已超出行使偽造有價證券罪之當然評價範圍，應另論以詐欺罪。</p>
+          <h4>結論</h4>
+          <p>戊成立刑法第201條第1項偽造有價證券罪、第2項行使偽造有價證券罪，及刑法第339條第1項<span class="conclude-est">詐欺取財罪</span>（就逾越票面價值之借款部分），依具體情形論以數罪併罰或想像競合。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 七、申論練習題 -->
+    <section class="section" id="s7">
+      <h2 class="stitle">七、申論練習題與模擬解答</h2>
+      <p style="font-size:13px; color:var(--ink-45);">以下題目經使用者授權由 AI 出題，模擬解答僅供教學參考。</p>
+
+      <div class="case-card exam">
+        <div class="ch">題目一（偽造有價證券罪與偽造私文書罪之區辨）</div>
+        <div class="cb">
+          <p>庚未經授權，以某公司名義製作一份記載公司股權比例之股票憑證。試問庚之行為應如何論罪？並說明偽造有價證券罪與偽造私文書罪之區辨標準。</p>
+          <h4>擬答</h4>
+          <p>偽造有價證券罪與偽造私文書罪之區辨，核心在於行為客體是否具備「有價證券」之本質——即該證券所表彰之權利，其發生、移轉或行使是否與占有證券本身具有不可分離之關係。公司股票係表彰股東權之有價證券，其權利之行使（如出席股東會、請求股息分派、轉讓股份）均須以占有該股票為前提，屬典型之有價證券。庚未經授權擅自製作外觀具公司股票形式之憑證，其行為客體屬有價證券而非單純私文書，應優先適用第201條第1項偽造有價證券罪（有價證券之公共信用保護密度較一般私文書更高，故法定刑亦較第210條偽造私文書罪為重，屬特別規定，應優先適用，不再論以偽造私文書罪）。庚並無阻卻違法、阻卻罪責事由。</p>
+          <p>從而，庚應成立刑法第201條第1項<span class="conclude-est">偽造有價證券罪既遂</span>，不另論第210條偽造私文書罪。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目二（收集之獨立既遂性）</div>
+        <div class="cb">
+          <p>辛明知友人壬持有一批偽造之公債票，仍向壬購入其中一部分，意圖日後轉賣圖利，尚未及轉手或行使即遭警方查獲。試問辛之刑責為何？</p>
+          <h4>擬答</h4>
+          <p>辛明知該公債票為偽造，仍基於日後供人行使（轉賣圖利，使買受人得以行使或再轉手）之意圖而向壬購入並持有，其購入持有行為該當第201條第2項「意圖供行使之用而收集」之構成要件。第201條第2項所稱「收集」，不以行為人自行偽造或直接向被害人行使為必要，凡基於供行使之目的而蒐集、持有偽造有價證券者，即已構成既遂，不以嗣後現實轉賣或行使完成為要件；收集罪之既遂時點在於行為人已基於供行使目的取得該偽造證券之持有，不因尚未及轉手行使而阻卻既遂之成立。辛雖尚未轉賣或行使，惟其收集行為本身已該當既遂構成要件，且第201條並未設未遂犯處罰明文，本無另論未遂之空間，其收集行為既已完成，應逕論以既遂。</p>
+          <p>從而，辛應成立刑法第201條第2項<span class="conclude-est">收集偽造有價證券罪既遂</span>。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目三（本票應記載事項未齊備，是否既遂）</div>
+        <div class="cb">
+          <p>癸擅自以他人名義製作一張本票，惟僅記載發票人姓名及金額，尚未記載發票日、到期日等票據法所定應記載事項，即於他人發現前自行銷毀。試問癸之刑責為何？</p>
+          <h4>擬答</h4>
+          <p>偽造有價證券罪之既遂，須偽造物在形式上已具備該類有價證券之基本要件，達足以使人誤信為真正有價證券之程度。就本票而言，依實務見解，須偽造之本票在形式上已記載符合票據法所定之應記載事項（如發票人簽名、金額、發票日、無條件擔任支付之意旨等），並有發票人之簽名或蓋章，犯罪始屬完成；若僅記載部分事項，尚未齊備票據法所定之基本要件，該文件在票據法上尚不生本票之效力，客觀上亦難認已達可持以冒充真正有價證券行使、使人誤信之程度，應評價為偽造行為尚未完成，未達既遂。癸僅記載發票人姓名及金額，未記載發票日等應記載事項，其偽造行為尚未完成，未達第201條第1項既遂之程度；因第201條並未設未遂犯處罰明文，依第25條第2項，本罪不處罰未遂犯，癸未完成之偽造行為，尚不成立本罪。</p>
+          <p>從而，癸之行為<span class="conclude-not">不成立</span>刑法第201條偽造有價證券罪（既遂或未遂），僅屬犯罪之預備或未完成階段。</p>
+        </div>
+      </div>
+
+      <div class="case-card exam">
+        <div class="ch">題目四（195／196條與201條就未遂犯處罰規定之比較）</div>
+        <div class="cb">
+          <p>試比較說明刑法第195條、第196條與第201條，就未遂犯處罰規定之立法差異及其可能理由。</p>
+          <h4>擬答</h4>
+          <p>第195條第2項、第196條第3項均明文規定「前項之未遂犯罰之」，故偽造貨幣罪與行使偽造貨幣罪均處罰未遂；第201條第1項、第2項則均未設此類明文，依第25條第2項「未遂犯之處罰，以有特別規定者為限」，偽造有價證券罪及行使偽造有價證券罪均不處罰未遂。此一立法差異之可能理由在於：通用貨幣係國家發行、具強制流通力之法定支付工具，其公共信用攸關整體金融交易秩序之根本穩定，侵害風險與範圍較有價證券更為廣泛、深遠（任何人均可能於日常交易中受偽鈔波及），立法者因而對貨幣犯罪設較高之保護密度，未遂階段即已值得科處刑罰；有價證券則多僅於特定交易關係人間流通（如公司股東、票據授受當事人），侵害範圍相對有限、且行為人通常須經一定形式要件（如票據應記載事項齊備）始能完成偽造，立法者評價上認未遂階段之危險性尚不足與貨幣犯罪等量齊觀，故未特別規定處罰未遂。此外，有價證券之偽造行為本身即須達「形式要件齊備、足以使人誤信」之程度方屬既遂，此一既遂門檻已具一定篩選作用，於既遂門檻之前的未完成階段，其法益侵害之具體與急迫程度，立法者評價上尚不足以科處刑罰。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 八、速查卡 -->
+    <section class="section" id="s8">
+      <h2 class="stitle">八、速查卡</h2>
+      <div class="mnemonic-card">
+        <div class="wm">速</div>
+        <h3>記憶口訣</h3>
+        <div class="mnemonic-item">有價證券憑占有，發生移轉皆須之
+          <small>有價證券之核心特徵在於權利之發生、移轉或行使與占有證券本身不可分離，此為判斷是否屬「其他有價證券」之關鍵標準</small>
+        </div>
+        <div class="mnemonic-item">行使若得票面對價，不再另論詐欺罪
+          <small>行使偽造有價證券取得相當於票面價值之對價者，詐欺部分已為行使罪當然評價所涵蓋，不另論詐欺罪；惟逾越票面價值另生欺罔取財者，仍應另論詐欺罪</small>
+        </div>
+        <table style="margin-top:22px; color:var(--ink); background:var(--paper-card); border-radius:6px; overflow:hidden;">
+          <thead><tr><th>項次</th><th>類型</th><th>法定刑</th><th>未遂</th></tr></thead>
+          <tbody>
+            <tr><td>第1項</td><td>偽造變造既遂</td><td>3年以上10年以下，得併科9萬元以下罰金</td><td>不罰（未設明文）</td></tr>
+            <tr><td>第2項</td><td>行使／收集／交付既遂</td><td>1年以上7年以下，得併科9萬元以下罰金</td><td>不罰（未設明文）</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 九、相關主題 -->
+    <section class="section" id="s9">
+      <h2 class="stitle">九、相關主題</h2>
+      <div class="link-note">
+        本條與新增講義《<a href="../講義/刑法195-196條-偽造貨幣罪.html" target="_blank">第195、196條．偽造貨幣罪</a>》同屬偽造類犯罪體系（侵害公共信用法益），惟未遂犯處罰規定之立法體例不同，本講義申論題四直接比較說明，建議合併研讀。<br><br>
+        本講義教學案例三、四涉及既有講義《<a href="../講義/刑法339條-詐欺罪.html" target="_blank">第339條．詐欺罪</a>》：行使偽造有價證券取得對價是否另論詐欺罪之判斷，建議對照閱讀。<br><br>
+        本講義申論題一涉及既有講義《<a href="../講義/刑法210條-偽造私文書罪.html" target="_blank">第210條．偽造私文書罪</a>》：偽造有價證券罪與偽造私文書罪之區辨、特別規定優先適用關係，建議對照閱讀。
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  const links = [...document.querySelectorAll('nav.sidebar a, .topnav a')];
+  const sections = [...document.querySelectorAll('main .section, main .cover')];
+  const map = new Map();
+  links.forEach(a=>{
+    const id = a.getAttribute('href').slice(1);
+    const el = document.getElementById(id);
+    if(el) map.set(el, links.filter(l=>l.getAttribute('href')==='#'+id));
+  });
+  const observer = new IntersectionObserver((entries)=>{
+    entries.forEach(entry=>{
+      const els = map.get(entry.target);
+      if(!els) return;
+      if(entry.isIntersecting){
+        links.forEach(l=>l.classList.remove('active'));
+        els.forEach(l=>l.classList.add('active'));
+      }
+    });
+  }, {rootMargin:'-20% 0px -70% 0px'});
+  sections.forEach(s=>{ if(map.has(s)) observer.observe(s); });
+
+  links.forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      e.preventDefault();
+      const id = a.getAttribute('href').slice(1);
+      document.getElementById(id)?.scrollIntoView({behavior:'smooth'});
+    });
+  });
+</script>
+</body>
+</html>
