@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>刑法第349、351條｜贓物罪</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700;900&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#16233b; --indigo:#2c4a76; --indigo-soft:#3f5f8f;
+  --parchment:#f3ede0; --paper:#fbf8f1; --paper-panel:#fffdf8;
+  --seal:#9c2b3a; --brass:#a9832f; --line:#ddd3bf;
+  --ink-70:rgba(22,35,59,.7); --ink-45:rgba(22,35,59,.45);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;font-family:"Noto Sans TC",sans-serif;background:var(--parchment);color:var(--ink);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+h1,h2,h3{font-family:"Noto Serif TC",serif;}
+.shell{display:flex;max-width:1280px;margin:0 auto;}
+.sidenav{width:240px;flex-shrink:0;position:sticky;top:0;align-self:flex-start;height:100vh;overflow-y:auto;padding:32px 18px;border-right:1px solid var(--line);}
+.sidenav .brand{font-family:"Noto Serif TC",serif;font-weight:900;font-size:1rem;color:var(--seal);margin-bottom:6px;}
+.sidenav .brand-sub{font-size:.72rem;color:var(--ink-45);margin-bottom:26px;}
+.sidenav ul{list-style:none;margin:0;padding:0;}
+.sidenav li{margin-bottom:2px;}
+.sidenav a{display:block;font-size:.86rem;padding:8px 10px;border-radius:6px;color:var(--ink-70);text-decoration:none;border-left:3px solid transparent;transition:.15s;}
+.sidenav a:hover{background:var(--paper-panel);}
+.sidenav a.active{background:var(--paper-panel);border-left-color:var(--seal);color:var(--ink);font-weight:700;}
+.sidenav a.dim{color:var(--ink-45);}
+.main{flex:1;min-width:0;box-shadow:-6px 0 18px -14px rgba(22,35,59,.25);background:var(--paper);}
+.topnav{display:none;position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line);padding:10px 12px;overflow-x:auto;white-space:nowrap;}
+.topnav a{display:inline-block;font-size:.78rem;padding:7px 14px;margin-right:6px;border-radius:999px;background:var(--paper-panel);border:1px solid var(--line);color:var(--ink-70);text-decoration:none;}
+.topnav a.active{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.topnav a.dim{color:var(--ink-45);}
+@media (max-width:980px){.sidenav{display:none;}.topnav{display:block;}}
+.cover{position:relative;padding:56px 40px 40px;border-bottom:1px solid var(--line);}
+.cover .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;letter-spacing:.24em;color:var(--brass);font-weight:700;margin-bottom:16px;}
+.cover .eyebrow::before{content:"";width:22px;height:1px;background:var(--brass);}
+.cover h1{font-weight:900;font-size:2rem;line-height:1.4;margin:0 0 10px;letter-spacing:.01em;}
+.cover .sub{font-size:1rem;color:var(--indigo);font-weight:500;margin:0;}
+.cover-meta{display:flex;align-items:center;gap:12px;margin-top:18px;flex-wrap:wrap;}
+.ver-badge{font-weight:700;font-size:.78rem;color:var(--seal);border:1px solid var(--seal);border-radius:20px;padding:3px 12px;letter-spacing:.03em;}
+.meta-date{font-size:.8rem;color:var(--ink-45);}
+.cover .seal-mark{position:absolute;top:48px;right:40px;width:78px;height:78px;border:2.5px solid var(--seal);border-radius:6px;color:var(--seal);display:flex;align-items:center;justify-content:center;font-family:"Noto Serif TC",serif;font-weight:900;writing-mode:vertical-rl;font-size:1.05rem;letter-spacing:.15em;transform:rotate(3deg);background:rgba(156,43,58,.03);}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px;}
+.toc span{font-size:.74rem;background:var(--paper-panel);border:1px solid var(--line);padding:4px 10px;border-radius:6px;color:var(--ink-70);}
+@media(max-width:600px){.cover{padding:40px 20px 28px;}.cover .seal-mark{display:none;}}
+section{padding:44px 40px;border-bottom:1px solid var(--line);}
+@media(max-width:600px){section{padding:32px 20px;}}
+.eyebrow-sec{font-size:.72rem;letter-spacing:.2em;color:var(--brass);font-weight:700;margin-bottom:8px;}
+section h2{font-size:1.4rem;margin:0 0 22px;color:var(--ink);}
+.article-box{position:relative;background:var(--paper-panel);border-left:3px solid var(--indigo);border-radius:4px;padding:20px 22px;margin-bottom:16px;overflow:hidden;box-shadow:0 1px 3px rgba(22,35,59,.06);}
+.article-box .num-wm{position:absolute;right:10px;bottom:-14px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:5rem;color:var(--ink);opacity:.06;pointer-events:none;line-height:1;}
+.article-box h3{margin:0 0 10px;font-size:1.05rem;color:var(--indigo);}
+.article-box p{margin:0 0 6px;line-height:1.9;font-size:.95rem;}
+.article-box .tag-role{display:inline-block;font-size:.7rem;background:var(--parchment);border:1px solid var(--line);color:var(--ink-70);padding:2px 8px;border-radius:4px;margin-bottom:10px;}
+table{width:100%;border-collapse:collapse;margin:14px 0 6px;font-size:.88rem;}
+th{background:var(--ink);color:var(--paper);text-align:left;padding:10px 12px;font-weight:700;}
+td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;}
+tr:nth-child(even) td{background:#f6f1e6;}
+tr:nth-child(odd) td{background:var(--paper-panel);}
+.result-pos{color:var(--ink);font-weight:700;background:linear-gradient(transparent 60%, rgba(169,131,47,.35) 60%);}
+.result-neg{color:var(--seal);font-weight:700;}
+.tier-block{margin-bottom:26px;}
+.tier-block h3{font-size:1.02rem;color:var(--indigo);margin:0 0 10px;padding-left:10px;border-left:3px solid var(--brass);}
+.placeholder{border:2px dashed var(--brass);border-radius:8px;padding:28px 20px;text-align:center;background:repeating-linear-gradient(135deg, rgba(169,131,47,.05) 0 10px, transparent 10px 20px);}
+.placeholder .icon{font-size:1.6rem;margin-bottom:8px;}
+.placeholder p{margin:4px 0;font-size:.86rem;color:var(--ink-70);}
+.placeholder .badge{display:inline-block;margin-top:8px;font-size:.72rem;background:var(--brass);color:var(--paper);padding:3px 12px;border-radius:999px;}
+.doc-card{background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:16px 18px;margin-bottom:12px;}
+.doc-card .name{font-weight:700;color:var(--indigo);margin-bottom:6px;font-size:.94rem;}
+.doc-card .body{font-size:.88rem;line-height:1.8;color:var(--ink);margin-bottom:8px;}
+.doc-card .src{font-size:.74rem;color:var(--ink-45);}
+.doc-card .warn{font-size:.74rem;color:var(--seal);margin-top:4px;}
+.case-card{background:var(--paper-panel);border-radius:10px;box-shadow:0 1px 2px rgba(22,35,59,.08), 0 6px 18px -10px rgba(22,35,59,.25);margin-bottom:22px;overflow:hidden;}
+.case-card .head{background:var(--indigo);color:var(--paper);padding:12px 18px;font-weight:700;font-size:.94rem;}
+.case-card .body-inner{padding:18px;}
+.case-card h4{margin:14px 0 6px;font-size:.86rem;color:var(--brass);letter-spacing:.05em;}
+.case-card h4:first-child{margin-top:0;}
+.case-card p{margin:0 0 8px;font-size:.9rem;line-height:1.9;}
+.essay-card .head{background:var(--ink);}
+.relation-wrap{margin:16px 0 4px;background:var(--paper-panel);border:1px solid var(--line);border-radius:8px;padding:14px;}
+.relation-note{font-size:.8rem;color:var(--ink-45);text-align:center;margin-top:6px;}
+.link-note{border:1px dashed var(--line);border-radius:8px;padding:18px 22px;margin-top:10px;}
+.link-note h3{font-size:.92rem;color:var(--indigo);margin:0 0 10px;}
+.link-note ul{margin:0;padding-left:1.2em;font-size:.88rem;line-height:2;}
+.link-note a{color:var(--indigo);text-decoration:underline;}
+.cheatsheet{background:var(--ink);color:var(--paper);border-radius:12px;padding:30px 26px;position:relative;overflow:hidden;}
+.cheatsheet::after{content:"速";position:absolute;right:6px;bottom:-30px;font-family:"Noto Serif TC",serif;font-weight:900;font-size:9rem;color:rgba(251,248,241,.06);}
+.cheatsheet h3{margin:0 0 14px;font-size:1.1rem;color:var(--paper);}
+.cheatsheet ul{margin:0 0 18px;padding-left:1.2em;font-size:.88rem;line-height:2;}
+.mnemonic{background:var(--seal);border-radius:8px;padding:14px 16px;font-family:"Noto Serif TC",serif;font-weight:700;font-size:1rem;text-align:center;letter-spacing:.05em;}
+</style>
+</head>
+<body>
+<div class="shell">
+<nav class="sidenav" id="sidenav">
+  <div class="brand">criminal-law-interpretation</div>
+  <div class="brand-sub">刑法教學講義</div>
+  <ul>
+    <li><a href="#cover" class="nav-link">封面</a></li>
+    <li><a href="#articles" class="nav-link">一、條文原文</a></li>
+    <li><a href="#structure" class="nav-link">二、條文結構</a></li>
+    <li><a href="#tiers" class="nav-link">三、犯罪三階層解析</a></li>
+    <li><a href="#doctrine" class="nav-link">四、學說見解</a></li>
+    <li><a href="#practice" class="nav-link">五、實務見解</a></li>
+    <li><a href="#cases" class="nav-link">六、教學案例</a></li>
+    <li><a href="#essays" class="nav-link">七、申論練習題</a></li>
+    <li><a href="#cheatsheet" class="nav-link">八、速查卡</a></li>
+    <li><a href="#related" class="nav-link">九、相關主題</a></li>
+  </ul>
+</nav>
+
+<div class="main">
+<nav class="topnav" id="topnav">
+  <a href="#cover" class="nav-link">封面</a>
+  <a href="#articles" class="nav-link">原文</a>
+  <a href="#structure" class="nav-link">結構</a>
+  <a href="#tiers" class="nav-link">三階層</a>
+  <a href="#doctrine" class="nav-link">學說</a>
+  <a href="#practice" class="nav-link">實務</a>
+  <a href="#cases" class="nav-link">案例</a>
+  <a href="#essays" class="nav-link">申論題</a>
+  <a href="#cheatsheet" class="nav-link">速查卡</a>
+  <a href="#related" class="nav-link">相關主題</a>
+</nav>
+
+<header class="cover" id="cover">
+  <div class="eyebrow">第二編 分則 · 第三十四章 贓物罪</div>
+  <h1>刑法第349、351條<br>贓物罪・親屬間減免</h1>
+  <p class="sub">維護國家財產法益回復可能性——收受、搬運、寄藏、故買、媒介五態樣與親親相隱之界線</p>
+  <div class="cover-meta">
+    <span class="ver-badge">v1.0</span>
+    <span class="meta-date">建立日期：2026-08-30</span>
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=mjib007.criminal-law-interpretation.349-351" alt="visitor badge" style="height:20px;">
+  </div>
+  <div class="toc">
+    <span>§349Ⅰ 收受・搬運・寄藏・故買・媒介贓物</span><span>§349Ⅱ 準贓物</span><span>§351 親屬間減免</span>
+  </div>
+  <div class="seal-mark">有罪</div>
+</header>
+
+<!-- 一、條文原文 -->
+<section id="articles">
+  <div class="eyebrow-sec">ARTICLES</div>
+  <h2>一、條文原文</h2>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第349條（贓物罪）</h3>
+    <p>收受、搬運、寄藏、故買贓物或媒介者，處五年以下有期徒刑、拘役或科或併科五十萬元以下罰金。</p>
+    <p>因贓物變得之財物，以贓物論。</p>
+    <div class="num-wm">349</div>
+  </div>
+
+  <div class="article-box">
+    <span class="tag-role">目標條文</span>
+    <h3>第351條（親屬間犯本章之罪）</h3>
+    <p>於直系血親、配偶或同財共居親屬之間，犯本章之罪者，得免除其刑。</p>
+    <div class="num-wm">351</div>
+  </div>
+</section>
+
+<!-- 二、條文結構 -->
+<section id="structure">
+  <div class="eyebrow-sec">STRUCTURE</div>
+  <h2>二、條文結構——贓物罪體系</h2>
+  <p style="font-size:.9rem;color:var(--ink-70);line-height:1.9;">本章（第三十四章）保護法益為國家對犯罪所得財物之追查、返還機制，兼及被害人對原物之返還請求權，屬侵害國家法益與財產法益之複合犯罪類型。第349條為本章核心之單一構成要件，以五種行為態樣（收受、搬運、寄藏、故買、媒介）擇一即該當；第二項另設「準贓物」之擬制規定，擴張適用範圍。第351條則就「親屬間」犯本章之罪設減免規定，性質與第167條（藏匿人犯及湮滅證據罪章之親屬減免）相同，均體現「期待可能性」降低之立法政策考量。本章第350條原規定「常業贓物罪」，已於民國103年修法刪除，現行本章僅餘第349條、第351條兩條。</p>
+
+  <table>
+    <thead><tr><th>條文</th><th>規範對象</th><th>行為態樣</th><th>法定刑／效果</th></tr></thead>
+    <tbody>
+      <tr><td>§349Ⅰ</td><td>他人財產犯罪所得之物（贓物）</td><td>收受、搬運、寄藏、故買、媒介（擇一即該當）</td><td>5年以下有期徒刑、拘役或科或併科50萬元以下罰金</td></tr>
+      <tr><td>§349Ⅱ</td><td>因贓物變得之財物（準贓物，如變賣贓物所得價金、以價金購置之物）</td><td>擬制規定，不另設行為態樣，逕以贓物論</td><td>同§349Ⅰ</td></tr>
+      <tr><td>§351</td><td>直系血親、配偶或同財共居親屬</td><td>犯本章（§349）之罪</td><td>得免除其刑（法官裁量，非義務免除）</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1rem;color:var(--indigo);margin-top:20px;">五種行為態樣界定</h3>
+  <table>
+    <thead><tr><th>行為態樣</th><th>內容</th></tr></thead>
+    <tbody>
+      <tr><td>收受</td><td>無償或有償取得贓物之持有，不以移轉所有權為必要，單純受贈、受讓占有即屬之</td></tr>
+      <tr><td>搬運</td><td>為贓物之運送、搬移，使贓物離開原所在地，藉此助長本犯處分贓物之便利</td></tr>
+      <tr><td>寄藏</td><td>受本犯或第三人委託代為保管、藏放贓物</td></tr>
+      <tr><td>故買</td><td>明知為贓物而仍以對價取得（有償取得），為與「收受」區辨之關鍵——收受不限有償，故買則限於有償</td></tr>
+      <tr><td>媒介</td><td>居間介紹、撮合前四種行為之完成，本身未必直接持有贓物</td></tr>
+    </tbody>
+  </table>
+
+  <h3 style="font-size:1rem;color:var(--indigo);margin-top:20px;">本犯自行處分贓物之連鎖效應</h3>
+  <p style="font-size:.9rem;line-height:1.9;">本犯（原財產犯罪之正犯或共犯）自行收受、搬運、寄藏、故買或媒介自己犯罪所得之物，均非贓物罪所處罰之行為，因其僅是原財產犯罪既遂後之當然後續處分行為，實務與學說多認屬「不可罰之後行為」，不另論贓物罪，僅論原財產犯罪一罪。本罪之行為主體，須為「本犯以外之人」。</p>
+</section>
+
+<!-- 三、犯罪三階層逐項解析 -->
+<section id="tiers">
+  <div class="eyebrow-sec">THREE-TIER ANALYSIS</div>
+  <h2>三、犯罪三階層逐項解析</h2>
+
+  <div class="tier-block">
+    <h3>（一）構成要件該當性——客觀構成要件</h3>
+    <table>
+      <thead><tr><th>要件</th><th>內容</th></tr></thead>
+      <tbody>
+        <tr><td>行為主體</td><td>一般犯，惟排除「本犯」自己（本犯處分自己犯罪所得之物，不另成立本罪）</td></tr>
+        <tr><td>行為客體</td><td>「贓物」——通說限於「他人」財產犯罪（竊盜、搶奪、強盜、侵占、詐欺、恐嚇取財、擄人勒贖等）所得之實體財物，不含違禁物、抽象權利（詳見學說見解單元之爭議）</td></tr>
+        <tr><td>實行行為</td><td>收受、搬運、寄藏、故買、媒介，五者擇一即該當，屬即成犯（行為完成即既遂）</td></tr>
+        <tr><td>§349Ⅱ準贓物</td><td>因贓物變得之財物（如變賣贓物所得價金、以該價金購置之物），法律擬制以贓物論，適用範圍隨之擴張</td></tr>
+        <tr><td>未遂</td><td>本罪未特別規定處罰未遂（§25Ⅱ「未遂犯之處罰，以有特別規定者為限」），故不成立未遂犯</td></tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:22px;">主觀構成要件</h3>
+    <table>
+      <thead><tr><th>要件</th><th>內容</th></tr></thead>
+      <tbody>
+        <tr><td>故意</td><td>須對「該物為贓物」具有認識，實務採較寬鬆之未必故意標準：行為人雖非確知，然依價格顯著異常低廉、交易來源不明、交易方式可疑等客觀情狀，應可懷疑而仍取得者，得認定其對贓物具有不確定故意（預見其為贓物仍不違背本意）</td></tr>
+        <tr><td>過失不罰</td><td>純粹過失不知為贓物而收受、搬運等，本罪不處罰過失犯，不成立本罪</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tier-block">
+    <h3>（二）違法性</h3>
+    <p style="font-size:.9rem;line-height:1.9;">本條不涉及正當防衛、緊急避難等傳統阻卻違法事由之類型化討論，構成要件該當通常即具違法性；個案仍不排除一般阻卻違法事由（如依法令之行為）之抽象適用可能，惟於贓物罪之典型案例中甚少出現。</p>
+  </div>
+
+  <div class="tier-block">
+    <h3>（三）有責性（罪責）——第351條之定位</h3>
+    <p style="font-size:.9rem;line-height:1.9;">第351條並非阻卻違法或阻卻構成要件事由，而係於「罪責」層次，就直系血親、配偶或同財共居親屬之間犯本章之罪之情形，基於期待可能性顯著降低（不能強求至親「大義滅親」，例如子女為犯罪之父母寄藏贓物），賦予法官裁量減輕或免除其刑之空間。其行為本身仍該當構成要件且具違法性，僅罪責非難程度因期待可能性降低而受評價，條文明文為「得免除」而非「不罰」，法官仍有裁量空間，並非當然免刑。此一立法體例與第167條（藏匿人犯及湮滅證據罪章之親屬減免）相同，均屬「親親相隱」價值於現行法之具體化。</p>
+  </div>
+</section>
+
+<!-- 四、學說見解 -->
+<section id="doctrine">
+  <div class="eyebrow-sec">DOCTRINE</div>
+  <h2>四、學說見解</h2>
+
+  <div class="doc-card">
+    <div class="name">通說（多數見解）——贓物之範圍限於財產犯罪所得</div>
+    <div class="body">贓物僅限於「財產犯罪」（竊盜、搶奪、強盜、侵占、詐欺等）所得之物，且限於實體財物（如金錢、動產），不包含違禁物（如毒品、假鈔）或抽象權利。理由在於贓物罪之規範目的係維護被害人對「財產法益」之回復可能性，若非財產犯罪所得（如毒品交易對價），因法律本不承認該利得之合法回復請求權，即無透過贓物罪保護之必要。</div>
+    <div class="src">來源：綜合檢索多筆法律科普網站（如法律百科 Legispedia）之摘要整理，<strong>非直接引自特定教科書原文逐字轉錄</strong>，建議日後以特定教科書（如林山田、林東茂、盧映潔等分則教科書）原文核實後補正出處。</div>
+    <div class="warn">提醒：此則為網路轉引整理，尚未經原始文獻逐一核實。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">蔡佩芬</div>
+    <div class="body">「贓物」之概念不應僅以現行法所保護之財產法益為判斷標準，亦不應僅以立法體系（本章列於財產犯罪之後）為依據，而認為僅侵害財產法益所得之物始屬贓物；贓物之範圍宜有更廣義之理解空間。此見解與前述通說形成對照，值得於教學上並列比較。</div>
+    <div class="src">出處：蔡佩芬，〈贓物與準贓物之意義範圍新釋〉，《法學叢刊》，第47卷第3期，頁149-164，2002年7月。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">王效文</div>
+    <div class="body">目前僅檢索確認篇名、作者與出處，<strong>尚未取得該文完整見解內容摘要</strong>（原文收錄於付費資料庫，未能取得全文內容以供摘要改寫）。先列出出處供您參考，內容摘要待您提供原文或進一步查證後補入。</div>
+    <div class="src">出處：王效文，〈贓物罪的處罰理由、構成要件與修正建議〉，《月旦法學雜誌》，第145期，頁250，2007年6月。</div>
+    <div class="warn">提醒：見解內容尚未核實，僅列出處待補。</div>
+  </div>
+
+  <h3 style="font-size:.92rem;color:var(--indigo);margin-top:24px;">贓物罪罪質學說（補充參考）</h3>
+  <p style="font-size:.86rem;color:var(--ink-70);line-height:1.9;">關於贓物罪之處罰根據（罪質），學說上約有事後從犯說、犯罪隱匿說、返還請求權妨害說、違法狀態維持說、參與利得說、間接領得說等六說，其中較受注目者為「返還請求權妨害說」（贓物犯之參與使被害人喪失或難以行使原物返還請求權）與「違法狀態維持說」（贓物犯使本犯所造成之違法財產狀態得以維持、存續），通說多採二者併合之觀點。</p>
+  <div class="doc-card" style="margin-top:12px;">
+    <div class="src">來源：綜合檢索法律科普網站（如「刑法名詞解釋」等）之摘要整理，<strong>非直接引自特定教科書原文</strong>，六說之個別主張學者尚未逐一查核，建議後續補上具體教科書出處。</div>
+    <div class="warn">提醒：此則為網路轉引整理，尚未經原始文獻核實，先列入供教學參考。</div>
+  </div>
+</section>
+
+<!-- 五、實務見解 -->
+<section id="practice">
+  <div class="eyebrow-sec">PRACTICE</div>
+  <h2>五、實務見解</h2>
+
+  <div class="doc-card">
+    <div class="name">最高法院83年度台上字第6837號刑事判決</div>
+    <div class="body">涉及被告所犯第349條第2項故買贓物罪，與偽造私文書罪、偽造特種文書罪間之牽連關係認定；就各罪輕重比較而言，故買贓物罪雖與偽造私文書罪最高本刑均為5年以下有期徒刑，惟故買贓物罪另有拘役、罰金之選科規定，經比較後認定較偽造私文書罪為輕。</div>
+    <div class="src">來源：本則內容轉引自法律資訊網站（lawplayer.com「具參考價值裁判」欄目），<strong>尚未經司法院裁判書查詢系統原文核實</strong>。建議您或我進一步至<a href="https://judgment.judicial.gov.tw/" target="_blank">司法院裁判書查詢系統</a>以案號「83年度台上字第6837號」查證全文後再正式採用。</div>
+    <div class="warn">提醒：二手轉引內容，尚待原文核實。</div>
+  </div>
+
+  <div class="doc-card">
+    <div class="name">臺灣高等法院法律座談會決議（刑事類）——同一行為人先後有故買、搬運贓物行為如何論罪</div>
+    <div class="body">本則座談會題目直接對應「同一行為人先後多次為贓物罪各行為態樣（如先故買後搬運）應如何論罪（一罪或數罪）」之罪數爭議，惟頁面多次連線逾時，<strong>目前尚未能取得決議之研討結論與理由內容</strong>，故本講義暫不引用其結論，僅提供頁面連結供您自行查閱核實。</div>
+    <div class="src">來源：<a href="https://tph.judicial.gov.tw/tw/cp-9035-500583-b4fee-051.html" target="_blank">臺灣高等法院網站</a>（頁面連線多次失敗，內容未經確認）。</div>
+    <div class="warn">提醒：內容未能讀取核實，僅供您自行查閱，講義中不呈現任何結論性文字。</div>
+  </div>
+
+  <h3 style="font-size:.92rem;color:var(--indigo);margin-top:24px;">大法官解釋／憲法法庭判決</h3>
+  <div class="placeholder">
+    <div class="icon">⚖️</div>
+    <p>本條（§349、§351）目前查無大法官解釋或憲法法庭判決。</p>
+    <p>理由：本條構成要件明確，爭議多集中於個案事實（故意之認定、罪數關係），尚未有人以此聲請違憲審查。</p>
+    <p style="margin-top:8px;">附註：「釋字第349號解釋」純屬解釋號碼與條號之巧合，其內容為不動產所有權相關爭議，與刑法第349條贓物罪並無關聯，特此說明以免讀者混淆。</p>
+    <span class="badge">查無資料</span>
+  </div>
+</section>
+
+<!-- 六、教學案例 -->
+<section id="cases">
+  <div class="eyebrow-sec">CASES（教學用途・AI虛構）</div>
+  <h2>六、教學案例</h2>
+
+  <div class="case-card">
+    <div class="head">案例一｜異常低價收購——故買故意（未必故意）之認定</div>
+    <div class="body-inner">
+      <p><strong>事實</strong>：甲無故竊取丙所有之名牌包一只（市價約新臺幣10萬元），得手後尋得經營二手精品店之乙，以新臺幣1萬元（約市價一成）出售予乙。乙見該包標籤、保卡俱全但價格顯著低於行情，且甲交易時神色閃爍、拒絕提供進貨憑證，乙仍收購入店。</p>
+
+      <div class="relation-wrap">
+        <svg viewBox="0 0 640 340" width="100%" role="img" aria-label="甲、乙、丙三方關係圖">
+          <defs>
+            <marker id="arrow349" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#2c4a76"/>
+            </marker>
+          </defs>
+          <line x1="300" y1="100" x2="140" y2="222" stroke="#2c4a76" stroke-width="2" marker-end="url(#arrow349)"/>
+          <text x="175" y="170" font-family="Noto Sans TC" font-size="12" fill="#5b6472">竊取其名牌包（§320）</text>
+          <line x1="340" y1="100" x2="500" y2="222" stroke="#2c4a76" stroke-width="2" marker-end="url(#arrow349)"/>
+          <text x="365" y="170" font-family="Noto Sans TC" font-size="12" fill="#5b6472">以市價一成出售</text>
+
+          <rect x="240" y="30" width="160" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+          <text x="320" y="58" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">甲・竊盜正犯</text>
+          <text x="320" y="78" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">無故竊取丙之名牌包</text>
+
+          <rect x="40" y="230" width="160" height="70" rx="6" fill="#fffdf8" stroke="#2c4a76" stroke-width="1.5"/>
+          <text x="120" y="258" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">丙・被害人</text>
+          <text x="120" y="278" text-anchor="middle" font-family="Noto Sans TC" font-size="12" fill="#5b6472">名牌包遭竊，物之所有人</text>
+
+          <rect x="440" y="230" width="160" height="70" rx="6" fill="#fffdf8" stroke="#9c2b3a" stroke-width="1.5"/>
+          <text x="520" y="255" text-anchor="middle" font-family="Noto Serif TC" font-weight="700" font-size="15" fill="#16233b">乙・故買贓物被告</text>
+          <text x="520" y="273" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#5b6472">經營二手精品店，低價收購</text>
+          <text x="520" y="290" text-anchor="middle" font-family="Noto Sans TC" font-size="11" fill="#9c2b3a">爭點：是否具備故買故意</text>
+        </svg>
+        <p class="relation-note">乙是否成立故買贓物罪，關鍵在於價格顯著異常低廉、來源不明、交易可疑等客觀跡象，是否足以認定其對「該物為贓物」具有未必故意。</p>
+      </div>
+
+      <h4>爭點</h4>
+      <p>乙未親眼見聞甲行竊之過程，亦未經甲明確告知該包來源不正，乙是否仍具備故買贓物罪之故意？</p>
+      <h4>分析</h4>
+      <p>甲無故竊取丙之名牌包，該當第320條普通竊盜罪。乙其後以顯著低於市價之對價收購該包，客觀上該當第349條第1項「故買贓物」之構成要件行為。主觀故意部分，實務就贓物罪之故意採較寬鬆之未必故意標準：行為人雖未必確知該物確係贓物，然依價格顯著異常低廉（僅約市價一成）、賣家交易時神色閃爍、無法提供合法來源憑證等客觀情狀綜合判斷，一般人依交易經驗均應心生懷疑，乙身為經營二手精品店之專業從業者，對商品來源之注意義務應高於一般消費者，其明知上開可疑跡象仍執意收購，堪認其已預見該包可能為贓物，仍不違背本意而收購，應論以贓物罪之未必故意。</p>
+      <h4>結論</h4>
+      <p>乙<span class="result-pos">成立故買贓物罪（§349Ⅰ）</span>，因其具備贓物之未必故意；甲另<span class="result-pos">成立竊盜罪（§320）</span>，二者分別論罪。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例二｜直系血親間之寄藏——第351條減免之適用</div>
+    <div class="body-inner">
+      <p><strong>事實</strong>：戊以詐術向他人詐得現金新臺幣30萬元，戊之父丁明知該筆現金來源不正，仍應戊之請求，代為將該筆現金藏放於自己銀行帳戶內達數月之久。</p>
+      <h4>爭點</h4>
+      <p>丁之行為應如何論處？是否得適用第351條減免？</p>
+      <h4>分析</h4>
+      <p>戊向他人施用詐術取得現金30萬元，該當第339條詐欺取財罪。丁明知該筆現金為戊犯罪所得之贓物，仍代為藏放於自己帳戶，該當第349條第1項「寄藏贓物」之構成要件：丁受戊委託代為保管該贓物，且丁明知其為贓物仍為之，具備寄藏贓物之故意。就第351條減免規定之適用，丁與戊為父子關係，屬「直系血親」，且丁係就戊（本犯）所犯本章之罪（即第349條寄藏贓物罪）而為之，該當第351條之適用要件。依期待可能性理論，法律難以強求丁對親生子女之犯罪所得「見死不救」、逕行檢舉或拒絕協助，故法官得就丁之刑責，依裁量減輕或免除之，惟丁之行為本身仍該當構成要件且具違法性，僅罪責非難程度因期待可能性降低而受評價，並非當然無罪。</p>
+      <h4>結論</h4>
+      <p>丁<span class="result-pos">該當寄藏贓物罪（§349Ⅰ）</span>，惟得依<span class="result-pos">第351條減輕或免除其刑</span>（法官裁量）；戊另成立<span class="result-pos">詐欺取財罪（§339）</span>。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例三｜違禁物交易對價——贓物概念之限縮（通說立場）</div>
+    <div class="body-inner">
+      <p><strong>事實</strong>：己販賣毒品予多人，取得現金新臺幣50萬元，己委由不知情以外之友人庚，代為藏放該筆現金。庚明知該筆現金確係己販毒所得。</p>
+      <h4>爭點</h4>
+      <p>庚寄藏該筆現金之行為，是否成立贓物罪？</p>
+      <h4>分析</h4>
+      <p>依通說見解，「贓物」之範圍限於「他人財產犯罪」（如竊盜、搶奪、強盜、侵占、詐欺等）所得之物，其規範目的在於維護被害人對財產法益之回復可能性。己販賣毒品之行為構成毒品危害防制條例上之犯罪，其性質係違反國家對毒品管制之公共法益，並非侵害特定被害人財產法益之「財產犯罪」，該筆現金亦非通說所稱贓物罪欲保護之「被害人得請求回復之財產」。從而，依前述通說立場，庚代為藏放該筆現金之行為，尚不成立第349條寄藏贓物罪（惟仍可能該當洗錢防制法等其他特別法規定，非本講義討論範圍）。此結論與蔡佩芬見解（贓物概念不應僅以現行法益為限）恐有出入，若採後者立場，庚之行為是否成立本罪，容有進一步討論空間，教學上宜並列比較。</p>
+      <h4>結論</h4>
+      <p>依通說立場，庚<span class="result-neg">不成立寄藏贓物罪（§349）</span>，因該筆現金非「財產犯罪」所得之贓物。</p>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="head">案例四｜準贓物——因贓物變得之財物（§349Ⅱ）</div>
+    <div class="body-inner">
+      <p><strong>事實</strong>：甲搶奪路人之金項鍊一條，得手後轉賣予不知情之銀樓，得款新臺幣8萬元，甲以其中5萬元購入一支二手手錶。辛明知甲以搶奪贓款購入該手錶，仍以顯著低價向甲收購該手錶。</p>
+      <h4>爭點</h4>
+      <p>甲以贓款購入之手錶，是否仍屬「贓物」？辛收購該手錶之行為應如何論處？</p>
+      <h4>分析</h4>
+      <p>甲搶奪路人之金項鍊，該當第325條普通搶奪罪，金項鍊為該罪之贓物。甲將金項鍊轉賣予不知情銀樓所得之價金，性質上為「因贓物變得之財物」；甲進而以該價金購入手錶，該手錶亦屬「因贓物變得之財物」之範疇，依第349條第2項「因贓物變得之財物，以贓物論」之擬制規定，該手錶在法律上仍以贓物論，不因贓物之型態經一次或多次轉換而喪失贓物性質。辛明知該手錶係甲以搶奪贓款購得，仍以顯著低價收購，客觀上該當「故買」準贓物之行為，主觀上具備明知之故意，應論以第349條第1項故買贓物罪（第2項準贓物之擬制效果）。</p>
+      <h4>結論</h4>
+      <p>辛<span class="result-pos">成立故買贓物罪（§349Ⅰ準用Ⅱ）</span>，因其故買之手錶依§349Ⅱ以贓物論；甲另成立<span class="result-pos">搶奪罪（§325）</span>。</p>
+    </div>
+  </div>
+
+
+</section>
+
+<!-- 七、申論題 -->
+<section id="essays">
+  <div class="eyebrow-sec">ESSAY QUESTIONS（AI自行出題，已獲使用者授權）</div>
+  <h2>七、申論練習題與模擬解答</h2>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題一</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：甲於路邊撿獲他人不慎遺失之皮夾一只（非因任何人之犯罪行為而喪失占有，單純遺失），內有現金及證件。甲明知該皮夾非自己所有，仍據為己有並花用其內現金。試問甲之行為是否成立贓物罪？</p>
+      <h4>模擬解答</h4>
+      <p>第349條贓物罪之成立，以行為客體須為「贓物」（即他人因財產犯罪所喪失占有之物）為前提。本案甲所拾得之皮夾，係原所有人單純遺失而非因他人犯罪行為（如竊盜、搶奪等）所致喪失占有，該皮夾自始並非「贓物」，甲拾得後據為己有並花用現金之行為，核與第349條之構成要件不符，不成立贓物罪。惟甲之行為另涉及對於「持有人脫離持有之物」擅自處分，可能該當第337條侵占遺失物罪之構成要件（甲對於因脫離本人所持有之物，意圖為自己不法之所有，而予以侵占），應另行檢視是否成立該罪，惟此非贓物罪體系之討論範疇。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題二</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：乙受甲委託，將甲竊得之機車一部搬運至甲指定之地點寄放，乙搬運過程中始終未曾親自查看車輛來源，亦未詢問甲。事後查明，乙雖未明確知悉車輛確係贓物，但甲交付時該機車鑰匙孔遭破壞、車牌明顯遭拆卸，此等跡象一望即知可疑。試問乙是否成立贓物罪？</p>
+      <h4>模擬解答</h4>
+      <p>乙受甲委託搬運機車，客觀上該當第349條第1項「搬運」贓物之構成要件行為。主觀故意部分，乙雖辯稱未曾明確知悉車輛來源，惟贓物罪之故意不以行為人確實知悉為必要，實務就贓物之明知採較寬鬆之未必故意標準：行為人依客觀情狀（如本案機車鑰匙孔遭破壞、車牌遭拆卸等一望即知之異常跡象）應可懷疑其為贓物，卻仍執意搬運，可認其已預見該物可能為贓物，仍不違背本意而為搬運，應論以贓物罪之未必故意，尚不能以「未親自查看」、「未曾詢問」等消極不作為，卸免其對客觀顯著可疑跡象視而不見之故意評價。從而，乙應論以第349條第1項搬運贓物罪。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題三</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：丙與丁為同居多年、共同生活但未辦理結婚登記之伴侶（不具配偶身分，亦非直系血親）。丁竊得財物後，丙明知情由仍代為寄藏。試問丙得否主張第351條減免其刑？</p>
+      <h4>模擬解答</h4>
+      <p>丙代為寄藏丁竊得之財物，該當第349條第1項寄藏贓物罪之構成要件。就第351條減免規定之適用範圍，條文明文限於「直系血親、配偶或同財共居親屬」。丙、丁雖共同生活多年，然未辦理結婚登記，依現行法尚不具備「配偶」之身分（配偶以有效婚姻關係為前提）；二人亦非「直系血親」。惟若丙、丁確係「同財共居」（共同生活、財產一定程度共同運用管理）之關係，仍可能該當第351條所稱「同財共居親屬」之範疇，此有賴具體審認二人是否具備親屬身分（如姻親、旁系血親等）且同財共居之事實，若二人僅係單純同居伴侶而不具備任何親屬身分基礎，即難認屬「同財共居『親屬』」，蓋該條要件仍以「親屬」關係之存在為前提，同財共居僅係附加限縮要件，非謂任何同財共居之人均當然適用。從而，若丙、丁間欠缺法律上之親屬身分，丙尚不得主張第351條減免其刑，應依第349條第1項通常法定刑論處。</p>
+    </div>
+  </div>
+
+  <div class="case-card essay-card">
+    <div class="head">申論題四</div>
+    <div class="body-inner">
+      <p><strong>試題</strong>：戊先後三次，分別於不同時間、地點，向同一竊盜集團故買該集團所竊得之財物（每次交易之標的物、對價均各自獨立）。試問戊之行為應如何論罪，是成立一罪或數罪？</p>
+      <h4>模擬解答</h4>
+      <p>戊先後三次故買贓物之行為，各次交易之時間、地點、標的物、對價均各自獨立，客觀上為可分之三個行為，each次交易均個別該當第349條第1項故買贓物罪之構成要件，主觀上戊對each次交易亦各別具備贓物故意，依一般刑法原理，數個獨立之行為各自成立犯罪者，原則上應分論併罰（第50條數罪併罰），除非依接續犯（基於單一犯意，於密切接近之時間、地點，反覆實施同一構成要件之行為，各行為之獨立性極為薄弱）或集合犯（構成要件本身predetermined 反覆實行，如常業犯類型）等法理，評價為包括一罪。惟本案戊三次交易之時間、地點均各自分離，難認具備接續犯要求之時空密切關聯性，亦因現行法已刪除贓物罪之常業犯規定（原第350條，103年修法刪除），不能再依集合犯法理評價為一罪。從而，戊應成立三次獨立之故買贓物罪，依第50條規定數罪併罰。（本題所涉罪數判斷，另有臺灣高等法院法律座談會決議可供參考，惟其具體結論尚待讀者自行查閱核實，本解答僅依一般刑法罪數原理作答，未逕行援引該決議結論。）</p>
+    </div>
+  </div>
+</section>
+
+<!-- 八、速查卡 -->
+<section id="cheatsheet">
+  <div class="eyebrow-sec">CHEAT SHEET</div>
+  <h2>八、速查卡</h2>
+  <div class="cheatsheet">
+    <h3>贓物罪一覽</h3>
+    <ul>
+      <li>五態樣：收受・搬運・寄藏・故買・媒介，擇一即該當，屬即成犯，不罰未遂</li>
+      <li>贓物（通說）：限「他人財產犯罪」所得之實體財物，不含違禁物、抽象權利</li>
+      <li>§349Ⅱ準贓物：因贓物變得之財物（變賣所得價金、以價金購置之物），以贓物論</li>
+      <li>本犯自行處分自己犯罪所得＝不可罰之後行為，不另論贓物罪</li>
+      <li>故意標準：未必故意即足，價格異常、來源可疑而仍取得者，可認有贓物故意</li>
+      <li>§351：直系血親／配偶／同財共居親屬犯本章之罪，得減免其刑（罪責層次，非阻卻違法，非當然免刑）</li>
+    </ul>
+    <div class="mnemonic">贓物明知即成罪，親屬相隱得減刑</div>
+  </div>
+</section>
+
+<!-- 九、相關主題 -->
+<section id="related">
+  <div class="eyebrow-sec">RELATED</div>
+  <h2>九、相關主題</h2>
+  <div class="link-note">
+    本講義教學案例涉及之前置財產犯罪，另有獨立講義可供對照：
+    《<a href="../講義/刑法320條-竊盜罪.html" target="_blank">第320條．普通竊盜罪（竊佔罪）</a>》、
+    《<a href="../講義/刑法325條-搶奪罪.html" target="_blank">第325條．普通搶奪罪</a>》、
+    《<a href="../講義/刑法339條-詐欺罪.html" target="_blank">第339條．普通詐欺罪</a>》——贓物罪之「贓物」多源自此類財產犯罪，建議對照閱讀以掌握本犯行為與贓物犯行為之銜接關係。<br><br>
+    本講義申論題四涉及數次故買贓物行為之罪數判斷，另涉及既有講義《<a href="../講義/刑法50-51-53-54條-數罪併罰.html" target="_blank">第50、51、53、54條．數罪併罰</a>》，建議對照閱讀以掌握獨立行為分論併罰之基本原理。
+  </div>
+</section>
+
+</div>
+</div>
+
+<script>
+const links = document.querySelectorAll('.nav-link');
+const sections = ['cover','articles','structure','tiers','doctrine','practice','cases','essays','cheatsheet','related'].map(id => document.getElementById(id));
+function setActive(id){
+  links.forEach(a => {
+    const match = a.getAttribute('href') === '#' + id;
+    a.classList.toggle('active', match);
+  });
+}
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => { if(entry.isIntersecting){ setActive(entry.target.id); } });
+}, {rootMargin: '-40% 0px -50% 0px', threshold: 0});
+sections.forEach(s => { if(s) observer.observe(s); });
+links.forEach(a => {
+  a.addEventListener('click', (e) => {
+    e.preventDefault();
+    const id = a.getAttribute('href').slice(1);
+    document.getElementById(id).scrollIntoView({behavior:'smooth', block:'start'});
+  });
+});
+</script>
+</body>
+</html>
